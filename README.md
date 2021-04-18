@@ -1,5 +1,8 @@
 # 개발일기
 
+## 2021-04-19
+- [EgovCmmUseServiceImplTest_selectCmmCodeDetail2](2021/04/19/EgovCmmUseServiceImplTest_selectCmmCodeDetail2.md)
+
 ## 2021년 04월 17일
 - CmmUseDAO 수정 [링크](2021/04/17/CmmUseDAO.md)
 - EgovComponentCheckerTest [링크](2021/04/17/EgovComponentChecker.md)
