@@ -1,5 +1,8 @@
 # 개발일기
 
+## 2021-04-21
+- [EgovCmmUseServiceImplTest_selectOgrnztIdDetail](2021-04-21/EgovCmmUseServiceImplTest_selectOgrnztIdDetail.md)
+
 ## 2021-04-20
 - [EgovCmmUseServiceImplTest_selectCmmCodeDetails](2021/04/20/EgovCmmUseServiceImplTest_selectCmmCodeDetails.md)
 
