@@ -2,6 +2,7 @@
 
 ## 2021-04-21
 - [EgovCmmUseServiceImplTest_selectOgrnztIdDetail](2021/04/21/EgovCmmUseServiceImplTest_selectOgrnztIdDetail.md)
+- [Code Generation 코드 생성](2021/04/21/god.codegen.md)
 
 ## 2021-04-20
 - [EgovCmmUseServiceImplTest_selectCmmCodeDetails](2021/04/20/EgovCmmUseServiceImplTest_selectCmmCodeDetails.md)
