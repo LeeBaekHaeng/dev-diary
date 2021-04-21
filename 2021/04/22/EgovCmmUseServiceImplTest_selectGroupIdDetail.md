@@ -13,3 +13,4 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 ```
+<https://github.com/LeeBaekHaeng/egovframe-common-components/commit/731c9898d87eaa1113eb5cfc359b1165724a6b4e>
