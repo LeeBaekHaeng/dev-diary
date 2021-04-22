@@ -87,3 +87,5 @@ public interface AllTabColsMapper {
 ### 3.5 AllTablesMapperTest_selectList
 
 <https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/e579a36f141b6d39bb152ae687e39ba65971217d>
+
+<https://youtu.be/oFW4OtON8RI>
