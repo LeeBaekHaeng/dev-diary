@@ -65,3 +65,25 @@ public interface AllTabColsMapper {
 
 <https://youtu.be/ojVsYZkbbXk>
 
+## 3. ALL_TABLES
+
+- ALL_TABLES
+- alltables
+- AllTables
+
+### 3.1 package
+- god.codegen.oracle.alltables.service.impl
+
+### 3.2 VO
+- AllTables
+- AllTablesVO
+
+### 3.3 mapper xml
+- god/mapper/codegen/oracle/alltables/AllTables_SQL_oracle.xml
+
+### 3.4 mapper
+- AllTablesMapper
+
+### 3.5 AllTablesMapperTest_selectList
+
+<https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/e579a36f141b6d39bb152ae687e39ba65971217d>
