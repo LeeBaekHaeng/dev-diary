@@ -89,3 +89,32 @@ public interface AllTabColsMapper {
 <https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/e579a36f141b6d39bb152ae687e39ba65971217d>
 
 <https://youtu.be/oFW4OtON8RI>
+
+## 4. egovframework.dev.imp.templates
+
+<https://github.com/LeeBaekHaeng/egovframe-development/tree/master/egovframework.dev.imp.templates>
+
+<https://github.com/LeeBaekHaeng/egovframe-development/blob/master/egovframework.dev.imp.templates/pom.xml>
+```xml
+<dependency>
+    <groupId>org.apache.velocity</groupId>
+    <artifactId>velocity</artifactId>
+    <version>1.6.2</version>
+</dependency>
+```
+
+<https://mvnrepository.com/artifact/org.apache.velocity/velocity/1.6.2>
+```xml
+<!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity -->
+<dependency>
+    <groupId>org.apache.velocity</groupId>
+    <artifactId>velocity</artifactId>
+    <version>1.6.2</version>
+</dependency>
+```
+
+CrudCodeGenTest
+
+CrudCodeGenTest_A1_sql
+
+<https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/4668d76dec7a6991f4e6ad59a78811cb41a4e253>
