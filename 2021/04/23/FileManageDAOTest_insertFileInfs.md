@@ -61,3 +61,4 @@ private EgovIdGnrService egovFileIdGnrService;
 
 <https://github.com/LeeBaekHaeng/egovframe-common-components/commit/217ceef51a392d06fa30d69227079f93d1a60451>
 
+<https://youtu.be/NUNu0wRQ41k>
