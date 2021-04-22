@@ -49,3 +49,5 @@ SELECT * FROM ALL_COL_COMMENTS A WHERE A.OWNER = 'COM' ORDER BY A.OWNER, A.TABLE
 
 <https://github.com/LeeBaekHaeng/sql/commit/41cf287e44cf09a809f1fc9d3456ab68764a9726>
 
+<https://youtu.be/1cscUGpBrE4>
+
