@@ -118,3 +118,5 @@ CrudCodeGenTest
 CrudCodeGenTest_A1_sql
 
 <https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/4668d76dec7a6991f4e6ad59a78811cb41a4e253>
+
+<https://youtu.be/BtZ4BfDlBDc>
