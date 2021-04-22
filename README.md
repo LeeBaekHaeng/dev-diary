@@ -3,6 +3,7 @@
 ## 2021-04-22
 - '그룹정보를 코드형태로 리턴한다.' 단위 테스트[EgovCmmUseServiceImplTest_selectGroupIdDetail](2021/04/22/EgovCmmUseServiceImplTest_selectGroupIdDetail.md)
 - [Code Generation 코드 생성](2021/04/22/god.codegen.md)
+- [ALL_TAB_COLS](2021/04/22/sql.md)
 
 ## 2021-04-21
 - [EgovCmmUseServiceImplTest_selectOgrnztIdDetail](2021/04/21/EgovCmmUseServiceImplTest_selectOgrnztIdDetail.md)
