@@ -42,3 +42,4 @@ SELECT * FROM COMTNFILEDETAIL;
 
 <https://github.com/LeeBaekHaeng/egovframe-common-components/commit/e2bc34687e74bb8be5c04d91dd6c4ad13e205d88>
 
+<https://youtu.be/uAfc1eqxueI>
