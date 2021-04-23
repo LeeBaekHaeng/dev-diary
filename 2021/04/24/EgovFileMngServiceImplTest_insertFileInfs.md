@@ -1,6 +1,6 @@
 # EgovFileMngServiceImpl '여러 개의 파일에 대한 정보(속성 및 상세)를 등록한다.' 단위 테스트
 
-EgovFileMngServiceImpl_insertFileInfs
+EgovFileMngServiceImplTest_insertFileInfs
 
 ## 1. sql
 ```sql
