@@ -40,3 +40,5 @@ server.xml
 ```
 
 <https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/6ed30a5a264df1ca5c59eef990f20c5d0005dc92>
+
+<https://youtu.be/OlgjtjZI3No>
