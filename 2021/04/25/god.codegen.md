@@ -21,3 +21,5 @@
 ## 5. EgovSample2ServiceImpl.vm
 
 <https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/f859d0ee7b704c3ed23d5e21df3a57970dfb6e9a>
+
+<https://youtu.be/2ngT-adWMAY>
