@@ -59,3 +59,5 @@ DatabaseMetaData databaseMetaData = connection.getMetaData();
 <https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/1e7b965c54985618a3324042bdfbe4223bd9617d>
 
 <https://github.com/LeeBaekHaeng/sql/commit/869dad3c575b576167c9bb760aa1b775005da794>
+
+<https://youtu.be/6ruf_vihG8s>
