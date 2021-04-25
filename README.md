@@ -3,6 +3,9 @@
 ## To Do
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-04-26
+- [FileManageDAO '여러 개의 파일에 대한 정보(속성 및 상세)를 수정한다.' 단위 테스트](2021/04/26/FileManageDAOTest_updateFileInfs.md)
+
 ## 2021-04-25
 - [Code Generation 코드 생성](2021/04/25/god.codegen.md)
 
