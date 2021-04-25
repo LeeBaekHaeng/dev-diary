@@ -211,3 +211,5 @@ public class DatabaseMetaDataTest_getTables {
 ```
 
 <https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/4ee67d75506d644ca05e83206bad4e1c89d11a39>
+
+<https://youtu.be/J-tSuGc2XxQ>
