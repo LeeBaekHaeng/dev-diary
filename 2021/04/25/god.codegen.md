@@ -42,3 +42,20 @@ server.xml
 <https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/6ed30a5a264df1ca5c59eef990f20c5d0005dc92>
 
 <https://youtu.be/OlgjtjZI3No>
+
+## 7. JDBC를 사용하여 데이터베이스 메타 데이터 추출
+
+Extracting Database Metadata Using JDBC
+
+<https://www.baeldung.com/jdbc-database-metadata>
+
+7.2. DatabaseMetaData Interface
+```java
+DatabaseMetaData databaseMetaData = connection.getMetaData();
+```
+
+<https://www.heidisql.com/download.php?download=portable-64>
+
+<https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/1e7b965c54985618a3324042bdfbe4223bd9617d>
+
+<https://github.com/LeeBaekHaeng/sql/commit/869dad3c575b576167c9bb760aa1b775005da794>
