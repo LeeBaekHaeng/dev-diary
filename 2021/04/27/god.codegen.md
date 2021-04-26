@@ -68,3 +68,5 @@ SELECT /* select */
 ```
 
 <https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/67ab8ad1409936409f28cf5040feb7fdc98099df>
+
+<https://youtu.be/5KxpGFCS1IA>
