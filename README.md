@@ -6,6 +6,7 @@
 ## 2021-04-28
 - [FileManageDAO '하나의 파일을 삭제한다.' 단위 테스트](2021/04/28/FileManageDAOTest_deleteFileInf.md)
 - [AllTablesMapperTest_selectList 리팩토링](2021/04/28/god.codegen.md)
+- [JNDI Datasource How-To JNDI 데이터 소스 방법](2021/04/28/jndi-datasource-examples-howto.md)
 
 ## 2021-04-27
 - [FileManageDAO '여러 개의 파일을 삭제한다.' 단위 테스트](2021/04/27/FileManageDAOTest_deleteFileInfs.md)
