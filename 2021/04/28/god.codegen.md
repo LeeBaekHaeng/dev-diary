@@ -76,3 +76,5 @@ import org.springframework.util.StopWatch;
 ## 6. CrudCodeGenTest_C1_src 리팩토링
 
 <https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/0f90476aa792d36ea58baf28a69694d7143f8078>
+
+<https://youtu.be/9-cSqPFcfd8>
