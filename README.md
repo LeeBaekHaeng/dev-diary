@@ -5,7 +5,7 @@
 
 ## 2021-04-29
 - [FileManageDAO '파일에 대한 목록을 조회한다.' 단위 테스트](2021/04/29/FileManageDAOTest_selectFileInfs.md)
-- [TableVO](2021/04/29/god.codegen.md)
+- [TableVO, ColumnVO 추가](2021/04/29/god.codegen.md)
 
 ## 2021-04-28
 - [FileManageDAO '하나의 파일을 삭제한다.' 단위 테스트](2021/04/28/FileManageDAOTest_deleteFileInf.md)

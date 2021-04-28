@@ -193,3 +193,5 @@ public class ColumnVO extends Column {
 			log.debug("");
 		});
 ```
+
+<https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/3854fcd10f09892ecb8df533e05861f6e39ed26b>
