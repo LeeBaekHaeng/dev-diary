@@ -3,6 +3,10 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-04-30
+- [FileManageDAO '파일 구분자에 대한 최대값을 구한다.' 단위 테스트](2021/04/30/FileManageDAOTest_getMaxFileSN.md)
+- [Code Generation 코드 생성 - setTableVO, setColumnVO](2021/04/30/god.codegen.md)
+
 ## 2021-04-29
 - [FileManageDAO '파일에 대한 목록을 조회한다.' 단위 테스트](2021/04/29/FileManageDAOTest_selectFileInfs.md)
 - [TableVO, ColumnVO 추가](2021/04/29/god.codegen.md)
