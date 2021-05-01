@@ -2,8 +2,8 @@
 
 ## 목차
 
-1. [getColumns](#-1.-getColumns)
-2. [Interface DatabaseMetaData](#-2.-Interface-DatabaseMetaData)
+1. [getColumns](#1-getcolumns)
+2. [Interface DatabaseMetaData](#2-Interface-DatabaseMetaData)
 
 ## 1. getColumns
 

@@ -2,12 +2,12 @@
 
 ## 목차
 
-1. [FileManageDAOTest_deleteAllFileInf](#-1.-FileManageDAOTest_deleteAllFileInf)
-    1. [test](#-1.1-test)
-    2. [test2](#-1.1-test2)
-2. [EgovFileMngServiceImplTest_deleteAllFileInf](#-2.-EgovFileMngServiceImplTest_deleteAllFileInf)
-    1. [test](#-2.1-test)
-    2. [test2](#-2.1-test2)
+1. [FileManageDAOTest_deleteAllFileInf](#1-FileManageDAOTest_deleteAllFileInf)
+    1. [test](#1.1-test)
+    2. [test2](#1.2-test2)
+2. [EgovFileMngServiceImplTest_deleteAllFileInf](#2.-EgovFileMngServiceImplTest_deleteAllFileInf)
+    1. [test](#2.1-test)
+    2. [test2](#2.2-test2)
 
 ## 1. FileManageDAOTest_deleteAllFileInf
 
