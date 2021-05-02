@@ -189,3 +189,5 @@ import oracle.jdbc.OracleConnection;
 ```
 
 <https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/9835c4c82324095610d2bf24aa55f4ff009d956b>
+
+<https://youtu.be/9lGqHvamIwk>
