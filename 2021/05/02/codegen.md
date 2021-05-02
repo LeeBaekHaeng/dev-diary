@@ -58,3 +58,5 @@ model.GodPathname
 info
 
 <https://github.com/LeeBaekHaeng/egovframe-3.10.0/commit/f5cc1999e8b95125b855f141c63c10d434044032>
+
+<https://youtu.be/NWniW9mP7BI>
