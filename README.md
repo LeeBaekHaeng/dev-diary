@@ -7,6 +7,9 @@
 - [FileManageDAO '전체 파일을 삭제한다.' 단위 테스트](2021/05/03/FileManageDAOTest_deleteAllFileInf.md)
 - [Code Generation 코드 생성 - setColumnVO](2021/05/03/codegen.md)
 
+## 2021-05-02
+- [Code Generation 코드 생성 - GodTestV1 리팩토링](2021/05/02/codegen.md)
+
 ## 2021-05-01
 - [FileManageDAO '파일에 대한 상세정보를 조회한다.' 단위 테스트](2021/05/01/FileManageDAOTest_selectFileInf.md)
 - [Code Generation 코드 생성 - setColumnVO](2021/05/01/god.codegen.md)
