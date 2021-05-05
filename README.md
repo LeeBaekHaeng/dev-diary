@@ -5,7 +5,7 @@
 
 ## 2021-05-05
 - [FileManageDAO '파일명 검색에 대한 목록 전체 건수를 조회한다.' 단위 테스트](2021/05/05/1.test.md)
-- [Code Generation 코드 생성 - DatabaseMetaData](2021/05/05/2.codegen.md)
+- [Code Generation 코드 생성 - getSchemas](2021/05/05/2.codegen.md)
 
 ## 2021-05-04
 - [FileManageDAO '파일명 검색에 대한 목록을 조회한다.' 단위 테스트](2021/05/04/1.test.md)
