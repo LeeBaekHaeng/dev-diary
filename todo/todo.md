@@ -3,7 +3,7 @@
 ## 전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트
 1. <s>CmmUseDAO</s>
 2. <s>EgovComAbstractDAO</s>
-3. FileManageDAO
+3. <s>FileManageDAO</s>
 4. AddressBookDAO
 5. BBSAddedOptionsDAO
 6. EgovArticleDAO
