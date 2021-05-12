@@ -3,6 +3,10 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-05-12
+- [AddressBookDAO '주어진 조건에 따라 주소록에 기등록된 구성원의 목록을 불러온다.' 단위 테스트](2021/05/12/1.test.md)
+- [Code Generation 코드 생성 - getTables to setVO](2021/05/12/2.codegen.md)
+
 ## 2021-05-11
 - [AddressBookDAO '주어진 조건에 따라 주소록에 추가할 명함목록을 불러온다.' 단위 테스트](2021/05/11/1.test.md)
 - [Code Generation 코드 생성 - getTables to setVO](2021/05/11/2.codegen.md)
