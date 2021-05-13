@@ -5,7 +5,7 @@
 
 ## 2021-05-14
 - [AddressBookDAO '주어진 조건에 맞는 주소록을 불러온다.' 단위 테스트](2021/05/14/1.test.md)
-- [Code Generation 코드 생성 - getTables to setVO](2021/05/14/2.codegen.md)
+- [Code Generation 코드 생성 - DatabaseMetaData.getTables](2021/05/14/2.codegen.md)
 
 ## 2021-05-12
 - [AddressBookDAO '주어진 조건에 따라 주소록에 기등록된 구성원의 목록을 불러온다.' 단위 테스트](2021/05/12/1.test.md)
