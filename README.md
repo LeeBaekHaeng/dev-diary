@@ -3,6 +3,10 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-05-17
+- [AddressBookDAO '주소록을 구성하는 구성원을 등록한다.' 단위 테스트](2021/05/17/1.test.md)
+- [Code Generation 코드 생성 - DatabaseMetaData.getTables](2021/05/17/2.codegen.md)
+
 ## 2021-05-15
 - [AddressBookDAO '주소록 정보를 등록한다.' 단위 테스트](2021/05/15/1.test.md)
 - [Code Generation 코드 생성 - DatabaseMetaData.getTables](2021/05/15/2.codegen.md)
