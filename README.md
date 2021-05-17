@@ -5,7 +5,7 @@
 
 ## 2021-05-18
 - [AddressBookDAO '주소록 정보를 수정한다.' 단위 테스트](2021/05/18/1.test.md)
-- [Code Generation 코드 생성 - DatabaseMetaData](2021/05/18/2.codegen.md)
+- [Code Generation 코드 생성 - DatabaseMetaData, ResultSetMetaData](2021/05/18/2.codegen.md)
 
 ## 2021-05-17
 - [AddressBookDAO '주소록을 구성하는 구성원을 등록한다.' 단위 테스트](2021/05/17/1.test.md)
