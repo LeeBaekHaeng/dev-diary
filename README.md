@@ -5,7 +5,7 @@
 
 ## 2021-05-20
 - [AddressBookDAO '주소록 목록에 대한 전체 건수를 조회한다.' 단위 테스트](2021/05/20/1.test.md)
-- [Code Generation 코드 생성 - sql gen](2021/05/20/2.codegen.md)
+- [Code Generation 코드 생성 - sql gen insert](2021/05/20/2.codegen.md)
 
 ## 2021-05-19
 - [AddressBookDAO '주소록 구성원을 삭제한다.' 단위 테스트](2021/05/19/1.test.md)
