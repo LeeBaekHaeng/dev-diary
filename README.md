@@ -3,6 +3,10 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-05-22
+- [AddressBookDAO '주소록을 구성할 사용자의 정보를 조회한다.' 단위 테스트](2021/05/22/1.test.md)
+- [Code Generation 코드 생성 - VO gen](2021/05/22/2.codegen.md)
+
 ## 2021-05-21
 - [AddressBookDAO '사용자 목록에 대한 전체 건수를 조회한다.' 단위 테스트](2021/05/21/1.test.md)
 - [Code Generation 코드 생성 - sql gen update](2021/05/21/2.codegen.md)
