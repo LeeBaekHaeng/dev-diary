@@ -3,6 +3,10 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-05-25
+- [BBSAddedOptionsDAO '신규 게시판 추가기능 정보를 등록한다.' 단위 테스트](2021/05/25/1.test.md)
+- [Code Generation 코드 생성 - mapper gen](2021/05/25/2.codegen.md)
+
 ## 2021-05-24
 - [AddressBookDAO '주소록을 구성할 명함의 정보를 조회한다.' 단위 테스트](2021/05/24/1.test.md)
 - [Code Generation 코드 생성 - VO gen](2021/05/24/2.codegen.md)
