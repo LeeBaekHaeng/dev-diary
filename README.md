@@ -5,7 +5,7 @@
 
 ## 2021-05-27
 - [BBSAddedOptionsDAO '게시판 추가기능 정보를 수정한다.' 단위 테스트](2021/05/27/1.test.md)
-- [Code Generation 코드 생성 - mapper gen select](2021/05/27/2.codegen.md)
+- [Code Generation 코드 생성 - mapper gen resultMap](2021/05/27/2.codegen.md)
 
 ## 2021-05-26
 - [BBSAddedOptionsDAO '게시판 추가기능 정보 한 건을 상세조회 한다.' 단위 테스트](2021/05/26/1.test.md)
