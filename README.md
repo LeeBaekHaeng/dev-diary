@@ -3,6 +3,10 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-05-27
+- [BBSAddedOptionsDAO '게시판 추가기능 정보를 수정한다.' 단위 테스트](2021/05/27/1.test.md)
+- [Code Generation 코드 생성 - mapper gen select](2021/05/27/2.codegen.md)
+
 ## 2021-05-26
 - [BBSAddedOptionsDAO '게시판 추가기능 정보 한 건을 상세조회 한다.' 단위 테스트](2021/05/26/1.test.md)
 - [Code Generation 코드 생성 - mapper gen select](2021/05/26/2.codegen.md)
