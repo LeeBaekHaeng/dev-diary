@@ -5,6 +5,7 @@
 
 ## 2021-05-28
 - [EgovArticleDAO selectArticleList 단위 테스트](2021/05/28/1.test.md)
+- [Code Generation 코드 생성 - mapper gen insert](2021/05/28/2.codegen.md)
 
 ## 2021-05-27
 - [BBSAddedOptionsDAO '게시판 추가기능 정보를 수정한다.' 단위 테스트](2021/05/27/1.test.md)
