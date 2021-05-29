@@ -5,6 +5,7 @@
 
 ## 2021-05-29
 - [EgovArticleDAO selectArticleListCnt 단위 테스트](2021/05/29/1.test.md)
+- [Code Generation 코드 생성 - mapper gen update](2021/05/29/2.codegen.md)
 
 ## 2021-05-28
 - [EgovArticleDAO selectArticleList 단위 테스트](2021/05/28/1.test.md)
