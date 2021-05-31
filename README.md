@@ -5,6 +5,7 @@
 
 ## 2021-06-01
 - [EgovArticleDAO updateInqireCo 단위 테스트](2021/06/01/1.test.md)
+- [Code Generation 코드 생성 - DatabaseMetaData](2021/06/01/2.codegen.md)
 
 ## 2021-05-31
 - [EgovArticleDAO selectMaxInqireCo 단위 테스트](2021/05/31/1.test.md)
