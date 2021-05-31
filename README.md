@@ -3,6 +3,9 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-05-31
+- [EgovArticleDAO selectMaxInqireCo 단위 테스트](2021/05/31/1.test.md)
+
 ## 2021-05-29
 - [EgovArticleDAO selectArticleListCnt 단위 테스트](2021/05/29/1.test.md)
 - [Code Generation 코드 생성 - mapper gen update](2021/05/29/2.codegen.md)
