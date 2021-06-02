@@ -5,6 +5,7 @@
 
 ## 2021-06-03
 - [EgovArticleDAO replyArticle 단위 테스트](2021/06/03/1.test.md)
+- [Code Generation 코드 생성 - DatabaseMetaData](2021/06/03/2.codegen.md)
 
 ## 2021-06-02
 - [EgovArticleDAO selectArticleDetail 단위 테스트](2021/06/02/1.test.md)
