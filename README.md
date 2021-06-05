@@ -5,6 +5,7 @@
 
 ## 2021-06-05
 - [EgovArticleDAO replyArticle 단위 테스트](2021/06/05/1.test.md)
+- [Code Generation 코드 생성 - setEntity](2021/06/05/2.codegen.md)
 
 ## 2021-06-04
 - [No bean named 'EgovFileMngService' available](2021/06/04/1.test.md)
