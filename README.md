@@ -3,6 +3,9 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-06-07
+- [EgovArticleDAO insertArticle 단위 테스트](2021/06/07/1.test.md)
+
 ## 2021-06-05
 - [EgovArticleDAO replyArticle 단위 테스트](2021/06/05/1.test.md)
 - [Code Generation 코드 생성 - setEntity](2021/06/05/2.codegen.md)
