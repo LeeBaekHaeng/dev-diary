@@ -5,6 +5,7 @@
 
 ## 2021-06-07
 - [EgovArticleDAO insertArticle 단위 테스트](2021/06/07/1.test.md)
+- [Code Generation 코드 생성 - setAttribute](2021/06/07/2.codegen.md)
 
 ## 2021-06-05
 - [EgovArticleDAO replyArticle 단위 테스트](2021/06/05/1.test.md)
