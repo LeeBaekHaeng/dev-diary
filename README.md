@@ -5,6 +5,7 @@
 
 ## 2021-06-08
 - [EgovArticleDAO updateArticle 단위 테스트](2021/06/08/1.test.md)
+- [Code Generation 코드 생성 - DatabaseMetaData.getColumns](2021/06/08/2.codegen.md)
 
 ## 2021-06-07
 - [EgovArticleDAO insertArticle 단위 테스트](2021/06/07/1.test.md)
