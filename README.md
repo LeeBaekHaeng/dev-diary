@@ -5,6 +5,7 @@
 
 ## 2021-06-12
 - [EgovArticleDAO selectGuestArticleListCnt 단위 테스트](2021/06/12/1.test.md)
+- [Code Generation 코드 생성 - setJavaType(String javaType, int nullable, String databaseProductName)](2021/06/12/2.codegen.md)
 
 ## 2021-06-11
 - [EgovArticleDAO selectGuestArticleList 단위 테스트](2021/06/11/1.test.md)
