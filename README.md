@@ -5,6 +5,7 @@
 
 ## 2021-06-15
 - [EgovArticleDAO selectBlogNmList 단위 테스트](2021/06/15/1.test.md)
+- [Code Generation 코드 생성 - EgovSample_Sample2_MAPPER_sql.vm](2021/06/15/2.codegen.md)
 
 ## 2021-06-14
 - [EgovArticleDAO selectArticleCnOne 단위 테스트](2021/06/14/1.test.md)
