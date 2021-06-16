@@ -3,6 +3,9 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-06-17
+- [EgovArticleDAO selectBlogListManagerCnt 단위 테스트](2021/06/17/1.test.md)
+
 ## 2021-06-16
 - [EgovArticleDAO selectBlogListManager 단위 테스트](2021/06/16/1.test.md)
 - [Code Generation 코드 생성 - EgovSample_Sample2_MAPPER_sql.vm update](2021/06/16/2.codegen.md)
