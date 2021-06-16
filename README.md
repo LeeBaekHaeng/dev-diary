@@ -5,6 +5,7 @@
 
 ## 2021-06-17
 - [EgovArticleDAO selectBlogListManagerCnt 단위 테스트](2021/06/17/1.test.md)
+- [Code Generation 코드 생성 - EgovSample_Sample2_MAPPER_sql.vm delete](2021/06/17/2.codegen.md)
 
 ## 2021-06-16
 - [EgovArticleDAO selectBlogListManager 단위 테스트](2021/06/16/1.test.md)
