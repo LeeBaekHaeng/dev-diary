@@ -4,6 +4,9 @@
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
 ## 2021-06-17
+- [EgovArticleDAO selectArticleDetailDefault 단위 테스트](2021/06/18/1.test.md)
+
+## 2021-06-17
 - [EgovArticleDAO selectBlogListManagerCnt 단위 테스트](2021/06/17/1.test.md)
 - [Code Generation 코드 생성 - EgovSample_Sample2_MAPPER_sql.vm delete](2021/06/17/2.codegen.md)
 - [JavaParser - java.sql.ResultSetMetaData / createGetter and createSetter](2021/06/17/3.javaparser.md)
