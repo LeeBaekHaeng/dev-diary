@@ -5,6 +5,7 @@
 
 ## 2021-06-19
 - [EgovArticleDAO selectArticleDetailDefaultCnt 단위 테스트](2021/06/19/1.test.md)
+- [Code Generation 코드 생성 - GodSql.select](2021/06/19/2.codegen.md)
 
 ## 2021-06-18
 - [EgovArticleDAO selectArticleDetailDefault 단위 테스트](2021/06/18/1.test.md)
