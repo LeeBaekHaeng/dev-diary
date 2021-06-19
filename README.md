@@ -3,7 +3,10 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
-## 2021-06-17
+## 2021-06-19
+- [EgovArticleDAO selectArticleDetailDefaultCnt 단위 테스트](2021/06/19/1.test.md)
+
+## 2021-06-18
 - [EgovArticleDAO selectArticleDetailDefault 단위 테스트](2021/06/18/1.test.md)
 - [Code Generation 코드 생성 - GodSql.update](2021/06/18/2.codegen.md)
 - [JavaParser - 한 번에 전체 프로젝트 분석](2021/06/18/3.javaparser.md)
