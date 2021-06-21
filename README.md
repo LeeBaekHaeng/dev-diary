@@ -6,6 +6,7 @@
 ## 2021-06-21
 - [EgovArticleDAO selectArticleDetailCn 단위 테스트](2021/06/21/1.test.md)
 - [Code Generation 코드 생성 - GodSql.delete](2021/06/21/2.codegen.md)
+- [JavaParser - ClassOrInterfaceDeclaration](2021/06/21/3.javaparser.md)
 
 ## 2021-06-19
 - [EgovArticleDAO selectArticleDetailDefaultCnt 단위 테스트](2021/06/19/1.test.md)
