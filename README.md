@@ -5,6 +5,7 @@
 
 ## 2021-06-24
 - [EgovArticleDAO testData 단위 테스트](2021/06/24/1.test.md)
+- [Code Generation 코드 생성 - java.sql.DriverManager](2021/06/24/2.codegen.md)
 
 ## 2021-06-23
 - [EgovArticleDAO selectLoginUser 단위 테스트](2021/06/23/1.test.md)
