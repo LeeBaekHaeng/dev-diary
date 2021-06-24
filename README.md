@@ -3,6 +3,9 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-06-25
+- [EgovArticleDAO testData insertArticle 단위 테스트](2021/06/25/1.test.md)
+
 ## 2021-06-24
 - [EgovArticleDAO testData 단위 테스트](2021/06/24/1.test.md)
 - [Code Generation 코드 생성 - java.sql.DriverManager](2021/06/24/2.codegen.md)
