@@ -6,6 +6,7 @@
 ## 2021-06-29
 - [EgovArticleDAO testData selectBlogListManagerCnt 단위 테스트](2021/06/29/1.test.md)
 - [Code Generation 코드 생성 - DatabaseMetaData.getCatalogs](2021/06/29/2.codegen.md)
+- [JavaParser - VO getFields](2021/06/29/3.javaparser.md)
 
 ## 2021-06-28
 - [EgovArticleDAO testData EgovArticleDAOTest_selectArticleDetailDefault 단위 테스트](2021/06/28/1.test.md)
