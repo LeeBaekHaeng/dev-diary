@@ -6,7 +6,7 @@
 ## 2021-06-28
 - [EgovArticleDAO testData EgovArticleDAOTest_selectArticleDetailDefault 단위 테스트](2021/06/28/1.test.md)
 - [Code Generation 코드 생성 - getTables](2021/06/28/2.codegen.md)
-- [JavaParser - VO getFields](2021/06/28/3.javaparser.md)
+- [JavaParser - VO vo.set*](2021/06/28/3.javaparser.md)
 
 ## 2021-06-26
 - [EgovArticleDAO testData selectArticleDetailDefaultCnt 단위 테스트](2021/06/26/1.test.md)
