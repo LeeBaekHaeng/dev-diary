@@ -5,6 +5,7 @@
 
 ## 2021-06-30
 - [EgovArticleDAO testData selectBlogListManager 단위 테스트](2021/06/30/1.test.md)
+- [Code Generation 코드 생성 - DatabaseMetaData.getSchemas](2021/06/30/2.codegen.md)
 
 ## 2021-06-29
 - [EgovArticleDAO testData selectBlogListManagerCnt 단위 테스트](2021/06/29/1.test.md)
