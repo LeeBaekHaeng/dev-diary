@@ -5,6 +5,7 @@
 
 ## 2021-07-01
 - [EgovArticleDAO testData selectBlogNmList 단위 테스트](2021/07/01/1.test.md)
+- [Code Generation 코드 생성 - EgovResourceCloseHelper.closeDBObjects(rs, con);](2021/07/01/2.codegen.md)
 
 ## 2021-06-30
 - [EgovArticleDAO testData selectBlogListManager 단위 테스트](2021/06/30/1.test.md)
