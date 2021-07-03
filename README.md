@@ -3,6 +3,9 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-07-03
+- [EgovArticleServiceImpl JavaParser 단위 테스트](2021/07/03/1.test.md)
+
 ## 2021-07-02
 - [EgovArticleDAO testData selectArticleCnOne 단위 테스트](2021/07/02/1.test.md)
 - [Code Generation 코드 생성 - DatabaseMetaData.getAttributes 지원되지 않는 기능입니다](2021/07/02/2.codegen.md)
