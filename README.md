@@ -5,6 +5,7 @@
 
 ## 2021-07-05
 - [EgovArticleServiceImpl @Configuration 단위 테스트](2021/07/05/1.test.md)
+- [Code Generation 코드 생성 - DatabaseMetaData.getColumns](2021/07/05/2.codegen.md)
 
 ## 2021-07-03
 - [EgovArticleServiceImpl JavaParser 단위 테스트](2021/07/03/1.test.md)
