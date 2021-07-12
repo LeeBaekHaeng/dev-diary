@@ -5,6 +5,7 @@
 
 ## 2021-07-12
 - [EgovArticleServiceImpl selectArticleCnOne 단위 테스트](2021/07/12/1.test.md)
+- [Code Generation 코드 생성 - DatabaseMetaData.allTablesAreSelectable MySQL](2021/07/12/2.codegen.md)
 
 ## 2021-07-10
 - [EgovArticleServiceImpl selectArticleDetail 단위 테스트](2021/07/10/1.test.md)
