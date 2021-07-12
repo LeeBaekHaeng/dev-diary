@@ -5,6 +5,7 @@
 
 ## 2021-07-13
 - [EgovArticleServiceImpl selectArticleDetailDefault 단위 테스트](2021/07/13/1.test.md)
+- [Code Generation 코드 생성 - DatabaseMetaData.getURL](2021/07/13/2.codegen.md)
 
 ## 2021-07-12
 - [EgovArticleServiceImpl selectArticleCnOne 단위 테스트](2021/07/12/1.test.md)
