@@ -3,6 +3,9 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-07-16
+- [EgovArticleServiceImpl updateArticle 단위 테스트](2021/07/16/1.test.md)
+
 ## 2021-07-15
 - [EgovArticleServiceImpl selectArticleDetailCn 단위 테스트](2021/07/15/1.test.md)
 - [Code Generation 코드 생성 - DatabaseMetaData.isReadOnly](2021/07/15/2.codegen.md)
