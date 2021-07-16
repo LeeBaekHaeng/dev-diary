@@ -5,6 +5,7 @@
 
 ## 2021-07-16
 - [EgovArticleServiceImpl updateArticle 단위 테스트](2021/07/16/1.test.md)
+- [Code Generation 코드 생성 - DatabaseMetaData.nullsAreSortedHigh](2021/07/16/2.codegen.md)
 
 ## 2021-07-15
 - [EgovArticleServiceImpl selectArticleDetailCn 단위 테스트](2021/07/15/1.test.md)
