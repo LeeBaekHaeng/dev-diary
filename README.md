@@ -7,6 +7,7 @@
 - [EgovArticleServiceImpl updateArticle 단위 테스트](2021/07/16/1.test.md)
 - [Code Generation 코드 생성 - DatabaseMetaData.nullsAreSortedHigh](2021/07/16/2.codegen.md)
 - [JavaParser - CompilationUnit.getTypes member.isClassOrInterfaceDeclaration](2021/07/16/3.javaparser.md)
+- [mybatis getParameterMappings](2021/07/16/4.mybatis.md)
 
 ## 2021-07-15
 - [EgovArticleServiceImpl selectArticleDetailCn 단위 테스트](2021/07/15/1.test.md)
