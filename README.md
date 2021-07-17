@@ -4,6 +4,9 @@
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
 ## 2021-07-16
+- [mybatis Parameters](2021/07/17/1.mybatis.md)
+
+## 2021-07-16
 - [EgovArticleServiceImpl updateArticle 단위 테스트](2021/07/16/1.test.md)
 - [Code Generation 코드 생성 - DatabaseMetaData.nullsAreSortedHigh](2021/07/16/2.codegen.md)
 - [JavaParser - CompilationUnit.getTypes member.isClassOrInterfaceDeclaration](2021/07/16/3.javaparser.md)
