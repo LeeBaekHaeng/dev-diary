@@ -5,6 +5,7 @@
 
 ## 2021-07-20
 - [EgovArticle_SQL_*.xml deleteArticle BoardVO(Board) 오타 수정](2021/07/20/1.test.md)
+- [Code Generation 코드 생성 - DatabaseMetaData.nullsAreSortedAtStart](2021/07/20/2.codegen.md)
 
 ## 2021-07-19
 - [EgovArticleServiceImpl deleteArticle 단위 테스트](2021/07/19/1.test.md)
