@@ -5,6 +5,7 @@
 
 ## 2021-07-22
 - [EgovArticleServiceImpl selectBlogNmList 단위 테스트](2021/07/22/1.test.md)
+- [Code Generation 코드 생성 - DatabaseMetaData.getDatabaseProductName](2021/07/22/2.codegen.md)
 
 ## 2021-07-21
 - [EgovArticleServiceImpl selectNoticeArticleList 단위 테스트](2021/07/21/1.test.md)
