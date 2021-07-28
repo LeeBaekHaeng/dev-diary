@@ -5,6 +5,7 @@
 
 ## 2021-07-28
 - [EgovArticleServiceImpl selectBlogListManager 단위 테스트](2021/07/28/1.test.md)
+- [Code Generation 코드 생성 - DatabaseMetaData.getDriverMajorVersion](2021/07/28/2.codegen.md)
 
 ## 2021-07-27
 - [EgovArticleServiceImpl selectLoginUser 단위 테스트](2021/07/27/1.test.md)
