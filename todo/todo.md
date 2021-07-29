@@ -6,7 +6,7 @@
 3. <s>FileManageDAO</s>
 4. <s>AddressBookDAO</s>
 5. <s>BBSAddedOptionsDAO</s>
-6. EgovArticleDAO
+6. <s>EgovArticleDAO</s>
 7. EgovBBSMasterDAO
 8. EgovArticleCommentDAO
 9. EgovCommuBBSMasterDAO
