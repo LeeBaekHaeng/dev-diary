@@ -3,6 +3,9 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-07-31
+- [리소스 디렉토리 지정 - maven](2021/07/31/1.maven.md)
+
 ## 2021-07-30
 - [EgovBBSMasterDAO insertBBSMasterInf 단위 테스트](2021/07/30/1.test.md)
 
