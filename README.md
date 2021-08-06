@@ -3,7 +3,10 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
-## 2021-08-04
+## 2021-08-06
+- [EgovBBSMasterDAO selectBBSMasterInfsCnt 단위 테스트](2021/08/06/1.test.md)
+
+## 2021-08-05
 - [XMLMapperBuilder getParameterMappings, getResultMappings](2021/08/05/1.test.md)
 
 ## 2021-08-02
