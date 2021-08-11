@@ -7,6 +7,7 @@
 
 ## 2021-08-11
 - [EgovBBSMasterDAOTest_selectBBSMasterDetail 단위 테스트](2021/08/11/1.test.md)
+- [spring ContentNegotiatingViewResolver](2021/08/11/2.spring.md)
 
 ## 2021-08-10
 - [EgovBBSMasterDAOTest_selectBBSMasterDetail 단위 테스트](2021/08/10/1.test.md)
