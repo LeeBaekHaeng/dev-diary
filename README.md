@@ -3,6 +3,9 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-09-07
+- [EgovBBSMasterDAOTest_checkExistUser2 단위 테스트](2021/09/07/1.test.md)
+
 ## 2021-09-06
 - [EgovBBSMasterDAOTest_checkExistUser 단위 테스트](2021/09/06/1.test.md)
 
