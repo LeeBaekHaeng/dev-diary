@@ -5,6 +5,7 @@
 
 ## 2021-09-17
 - [EgovBBSMasterServiceImplTest_selectNotUsedBdMstrList 단위 테스트](2021/09/17/1.test.md)
+- [EgovBBSMasterService.selectNotUsedBdMstrList 버그 수정](2021/09/17/2.버그 수정.md)
 
 ## 2021-09-16
 - [EgovBBSMasterServiceImplTest_insertBlogMaster 단위 테스트](2021/09/16/1.test.md)
