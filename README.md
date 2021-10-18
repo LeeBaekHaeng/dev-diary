@@ -5,6 +5,7 @@
 
 ## 2021-10-19
 - [EgovArticleCommentDAOTest_selectArticleCommentDetail 단위 테스트](2021/10/19/1.test.md)
+- [EgovArticleCommentDAO 개선필요부분](2021/10/19/2.test.md)
 
 ## 2021-10-18
 - [EgovArticleCommentDAOTest_selectArticleCommentListCnt 단위 테스트](2021/10/18/1.test.md)
