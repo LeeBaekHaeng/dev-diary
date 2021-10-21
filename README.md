@@ -5,6 +5,7 @@
 
 ## 2021-10-22
 - [JavaParserTest_getMethods EgovArticleCommentServiceImpl.class](2021/10/22/1.test.md)
+- [JavaParserTest_getMethods getClassByName getInterfaceByName](2021/10/22/2.test.md)
 
 ## 2021-10-21
 - [EgovArticleCommentDAOTest_deleteArticleComment 단위 테스트](2021/10/21/1.test.md)
