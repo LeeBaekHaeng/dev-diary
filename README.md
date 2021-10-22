@@ -5,6 +5,7 @@
 
 ## 2021-10-23
 - [MyBatisTest_getParameterMappings EgovArticleComment_SQL_mysql.xml](2021/10/23/1.test.md)
+- [MyBatisTest_getResultMappings writeStringToFile](2021/10/24/2.test.md)
 
 ## 2021-10-22
 - [JavaParserTest_getMethods EgovArticleCommentServiceImpl.class](2021/10/22/1.test.md)
