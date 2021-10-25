@@ -6,6 +6,7 @@
 ## 2021-10-26
 - [EgovArticleCommentServiceImplTest_insertArticleComment 단위 테스트](2021/10/26/1.test.md)
 - [EgovArticleCommentServiceImplTest_selectArticleCommentList 단위 테스트](2021/10/26/2.test.md)
+- [MyBatisTest_getResultMappings getResultMapNames](2021/10/26/3.test.md)
 
 ## 2021-10-25
 - [EgovArticleCommentServiceImplTest_insertArticleComment 단위 테스트](2021/10/25/1.test.md)
