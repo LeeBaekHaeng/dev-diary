@@ -5,6 +5,7 @@
 
 ## 2021-10-27
 - [EgovArticleCommentServiceImplTest_selectArticleCommentDetail 단위 테스트](2021/10/27/1.test.md)
+- [MyBatisTest_getResultMappings - Could not resolve type alias](2021/10/27/2.test.md)
 
 ## 2021-10-26
 - [EgovArticleCommentServiceImplTest_insertArticleComment 단위 테스트](2021/10/26/1.test.md)
