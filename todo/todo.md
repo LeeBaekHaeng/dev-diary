@@ -6,6 +6,49 @@
 - 기능 추가
 - 개선필요부분
 
+## 개발표준가이드_v1.0.pdf
+- 구분, 유형, 동사(prefix), 비고
+- business 처리 관련
+	- 내용검증 validate
+	- 조건확인 check
+	- 검색 search
+	- 연계 contact
+	- action action
+	- 파일관리-읽기 read
+	- 파일관리-쓰기 write
+- data 처리관련(Controller, Business , DAO 공통)
+	- 등록 insert
+	- 조회(단건) select
+	- 조회(멀티건) select postfix로 List를 사용
+	- 수정 update
+	- 삭제 delete
+	- 등록/수정 merge
+	- 등록/수정/삭제 multi 작업을 동시에 수행하는 경우
+- Value Object(model)
+	- 값읽기 get
+	- 값설정 set
+
+|구분|유형|동사(prefix)|비고|
+|-|-|-|-|
+|business 처리 관련|내용검증|validate||
+|business 처리 관련|조건확인|check||
+|business 처리 관련|검색|search||
+|business 처리 관련|연계|contact||
+|business 처리 관련|action|action||
+|business 처리 관련|파일관리-읽기|read||
+|business 처리 관련|파일관리-쓰기|write||
+|&nbsp;||||
+|data 처리관련(Controller, Business , DAO 공통)|등록|insert||
+|data 처리관련(Controller, Business , DAO 공통)|조회(단건)|select||
+|data 처리관련(Controller, Business , DAO 공통)|조회(멀티건)|select|postfix로 List를 사용|
+|data 처리관련(Controller, Business , DAO 공통)|수정|update||
+|data 처리관련(Controller, Business , DAO 공통)|삭제|delete||
+|data 처리관련(Controller, Business , DAO 공통)|등록/수정|merge||
+|data 처리관련(Controller, Business , DAO 공통)|등록/수정/삭제|multi|작업을 동시에 수행하는 경우|
+|&nbsp;||||
+|Value Object(model)|값읽기|get||
+|Value Object(model)|값설정|set||
+
 ## 전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트
 1. <s>CmmUseDAO</s>
 2. <s>EgovComAbstractDAO</s>
