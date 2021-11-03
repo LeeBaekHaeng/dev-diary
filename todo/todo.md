@@ -15,7 +15,7 @@
 6. <s>EgovArticleDAO</s>
 7. <s>EgovBBSMasterDAO</s>
 8. <s>EgovArticleCommentDAO</s>
-9. EgovCommuBBSMasterDAO
+9. <s>EgovCommuBBSMasterDAO</s>
 10. EgovCommuManageDAO
 11. EgovCommuMasterDAO
 12. EgovUserInfManageDAO
