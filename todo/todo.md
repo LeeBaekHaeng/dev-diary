@@ -7,6 +7,33 @@
 - 개선필요부분
 
 ## 개발표준가이드_v1.0.pdf
+
+### 2.4 jsp
+#### 2.4.1 명명규칙
+
+|Postfix명|설명|적용|예|비고|
+|-|-|-|-|-|
+|List|목록|EgovChangeRequestList|||
+|Regist|등록|EgovChangeRequestRegist|||
+|Detail|상세|EgovChangeRequestDetail|||
+|Updt|수정|EgovChangeRequestUpdt|||
+|Popup|팝업|EgovChangeRequestPopup|||
+|Search|조회|EgovChangeRequestSearch|||
+
+- jsp의 각 컨트롤의 변수명에 대한 명명규칙은 다음과 같다.
+
+|컨트롤|Prefix명|적용|예|비고|
+|-|-|-|-|-|
+|버튼|btn|회원등록버튼 --> btnRegiUsr|||
+|이미지|img|검색버튼 --> imgSearch|||
+|Text|txt|사용자이름 Input --> txtName|||
+|TextArea|txa|내용 Textarea --> txaContent|||
+|Select|sel|Select에서 옵션선택 --> selOption1|||
+|ListBox|lst|List에서 메뉴선택 --> lstMenu01|||
+|Radio|rdo|Radio에서 타입선택 --> rdoTypeA|||
+|CheckBox|chk|체크박스로 옵션선택 --> chkOption1|||
+
+### 3.2.4 java method
 - 구분, 유형, 동사(prefix), 비고
 - business 처리 관련
 	- 내용검증 validate
