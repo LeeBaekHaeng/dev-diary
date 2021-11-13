@@ -3,6 +3,10 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-11-13
+- [커뮤니티 사용자 삭제 단위테스트](2021/11/13/1.test.md)
+    - EgovCommuManageDAO.deleteCommuUser
+
 ## 2021-11-12
 - [기존 사용자 조건확인 단위테스트](2021/11/12/1.test.md)
     - EgovCommuManageDAO.checkExistUser
