@@ -3,6 +3,10 @@
 ## To Do 할 일
 - [전자정부 표준프레임워크 공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
 
+## 2021-11-17
+- [커뮤니티 마스터 조회(멀티건) 카운트 단위테스트](2021/11/17/1.test.md)
+    - EgovCommuMasterDAO.selectCommuMasterListCnt
+
 ## 2021-11-16
 - [커뮤니티 마스터 등록 단위테스트](2021/11/16/1.test.md)
     - EgovCommuMasterDAO.insertCommuMaster
