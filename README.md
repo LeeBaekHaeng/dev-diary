@@ -13,6 +13,8 @@
     - [커뮤니티 마스터 수정 단위테스트](2021/11/20/1.test.md)
         - EgovCommuMasterDAO.updateCommuMaster
 - [깃허브 클론 테스트](2021/11/20/2.md)
+- [트랜잭션 테스트](2021/11/20/3.md)
+    - transaction rolled back because it has been marked as rollback-only
 
 ## 2021-11-19
 - 공통컴포넌트 3.10.0 단위 테스트
