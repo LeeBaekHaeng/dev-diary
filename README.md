@@ -12,6 +12,8 @@
 - 공통컴포넌트 3.10.0 단위 테스트
     - [커뮤니티 마스터 삭제 단위테스트](2021/11/22/1.md)
         - EgovCommuMasterDAO.deleteCommuMaster
+- [트랜잭션 테스트](2021/11/22/2.md)
+    - transaction rolled back because it has been marked as rollback-only
 
 ## 2021-11-20
 - 공통컴포넌트 3.10.0 단위 테스트
