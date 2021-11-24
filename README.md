@@ -12,6 +12,7 @@
 - 공통컴포넌트 3.10.0 단위 테스트
     - [사용자 조회(멀티건) 카운트 단위테스트](2021/11/25/1.md)
         - EgovUserInfManageDAO.selectUserListCnt
+        - selectUserListCnt 메서드에서 (Integer) 제거함
 
 ## 2021-11-24
 - 공통컴포넌트 3.10.0 단위 테스트
