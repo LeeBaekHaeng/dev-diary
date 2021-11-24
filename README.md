@@ -13,6 +13,10 @@
     - [사용자 조회(멀티건) 카운트 단위테스트](2021/11/25/1.md)
         - EgovUserInfManageDAO.selectUserListCnt
         - selectUserListCnt 메서드에서 (Integer) 제거함
+- [트랜잭션 테스트](2021/11/25/2.md)
+    - transaction rolled back because it has been marked as rollback-only
+    - 롤백 전용으로 표시되었기 때문에 트랜잭션이 롤백되었습니다.
+    - 서비스에서 Exception 발생하면 하위로는 모두 롤백됨
 
 ## 2021-11-24
 - 공통컴포넌트 3.10.0 단위 테스트
