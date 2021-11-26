@@ -14,6 +14,11 @@
         - EgovUserInfManageDAO.selectCmmntyUserListCnt
         - 개선필요부분
             - selectCmmntyUserListCnt에서 (Integer)를 제거함
+- 트랜잭션 테스트
+    - 부모는 try catch 하고 자식은 throws 한다.
+    - 07-4 예외처리 (Exception) - 점프 투 자바 https://wikidocs.net/229
+        - 자식1, 자식2, 자식3 메서드에서는 예외를 throws하고 부모 메서드에서 throws된 예외를 처리하여 모두 취소하는 것이 완벽한 트랜잭션 처리 방법이다.
+        - 트랜잭션관리를 잘못하여 고생하는 경우를 많이 보았는데 이것은 일종의 재앙에 가깝다.
 
 ## 2021-11-26
 - 공통컴포넌트 3.10.0 단위 테스트
