@@ -15,6 +15,9 @@
         - 개선필요부분
             - @return에 clubUsersCnt 를 추가함
             - selectClubUserListCnt 에서 (Integer)를 제거함
+- 코드생성(god.codegen)
+    - DriverManager, DatabaseMetaData, ResultSetMetaData 테스트
+    - https://youtu.be/tgkyee5khWw
 
 ## 2021-12-02
 - 공통컴포넌트 3.10.0 단위 테스트
