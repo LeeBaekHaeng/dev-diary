@@ -9,6 +9,11 @@
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
 ## 2021-12-04
+- 공통컴포넌트 3.10.0 단위 테스트
+    - [클럽 운영자 조회(멀티건) 단위테스트](2021/12/04/1.md)
+        - EgovUserInfManageDAO.selectClubOprtrList
+        - 개선필요부분
+            - @return에 clubOprtrs 를 추가함
 - 코드생성(god.codegen)
     - CRUD 프로그램 자동 생성 기능
         - DatabaseMetaData.getTables
