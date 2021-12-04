@@ -20,6 +20,8 @@
             - https://youtu.be/wRMBrCKgqck
         - DatabaseMetaData.getPrimaryKeys
             - https://youtu.be/81gOW8bTf44
+        - eGovFrameTemplates
+            - https://youtu.be/iUA6z-TD8QM
 
 ## 2021-12-03
 - 공통컴포넌트 3.10.0 단위 테스트
