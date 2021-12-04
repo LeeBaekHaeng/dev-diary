@@ -12,6 +12,7 @@
 - 코드생성(god.codegen)
     - CRUD 프로그램 자동 생성 기능
         - DatabaseMetaData.getTables
+        - https://youtu.be/wRMBrCKgqck
 
 ## 2021-12-03
 - 공통컴포넌트 3.10.0 단위 테스트
