@@ -15,6 +15,11 @@
         - 개선필요부분
             - @return 에 List<UserInfVO> allClubUsers = egovUserInfManageDAO.selectAllClubUser(userVO); 를 추가함
             - 페이징 필요함
+- 코드생성(god.codegen)
+    - CRUD 프로그램 자동 생성 기능
+        - CrudModel
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/f13c93d673b080f9776449b7d895f6fb610b1707
+            - https://youtu.be/xppwCZCc9CU
 
 ## 2021-12-06
 - 공통컴포넌트 3.10.0 단위 테스트
