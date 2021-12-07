@@ -13,7 +13,7 @@
     - [모든 커뮤니티 사용자 조회(멀티건) 단위테스트](2021/12/08/1.md)
         - EgovUserInfManageDAO.selectAllCmmntyUser
         - 개선필요부분
-            - @return 에 List<UserInfVO> allCmmntyUsers = egovUserInfManageDAO.selectAllCmmntyUser(userVO); 를 추가함
+            - @return 에 List&lt;UserInfVO&gt; allCmmntyUsers = egovUserInfManageDAO.selectAllCmmntyUser(userVO); 를 추가함
             - 페이징 필요함
 
 ## 2021-12-07
