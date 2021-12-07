@@ -19,7 +19,7 @@
 - CRUD 프로그램 자동 생성 기능
     - DefaultVO, VO 코드생성
         - https://github.com/LeeBaekHaeng/god.codegen/commit/1eecd79f4337b2cd5e944be49b6828b5f3625c14
-        - 
+        - https://youtu.be/Yc6o0aLMSCI
 
 ## 2021-12-07
 - 공통컴포넌트 3.10.0 단위 테스트
