@@ -9,12 +9,17 @@
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
 ## 2021-12-08
-- 공통컴포넌트 3.10.0 단위 테스트
+### 공통컴포넌트 3.10.0 단위 테스트
     - [모든 커뮤니티 사용자 조회(멀티건) 단위테스트](2021/12/08/1.md)
         - EgovUserInfManageDAO.selectAllCmmntyUser
         - 개선필요부분
             - @return 에 List&lt;UserInfVO&gt; allCmmntyUsers = egovUserInfManageDAO.selectAllCmmntyUser(userVO); 를 추가함
             - 페이징 필요함
+### 코드생성(god.codegen)
+    - CRUD 프로그램 자동 생성 기능
+        - DefaultVO, VO 코드생성
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/1eecd79f4337b2cd5e944be49b6828b5f3625c14
+            - 
 
 ## 2021-12-07
 - 공통컴포넌트 3.10.0 단위 테스트
