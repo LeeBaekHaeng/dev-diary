@@ -21,7 +21,7 @@
 - CRUD 프로그램 자동 생성 기능
     - mapper 코드생성
         - https://github.com/LeeBaekHaeng/god.codegen/commit/2752e487653daa0aaa54bc3b11eaf76572a744b6
-        - 
+        - https://youtu.be/J2o5EGgaang
 
 ## 2021-12-08
 ### 공통컴포넌트 3.10.0 단위 테스트
