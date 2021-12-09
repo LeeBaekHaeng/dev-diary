@@ -13,6 +13,11 @@
 - 공통컴포넌트 3.10.0 단위 테스트
     - [발송 메일 조회(단건) 단위테스트](2021/12/09/1.md)
         - SndngMailDetailDAO.selectSndngMail
+- 코드생성(god.codegen)
+    - CRUD 프로그램 자동 생성 기능
+        - Mapper 코드생성
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/1eace6f61d073a74e792df4c2c072dd4d1a69fad
+            - 
 
 ## 2021-12-09
 
