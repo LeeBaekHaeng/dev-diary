@@ -8,6 +8,14 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2021-12-09
+### 공통컴포넌트 3.10.0 단위 테스트
+- [발송 메일 조회(단건) 단위테스트](2021/12/09/1.md)
+    - SndngMailDetailDAO.selectSndngMail
+    - 개선필요부분
+        - import java.util.List; 제거함
+        - selectSndngMail 에서 (SndngMailVO) 제거함
+
 ## 2021-12-08
 ### 공통컴포넌트 3.10.0 단위 테스트
 - [모든 커뮤니티 사용자 조회(멀티건) 단위테스트](2021/12/08/1.md)
