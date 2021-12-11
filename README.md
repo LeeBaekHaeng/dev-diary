@@ -8,10 +8,16 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2021-12-11
+
+- 공통컴포넌트 3.10.0 단위 테스트
+    - [발송 메일 삭제 단위테스트](2021/12/11/1.md)
+        - SndngMailDetailDAO.deleteSndngMail
+
 ## 2021-12-10
 
 - 공통컴포넌트 3.10.0 단위 테스트
-    - [발송 메일 조회(단건) 단위테스트](2021/12/09/1.md)
+    - [발송 메일 조회(단건) 단위테스트](2021/12/10/1.md)
         - SndngMailDetailDAO.selectSndngMail
 - 코드생성(god.codegen)
     - CRUD 프로그램 자동 생성 기능
