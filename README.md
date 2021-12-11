@@ -9,10 +9,16 @@
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
 ## 2021-12-11
-
 - 공통컴포넌트 3.10.0 단위 테스트
     - [발송 메일 삭제 단위테스트](2021/12/11/1.md)
         - SndngMailDetailDAO.deleteSndngMail
+- 코드생성(god.codegen)
+    - CRUD 프로그램 자동 생성 기능
+        - JSP 코드생성
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/a1ab2c7f37f05523256d3dcdf5bccf654a6cf59f
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/2ab67fcc279e58e2d2025921878e80205c013951
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/75e394c68e4447fd56c13db5bf1b1930fbec7958
+            - 
 
 ## 2021-12-10
 
