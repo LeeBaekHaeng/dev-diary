@@ -22,7 +22,7 @@
 10. <s>EgovCommuManageDAO</s>
 11. <s>EgovCommuMasterDAO</s>
 12. <s>EgovUserInfManageDAO</s>
-13. SndngMailDetailDAO
+13. <s>SndngMailDetailDAO</s>
 14. SndngMailDtlsDAO
 15. SndngMailRegistDAO
 16. NcrdManageDAO
