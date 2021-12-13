@@ -12,11 +12,11 @@
 - 공통컴포넌트 3.10.0 단위 테스트
     - [발송 메일 조회(멀티건) 단위테스트](2021/12/13/1.md)
         - SndngMailDtlsDAO.selectSndngMailList
-    - 개선필요부분
-        - @return 에 List&lt;SndngMailVO&gt; sndngMails = sndngMailDtlsDAO.selectSndngMailList(vo); 를 추가
-        - list 를 selectList 로 수정
-        - &lt;if test="searchCondition == 1"&gt;AND 를 &lt;if test="@egovframework.com.cmm.util.EgovMybaitsUtil@isEquals(searchCondition, '1')"&gt;AND 로 수정
-        - SndngMailVO extends ComDefaultVO 로 고치고 싶음
+        - 개선필요부분
+            - @return 에 List&lt;SndngMailVO&gt; sndngMails = sndngMailDtlsDAO.selectSndngMailList(vo); 를 추가
+            - list 를 selectList 로 수정
+            - &lt;if test="searchCondition == 1"&gt;AND 를 &lt;if test="@egovframework.com.cmm.util.EgovMybaitsUtil@isEquals(searchCondition, '1')"&gt;AND 로 수정
+            - SndngMailVO extends ComDefaultVO 로 고치고 싶음
 
 ## 2021-12-11
 - 공통컴포넌트 3.10.0 단위 테스트
