@@ -8,6 +8,23 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2021-12-15
+- 공통컴포넌트 3.10.0 단위 테스트
+    - [발송 메일 등록 단위 테스트](2021/12/15/1.md)
+        - SndngMailRegistDAO.insertSndngMail
+        - 개선필요부분
+            - return 에서 result.setMssageId(vo.getMssageId()); 추가
+
+```java
+	@Resource(name = "propertiesService")
+	private EgovPropertyService propertiesService;
+
+		int pageUnit = propertiesService.getInt("pageUnit");
+		int pageSize = propertiesService.getInt("pageSize");
+		log.debug("pageUnit={}", pageUnit);
+		log.debug("pageSize={}", pageSize);
+```
+
 ## 2021-12-14
 - 공통컴포넌트 3.10.0 단위 테스트
     - [발송 메일 조회(멀티건) 총 합계 단위테스트](2021/12/14/1.md)
