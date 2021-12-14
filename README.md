@@ -26,6 +26,8 @@
 ```
 - 코드생성(god.codegen)
     - CRUD 프로그램 자동 생성 기능
+        - https://github.com/LeeBaekHaeng/god.codegen/commit/b1d5db1ea32939192f092250838af25e93a4dd70
+        - https://youtu.be/KNtJJb2sjrA
         - https://velocity.apache.org/download.cgi#inclusion-as-a-maven-dependency
             - https://mvnrepository.com/artifact/org.apache.velocity/velocity-engine-core/2.3
         - https://velocity.apache.org/engine/2.3/developer-guide.html#the-fundamental-pattern
