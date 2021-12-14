@@ -24,6 +24,33 @@
 		log.debug("pageUnit={}", pageUnit);
 		log.debug("pageSize={}", pageSize);
 ```
+- 코드생성(god.codegen)
+    - CRUD 프로그램 자동 생성 기능
+        - https://velocity.apache.org/download.cgi#inclusion-as-a-maven-dependency
+            - https://mvnrepository.com/artifact/org.apache.velocity/velocity-engine-core/2.3
+        - https://velocity.apache.org/engine/2.3/developer-guide.html#the-fundamental-pattern
+        - https://velocity.apache.org/engine/2.3/developer-guide.html#miscellaneous-details
+
+```xml
+<!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity-engine-core -->
+<dependency>
+    <groupId>org.apache.velocity</groupId>
+    <artifactId>velocity-engine-core</artifactId>
+    <version>2.3</version>
+</dependency>
+```
+
+```java
+VelocityContext context = new VelocityContext();
+template = Velocity.getTemplate("mytemplate.vm");
+template.merge( context, sw );
+```
+
+```java
+    Properties p = new Properties();
+    p.setProperty("resource.loader.file.path", "/opt/templates");
+    Velocity.init( p );
+```
 
 ## 2021-12-14
 - 공통컴포넌트 3.10.0 단위 테스트
