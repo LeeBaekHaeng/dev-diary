@@ -13,7 +13,7 @@
     - [첨부 파일 조회(멀티건) 단위 테스트](2021/12/16/1.md)
         - SndngMailRegistDAO.selectAtchmnFileList
         - 개선필요부분
-            - List<?> 를 List<AtchmnFileVO> 로 수정
+            - List&lt;?&gt; 를 List&lt;AtchmnFileVO&gt; 로 수정
 
 ## 2021-12-15
 - 공통컴포넌트 3.10.0 단위 테스트
