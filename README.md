@@ -14,6 +14,10 @@
         - NcrdManageDAO.insertNcrdItem
         - 개선필요부분
             - ComDefaultVO 에 enum 여부(Y, N)를 사용하고 싶음
+- 코드생성(god.codegen)
+    - CRUD 프로그램 자동 생성 기능
+        - 테이블, 컬럼 가져오기
+        - https://github.com/LeeBaekHaeng/god.codegen/commit/8a6e142386e1589f41b2b6b3d1ba4cf52067a3e8
 
 ## 2021-12-17
 - 공통컴포넌트 3.10.0 단위 테스트
