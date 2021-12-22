@@ -8,6 +8,16 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2021-12-23
+- 공통컴포넌트 3.10.0 단위 테스트
+    - [명함 상세 조회(멀티건) 카운트 단위 테스트](2021/12/23/1.md)
+        - NcrdManageDAO.selectNcrdItemListCnt
+        - 개선필요부분
+            - searchCnd == 0 를 @egovframework.com.cmm.util.EgovMybaitsUtil@isEquals(searchCnd, '0') 로 수정
+            - (Integer)selectOne 에서 (Integer) 를 제거
+            - 주석에 '명함 정보에 대한 목록 전체 건수를 조회한다.'를 추가
+            - AND NCRD_ID NOT IN 제거
+
 ## 2021-12-22
 - 공통컴포넌트 3.10.0 단위 테스트
     - [명함 상세 조회(멀티건) 단위 테스트](2021/12/22/1.md)
