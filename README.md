@@ -13,7 +13,7 @@
     - [내 명함 정보 조회(멀티건) 단위 테스트](2021/12/27/1.md)
         - NcrdManageDAO.selectMyNcrdItemList
         - 개선필요부분
-            - OTHBC_AT,에 , 추가
+            - OTHBC_AT에 , 추가
 
 ## 2021-12-25
 - 공통컴포넌트 3.10.0 단위 테스트
