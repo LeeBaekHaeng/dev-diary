@@ -8,6 +8,17 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2021-12-31
+- 공통컴포넌트 3.10.0 단위 테스트
+    - [명함 사용자 정보 수정 단위 테스트](2021/12/31/1.md)
+        - NcrdManageDAO.updateNcrdUseInf
+        - 개선필요부분
+            - 탭
+            - updateNcrdUseInf mapper에 없음
+            - @Deprecated 추가
+            - 사용하지 않는 것 같음
+            - Mapped Statements collection does not contain value for NcrdManageDAO.updateNcrdUseInf
+
 ## 2021-12-30
 - 공통컴포넌트 3.10.0 단위 테스트
     - [명함 정보 수정 단위 테스트](2021/12/30/1.md)
