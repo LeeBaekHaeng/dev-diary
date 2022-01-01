@@ -8,6 +8,16 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-01-01
+- 공통컴포넌트 3.10.0 단위 테스트
+    - [명함 정보 사용자 삭제 단위 테스트](2022/01/01/1.md)
+        - NcrdManageDAO.deleteNcrdItemUser
+        - 개선필요부분
+            - 탭
+            - 명함사용자 정보를 삭제한다.
+            - @param nameCardVO
+            - delete("NcrdManageDAO.deleteNcrdItemUser", nameCardVO);
+
 ## 2021-12-31
 - 공통컴포넌트 3.10.0 단위 테스트
     - [명함 사용자 정보 수정 단위 테스트](2021/12/31/1.md)
