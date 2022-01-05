@@ -8,6 +8,14 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-01-05
+- 공통컴포넌트 3.10.0 단위 테스트
+    - [스크랩 등록 단위 테스트](2022/01/05/1.md)
+        - EgovArticleScrapDAO.selectArticleScrapListCnt
+        - 개선필요부분
+            - (Integer) 제거
+            - if test="@egovframework.com.cmm.util.EgovMybaitsUtil@isEquals(searchCnd, '0')"
+
 ## 2022-01-04
 - 공통컴포넌트 3.10.0 단위 테스트
     - [스크랩 등록 단위 테스트](2022/01/04/1.md)
