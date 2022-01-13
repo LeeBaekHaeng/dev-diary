@@ -12,8 +12,8 @@
 - 공통컴포넌트 3.10.0 단위 테스트
     - [스크랩 삭제 단위 테스트](2022/01/13/1.md)
         - SmsBasicDAO.insertSmsInf
-        - SmsBasicDAO 보단 SmsDAO를 사용
         - 개선필요부분
+            - SmsBasicDAO 보단 SmsDAO를 사용
             - SmsBasicDBUtil
                 - Class.forName("org.apache.commons.dbcp2.PoolingDriver");
                 - PoolingDriver driver = (PoolingDriver) DriverManager.getDriver("jdbc:apache:commons:dbcp:" + alias);
