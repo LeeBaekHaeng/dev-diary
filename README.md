@@ -7,6 +7,18 @@
     - 전자정부 표준프레임워크 3.10.0
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
+
+## 2022-01-13
+- 공통컴포넌트 3.10.0 단위 테스트
+    - [스크랩 삭제 단위 테스트](2022/01/13/1.md)
+        - SmsBasicDAO.insertSmsInf
+        - SmsBasicDAO 보단 SmsDAO를 사용
+        - 개선필요부분
+            - SmsBasicDBUtil
+                - Class.forName("org.apache.commons.dbcp2.PoolingDriver");
+                - PoolingDriver driver = (PoolingDriver) DriverManager.getDriver("jdbc:apache:commons:dbcp:" + alias);
+                - driver.registerPool(alias, connectionPool);
+
 ## 2022-01-11
 - 공통컴포넌트 3.10.0 단위 테스트
     - [스크랩 삭제 단위 테스트](2022/01/11/1.md)
