@@ -10,7 +10,7 @@
 
 ## 2022-04-22
 - 코드 생성
-    - eGovFrameTemplates/crud2
+    - [eGovFrameTemplates/crud2](2022/04/22/1.md)
 
 ## 2022-01-17
 - 공통컴포넌트 3.10.0 단위 테스트
