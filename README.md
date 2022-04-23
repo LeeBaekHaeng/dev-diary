@@ -11,6 +11,10 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-04-24
+- 코드 생성
+    - [ServiceImpl 코드 생성](2022/04/24/1.md)
+
 ## 2022-04-23
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
     - [import egovframework.rte 를 org.egovframe.rte 로 수정 등](2022/04/23/1.md)
