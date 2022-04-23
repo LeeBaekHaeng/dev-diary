@@ -1,12 +1,21 @@
 # 개발일기
 
 ## 할 일(To Do)
+- 2022 전자정부 표준프레임워크 컨트리뷰션 참가
+    - https://github.com/godsoft2016/egovframe-common-components
+    - https://github.com/godsoft2016/egovframe-development
 - [코드생성(god.codegen)](https://github.com/LeeBaekHaeng/god.codegen)
     - [CRUD 프로그램 자동 생성 기능](https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev2:imp:codegen:template:crud#crud_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%9E%90%EB%8F%99_%EC%83%9D%EC%84%B1_%EA%B8%B0%EB%8A%A5)
 - [공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
     - 전자정부 표준프레임워크 3.10.0
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
+
+## 2022-04-23
+- 2022 전자정부 표준프레임워크 컨트리뷰션 참가
+    - [import egovframework.rte 를 org.egovframe.rte 로 수정 등](2022/04/23/1.md)
+    - [context-idgn-Test.xml 에서 egovframework.rte 를 org.egovframe.rte 로 수정](2022/04/23/2.md)
+    - [EgovDataCryptoTest 단위 테스트 실행](2022/04/23/3.md)
 
 ## 2022-04-22
 - 코드 생성
