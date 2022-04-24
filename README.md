@@ -6,6 +6,8 @@
     - https://github.com/godsoft2016/egovframe-development
 - [코드생성(god.codegen)](https://github.com/LeeBaekHaeng/god.codegen)
     - [CRUD 프로그램 자동 생성 기능](https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev2:imp:codegen:template:crud#crud_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%9E%90%EB%8F%99_%EC%83%9D%EC%84%B1_%EA%B8%B0%EB%8A%A5)
+        - mapper v3.8.0 이상
+        - sqlmap v3.7.3 이하(ibatis-sqlmap-2.3.4.726.jar)
 - [공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
     - 전자정부 표준프레임워크 3.10.0
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
@@ -14,6 +16,7 @@
 ## 2022-04-24
 - 코드 생성
     - [ServiceImpl 코드 생성](2022/04/24/1.md)
+    - [sqlmap 코드 생성](2022/04/24/2.md)
 
 ## 2022-04-23
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
