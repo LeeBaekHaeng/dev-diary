@@ -19,6 +19,13 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-04-29
+- 2022 전자정부 표준프레임워크 컨트리뷰션 참가
+    - CRUD 프로그램 자동 생성 기능
+        - crud-com EgovSample_Sample2_MAPPER.vm insert, update 수정
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/377e8a3565dedd584c8c68ae0fb8ae733324a67a
+            - https://github.com/godsoft2016/egovframe-development/commit/08e24ed4a31aaec70f80aff09e459d75d7dbd465
+
 ## 2022-04-28
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
     - CRUD 프로그램 자동 생성 기능
@@ -30,7 +37,7 @@
             - https://github.com/LeeBaekHaeng/god.codegen/commit/2371ea36ff8d193a6343e5849e7398dee1d57d76
             - https://github.com/godsoft2016/egovframe-development/commit/86ca32728f344b5dfa7e0398db78b1c4ec1ce760
 
-### '-//ibatis.apache.org//DTD SQL Map Config 2.0//EN' 를 '-//ibatis.apache.org//DTD SQL Map Config 2.0//EN' 로 수정
+### '-//iBATIS.com//DTD SQL Map Config 2.0//EN' 를 '-//ibatis.apache.org//DTD SQL Map Config 2.0//EN' 로 수정
 https://github.com/LeeBaekHaeng/god.codegen/blob/develop-4.0.0/god.codegen/src/main/resources/egovframework/sqlmap/config/mysql/sql-map-config-mysql-codegen.xml
 ```xml
 <!DOCTYPE sqlMapConfig PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
