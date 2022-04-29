@@ -26,6 +26,9 @@
         - crud-com EgovSample_Sample2_MAPPER.vm selectList 수정
             - https://github.com/LeeBaekHaeng/god.codegen/commit/215870711854ea6756c6178ad106490589c74a07
             - https://github.com/godsoft2016/egovframe-development/commit/1d9597f9c33d39ae28e2cf45b2ef759284b2e536
+        - crud-com Sample2Mapper.vm 수정
+            - https://github.com/godsoft2016/egovframe-development/commit/52531325f8ff217adc058a3f893f0a0a514a8a6e
+            - https://github.com/eGovFramework/egovframe-development/pull/35/commits/52531325f8ff217adc058a3f893f0a0a514a8a6e
 
 ## 2022-04-29
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
