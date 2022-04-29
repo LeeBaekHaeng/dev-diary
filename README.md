@@ -32,6 +32,9 @@
         - crud-com Sample2DAO.vm 수정
             - https://github.com/LeeBaekHaeng/god.codegen/commit/e5703020a9d0fcfe4d19fbb0aeaf4a0b94f0dc65
             - https://github.com/godsoft2016/egovframe-development/commit/a52204a3d0d2207b361b0f07d8d5acc2899bbffb
+        - crud-com EgovSample2Service.vm 수정
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/7d81f5e1f8b8de8a2124ae414f6ec48db3fce128
+            - https://github.com/godsoft2016/egovframe-development/commit/951a2f0b50fd9e4500a6162e59a58e6d2d99f76f
 
 ## 2022-04-29
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
