@@ -35,6 +35,9 @@
         - crud-com EgovSample2Service.vm 수정
             - https://github.com/LeeBaekHaeng/god.codegen/commit/7d81f5e1f8b8de8a2124ae414f6ec48db3fce128
             - https://github.com/godsoft2016/egovframe-development/commit/951a2f0b50fd9e4500a6162e59a58e6d2d99f76f
+        - crud-com EgovSample2ServiceImpl.vm 수정
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/6900a10e9593905cbc98a707114471a25758a925
+            - https://github.com/godsoft2016/egovframe-development/commit/3c9062537b90b3755d1821467a4afd324be8cbdf
 
 ## 2022-04-29
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
