@@ -25,6 +25,9 @@
         - crud-com EgovSample2Controller.vm @RequestMapping 을 @GetMapping, @PostMapping 로 수정
             - https://github.com/LeeBaekHaeng/god.codegen/commit/80ae5e58fe597b675a9de4933e952435485403a6
             - https://github.com/godsoft2016/egovframe-development/commit/dd7f232f12630409feac40126dcb60199e4ff6cf
+        - crud-com egovSample2Detail.vm 추가
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/8952792f8f5656076d22f174e5808852051f4a93
+            - https://github.com/godsoft2016/egovframe-development/commit/33bad14fce6e48ee7cfb4d4f6f623bacbb6bc147
 
 ## 2022-04-30
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
