@@ -19,6 +19,13 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-05-03
+- 2022 전자정부 표준프레임워크 컨트리뷰션 참가
+    - CRUD 프로그램 자동 생성 기능
+        - crud-com Sample2VOTest.vm 추가
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/d68f20795f87271a2962e65d0903891a52dd4375
+            - https://github.com/godsoft2016/egovframe-development/commit/4990a58663d667a78384ade16c8fed4e4aaeabb1
+
 ## 2022-05-02
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
     - CRUD 프로그램 자동 생성 기능
