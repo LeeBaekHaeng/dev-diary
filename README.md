@@ -20,7 +20,76 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
-## 2022-05-03
+## 2022-05-05
+- 2022 전자정부 표준프레임워크 컨트리뷰션 참가
+    - CRUD 프로그램 자동 생성 기능
+        - egovframework.dev.imp.codegen.template
+            - https://github.com/eGovFramework/egovframe-development/tree/master/egovframework.dev.imp.codegen.template
+                - CodeGenTableWizardPage
+                    - https://github.com/eGovFramework/egovframe-development/blob/master/egovframework.dev.imp.codegen.template/src/egovframework/dev/imp/codegen/template/wizards/CodeGenTableWizardPage.java
+                        - putValuesToVelocityContext
+                        - Velocity Context에 값 삽입
+        - egovframework.dev.imp.codegen.template.templates
+            - https://github.com/eGovFramework/egovframe-development/tree/master/egovframework.dev.imp.codegen.template.templates
+                - https://github.com/eGovFramework/egovframe-development/tree/master/egovframework.dev.imp.codegen.template.templates/eGovFrameTemplates/crud
+        - egovframework.dev.imp.templates
+            - https://github.com/eGovFramework/egovframe-development/tree/master/egovframework.dev.imp.templates
+                - https://github.com/eGovFramework/egovframe-development/blob/master/egovframework.dev.imp.templates/src/test/java/test/CrudCodeGenTest.java
+        - egovframework.dev.imp.templates target 제거
+            - https://github.com/godsoft2016/egovframe-development/commit/edd981f9cd8a88a275cbceb3976104005ddda06d
+
+- egovframework.dev.imp.templates testDAO EgovMap 추가
+    - https://github.com/godsoft2016/egovframe-development/commit/992a76744aa9a6cfd2825adc048d7b0a3d08d8f5
+```java
+77c77
+<     public List<?> selectSample2List(SampleDefaultVO searchVO) throws Exception {
+---
+>     public List selectSample2List(SampleDefaultVO searchVO) throws Exception {
+```
+
+- egovframework.dev.imp.templates testController EgovMap 추가
+    - https://github.com/godsoft2016/egovframe-development/commit/68f5dc677f0aed20b1fa31f0036053fa7d04a090
+
+```java
+75c75
+<         List<?> sample2List = sample2Service.selectSample2List(searchVO);
+---
+>         List sample2List = sample2Service.selectSample2List(searchVO);
+```
+
+- egovframework.dev.imp.templates testServiceImpl EgovMap 추가
+    - 
+```java
+9,11d8
+< import org.slf4j.Logger;
+< import org.slf4j.LoggerFactory;
+< 
+13c10
+< import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
+---
+> import egovframework.rte.fdl.cmmn.AbstractServiceImpl;
+37c34
+< public class EgovSample2ServiceImpl extends EgovAbstractServiceImpl implements
+---
+> public class EgovSample2ServiceImpl extends AbstractServiceImpl implements
+39,40d35
+<         
+<     private static final Logger LOGGER = LoggerFactory.getLogger(EgovSample2ServiceImpl.class);
+56c51
+<     	LOGGER.debug(vo.toString());
+---
+>     	log.debug(vo.toString());
+61c56
+<     	LOGGER.debug(vo.toString());
+---
+>     	log.debug(vo.toString());
+106c101
+<     public List<?> selectSample2List(SampleDefaultVO searchVO) throws Exception {
+---
+>     public List selectSample2List(SampleDefaultVO searchVO) throws Exception {
+```
+
+## 2022-05-04
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
     - CRUD 프로그램 자동 생성 기능
         - 페이징 처리를 위한 EgovComAbstractController 추가
