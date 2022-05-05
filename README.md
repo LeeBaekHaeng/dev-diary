@@ -20,6 +20,24 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-05-06
+- 2022 전자정부 표준프레임워크 컨트리뷰션 참가
+    - CRUD 프로그램 자동 생성 기능
+        - testServiceImpl 수정 egovLogger, EgovAbstractServiceImpl, EgovMap 등 수정
+            - https://github.com/godsoft2016/egovframe-development/commit/3ed97620c1687a258a6ddff5a83d4227c9d77323
+        - egovframework.dev.imp.templates .classpath 에서 lib 를 제거
+        - pom.xml 수정
+        - ResourceUtils, TemplateUtil, TemplatesPlugin 주석
+            - https://github.com/godsoft2016/egovframe-development/commit/11df7f2f4eb7532940896d74be9a9ece5bbcbf55
+
+```xml
+	<classpathentry kind="lib" path="lib/java-diff-1.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="lib/velocity-1.6.2.jar"/>
+```
+
 ## 2022-05-05
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
     - CRUD 프로그램 자동 생성 기능
