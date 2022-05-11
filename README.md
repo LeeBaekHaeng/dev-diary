@@ -27,6 +27,9 @@
         - Sample2MapperTest.vm, EgovSample2ServiceImplTest.vm 추가
             - https://github.com/LeeBaekHaeng/god.codegen/commit/912eba14e3d257893e2c0da7bdbb53a50f218d78
             - https://github.com/godsoft2016/egovframe-development/commit/c198d3059137254e132b446fa0f5d38873983579
+        - MockMvc Sample2ControllerTest 추가
+            - https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev2:tst:mvc_test
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/e51495ab1224f19f9fe647c17abb5f29a3ecb4c5
 
 ## 2022-05-11
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
