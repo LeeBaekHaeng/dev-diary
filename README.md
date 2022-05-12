@@ -29,6 +29,9 @@
                 - b1_insertSample2
             - https://github.com/LeeBaekHaeng/god.codegen/commit/46ac8176b9e3ca8ae3aaaf65481331785cea85d0
             - https://github.com/godsoft2016/egovframe-development/commit/e1c8b58ffcf587b0762718f080ef483dece39660
+        - pk 파라미터 추가
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/451d9b3a98d30575f743529e0f6a282d285f5717
+            - https://github.com/godsoft2016/egovframe-development/commit/8f347f17f3ee45e6c4d72933b0ab349b366a7857
 
 ## 2022-05-12
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
