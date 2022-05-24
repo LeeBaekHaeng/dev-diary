@@ -25,6 +25,20 @@
     - CRUD 프로그램 자동 생성 기능
         - DatabaseMetaData.getColumns 로 엑셀 파일 생성
             - https://github.com/LeeBaekHaeng/god.codegen/commit/ff432ea2615b3223df6e7146b0dd533859611259
+        - ResultSetMetaData rsmd = tables.getMetaData();
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/a5753fea9135bf85c5543ddb40a9551cf9a50e00
+```java
+ResultSetMetaData rsmd = tables.getMetaData();
+int columnCount = rsmd.getColumnCount();
+egovLogger.debug("columnCount={}", columnCount);
+for (int column = 1; column <= columnCount; column++) {
+    egovLogger.debug("getColumnLabel={}", rsmd.getColumnLabel(column));
+    egovLogger.debug("getColumnName={}", rsmd.getColumnName(column));
+    egovLogger.debug("getColumnType={}", rsmd.getColumnType(column));
+    egovLogger.debug("getColumnTypeName={}", rsmd.getColumnTypeName(column));
+    egovLogger.debug("");
+}
+```
 
 ## 2022-05-24
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
