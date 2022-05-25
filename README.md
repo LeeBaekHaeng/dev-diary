@@ -20,6 +20,52 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-05-26
+- 2022 전자정부 표준프레임워크 컨트리뷰션 참가
+    - CRUD 프로그램 자동 생성 기능
+        - getColumnTypeName으로 분기처리
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/842ff375121a5552130a607d09e46eae8ec08dbe
+
+```java
+					Statement stmt = con.createStatement();
+
+					ResultSet tables = stmt
+							.executeQuery("SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'COM'");
+
+			) {
+
+				ResultSetMetaData rsmd = tables.getMetaData();
+				int columnCount = rsmd.getColumnCount();
+				egovLogger.debug("columnCount={}", columnCount);
+				StringBuffer sb = new StringBuffer();
+				StringBuffer sb2 = new StringBuffer();
+				for (int column = 1; column <= columnCount; column++) {
+					String columnLabel = rsmd.getColumnLabel(column);
+					String columnTypeName = rsmd.getColumnTypeName(column);
+					String columnLabelCcName = NamingUtils.convertUnderscoreNameToCamelcase(columnLabel);
+
+					egovLogger.debug("columnLabel={}", columnLabel);
+					egovLogger.debug("getColumnName={}", rsmd.getColumnName(column));
+					egovLogger.debug("getColumnType={}", rsmd.getColumnType(column));
+					egovLogger.debug("columnTypeName={}", columnTypeName);
+					egovLogger.debug("");
+
+					if ("VARCHAR".equals(columnTypeName)) {
+						sb.append("String " + columnLabelCcName + " = tables.getString(\"" + columnLabel + "\");");
+					} else if ("DATETIME".equals(columnTypeName)) {
+						sb.append("String " + columnLabelCcName + " = tables.getString(\"" + columnLabel + "\");");
+					} else {
+						sb.append("int " + columnLabelCcName + " = tables.getInt(\"" + columnLabel + "\");");
+					}
+					sb.append("\n");
+
+					sb2.append("egovLogger.debug(\"" + columnLabelCcName + "={}\", " + columnLabelCcName + ");");
+					sb2.append("\n");
+				}
+				System.out.println(sb);
+				System.out.println(sb2);
+```
+
 ## 2022-05-25
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
     - CRUD 프로그램 자동 생성 기능
