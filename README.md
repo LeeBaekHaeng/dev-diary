@@ -20,6 +20,68 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-05-27
+- 2022 전자정부 표준프레임워크 컨트리뷰션 참가
+    - CRUD 프로그램 자동 생성 기능
+        - INFORMATION_SCHEMA.COLUMNS 로 엑셀 생성
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/e13d8ce143be682f72ab00dba1bc54fc13c84272
+
+```java
+			try (
+
+					Statement stmt = con.createStatement();
+
+					ResultSet columns = stmt
+							.executeQuery("SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'COM'");
+
+			) {
+
+				ResultSetMetaData rsmd = columns.getMetaData();
+				int columnCount = rsmd.getColumnCount();
+				egovLogger.debug("columnCount={}", columnCount);
+				StringBuffer sb = new StringBuffer();
+				StringBuffer sb2 = new StringBuffer();
+				StringBuffer sb3 = new StringBuffer();
+				StringBuffer sb4 = new StringBuffer();
+				int column2 = 0;
+				for (int column = 1; column <= columnCount; column++) {
+					String columnLabel = rsmd.getColumnLabel(column);
+					String columnTypeName = rsmd.getColumnTypeName(column);
+					String columnLabelCcName = NamingUtils.convertUnderscoreNameToCamelcase(columnLabel);
+
+					egovLogger.debug("columnLabel={}", columnLabel);
+					egovLogger.debug("getColumnName={}", rsmd.getColumnName(column));
+					egovLogger.debug("getColumnType={}", rsmd.getColumnType(column));
+					egovLogger.debug("columnTypeName={}", columnTypeName);
+					egovLogger.debug("");
+
+					if ("VARCHAR".equals(columnTypeName)) {
+						sb.append("String " + columnLabelCcName + " = columns.getString(\"" + columnLabel + "\");");
+					} else if ("DATETIME".equals(columnTypeName)) {
+						sb.append("String " + columnLabelCcName + " = columns.getString(\"" + columnLabel + "\");");
+					} else {
+						sb.append("int " + columnLabelCcName + " = columns.getInt(\"" + columnLabel + "\");");
+					}
+					sb.append("\n");
+
+					sb2.append("egovLogger.debug(\"" + columnLabelCcName + "={}\", " + columnLabelCcName + ");");
+					sb2.append("\n");
+
+					char abc = (char) (65 + column2);
+					sb3.append("Cell cell" + abc + " = row.createCell(" + column2 + ");\n");
+					sb3.append("cell" + abc + ".setCellValue(\"" + columnLabel + "\");\n\n");
+
+					sb4.append("cell" + abc + " = row.createCell(" + column2 + ");\n");
+					sb4.append("cell" + abc + ".setCellValue(" + columnLabelCcName + "); // " + columnLabel + "\n\n");
+
+					column2++;
+				}
+				System.out.println(sb);
+				System.out.println(sb2);
+				System.out.println(sb3);
+				System.out.println(sb4);
+```
+
 ## 2022-05-26
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
     - CRUD 프로그램 자동 생성 기능
