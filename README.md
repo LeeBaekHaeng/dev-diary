@@ -25,7 +25,16 @@
     - CRUD 프로그램 자동 생성 기능
         - INFORMATION_SCHEMA.COLUMNS 로 엑셀 생성
             - https://github.com/LeeBaekHaeng/god.codegen/commit/e13d8ce143be682f72ab00dba1bc54fc13c84272
+        - 메뉴관리
+            - https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.0:sym:%EB%A9%94%EB%89%B4%EA%B4%80%EB%A6%AC
+            - 메뉴일괄 엑셀양식	
+                - https://www.egovframe.go.kr/wiki/lib/exe/fetch.php?media=egovframework:com:v2:sym:batchmenubind_%EB%A9%94%EB%89%B4%EC%83%98%ED%94%8C.xls
+        - 프로그램관리
+            - https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.0:sym:%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EA%B4%80%EB%A6%AC
+        - batchmenubind_메뉴샘플.xls
+            - https://github.com/LeeBaekHaeng/god.codegen/commit/983ac1dc1b4906c30d09bb30e39a3764251f93f1
 
+INFORMATION_SCHEMA.COLUMNS 로 엑셀 생성
 ```java
 			try (
 
