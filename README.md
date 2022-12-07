@@ -20,6 +20,70 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-12-07
+- 파일 이동/파일을 디렉토리로 이동 테스트
+- https://javadoc.io/doc/commons-io/commons-io/2.11.0/index.html
+- https://javadoc.io/static/commons-io/commons-io/2.11.0/org/apache/commons/io/FileUtils.html
+```java
+package gsitm.test;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
+
+import org.apache.commons.io.FileUtils;
+import org.egovframe.rte.fdl.string.EgovDateUtil;
+import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class GodTest4 {
+
+	protected Logger egovLogger = LoggerFactory.getLogger(GodTest4.class);
+
+	@Test
+	public void test() {
+
+		// Moves a file.
+		// When the destination file is on another file system, do a "copy and delete".
+
+		// 파일을 이동합니다.
+		// 대상 파일이 다른 파일 시스템에 있는 경우 "복사 및 삭제"를 수행합니다.
+
+		File srcFile = new File("/test/새 텍스트 문서.txt");
+		File destDir = new File("/test/" + EgovDateUtil.toString(new Date(), "yyyy/MM/dd", null) + "/새 텍스트 문서.txt");
+
+		try {
+			FileUtils.moveFile(srcFile, destDir);
+		} catch (IOException e) {
+			egovLogger.error("IOException FileUtils.moveFile");
+//			e.printStackTrace();
+		}
+
+	}
+
+//	@Test
+	public void test2() {
+
+		// Moves a file to a directory.
+		// 파일을 디렉토리로 이동합니다.
+
+		File srcFile = new File("/test/새 텍스트 문서.txt");
+		File destDir = new File("/test/" + EgovDateUtil.toString(new Date(), "yyyy/MM/dd", null));
+		boolean createDestDir = true;
+
+		try {
+			FileUtils.moveFileToDirectory(srcFile, destDir, createDestDir);
+		} catch (IOException e) {
+			egovLogger.error("IOException FileUtils.moveFileToDirectory");
+//			e.printStackTrace();
+		}
+
+	}
+
+}
+```
+
 ## 2022-06-02
 - 2022 전자정부 표준프레임워크 컨트리뷰션 참가
     - CRUD 프로그램 자동 생성 기능
