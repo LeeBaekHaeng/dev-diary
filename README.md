@@ -66,6 +66,11 @@ pcs -P 22000 test.txt god@192.168.0.100:/test
 pcs -P 22000 -r /test god@192.168.0.100:/test
 ```
 
+- Personal access tokens (classic)
+- https://github.com/settings/tokens
+- Tokens (classic)
+- https://토큰 패스워드@github.com/LeeBaekHaeng/dev-diary.git
+
 ## 2022-12-07
 - 파일 이동/파일을 디렉토리로 이동 테스트
 - https://javadoc.io/doc/commons-io/commons-io/2.11.0/index.html
