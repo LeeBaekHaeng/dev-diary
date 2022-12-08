@@ -20,6 +20,52 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-12-08
+- ssh 를 hss 로, scp 를 pcs 로 실행하기
+- .bash_profile
+```sh
+shopt -s expand_aliases
+alias hss='ssh'
+alias pcs='scp'
+```
+- deploy.sh
+```sh
+source ~/.bash_profile
+
+# ssh 를 hss 로
+
+: '
+
+ssh god@192.168.0.100 ls
+ssh god@192.168.0.100 source ~/.bash_profile && ls
+
+ssh -p 22000 god@192.168.0.100 ls
+ssh -p 22000 god@192.168.0.100 source ~/.bash_profile && ls
+'
+
+hss god@192.168.0.100 ls
+hss god@192.168.0.100 source ~/.bash_profile && ls
+
+hss -p 22000 god@192.168.0.100 ls
+hss -p 22000 god@192.168.0.100 source ~/.bash_profile && ls
+
+# scp 를 pcs 로
+
+: '
+scp test.txt god@192.168.0.100:/test
+scp -r /test god@192.168.0.100:/test
+
+scp -P 22000 test.txt god@192.168.0.100:/test
+scp -P 22000 -r /test god@192.168.0.100:/test
+'
+
+pcs test.txt god@192.168.0.100:/test
+pcs -r /test god@192.168.0.100:/test
+
+pcs -P 22000 test.txt god@192.168.0.100:/test
+pcs -P 22000 -r /test god@192.168.0.100:/test
+```
+
 ## 2022-12-07
 - 파일 이동/파일을 디렉토리로 이동 테스트
 - https://javadoc.io/doc/commons-io/commons-io/2.11.0/index.html
