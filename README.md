@@ -20,6 +20,32 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-12-10
+
+### shopt -s expand_aliases 별칭 확장
+
+/home/centos/.bashrc
+```
+# User specific aliases and functions
+
+shopt -s expand_aliases
+
+alias hss='ssh'
+
+alias hss4='ssh -p 22 root@192.168.0.4'
+```
+
+/home/centos/deploy.sh
+```
+#ssh -p 22 root@192.168.0.4 'id && ls'
+
+source ~/.bash_profile
+
+hss -p 22 root@192.168.0.4 'id && ls'
+
+hss4 'id && ls'
+```
+
 ## 2022-12-08
 - ssh 를 hss 로, scp 를 pcs 로 실행하기
 - .bash_profile
