@@ -94,7 +94,6 @@ rm -rf /home/godweb
 rm -rf /home/godwas
 ```
 
-
 사용자의 비밀 번호 변경
 ```
 passwd godweb
@@ -171,6 +170,46 @@ ssh-copy-id -p 22 godwas@192.168.0.4
 
 ssh -p 22 godweb@192.168.0.4
 ssh -p 22 godwas@192.168.0.4
+```
+
+### CURRENT_PID
+
+현재 수행 중인 톰캣의 프로세스 ID를 찾습니다.
+
+```
+tail -f /TEST/apache-tomcat-8.5.65-01/logs/catalina.out
+```
+
+```
+ps -ef | grep tomcat
+```
+
+```
+ps -ef | grep apache-tomcat-8.5.65-01
+```
+
+```
+pgrep -fl tomcat
+```
+
+```
+pgrep -fl apache-tomcat-8.5.65-01
+```
+
+deploy.sh
+```
+CURRENT_PID=$(pgrep -fl apache-tomcat-8.5.65-01 | grep java | awk '{print $1}')
+echo "현재 구동 중인 톰캣 pid 확인: $CURRENT_PID"
+
+if [ -z "$CURRENT_PID" ]; then
+    echo "현재 구동 중인 톰캣이 없으므로 종료하지 않습니다."
+else
+    echo "톰캣 $CURRENT_PID 종료"
+fi
+```
+
+```
+/TEST/apache-tomcat-8.5.65-01/bin/startup.sh
 ```
 
 ## 2022-12-10
