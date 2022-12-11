@@ -90,6 +90,87 @@ id godwas
 userdel godweb
 userdel godwas
 cat /etc/passwd
+rm -rf /home/godweb
+rm -rf /home/godwas
+```
+
+
+사용자의 비밀 번호 변경
+```
+passwd godweb
+passwd godwas
+```
+```
+echo godweb | passwd --stdin godweb
+echo godwas | passwd --stdin godwas
+```
+
+### 리눅스에서 에일리어스(별명) 추가
+
+CI/CD 서버에서 빌드/배포한다.
+
+CI/CD 서버에서 WEB/WAS 서버에 ssh로 접속해야 한다.
+
+/APP/.bashrc
+```
+shopt -s expand_aliases
+
+alias hss='ssh'
+alias pcs='scp'
+
+alias hss4='ssh -p 22 root@192.168.0.4'
+alias hss5='ssh -p 22 root@192.168.0.5'
+
+# 개발 WEB
+alias hssgodweb1='ssh -p 22 godweb@192.168.0.4'
+alias hssgodweb2='ssh -p 22 godweb@192.168.0.5'
+
+# 개발 WAS
+alias hssgodwas1='ssh -p 22 godwas@192.168.0.4'
+alias hssgodwas2='ssh -p 22 godwas@192.168.0.5'
+```
+
+/home/godci/.bashrc
+```
+if [ -f /APP/.bashrc ]; then
+	. /APP/.bashrc
+fi
+```
+
+/home/godweb/deploy.sh
+```
+source ~/.bash_profile
+
+hssgodweb1 'id && pwd'
+hssgodwas1 'source ~/.bash_profile && id && pwd'
+```
+
+### ssh-keygen, ssh-copy-id, ssh
+
+```
+ssh-keygen
+```
+
+```
+#ssh-copy-id godweb@192.168.0.4
+#ssh-copy-id godweb@192.168.0.4
+
+#ssh-copy-id -i ~/.ssh/id_rsa.pub -p 22 godweb@192.168.0.4
+#ssh-copy-id -i ~/.ssh/id_rsa.pub -p 22 godwas@192.168.0.4
+
+ssh-copy-id -p 22 godweb@192.168.0.4
+ssh-copy-id -p 22 godwas@192.168.0.4
+```
+
+```
+#ssh 'godweb@192.168.0.4'
+#ssh 'godwas@192.168.0.4'
+
+#ssh -p '22' 'godweb@192.168.0.4'
+#ssh -p '22' 'godwas@192.168.0.4'
+
+ssh -p 22 godweb@192.168.0.4
+ssh -p 22 godwas@192.168.0.4
 ```
 
 ## 2022-12-10
