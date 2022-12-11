@@ -20,6 +20,78 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-12-11
+
+리눅스에서 그룹과 사용자를 추가한다.
+
+그룹 GID
+- godweb 10001
+- godwas 10002
+- godnas 10003
+- godnas2 10004
+
+사용자 UID
+- godweb 10001
+- godwas 10002
+
+### groupadd 그룹 추가
+
+GID 10001으로 그룹을 추가한다.
+
+그룹 확인
+```
+cat /etc/group
+```
+
+그룹 추가
+```
+groupadd -g 10001 godweb
+groupadd -g 10002 godwas
+groupadd -g 10003 godnas
+groupadd -g 10004 godnas2
+cat /etc/group
+```
+
+그룹 수정
+- GID 20001으로 그룹을 수정한다.
+```
+groupmod -g 20001 godweb
+```
+
+그룹 삭제
+```
+groupdel godweb
+groupdel godwas
+groupdel godnas
+groupdel godnas2
+cat /etc/group
+```
+
+### useradd 사용자 추가
+
+UID 10001으로 사용자를 추가한다.
+
+사용자 확인
+```
+cat /etc/passwd
+```
+
+사용자 추가
+```
+useradd -d /home/godweb -g 10001 -G 10003,10004 -u 10001 godweb
+useradd -d /home/godwas -g 10002 -G 10003,10004 -u 10002 godwas
+cat /etc/passwd
+id godweb
+id godwas
+```
+
+사용자 삭제
+```
+userdel godweb
+userdel godwas
+cat /etc/passwd
+```
+
 ## 2022-12-10
 
 ### shopt -s expand_aliases 별칭 확장
