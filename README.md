@@ -212,6 +212,8 @@ fi
 /TEST/apache-tomcat-8.5.65-01/bin/startup.sh
 ```
 
+[deploy.sh](2022/12/11/deploy.sh)
+
 ## 2022-12-10
 
 ### shopt -s expand_aliases 별칭 확장
