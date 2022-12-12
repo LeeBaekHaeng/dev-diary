@@ -20,6 +20,21 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-12-12
+
+BasicDataSource를 JNDI Datasource로 수정한다.
+
+https://tomcat.apache.org/tomcat-8.5-doc/jndi-datasource-examples-howto.html
+
+```xml
+	<beans profile="mysql-jndi">
+		<bean id="dataSource"
+			class="org.springframework.jndi.JndiObjectFactoryBean">
+			<property name="jndiName" value="jdbc/ComDB" />
+		</bean>
+	</beans>
+```
+
 ## 2022-12-11
 
 리눅스에서 그룹과 사용자를 추가한다.
