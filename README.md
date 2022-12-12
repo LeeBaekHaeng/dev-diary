@@ -20,6 +20,42 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-12-13
+
+넥사크로 N
+
+넥사크로 스튜디오와 콘솔도구(Nexacro Deploy) 사용법을 익힐 수 있습니다.
+
+넥사크로 N 개발도구 가이드 21.0.0.1100 > Nexacro Deploy
+
+http://docs.tobesoft.com/development_tools_guide_nexacro_n_ko#ce55319115c047e4
+
+### 1. Application 전체를 Generate 하는 경우
+```
+nexacrodeploy.exe  -P "C:\TestGenerate\TestGenerate.xprj" -O "E:\ResultGenerate" -B "C:\TestGenerate\nexacrolib"
+```
+
+특정 파일만 Generate 하는 경우
+- FILE 옵션으로 지정한 C:\TestGenerate\aa.xfdl 파일만 Generate 하여 "E:\ResultGenerate" 폴더 아래에 생성합니다.
+```
+nexacrodeploy.exe -P "C:\TestGenerate\TestGenerate.xprj" -O "E:\ResultGenerate"  -B "C:\TestGenerate\nexacrolib" -FILE "C:\TestGenerate\aa.xfdl" 
+```
+
+- n개 파일을 Generate 하여 "E:\ResultGenerate" 폴더 아래에 생성합니다.
+```
+nexacrodeploy.exe -P "C:\TestGenerate\TestGenerate.xprj" -O "E:\ResultGenerate"  -B "C:\TestGenerate\nexacrolib" -FILE "'C:\TestGenerate\aa.xfdl','C:\TestGenerate\bb.xfdl','C:\TestGenerate\cc.xfdl'" 
+```
+
+### 2. Application 전체를 Deploy 하는 경우
+
+- O 옵션으로 지정한 경로에 Generate를 수행한 후 -D 경로에 Deploy를 처리합니다.
+- O 옵션으로 지정한 경로에 수행되는 Generate는 모든 Generate 옵션이 적용됩니다. (-R, -BROWSER 등)
+- D 옵션으로 지정한 경로에 Deploy 되는 파일들은 -O 경로의 파일들을 소스로 처리합니다.
+
+```
+nexacrodeploy.exe  -P "C:\TestGenerate\TestGenerate.xprj" -O "E:\ResultGenerate" -B "C:\TestGenerate\nexacrolib" -D "E:\ResultDeploy"
+```
+
 ## 2022-12-12
 
 BasicDataSource를 JNDI Datasource로 수정한다.
@@ -27,12 +63,12 @@ BasicDataSource를 JNDI Datasource로 수정한다.
 https://tomcat.apache.org/tomcat-8.5-doc/jndi-datasource-examples-howto.html
 
 ```xml
-	<beans profile="mysql-jndi">
-		<bean id="dataSource"
-			class="org.springframework.jndi.JndiObjectFactoryBean">
-			<property name="jndiName" value="jdbc/ComDB" />
-		</bean>
-	</beans>
+<beans profile="mysql-jndi">
+	<bean id="dataSource"
+		class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="jdbc/ComDB" />
+	</bean>
+</beans>s>
 ```
 
 ## 2022-12-11
