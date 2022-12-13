@@ -20,6 +20,30 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-12-14
+
+### JNDIDataSource
+
+JNDIDataSource는 JNDI Lookup을 이용하여 Database Connection을 생성한다. JNDIDataSource는 대부분 Enterprise application server에서 제공되는 JNDI tree로 부터 DataSource를 가져온다.
+
+Jeus 설정
+```xml
+<jee:jndi-lookup id="dataSource" jndi-name="${jndiName}" resource-ref="true">
+     <jee:environment>
+	  java.naming.factory.initial=${jeus.java.naming.factory.initial}
+	  java.naming.provider.url=${jeus.java.naming.provider.url}
+    </jee:environment>
+</jee:jndi-lookup>
+```
+
+Weblogic 설정
+```xml
+<util:properties id="jndiProperties" location="classpath:/META-INF/spring/jndi.properties" />
+<jee:jndi-lookup id="dataSource" jndi-name="${jndiName}" resource-ref="true" environment-ref="jndiProperties" />
+```
+
+[데이터처리 > Data Source > JNDIDataSource](https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:rte4.0:psl:data_source)
+
 ## 2022-12-13
 
 넥사크로 N
@@ -48,9 +72,9 @@ nexacrodeploy.exe -P "C:\TestGenerate\TestGenerate.xprj" -O "E:\ResultGenerate" 
 
 ### 2. Application 전체를 Deploy 하는 경우
 
-- O 옵션으로 지정한 경로에 Generate를 수행한 후 -D 경로에 Deploy를 처리합니다.
-- O 옵션으로 지정한 경로에 수행되는 Generate는 모든 Generate 옵션이 적용됩니다. (-R, -BROWSER 등)
-- D 옵션으로 지정한 경로에 Deploy 되는 파일들은 -O 경로의 파일들을 소스로 처리합니다.
+- -O 옵션으로 지정한 경로에 Generate를 수행한 후 -D 경로에 Deploy를 처리합니다.
+- -O 옵션으로 지정한 경로에 수행되는 Generate는 모든 Generate 옵션이 적용됩니다. (-R, -BROWSER 등)
+- -D 옵션으로 지정한 경로에 Deploy 되는 파일들은 -O 경로의 파일들을 소스로 처리합니다.
 
 ```
 nexacrodeploy.exe  -P "C:\TestGenerate\TestGenerate.xprj" -O "E:\ResultGenerate" -B "C:\TestGenerate\nexacrolib" -D "E:\ResultDeploy"
