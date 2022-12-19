@@ -20,6 +20,101 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-12-20
+
+### 전자정부 표준프레임워크 DAO/ServiceImpl/Controller 로그 사용하기
+
+logger.debug("test 이백행 logger");
+
+final static Logger logger = LoggerFactory.getLogger(Wombat.class);
+
+```java
+@Repository("loginPolicyDAO")
+public class LoginPolicyDAO extends EgovComAbstractDAO {
+
+	/**
+	 * 로그인정책 목록을 조회한다.
+	 * 
+	 * @param loginPolicyVO - 로그인정책 VO
+	 * @return List - 로그인정책 목록
+	 */
+	public List<LoginPolicyVO> selectLoginPolicyList(LoginPolicyVO loginPolicyVO) throws Exception {
+		logger.debug("test 이백행 logger");
+		return selectList("loginPolicyDAO.selectLoginPolicyList", loginPolicyVO);
+	}
+```
+
+@Resource(name="egov.sqlSession")
+
+```java
+public abstract class EgovComAbstractDAO extends EgovAbstractMapper{
+
+	private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+	
+	@Resource(name="egov.sqlSession")
+	public void setSqlSessionFactory(SqlSessionFactory sqlSession) {
+		super.setSqlSessionFactory(sqlSession);
+	}
+```
+
+@Resource(name = "sqlSession")
+
+```java
+public abstract class EgovAbstractMapper extends SqlSessionDaoSupport {
+
+	/**
+	 * Annotation 형식으로 sqlSession(SqlSessionFactoryBean)을 받아와
+	 * 이를 super(SqlSessionDaoSupport)의 setSqlSessionFactory 메서드를 호출하여 설정해 준다.
+	 * <p>
+	 * SqlSessionTemplate이 지정된 경우된 경우 이 SqlSessionFactory가 무시된다. (Batch 처리를 위해서는 SqlSessionTemplate가 필요)
+	 * </p>
+	 *
+	 * @param sqlSession SqlSessionFactory로 MyBatis와의 연계를 위한 기본 클래스
+	 */
+	@Resource(name = "sqlSession")
+	public void setSqlSessionFactory(SqlSessionFactory sqlSession) {
+		super.setSqlSessionFactory(sqlSession);
+	}
+```
+
+public class LoginPolicyDAO extends EgovComAbstractDAO {
+
+public abstract class EgovComAbstractDAO extends EgovAbstractMapper{
+
+public abstract class SqlSessionDaoSupport extends DaoSupport {
+
+public abstract class DaoSupport implements InitializingBean {
+
+```java
+logger.trace("test 이백행 logger trace");
+logger.debug("test 이백행 logger debug");
+logger.info("test 이백행 logger info");
+logger.warn("test 이백행 logger warn");
+logger.error("test 이백행 logger error");
+logger.fatal("test 이백행 logger fatal");
+```
+
+public class EgovLoginPolicyServiceImpl extends EgovAbstractServiceImpl implements EgovLoginPolicyService {
+
+```java
+egovLogger.trace("test 이백행 egovLogger trace");
+egovLogger.debug("test 이백행 egovLogger debug");
+egovLogger.info("test 이백행 egovLogger info");
+egovLogger.warn("test 이백행 egovLogger warn");
+egovLogger.error("test 이백행 egovLogger error");
+```
+
+
+```java
+final static Logger logger = LoggerFactory.getLogger(EgovLoginPolicyController.class);
+
+logger.trace("test 이백행 egovLogger trace");
+logger.debug("test 이백행 egovLogger debug");
+logger.info("test 이백행 egovLogger info");
+logger.warn("test 이백행 egovLogger warn");
+logger.error("test 이백행 egovLogger error");
+```
+
 ## 2022-12-19
 
 ### 스프링 생성자 주입
