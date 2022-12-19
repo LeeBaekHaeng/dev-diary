@@ -20,6 +20,40 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-12-19
+
+### 스프링 생성자 주입
+
+Constructor-based Dependency Injection
+
+https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-constructor-injection
+
+EgovLoginPolicyController
+
+```java
+//	@Resource(name = "egovLoginPolicyService")
+//	EgovLoginPolicyService egovLoginPolicyService;
+
+private final EgovLoginPolicyService egovLoginPolicyService;
+
+public EgovLoginPolicyController(EgovLoginPolicyService egovLoginPolicyService) {
+    this.egovLoginPolicyService = egovLoginPolicyService;
+}
+```
+
+EgovLoginPolicyServiceImpl
+
+```java
+//	@Resource(name = "loginPolicyDAO")
+//	LoginPolicyDAO loginPolicyDAO;
+
+private final LoginPolicyDAO loginPolicyDAO;
+
+public EgovLoginPolicyServiceImpl(LoginPolicyDAO loginPolicyDAO) {
+    this.loginPolicyDAO = loginPolicyDAO;
+}
+```
+
 ## 2022-12-14
 
 ### JNDIDataSource
