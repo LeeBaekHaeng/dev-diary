@@ -39,7 +39,12 @@ public class LoginPolicyDAO extends EgovComAbstractDAO {
 	 * @return List - 로그인정책 목록
 	 */
 	public List<LoginPolicyVO> selectLoginPolicyList(LoginPolicyVO loginPolicyVO) throws Exception {
-		logger.debug("test 이백행 logger");
+		logger.trace("test 이백행 logger trace");
+		logger.debug("test 이백행 logger debug");
+		logger.info("test 이백행 logger info");
+		logger.warn("test 이백행 logger warn");
+		logger.error("test 이백행 logger error");
+		logger.fatal("test 이백행 logger fatal");
 		return selectList("loginPolicyDAO.selectLoginPolicyList", loginPolicyVO);
 	}
 ```
