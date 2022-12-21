@@ -59,7 +59,7 @@ curl -o C:\EGOVFRAME\eGovFrameDev-4.0.0-Win-64bit.exe https://maven.egovframe.go
 curl -o C:\EGOVFRAME\eGovCI-4.0.0_64bit.exe https://maven.egovframe.go.kr/publist/HDD1/public/eGovCI-4.0.0_64bit.exe
 ```
 
-[EGOVFRAME-4.0.0-install.bat](2020/12/21/EGOVFRAME-4.0.0-install.bat)
+[EGOVFRAME-4.0.0-install.bat](2022/12/21/EGOVFRAME-4.0.0-install.bat)
 
 ```bat
 if not exist C:\EGOVFRAME\Downloads mkdir -p C:\EGOVFRAME\Downloads
@@ -76,7 +76,7 @@ C:\EGOVFRAME\Downloads\eGovCI-4.0.0_64bit.exe
 
 ```
 
-[EGOVFRAME-4.0.0-uninstall.bat](2020/12/21/EGOVFRAME-4.0.0-uninstall.bat)
+[EGOVFRAME-4.0.0-uninstall.bat](2022/12/21/EGOVFRAME-4.0.0-uninstall.bat)
 
 ## 2022-12-20
 
