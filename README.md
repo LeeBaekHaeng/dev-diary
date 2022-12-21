@@ -20,6 +20,64 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-12-21
+
+### curl 다운로드
+
+curl로 전자정부 표준프레임워크 개발환경 4.0.0을 다운로드한다.
+
+```cmd
+C:\Users\it1385>curl --help
+Usage: curl [options...] <url>
+ -d, --data <data>          HTTP POST data
+ -f, --fail                 Fail fast with no output on HTTP errors
+ -h, --help <category>      Get help for commands
+ -i, --include              Include protocol response headers in the output
+ -o, --output <file>        Write to file instead of stdout
+ -O, --remote-name          Write output to a file named as the remote file
+ -s, --silent               Silent mode
+ -T, --upload-file <file>   Transfer local FILE to destination
+ -u, --user <user:password> Server user and password
+ -A, --user-agent <name>    Send User-Agent <name> to server
+ -v, --verbose              Make the operation more talkative
+ -V, --version              Show version number and quit
+
+This is not the full help, this menu is stripped into categories.
+Use "--help category" to get an overview of all categories.
+For all options use the manual or "--help all".
+```
+
+개발자용 개발환경 64bit(Implementation Tool) Version 4.0.0을 C:\EGOVFRAME 폴더에 다운로드 받는다.
+
+```cmd
+curl -o C:\EGOVFRAME\eGovFrameDev-4.0.0-Win-64bit.exe https://maven.egovframe.go.kr/publist/HDD1/public/eGovFrameDev-4.0.0-Win-64bit.exe
+```
+
+서버용 개발환경(Development Tool - Unix,Linux,Win64bit) 4.0.0을 C:\EGOVFRAME 폴더에 다운로드 받는다.
+
+```cmd
+curl -o C:\EGOVFRAME\eGovCI-4.0.0_64bit.exe https://maven.egovframe.go.kr/publist/HDD1/public/eGovCI-4.0.0_64bit.exe
+```
+
+[EGOVFRAME-4.0.0-install.bat](2020/12/21/EGOVFRAME-4.0.0-install.bat)
+
+```bat
+if not exist C:\EGOVFRAME\Downloads mkdir -p C:\EGOVFRAME\Downloads
+
+curl -o C:\EGOVFRAME\Downloads\eGovFrameDev-4.0.0-Win-64bit.exe https://maven.egovframe.go.kr/publist/HDD1/public/eGovFrameDev-4.0.0-Win-64bit.exe
+
+curl -o C:\EGOVFRAME\Downloads\eGovCI-4.0.0_64bit.exe https://maven.egovframe.go.kr/publist/HDD1/public/eGovCI-4.0.0_64bit.exe
+
+cd C:\EGOVFRAME
+
+C:\EGOVFRAME\Downloads\eGovFrameDev-4.0.0-Win-64bit.exe
+
+C:\EGOVFRAME\Downloads\eGovCI-4.0.0_64bit.exe
+
+```
+
+[EGOVFRAME-4.0.0-uninstall.bat](2020/12/21/EGOVFRAME-4.0.0-uninstall.bat)
+
 ## 2022-12-20
 
 ### 전자정부 표준프레임워크 DAO/ServiceImpl/Controller 로그 사용하기
