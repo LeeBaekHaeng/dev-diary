@@ -1,15 +1,22 @@
-if not exist C:\EGOVFRAME\Downloads mkdir -p C:\EGOVFRAME\Downloads
+rem setenv.bat
 
-echo "1. Í∞úÎ∞úÏûêÏö© Í∞úÎ∞úÌôòÍ≤Ω 64bit(Implementation Tool) Version 4.0.0"
+set EGOVFRAME_HOME=C:\EGOVFRAME
 
-curl -o C:\EGOVFRAME\Downloads\eGovFrameDev-4.0.0-Win-64bit.exe https://maven.egovframe.go.kr/publist/HDD1/public/eGovFrameDev-4.0.0-Win-64bit.exe
+echo "%EGOVFRAME_HOME% ∆˙¥ı ª˝º∫ Ω√¿€"
+if not exist "%EGOVFRAME_HOME%\Downloads" mkdir -p "%EGOVFRAME_HOME%\Downloads"
+echo "%EGOVFRAME_HOME% ∆˙¥ı ª˝º∫ ≥°"
 
-cd C:\EGOVFRAME
-C:\EGOVFRAME\Downloads\eGovFrameDev-4.0.0-Win-64bit.exe
+echo "¥ŸøÓ∑ŒµÂ Ω√¿€"
+if not exist "%EGOVFRAME_HOME%\Downloads\eGovFrameDev-4.0.0-Win-64bit.exe" curl -o "%EGOVFRAME_HOME%\Downloads\eGovFrameDev-4.0.0-Win-64bit.exe" https://maven.egovframe.go.kr/publist/HDD1/public/eGovFrameDev-4.0.0-Win-64bit.exe
+if not exist "%EGOVFRAME_HOME%\Downloads\eGovCI-4.0.0_64bit.exe" curl -o "%EGOVFRAME_HOME%\Downloads\eGovCI-4.0.0_64bit.exe" https://maven.egovframe.go.kr/publist/HDD1/public/eGovCI-4.0.0_64bit.exe
+echo "¥ŸøÓ∑ŒµÂ ≥°"
 
-echo "2. ÏÑúÎ≤ÑÏö© Í∞úÎ∞úÌôòÍ≤Ω(Development Tool - Unix,Linux,Win64bit) 4.0.0"
+echo "1. ∞≥πﬂ¿⁄øÎ ∞≥πﬂ»Ø∞Ê 64bit(Implementation Tool) Version 4.0.0"
 
-curl -o C:\EGOVFRAME\Downloads\eGovCI-4.0.0_64bit.exe https://maven.egovframe.go.kr/publist/HDD1/public/eGovCI-4.0.0_64bit.exe
+cd "%EGOVFRAME_HOME%"
+if not exist "%EGOVFRAME_HOME%\eGovFrameDev-4.0.0-64bit" "%EGOVFRAME_HOME%\Downloads\eGovFrameDev-4.0.0-Win-64bit.exe"
 
-cd C:\EGOVFRAME
-C:\EGOVFRAME\Downloads\eGovCI-4.0.0_64bit.exe
+echo "2. º≠πˆøÎ ∞≥πﬂ»Ø∞Ê(Development Tool - Unix,Linux,Win64bit) 4.0.0"
+
+cd "%EGOVFRAME_HOME%"
+if not exist "%EGOVFRAME_HOME%\eGovCI-4.0.0_64bit" "%EGOVFRAME_HOME%\Downloads\eGovCI-4.0.0_64bit.exe"
