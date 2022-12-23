@@ -20,6 +20,24 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-12-23
+
+EGOVFRAME_HOME을 추가한다.
+
+### EGOVFRAME-4.0.0-setenv.bat 추가함
+
+[EGOVFRAME-4.0.0-install.bat](2022/12/21/EGOVFRAME-4.0.0-install.bat)
+
+[EGOVFRAME-4.0.0-setenv.bat](2022/12/21/EGOVFRAME-4.0.0-setenv.bat)
+
+```bat
+set EGOVFRAME_HOME=C:\EGOVFRAME
+rem set EGOVFRAME_HOME=D:\EGOVFRAME
+rem set EGOVFRAME_HOME=E:\EGOVFRAME
+```
+
+[EGOVFRAME-4.0.0-uninstall.bat](2022/12/21/EGOVFRAME-4.0.0-uninstall.bat)
+
 ## 2022-12-22
 
 ### EGOVFRAME_HOME 추가함
