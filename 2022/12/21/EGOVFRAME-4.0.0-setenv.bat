@@ -1,1 +1,3 @@
 set EGOVFRAME_HOME=C:\EGOVFRAME
+
+echo "%EGOVFRAME_HOME% ¼³Á¤ÇÔ"
