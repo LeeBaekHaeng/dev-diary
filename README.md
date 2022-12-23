@@ -31,6 +31,9 @@ EGOVFRAME_HOME을 추가한다.
 [EGOVFRAME-4.0.0-setenv.bat](2022/12/21/EGOVFRAME-4.0.0-setenv.bat)
 
 ```bat
+rem 한글깨짐
+chcp 65001
+
 set EGOVFRAME_HOME=C:\EGOVFRAME
 rem set EGOVFRAME_HOME=D:\EGOVFRAME
 rem set EGOVFRAME_HOME=E:\EGOVFRAME

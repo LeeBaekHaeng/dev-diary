@@ -1,3 +1,5 @@
+chcp 65001
+
 set EGOVFRAME_HOME=C:\EGOVFRAME
 
-echo "%EGOVFRAME_HOME% ¼³Á¤ÇÔ"
+echo "%EGOVFRAME_HOME% ì„¤ì •í•¨"
