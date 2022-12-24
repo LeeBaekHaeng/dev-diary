@@ -22,6 +22,8 @@
 
 ## 2022-12-24
 
+전자정부 표준프레임워크 개발환경 4.0.0을 설치한다.
+
 ### settings.xml에 localRepository를 추가
 
 C:\EGOVFRAME\eGovCI-4.0.0_64bit\bin\apache-maven-3.8.4\conf
@@ -45,6 +47,28 @@ plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201
 ```ini
 -Xms2048m
 -Xmx2048m
+```
+
+### eclipse 실행
+
+```
+C:\EGOVFRAME\eGovFrameDev-4.0.0-64bit\eclipse
+```
+
+eclipse.exe
+
+### 이클립스에서 메이븐 설정 수정
+
+Window > Preferences > Maven > User Settings
+
+```
+C:\EGOVFRAME\eGovCI-4.0.0_64bit\bin\apache-maven-3.8.4\conf\settings.xml
+```
+
+### eGovFrame Web Project
+
+```
+god.test
 ```
 
 [EGOVFRAME-4.0.0-install.bat](2022/12/21/EGOVFRAME-4.0.0-install.bat)
