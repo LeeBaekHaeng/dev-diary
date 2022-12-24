@@ -20,6 +20,43 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-12-24
+
+### settings.xml에 localRepository를 추가
+
+C:\EGOVFRAME\eGovCI-4.0.0_64bit\bin\apache-maven-3.8.4\conf
+
+```xml
+<localRepository>/EGOVFRAME/.m2/repository</localRepository>
+```
+
+### eclipse.ini에 vm을 추가
+
+```ini
+-vm
+#plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/javaw.exe
+plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server/jvm.dll
+```
+
+```ini
+-Dosgi.instance.area.default=C:\EGOVFRAME\eGovFrameDev-4.0.0-64bit\workspace
+```
+
+```ini
+-Xms2048m
+-Xmx2048m
+```
+
+[EGOVFRAME-4.0.0-install.bat](2022/12/21/EGOVFRAME-4.0.0-install.bat)
+
+[EGOVFRAME-4.0.0-setenv.bat](2022/12/21/EGOVFRAME-4.0.0-setenv.bat)
+
+[EGOVFRAME-4.0.0-uninstall.bat](2022/12/21/EGOVFRAME-4.0.0-uninstall.bat)
+
+[settings.xml](2022/12/21/eGovCI-4.0.0_64bit/settings.xml)
+
+[eclipse.ini](2022/12/21/eGovFrameDev-4.0.0-64bit/)
+
 ## 2022-12-23
 
 EGOVFRAME_HOME을 추가한다.

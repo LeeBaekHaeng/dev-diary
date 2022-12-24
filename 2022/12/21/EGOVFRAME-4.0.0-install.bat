@@ -1,4 +1,4 @@
-if exist "%CATALINA_HOME%\bin\setenv.bat" call "EGOVFRAME-4.0.0-setenv.bat"
+if exist "EGOVFRAME-4.0.0-setenv.bat" call "EGOVFRAME-4.0.0-setenv.bat"
 
 echo "%EGOVFRAME_HOME% 폴더 생성 시작"
 if not exist "%EGOVFRAME_HOME%\Downloads" mkdir -p "%EGOVFRAME_HOME%\Downloads"
