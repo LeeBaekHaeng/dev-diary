@@ -24,6 +24,8 @@
 
 전자정부 표준프레임워크 개발환경 4.0.0을 설치한다.
 
+https://youtu.be/3FQOetCMRF4
+
 ### settings.xml에 localRepository를 추가
 
 C:\EGOVFRAME\eGovCI-4.0.0_64bit\bin\apache-maven-3.8.4\conf
@@ -79,7 +81,7 @@ god.test
 
 [settings.xml](2022/12/21/eGovCI-4.0.0_64bit/settings.xml)
 
-[eclipse.ini](2022/12/21/eGovFrameDev-4.0.0-64bit/)
+[eclipse.ini](2022/12/21/eGovFrameDev-4.0.0-64bit/eclipse.ini)
 
 ## 2022-12-23
 
