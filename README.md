@@ -20,6 +20,41 @@
 - [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
     - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
 
+## 2022-12-26
+
+### JavaScript switch 문
+
+Using switch
+
+스위치 사용
+
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/switch#%EC%98%88%EC%A0%9C
+
+```js
+switch (expr) {
+  case 'Oranges':
+    console.log('Oranges are $0.59 a pound.');
+    break;
+  case 'Apples':
+    console.log('Apples are $0.32 a pound.');
+    break;
+  case 'Bananas':
+    console.log('Bananas are $0.48 a pound.');
+    break;
+  case 'Cherries':
+    console.log('Cherries are $3.00 a pound.');
+    break;
+  case 'Mangoes':
+  case 'Papayas':
+    console.log('Mangoes and papayas are $2.79 a pound.');
+    break;
+  default:
+    console.log('Sorry, we are out of ' + expr + '.');
+}
+
+console.log("Is there anything else you'd like?");
+```
+
 ## 2022-12-24
 
 전자정부 표준프레임워크 개발환경 4.0.0을 설치한다.
