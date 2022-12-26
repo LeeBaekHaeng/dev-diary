@@ -3,6 +3,50 @@
 ## 할 일(To Do)
 [2022년](todo/2022.md)
 
+## 2022-12-27
+
+### java.net.URL.URL 사용하기
+
+https://jsonplaceholder.typicode.com/guide/
+
+```java
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+
+import org.apache.commons.io.IOUtils;
+import org.junit.Test;
+
+public class URLTest {
+
+	@Test
+	public void test() {
+		String spec = "https://jsonplaceholder.typicode.com/posts";
+
+		URL url = null;
+
+		try {
+			url = new URL(spec);
+		} catch (MalformedURLException e) {
+			System.err.println("MalformedURLException URL");
+		}
+
+		String s = null;
+
+		try {
+			s = IOUtils.toString(url.openStream(), StandardCharsets.UTF_8);
+		} catch (IOException e) {
+//			e.printStackTrace();
+			System.err.println("IOException toString openStream");
+		}
+
+		System.out.println("s=" + s);
+	}
+
+}
+```
+
 ## 2022-12-26
 
 ### JavaScript switch 문
