@@ -1,24 +1,7 @@
 # 개발일기
 
 ## 할 일(To Do)
-- 컨트리뷰션 공통컴포넌트 테스트 코드 사용 가이드(2022-04-26)
-- 2022 전자정부 표준프레임워크 컨트리뷰션 참가
-    - https://github.com/godsoft2016/egovframe-common-components
-    - https://github.com/godsoft2016/egovframe-development
-    - 개발환경
-        - [2022 전자정부 표준프레임워크 컨트리뷰션 참가-CRUD 프로그램 자동 생성 기능](https://github.com/eGovFramework/egovframe-development/pull/34)
-        - [CRUD 프로그램 자동 생성 기능 템플릿 수정](https://github.com/eGovFramework/egovframe-development/pull/35)
-    - 공통컴포넌트
-        - [2022 전자정부 표준프레임워크 컨트리뷰션 참가-CRUD 프로그램 자동 생성 기능 추가](https://github.com/eGovFramework/egovframe-common-components/pull/49)
-        - [EgovComAbstractDAO 를 EgovComAbstractMapper 로 클래스명을 수정](https://github.com/eGovFramework/egovframe-common-components/pull/50)
-- [코드생성(god.codegen)](https://github.com/LeeBaekHaeng/god.codegen)
-    - [CRUD 프로그램 자동 생성 기능](https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev2:imp:codegen:template:crud#crud_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%9E%90%EB%8F%99_%EC%83%9D%EC%84%B1_%EA%B8%B0%EB%8A%A5)
-        - mapper v3.8.0 이상
-        - sqlmap v3.7.3 이하(ibatis-sqlmap-2.3.4.726.jar)
-- [공통컴포넌트 3.10.0 단위 테스트](todo/todo.md)
-    - 전자정부 표준프레임워크 3.10.0
-- [셀레늄(Selenium) 사용법](https://www.selenium.dev/)
-    - 셀레늄은 웹 애플리케이션 테스트를 위한 포터블 프레임워크이다.
+[2022년](todo/2022.md)
 
 ## 2022-12-26
 
@@ -29,6 +12,8 @@ Using switch
 스위치 사용
 
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/switch#%EC%98%88%EC%A0%9C
+
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/switch#using_switch
 
 ```js
 switch (expr) {
