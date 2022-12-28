@@ -3,6 +3,86 @@
 ## 할 일(To Do)
 [2022년](todo/2022.md)
 
+## 2022-12-28
+
+### HttpsURLConnection
+
+https://developer.android.com/reference/java/net/HttpURLConnection
+
+https://developer.android.com/reference/javax/net/ssl/HttpsURLConnection
+
+https://www.tabnine.com/code/java/classes/javax.net.ssl.HttpsURLConnection
+
+```java
+String spec = "https://developer.android.com/reference/java/net/HttpURLConnection";
+
+HttpsURLConnection urlConnection = null;
+
+try {
+	URL url = new URL(spec);
+
+	urlConnection = (HttpsURLConnection) url.openConnection();
+
+	TrustManager[] tm = new TrustManager[] { new X509TrustManager() {
+		@Override
+		public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+		}
+
+		@Override
+		public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+		}
+
+		@Override
+		public X509Certificate[] getAcceptedIssuers() {
+			return null;
+		}
+	} };
+	SSLContext sc = SSLContext.getInstance("SSL");
+	sc.init(null, tm, new SecureRandom());
+
+	HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier() {
+		@Override
+		public boolean verify(String hostname, SSLSession session) {
+			return true;
+		}
+	});
+	HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+	urlConnection.setHostnameVerifier(new HostnameVerifier() {
+		@Override
+		public boolean verify(String hostname, SSLSession session) {
+			return true;
+		}
+	});
+	urlConnection.setSSLSocketFactory(sc.getSocketFactory());
+
+	urlConnection.setRequestMethod("POST");
+
+	urlConnection.setDoOutput(true);
+
+	String str = "god=test 이백행";
+	System.out.println("str=" + str);
+	try (OutputStream out = new BufferedOutputStream(urlConnection.getOutputStream());) {
+		out.write(str.getBytes());
+		out.flush();
+	}
+
+	List<String> readLines = IOUtils.readLines(urlConnection.getInputStream(), StandardCharsets.UTF_8);
+	for (String readLine : readLines) {
+		System.out.println(readLine);
+	}
+} catch (MalformedURLException e) {
+	System.err.println("MalformedURLException URL");
+} catch (IOException e) {
+	System.err.println("IOException openConnection");
+} catch (NoSuchAlgorithmException e) {
+	System.err.println("NoSuchAlgorithmException getInstance");
+} catch (KeyManagementException e) {
+	System.err.println("KeyManagementException init");
+} finally {
+	urlConnection.disconnect();
+}
+```
+
 ## 2022-12-27
 
 ### java.net.URL.URL 사용하기
