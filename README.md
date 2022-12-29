@@ -1,7 +1,142 @@
 # 개발일기
 
-## 할 일(To Do)
-[2022년](todo/2022.md)
+[할 일(To Do)](todo/2022.md)
+
+## 2022-12-29
+
+### HttpsURLConnectionTest
+
+```java
+package god.test;
+
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.util.List;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
+
+import org.apache.commons.io.IOUtils;
+import org.junit.Test;
+
+public class HttpsURLConnectionTest {
+
+	@Test
+	public void test() {
+		String spec = "https://developer.android.com/reference/java/net/HttpURLConnection";
+		URL url = null;
+		try {
+			url = new URL(spec);
+		} catch (MalformedURLException e) {
+			System.err.println("MalformedURLException");
+		}
+
+		HttpsURLConnection urlConnection = null;
+		try {
+			urlConnection = (HttpsURLConnection) url.openConnection();
+			setDefaultHostnameVerifier(urlConnection);
+			setDefaultSSLSocketFactory(urlConnection);
+			post(urlConnection);
+		} catch (IOException e) {
+			System.err.println("IOException");
+		} finally {
+			urlConnection.disconnect();
+		}
+	}
+
+	private void setDefaultHostnameVerifier(HttpsURLConnection urlConnection) {
+		HostnameVerifier v = new HostnameVerifier() {
+			@Override
+			public boolean verify(String hostname, SSLSession session) {
+				return true;
+			}
+		};
+
+		HttpsURLConnection.setDefaultHostnameVerifier(v);
+
+		urlConnection.setHostnameVerifier(v);
+	}
+
+	private void setDefaultSSLSocketFactory(HttpsURLConnection urlConnection) {
+		SSLContext sc = null;
+		try {
+			sc = SSLContext.getInstance("SSL");
+		} catch (NoSuchAlgorithmException e) {
+			System.err.println("NoSuchAlgorithmException");
+		}
+
+		TrustManager[] tm = new TrustManager[] { new X509TrustManager() {
+			@Override
+			public void checkClientTrusted(java.security.cert.X509Certificate[] chain, String authType)
+					throws java.security.cert.CertificateException {
+			}
+
+			@Override
+			public void checkServerTrusted(java.security.cert.X509Certificate[] chain, String authType)
+					throws java.security.cert.CertificateException {
+			}
+
+			@Override
+			public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+				return null;
+			}
+		} };
+
+		try {
+			sc.init(null, tm, new SecureRandom());
+		} catch (KeyManagementException e) {
+			System.err.println("KeyManagementException");
+		}
+
+		HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+
+		urlConnection.setSSLSocketFactory(sc.getSocketFactory());
+	}
+
+	private void post(HttpsURLConnection urlConnection) {
+		urlConnection.setDoOutput(true);
+
+		try {
+			urlConnection.setRequestMethod("POST");
+		} catch (ProtocolException e) {
+			System.err.println("ProtocolException");
+		}
+
+		String s = "god=test 이백행&god2=갓";
+		System.out.println("s");
+		System.out.println(s);
+		try (OutputStream out = new BufferedOutputStream(urlConnection.getOutputStream());) {
+			out.write(s.getBytes());
+			out.flush();
+		} catch (IOException e) {
+			System.err.println("IOException");
+		}
+
+		List<String> readLines = null;
+		try {
+			readLines = IOUtils.readLines(urlConnection.getInputStream(), StandardCharsets.UTF_8);
+		} catch (IOException e) {
+			System.err.println("IOException");
+		}
+		for (String readLine : readLines) {
+			System.out.println(readLine);
+		}
+	}
+
+}
+```
 
 ## 2022-12-28
 
