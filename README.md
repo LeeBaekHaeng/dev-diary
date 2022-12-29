@@ -2,6 +2,34 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2022-12-30
+
+## GeoServer 설치
+
+GeoServer는 지리공간 데이터를 공유하고 편집할 수 있는 자바로 개발된 오픈 소스 GIS 소프트웨어 서버이다. 상호운용성을 전제로 개발되었기 때문에, 개방형 표준을 사용하여 다양한 공간 데이터 소스를 서비스할 수 있게 한다.
+
+### GeoServer 다운로드
+
+https://geoserver.org/release/stable/
+
+Packages
+- Platform Independent Binary
+    - https://sourceforge.net/projects/geoserver/files/GeoServer/2.22.0/geoserver-2.22.0-bin.zip
+
+### Download PostgreSQL
+
+https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+9.6.24*
+- https://www.enterprisedb.com/postgresql-tutorial-resources-training?uuid=91f8264f-8a2d-434a-9559-4dfa9b3b80b1&campaignId=701380000017oAXAAY
+
+### PostGIS 다운로드
+
+- https://download.osgeo.org/postgis/windows/
+- https://download.osgeo.org/postgis/windows/pg96/postgis-bundle-pg96x64-setup-3.2.3-1.exe
+
+https://bongra.tistory.com/category/GIS?page=4
+
 ## 2022-12-29
 
 ### HttpsURLConnectionTest
