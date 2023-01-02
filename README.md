@@ -14,6 +14,8 @@ http://localhost:8080/test/sample_bese.html
 <script src="https://map.vworld.kr/js/apis.do?type=Base&apiKey=B610A3AD-2A48-3553-9432-3C327846839D"></script>
 ```
 
+https://youtu.be/raGXrQ5XNv4
+
 ## 2022-12-30
 
 ## GeoServer 설치
