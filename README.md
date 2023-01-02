@@ -2,6 +2,18 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-02
+
+### 배경지도 API 1.0 레퍼런스
+
+https://www.vworld.kr/dev/v4dv_baseguide_s001.do
+
+http://localhost:8080/test/sample_bese.html
+
+```html
+<script src="https://map.vworld.kr/js/apis.do?type=Base&apiKey=B610A3AD-2A48-3553-9432-3C327846839D"></script>
+```
+
 ## 2022-12-30
 
 ## GeoServer 설치
