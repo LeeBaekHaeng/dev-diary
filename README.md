@@ -2,6 +2,14 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-03
+
+### Using Vue from CDN
+
+CDN에서 Vue 사용
+
+https://vuejs.org/guide/quick-start.html#using-vue-from-cdn
+
 ## 2023-01-02
 
 ### 배경지도 API 1.0 레퍼런스
