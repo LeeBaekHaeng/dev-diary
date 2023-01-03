@@ -10,6 +10,8 @@ CDN에서 Vue 사용
 
 https://vuejs.org/guide/quick-start.html#using-vue-from-cdn
 
+https://youtu.be/WZnddsbYmh0
+
 ## 2023-01-02
 
 ### 배경지도 API 1.0 레퍼런스
