@@ -2,6 +2,30 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-04
+
+### ES 모듈 빌드 사용
+
+Using the ES Module Build
+
+https://vuejs.org/guide/quick-start.html#using-the-es-module-build
+
+```html
+<div id="app">{{ message }}</div>
+
+<script type="module">
+  import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!'
+      }
+    }
+  }).mount('#app')
+</script>
+```
+
 ## 2023-01-03
 
 ### Using Vue from CDN
