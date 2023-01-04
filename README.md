@@ -26,6 +26,8 @@ https://vuejs.org/guide/quick-start.html#using-the-es-module-build
 </script>
 ```
 
+https://youtu.be/dbUrjxOSI-Q
+
 ## 2023-01-03
 
 ### Using Vue from CDN
