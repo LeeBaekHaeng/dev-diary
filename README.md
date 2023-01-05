@@ -34,6 +34,8 @@ https://vuejs.org/guide/quick-start.html#enabling-import-maps
 </script>
 ```
 
+https://youtu.be/WwiDPKSXwBQ
+
 ## 2023-01-04
 
 ### ES 모듈 빌드 사용
