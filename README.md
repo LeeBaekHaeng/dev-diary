@@ -2,6 +2,38 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-05
+
+### Enabling Import maps
+
+지도 가져오기 활성화
+
+https://vuejs.org/guide/quick-start.html#enabling-import-maps
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+    }
+  }
+</script>
+
+<div id="app">{{ message }}</div>
+
+<script type="module">
+  import { createApp } from 'vue'
+
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!'
+      }
+    }
+  }).mount('#app')
+</script>
+```
+
 ## 2023-01-04
 
 ### ES 모듈 빌드 사용
