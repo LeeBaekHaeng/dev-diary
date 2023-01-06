@@ -30,6 +30,8 @@ https://vuejs.org/guide/quick-start.html#splitting-up-the-modules
 </script>
 ```
 
+https://youtu.be/JlQk79Y26dQ
+
 ## 2023-01-05
 
 ### Enabling Import maps
