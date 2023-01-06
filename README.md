@@ -2,6 +2,34 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-06
+
+### Splitting Up the Modules
+
+모듈 분할
+
+https://vuejs.org/guide/quick-start.html#splitting-up-the-modules
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+    }
+  }
+</script>
+
+<div id="app">{{ message }}</div>
+
+<!-- index.html -->
+<script type="module">
+  import { createApp } from 'vue'
+  import MyComponent from './my-component.js'
+
+  createApp(MyComponent).mount('#app')
+</script>
+```
+
 ## 2023-01-05
 
 ### Enabling Import maps
