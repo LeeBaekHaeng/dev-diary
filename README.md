@@ -2,6 +2,14 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-07
+
+### Creating a Vue Application
+
+Vue 애플리케이션 만들기
+
+https://vuejs.org/guide/essentials/application.html
+
 ## 2023-01-06
 
 ### Splitting Up the Modules
