@@ -10,6 +10,8 @@ Vue 애플리케이션 만들기
 
 https://vuejs.org/guide/essentials/application.html
 
+https://youtu.be/_ZSS37Cf_J0
+
 ## 2023-01-06
 
 ### Splitting Up the Modules
