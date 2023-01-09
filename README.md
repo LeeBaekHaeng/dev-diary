@@ -2,6 +2,25 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-09
+
+### MSA Template Project
+
+개발자의 편의성을 위하여 eGovFrame기반의 msa 템플릿 생성 마법사를 제공한다.
+
+https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev4.0:imp:editor:create_msa_template_project_wizard
+
+- C:\EGOVFRAME\eGovFrameDev-4.0.0-64bit\eclipse\plugins\egovframework.boot.dev.imp.ide_4.0.0.202203281534\examples
+    - msa-discovery.zip
+    - msa-config.zip
+    - msa-apigateway.zip
+    - msa-board-service.zip
+    - msa-portal-service.zip
+    - msa-user-service.zip
+    - msa-reserve-check-service.zip
+    - msa-reserve-item-service.zip
+    - msa-reserve-request-service.zip
+
 ## 2023-01-07
 
 ### Creating a Vue Application
