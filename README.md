@@ -21,6 +21,8 @@ https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev4.0:imp:editor:cre
     - msa-reserve-item-service.zip
     - msa-reserve-request-service.zip
 
+https://youtu.be/c7SG01Tm4XY
+
 ## 2023-01-07
 
 ### Creating a Vue Application
