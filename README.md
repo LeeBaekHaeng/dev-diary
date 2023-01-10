@@ -2,6 +2,30 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-10
+
+### msa-config
+
+/a2-msa-config/config/board-service.yml
+
+```yml
+database:
+  url: jdbc:mysql://${mysql.hostname:localhost}:3306/msaportal
+
+spring:
+  datasource:
+    url: ${database.url}?serverTimezone=Asia/Seoul
+    username: msaportal
+    password: msaportal
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    stream:
+      bindings:
+        attachmentEntity-out-0: # 첨부파일 entity 정보 업데이트 하기 위한 이벤트
+          destination: attachment-entity.topic # queue name
+          group: attachment
+```
+
 ## 2023-01-09
 
 ### MSA Template Project
