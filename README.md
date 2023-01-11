@@ -2,6 +2,70 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-11
+
+### eGovFrame MSA Boot Template Project
+
+```
+C:\EGOVFRAME\eGovFrameDev-4.0.0-64bit\eclipse\plugins\egovframework.boot.dev.imp.ide_4.0.0.202203281534
+```
+- plugin.xml
+
+```xml
+<wizard
+    category="egovframework.dev.imp.core.wizards"
+    class="egovframework.boot.dev.imp.ide.wizards.EgovNewMsaTemplateProjectWizard"
+    finalPerspective="egovframework.dev.imp.core.perspectives.egovperspective"
+    hasPages="true"
+    icon="icons/newtemp_w.png"
+    id="egovframework.boot.dev.imp.ide.wizards.egovmsatemplateprojectwizard"
+    name="eGovFrame MSA Boot Template Project"
+    project="true">
+</wizard>
+```
+
+https://github.com/eGovFramework/egovframe-development/blob/main/egovframework.boot.dev.imp.ide/plugin.xml
+
+https://github.com/eGovFramework/egovframe-development/blob/main/egovframework.boot.dev.imp.ide/src/egovframework/boot/dev/imp/ide/wizards/examples/examples.properties
+
+```properties
+example.template.msa1=msa-discovery.zip
+example.template.msa2=msa-config.zip
+example.template.msa3=msa-apigateway.zip
+example.template.msa4=msa-board-service.zip
+example.template.msa5=msa-portal-service.zip
+example.template.msa6=msa-user-service.zip
+example.template.msa7=msa-reserve-check-service.zip
+example.template.msa8=msa-reserve-item-service.zip
+example.template.msa9=msa-reserve-request-service.zip
+```
+
+```
+msa1-discovery
+msa2-config
+msa3-apigateway
+msa4-board-service
+msa5-portal-service
+msa6-user-service
+msa7-reserve-check-service
+msa8-reserve-item-service
+msa9-reserve-request-service
+```
+
+https://github.com/eGovFramework/egovframe-msa-edu/blob/main/backend/board-service/src/main/resources/application.yml
+
+ddl-auto: update
+
+```yml
+spring:
+  application:
+    name: board-service
+  jpa:
+    hibernate:
+#      ddl-auto: none
+      ddl-auto: update
+```
+
 ## 2023-01-10
 
 ### msa-config
@@ -25,6 +89,32 @@ spring:
           destination: attachment-entity.topic # queue name
           group: attachment
 ```
+
+```
+msa4-board-service
+msa5-portal-service
+msa6-user-service
+msa7-reserve-check-service
+msa8-reserve-item-service
+msa9-reserve-request-service
+```
+
+- gradle build
+- Refresh Gradle Project
+- ddl-auto: none > ddl-auto: update
+    - https://github.com/eGovFramework/egovframe-msa-edu/blob/main/backend/board-service/src/main/resources/application.yml
+        - /msa4-board-service/src/main/resources/application.yml
+    - https://github.com/eGovFramework/egovframe-msa-edu/blob/main/backend/portal-service/src/main/resources/application.yml
+        - /msa5-portal-service/src/main/resources/application.yml
+    - https://github.com/eGovFramework/egovframe-msa-edu/blob/main/backend/portal-service/src/main/resources/application.yml
+        - /msa6-user-service/src/main/resources/application.yml
+- https://github.com/eGovFramework/egovframe-msa-edu/blob/main/backend/reserve-check-service/src/main/resources/schema.sql
+- https://github.com/eGovFramework/egovframe-msa-edu/blob/main/backend/reserve-item-service/src/main/resources/schema.sql
+- https://github.com/eGovFramework/egovframe-msa-edu/blob/main/backend/reserve-request-service/src/main/resources/schema.sql
+
+https://github.com/eGovFramework/egovframe-msa-edu/blob/main/docker-compose/mysql/reservation.sql
+
+https://github.com/eGovFramework/egovframe-msa-edu/blob/main/docker-compose/mysql/init/init.sql
 
 ## 2023-01-09
 
