@@ -2,6 +2,14 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-13
+
+### 실시간 SQL 모니터
+
+sqldeveloper
+
+https://jack-of-all-trades.tistory.com/228
+
 ## 2023-01-12
 ### 넥사크로 N this.Dataset00.rowcount
 - 넥사크로 N 컴포넌트 활용 워크북 21.0.0.700
