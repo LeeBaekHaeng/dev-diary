@@ -27,6 +27,16 @@ for (var i = 0; i < iRowCount; i++)
 }
 ```
 
+### 국세청_사업자등록정보 진위확인 및 상태조회 서비스
+
+https://www.data.go.kr/data/15081808/openapi.do
+
+국세청_사업자등록정보_진위확인_및_상태조회_서비스
+
+```cmd
+curl -X POST "https://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey=UMEa5VvLLLGHOOzP2cVmtSF15EtCq4Ke7KBJR8OS63PB2EJgAZGnVZdy7saCYsrOvXzJKw4raynLW7AT0Ezsyg%3D%3D" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{  \"b_no\": [    \"0000000000\"  ]}"
+```
+
 ## 2023-01-11
 
 ### eGovFrame MSA Boot Template Project
