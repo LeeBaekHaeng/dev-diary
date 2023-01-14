@@ -2,6 +2,29 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-14
+
+### SSLContext Algorithms
+
+https://developer.android.com/reference/javax/net/ssl/SSLContext#getInstance(java.lang.String)
+
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#SSLContext
+
+```
+SSL
+SSLv2
+SSLv3
+TLS
+TLSv1
+TLSv1.1
+TLSv1.2
+```
+
+```java
+SSLContext.getInstance("SSL");
+SSLContext.getInstance("TLS");
+```
+
 ## 2023-01-13
 
 ### 실시간 SQL 모니터
