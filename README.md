@@ -18,6 +18,58 @@ curl --tlsv1.2 -I -v -L https://api.odcloud.kr
 curl -X POST "http://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey=UMEa5VvLLLGHOOzP2cVmtSF15EtCq4Ke7KBJR8OS63PB2EJgAZGnVZdy7saCYsrOvXzJKw4raynLW7AT0Ezsyg%3D%3D" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{  \"b_no\": [    \"0000000000\"  ]}"  --tlsv1.2
 ```
 
+국세청_사업자등록정보_진위확인_및_상태조회_서비스
+
+```java
+package test.test;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import org.junit.Test;
+
+public class 국세청_사업자등록정보_진위확인_및_상태조회_서비스 {
+
+	@Test
+	public void test() throws Exception {
+		System.out.println("국세청_사업자등록정보 진위확인 및 상태조회 서비스");
+
+		String spec = "http://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey=UMEa5VvLLLGHOOzP2cVmtSF15EtCq4Ke7KBJR8OS63PB2EJgAZGnVZdy7saCYsrOvXzJKw4raynLW7AT0Ezsyg%3D%3D";
+
+		URL url = new URL(spec);
+
+		HttpURLConnection con = (HttpURLConnection) url.openConnection();
+
+		con.setRequestMethod("POST");
+
+		con.setRequestProperty("accept", "application/json");
+		con.setRequestProperty("Content-Type", "application/json");
+
+		con.setDoOutput(true);
+
+		String jsonInputString = "{  \"b_no\": [    \"0000000000\"  ]}}";
+
+		try (OutputStream os = con.getOutputStream()) {
+			byte[] input = jsonInputString.getBytes("utf-8");
+			os.write(input, 0, input.length);
+		}
+
+		try (BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream(), "utf-8"))) {
+			StringBuilder response = new StringBuilder();
+			String responseLine = null;
+			while ((responseLine = br.readLine()) != null) {
+				response.append(responseLine.trim());
+			}
+			System.out.println(response.toString());
+		}
+	}
+
+}
+```
+
 ## 2023-01-14
 
 ### SSLContext Algorithms
