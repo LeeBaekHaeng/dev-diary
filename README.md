@@ -2,6 +2,22 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-16
+
+### curl 사용할 SSL/TLS 버전(version) 강제로 지정하기
+
+https://www.lesstif.com/software-architect/curl-ssl-tls-version-113346985.html
+
+```
+curl --tlsv1.2 -I -v -L https://api.odcloud.kr
+```
+
+국세청_사업자등록정보 진위확인 및 상태조회 서비스
+
+```cmd
+curl -X POST "http://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey=UMEa5VvLLLGHOOzP2cVmtSF15EtCq4Ke7KBJR8OS63PB2EJgAZGnVZdy7saCYsrOvXzJKw4raynLW7AT0Ezsyg%3D%3D" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{  \"b_no\": [    \"0000000000\"  ]}"  --tlsv1.2
+```
+
 ## 2023-01-14
 
 ### SSLContext Algorithms
