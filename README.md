@@ -2,6 +2,133 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-17
+
+국세청_사업자등록정보_진위확인_및_상태조회_서비스
+
+
+```java
+package god.test;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.collections4.MapUtils;
+import org.apache.commons.io.IOUtils;
+import org.junit.Test;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class 국세청_사업자등록정보_진위확인_및_상태조회_서비스 {
+
+	@Test
+	public void test() {
+		System.out.println("국세청_사업자등록정보 진위확인 및 상태조회 서비스");
+
+		Map<String, Object> result = null;
+
+		Map<String, Object> data = new HashMap<>();
+		List<String> bNos = new ArrayList<>();
+		bNos.add("0000000000");
+		data.put("b_no", bNos);
+		final ObjectMapper mapper = new ObjectMapper();
+		String param = null;
+		try {
+			param = mapper.writeValueAsString(data);
+		} catch (JsonProcessingException e) {
+			System.err.println("JsonProcessingException");
+		}
+		System.out.println("param=" + param);
+
+//		String spec = "http://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey=UMEa5VvLLLGHOOzP2cVmtSF15EtCq4Ke7KBJR8OS63PB2EJgAZGnVZdy7saCYsrOvXzJKw4raynLW7AT0Ezsyg%3D%3D";
+		String spec = "https://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey=UMEa5VvLLLGHOOzP2cVmtSF15EtCq4Ke7KBJR8OS63PB2EJgAZGnVZdy7saCYsrOvXzJKw4raynLW7AT0Ezsyg%3D%3D";
+
+		URL url = null;
+		try {
+			url = new URL(spec);
+		} catch (MalformedURLException e) {
+			System.err.println("MalformedURLException");
+		}
+
+		HttpURLConnection urlConnection = null;
+		try {
+			urlConnection = (HttpURLConnection) url.openConnection();
+		} catch (IOException e) {
+			System.err.println("IOException");
+		}
+
+		try {
+			try {
+				urlConnection.setRequestMethod("POST");
+			} catch (ProtocolException e) {
+				System.err.println("ProtocolException");
+			}
+
+			urlConnection.setDoOutput(true);
+
+			urlConnection.setRequestProperty("accept", "application/json");
+			urlConnection.setRequestProperty("Content-Type", "application/json");
+
+			try (OutputStream out = new BufferedOutputStream(urlConnection.getOutputStream());) {
+				out.write(param.getBytes(StandardCharsets.UTF_8));
+			} catch (IOException e) {
+				System.err.println("IOException");
+			}
+
+			try (InputStream in = new BufferedInputStream(urlConnection.getInputStream());) {
+				String src = IOUtils.toString(in, StandardCharsets.UTF_8);
+				System.out.println("src=" + src);
+				result = mapper.readValue(src, new TypeReference<Map<String, Object>>() {
+				});
+			} catch (IOException e) {
+				System.err.println("IOException");
+			}
+		} finally {
+			urlConnection.disconnect();
+		}
+
+		System.out.println("result=" + result);
+		System.out.println("request_cnt=" + MapUtils.getInteger(result, "request_cnt"));
+		System.out.println("status_code=" + MapUtils.getString(result, "status_code"));
+		a1(result);
+
+	}
+
+	void a1(Map<String, Object> result) {
+		@SuppressWarnings("unchecked")
+		List<Map<String, Object>> datas = (List<Map<String, Object>>) result.get("data");
+//		List<Map<String, Object>> datas = (List<Map<String, Object>>) MapUtils.getObject(result, "data");
+
+		for (Map<String, Object> data : datas) {
+			System.out.println("data=" + data);
+			System.out.println("b_no=" + MapUtils.getString(data, "b_no"));
+			System.out.println("b_stt=" + MapUtils.getString(data, "b_stt"));
+			System.out.println("b_stt_cd=" + MapUtils.getString(data, "b_stt_cd"));
+			System.out.println("tax_type=" + MapUtils.getString(data, "tax_type"));
+			System.out.println("tax_type_cd=" + MapUtils.getString(data, "tax_type_cd"));
+			System.out.println("end_dt=" + MapUtils.getString(data, "end_dt"));
+			System.out.println("tax_type_change_dt=" + MapUtils.getString(data, "tax_type_change_dt"));
+			System.out.println("invoice_apply_dt=" + MapUtils.getString(data, "invoice_apply_dt"));
+		}
+	}
+
+}
+```
+
 ## 2023-01-16
 
 ### curl 사용할 SSL/TLS 버전(version) 강제로 지정하기
