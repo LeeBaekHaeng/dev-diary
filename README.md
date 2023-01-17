@@ -247,6 +247,410 @@ public class 국세청_사업자등록정보_진위확인_및_상태조회_서�
 }
 ```
 
+
+```java
+package god.test;
+
+import java.util.List;
+
+public class NtsBusinessmanV1Status {
+
+	private int request_cnt;
+
+	private String status_code;
+
+	private List<NtsBusinessmanV1StatusData> data;
+
+	public int getRequest_cnt() {
+		return request_cnt;
+	}
+
+	public void setRequest_cnt(int request_cnt) {
+		this.request_cnt = request_cnt;
+	}
+
+	public String getStatus_code() {
+		return status_code;
+	}
+
+	public void setStatus_code(String status_code) {
+		this.status_code = status_code;
+	}
+
+	public List<NtsBusinessmanV1StatusData> getData() {
+		return data;
+	}
+
+	public void setData(List<NtsBusinessmanV1StatusData> data) {
+		this.data = data;
+	}
+
+	@Override
+	public String toString() {
+		return "NtsBusinessmanV1Status [request_cnt=" + request_cnt + ", status_code=" + status_code + ", data=" + data
+				+ "]";
+	}
+
+}
+```
+
+```java
+package god.test;
+
+public class NtsBusinessmanV1StatusData {
+
+	private String b_no;
+	private String b_stt;
+	private String b_stt_cd;
+	private String tax_type;
+	private String tax_type_cd;
+	private String end_dt;
+	private String utcc_yn;
+	private String tax_type_change_dt;
+	private String invoice_apply_dt;
+
+	public String getB_no() {
+		return b_no;
+	}
+
+	public void setB_no(String b_no) {
+		this.b_no = b_no;
+	}
+
+	public String getB_stt() {
+		return b_stt;
+	}
+
+	public void setB_stt(String b_stt) {
+		this.b_stt = b_stt;
+	}
+
+	public String getB_stt_cd() {
+		return b_stt_cd;
+	}
+
+	public void setB_stt_cd(String b_stt_cd) {
+		this.b_stt_cd = b_stt_cd;
+	}
+
+	public String getTax_type() {
+		return tax_type;
+	}
+
+	public void setTax_type(String tax_type) {
+		this.tax_type = tax_type;
+	}
+
+	public String getTax_type_cd() {
+		return tax_type_cd;
+	}
+
+	public void setTax_type_cd(String tax_type_cd) {
+		this.tax_type_cd = tax_type_cd;
+	}
+
+	public String getEnd_dt() {
+		return end_dt;
+	}
+
+	public void setEnd_dt(String end_dt) {
+		this.end_dt = end_dt;
+	}
+
+	public String getUtcc_yn() {
+		return utcc_yn;
+	}
+
+	public void setUtcc_yn(String utcc_yn) {
+		this.utcc_yn = utcc_yn;
+	}
+
+	public String getTax_type_change_dt() {
+		return tax_type_change_dt;
+	}
+
+	public void setTax_type_change_dt(String tax_type_change_dt) {
+		this.tax_type_change_dt = tax_type_change_dt;
+	}
+
+	public String getInvoice_apply_dt() {
+		return invoice_apply_dt;
+	}
+
+	public void setInvoice_apply_dt(String invoice_apply_dt) {
+		this.invoice_apply_dt = invoice_apply_dt;
+	}
+
+	@Override
+	public String toString() {
+		return "NtsBusinessmanV1StatusData [b_no=" + b_no + ", b_stt=" + b_stt + ", b_stt_cd=" + b_stt_cd
+				+ ", tax_type=" + tax_type + ", tax_type_cd=" + tax_type_cd + ", end_dt=" + end_dt + ", utcc_yn="
+				+ utcc_yn + ", tax_type_change_dt=" + tax_type_change_dt + ", invoice_apply_dt=" + invoice_apply_dt
+				+ "]";
+	}
+
+}
+```
+
+국세청_사업자등록정보_진위확인_및_상태조회_서비스3
+
+```java
+package god.test2;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.io.IOUtils;
+import org.junit.Test;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class 국세청_사업자등록정보_진위확인_및_상태조회_서비스3 {
+
+	@Test
+	public void test() {
+		System.out.println("국세청_사업자등록정보 진위확인 및 상태조회 서비스");
+
+		NtsBusinessmanV1Status result = null;
+
+		Map<String, Object> data = new HashMap<>();
+		List<String> bNos = new ArrayList<>();
+		bNos.add("0000000000");
+		data.put("b_no", bNos);
+		final ObjectMapper mapper = new ObjectMapper();
+		String param = null;
+		try {
+			param = mapper.writeValueAsString(data);
+		} catch (JsonProcessingException e) {
+			System.err.println("JsonProcessingException");
+		}
+		System.out.println("param=" + param);
+
+//		String spec = "http://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey=UMEa5VvLLLGHOOzP2cVmtSF15EtCq4Ke7KBJR8OS63PB2EJgAZGnVZdy7saCYsrOvXzJKw4raynLW7AT0Ezsyg%3D%3D";
+		String spec = "https://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey=UMEa5VvLLLGHOOzP2cVmtSF15EtCq4Ke7KBJR8OS63PB2EJgAZGnVZdy7saCYsrOvXzJKw4raynLW7AT0Ezsyg%3D%3D";
+
+		URL url = null;
+		try {
+			url = new URL(spec);
+		} catch (MalformedURLException e) {
+			System.err.println("MalformedURLException");
+		}
+
+		HttpURLConnection urlConnection = null;
+		try {
+			urlConnection = (HttpURLConnection) url.openConnection();
+		} catch (IOException e) {
+			System.err.println("IOException");
+		}
+
+		try {
+			try {
+				urlConnection.setRequestMethod("POST");
+			} catch (ProtocolException e) {
+				System.err.println("ProtocolException");
+			}
+
+			urlConnection.setDoOutput(true);
+
+			urlConnection.setRequestProperty("accept", "application/json");
+			urlConnection.setRequestProperty("Content-Type", "application/json");
+
+			try (OutputStream out = new BufferedOutputStream(urlConnection.getOutputStream());) {
+				out.write(param.getBytes(StandardCharsets.UTF_8));
+			} catch (IOException e) {
+				System.err.println("IOException");
+			}
+
+			try (InputStream in = new BufferedInputStream(urlConnection.getInputStream());) {
+				String src = IOUtils.toString(in, StandardCharsets.UTF_8);
+				System.out.println("src=" + src);
+				result = mapper.readValue(src, NtsBusinessmanV1Status.class);
+			} catch (IOException e) {
+				e.printStackTrace();
+				System.err.println("IOException");
+			}
+		} finally {
+			urlConnection.disconnect();
+		}
+
+		System.out.println("result=" + result);
+		System.out.println("request_cnt=" + result.getRequestCnt());
+		System.out.println("status_code=" + result.getStatusCode());
+		a1(result);
+
+	}
+
+	void a1(NtsBusinessmanV1Status result) {
+		for (NtsBusinessmanV1StatusData data : result.getData()) {
+			System.out.println("data=" + data);
+			System.out.println("b_no=" + data.getbNo());
+			System.out.println("b_stt=" + data.getbStt());
+			System.out.println("b_stt_cd=" + data.getbSttCd());
+			System.out.println("tax_type=" + data.getTaxType());
+			System.out.println("tax_type_cd=" + data.getTaxTypeCd());
+			System.out.println("end_dt=" + data.getEndDt());
+			System.out.println("tax_type_change_dt=" + data.getTaxTypeChangeDt());
+			System.out.println("invoice_apply_dt=" + data.getInvoiceApplyDt());
+		}
+	}
+
+}
+```
+
+```java
+package god.test2;
+
+import java.util.List;
+
+public class NtsBusinessmanV1Status {
+
+	private int requestCnt;
+	private String statusCode;
+	private List<NtsBusinessmanV1StatusData> data;
+
+	public int getRequestCnt() {
+		return requestCnt;
+	}
+
+	public void setRequestCnt(int requestCnt) {
+		this.requestCnt = requestCnt;
+	}
+
+	public String getStatusCode() {
+		return statusCode;
+	}
+
+	public void setStatusCode(String statusCode) {
+		this.statusCode = statusCode;
+	}
+
+	public List<NtsBusinessmanV1StatusData> getData() {
+		return data;
+	}
+
+	public void setData(List<NtsBusinessmanV1StatusData> data) {
+		this.data = data;
+	}
+
+	@Override
+	public String toString() {
+		return "NtsBusinessmanV1Status [requestCnt=" + requestCnt + ", statusCode=" + statusCode + ", data=" + data
+				+ "]";
+	}
+
+}
+```
+
+```java
+package god.test2;
+
+public class NtsBusinessmanV1StatusData {
+
+	private String bNo;
+	private String bStt;
+	private String bSttCd;
+	private String taxType;
+	private String taxTypeCd;
+	private String endDt;
+	private String utccYn;
+	private String taxTypeChangeDt;
+	private String invoiceApplyDt;
+
+	public String getbNo() {
+		return bNo;
+	}
+
+	public void setbNo(String bNo) {
+		this.bNo = bNo;
+	}
+
+	public String getbStt() {
+		return bStt;
+	}
+
+	public void setbStt(String bStt) {
+		this.bStt = bStt;
+	}
+
+	public String getbSttCd() {
+		return bSttCd;
+	}
+
+	public void setbSttCd(String bSttCd) {
+		this.bSttCd = bSttCd;
+	}
+
+	public String getTaxType() {
+		return taxType;
+	}
+
+	public void setTaxType(String taxType) {
+		this.taxType = taxType;
+	}
+
+	public String getTaxTypeCd() {
+		return taxTypeCd;
+	}
+
+	public void setTaxTypeCd(String taxTypeCd) {
+		this.taxTypeCd = taxTypeCd;
+	}
+
+	public String getEndDt() {
+		return endDt;
+	}
+
+	public void setEndDt(String endDt) {
+		this.endDt = endDt;
+	}
+
+	public String getUtccYn() {
+		return utccYn;
+	}
+
+	public void setUtccYn(String utccYn) {
+		this.utccYn = utccYn;
+	}
+
+	public String getTaxTypeChangeDt() {
+		return taxTypeChangeDt;
+	}
+
+	public void setTaxTypeChangeDt(String taxTypeChangeDt) {
+		this.taxTypeChangeDt = taxTypeChangeDt;
+	}
+
+	public String getInvoiceApplyDt() {
+		return invoiceApplyDt;
+	}
+
+	public void setInvoiceApplyDt(String invoiceApplyDt) {
+		this.invoiceApplyDt = invoiceApplyDt;
+	}
+
+	@Override
+	public String toString() {
+		return "NtsBusinessmanV1StatusData [bNo=" + bNo + ", bStt=" + bStt + ", bSttCd=" + bSttCd + ", taxType="
+				+ taxType + ", taxTypeCd=" + taxTypeCd + ", endDt=" + endDt + ", utccYn=" + utccYn
+				+ ", taxTypeChangeDt=" + taxTypeChangeDt + ", invoiceApplyDt=" + invoiceApplyDt + "]";
+	}
+
+}
+```
+
 ## 2023-01-16
 
 ### curl 사용할 SSL/TLS 버전(version) 강제로 지정하기
