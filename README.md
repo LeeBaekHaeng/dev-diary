@@ -80,6 +80,36 @@ OBS-Studio-29.0-Full-Installer-x64.exe
 
 윈도우 캡쳐
 
+### nvm-windows
+
+https://github.com/coreybutler/nvm-windows
+
+https://github.com/coreybutler/nvm-windows/releases/tag/1.1.10
+
+nvm-setup.exe
+
+C:\Users\god\AppData\Roaming\nvm
+
+C:\Program Files\nodejs
+
+```
+nvm list
+```
+
+```
+nvm install 14.8.0
+```
+
+```
+nvm use 14.8.0
+```
+
+### 픽픽 (PicPick)
+
+https://picpick.app/ko/
+
+캡처
+
 ## 2023-01-17
 
 국세청_사업자등록정보_진위확인_및_상태조회_서비스
