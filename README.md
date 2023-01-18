@@ -68,6 +68,18 @@ font.jsp
 </html>
 ```
 
+### OBS Studio
+
+영상 녹화와 실시간 방송을 할 수 있는 무료 및 공개 소프트웨어입니다.
+
+오픈 브로드캐스터 소프트웨어
+
+https://ko.wikipedia.org/wiki/%EC%98%A4%ED%94%88_%EB%B8%8C%EB%A1%9C%EB%93%9C%EC%BA%90%EC%8A%A4%ED%84%B0_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4
+
+OBS-Studio-29.0-Full-Installer-x64.exe
+
+윈도우 캡쳐
+
 ## 2023-01-17
 
 국세청_사업자등록정보_진위확인_및_상태조회_서비스
