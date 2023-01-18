@@ -2,6 +2,72 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 20230-01-18
+
+### 모든 글꼴 가져오기
+
+모든_글꼴_가져오기
+```java
+package god.test;
+
+import java.awt.Font;
+import java.awt.GraphicsEnvironment;
+
+import org.junit.Test;
+
+public class 모든_글꼴_가져오기 {
+
+	@Test
+	public void test() {
+		GraphicsEnvironment graphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment();
+		Font[] allFonts = graphicsEnvironment.getAllFonts();
+		int i = 1;
+		for (Font font : allFonts) {
+			System.out.println("i=" + i);
+			System.out.println("family=" + font.getFamily());
+			System.out.println("fontName=" + font.getFontName());
+			System.out.println("");
+			i++;
+		}
+	}
+
+}
+```
+
+font.jsp
+```jsp
+<%@page import="java.awt.Font"%>
+<%@page import="java.awt.GraphicsEnvironment"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>모든 글꼴 가져오기</title>
+</head>
+<body>
+
+	<h1>모든 글꼴 가져오기</h1>
+
+	<ol>
+		<%
+		GraphicsEnvironment graphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment();
+		Font[] allFonts = graphicsEnvironment.getAllFonts();
+		for (Font font : allFonts) {
+			System.out.println("");
+			out.println("<li>");
+			out.println("family=" + font.getFamily());
+			out.println(", fontName=" + font.getFontName());
+			out.println("</li>");
+		}
+		%>
+	</ol>
+
+</body>
+</html>
+```
+
 ## 2023-01-17
 
 국세청_사업자등록정보_진위확인_및_상태조회_서비스
