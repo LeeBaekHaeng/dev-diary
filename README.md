@@ -77,6 +77,16 @@ C:\test\test.war
 		- server.log
 		- server.log.2023-01-18
 
+### 와일드플라이
+
+- https://www.wildfly.org/
+- https://www.wildfly.org/downloads/
+- 26.1.2.Final
+	- https://github.com/wildfly/wildfly/releases/download/26.1.2.Final/wildfly-26.1.2.Final.zip
+- https://docs.wildfly.org/26.1/
+- https://docs.wildfly.org/26.1/Getting_Started_Guide.html#starting-wildfly-10
+- C:\wildfly-26.1.2.Final
+
 ## 2023-01-18
 
 ### 모든 글꼴 가져오기
