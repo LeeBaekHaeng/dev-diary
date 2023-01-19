@@ -48,6 +48,35 @@ http://localhost:8080/
 http://localhost:9990
 ```
 
+### 앱 배포
+
+- Deployments
+- Content Repository
+- Add Unmanaged Deployment
+
+Name
+```
+test.war
+```
+
+Runtime Name
+```
+test.war
+```
+
+Path
+```
+C:\test\test.war
+```
+
+- Deploy
+- main-server-group 선택
+- http://localhost:8080/test/index.jsp
+- 로그
+	- C:\test\jboss-eap-7.4\domain\servers\server-one\log
+		- server.log
+		- server.log.2023-01-18
+
 ## 2023-01-18
 
 ### 모든 글꼴 가져오기
