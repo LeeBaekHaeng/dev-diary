@@ -87,6 +87,30 @@ C:\test\test.war
 - https://docs.wildfly.org/26.1/Getting_Started_Guide.html#starting-wildfly-10
 - C:\wildfly-26.1.2.Final
 
+### 아파치 HTTP 서버
+- https://httpd.apache.org/
+- https://dlcdn.apache.org/httpd/binaries/win32/
+- ApacheHaus
+	- https://www.apachehaus.com/cgi-bin/download.plx
+	- https://www.apachehaus.com/cgi-bin/download.plx?dli=AZU50RUNVT41EVNdnZtB3SiRUMUNlVSZETVFzbRtWW
+	- httpd-2.4.55-o111s-x64-vs17.zip
+- Apache Lounge
+	- https://www.apachelounge.com/download/
+	- https://www.apachelounge.com/download/VS17/binaries/httpd-2.4.55-win64-VS17.zip
+
+```
+C:\Apache24\conf
+```
+
+```
+httpd.conf
+```
+
+```
+Define SRVROOT "/Apache24"
+ServerRoot "${SRVROOT}"
+```
+
 ## 2023-01-18
 
 ### 모든 글꼴 가져오기
