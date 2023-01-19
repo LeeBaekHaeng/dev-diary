@@ -111,6 +111,76 @@ Define SRVROOT "/Apache24"
 ServerRoot "${SRVROOT}"
 ```
 
+### 리버스 프록시
+
+httpd-test.conf Include
+```
+C:\Apache24\conf
+```
+
+```
+httpd.conf
+```
+
+```
+Include conf/test/httpd-test.conf
+```
+
+httpd-test.conf
+```
+C:\test\Apache24\conf\test
+```
+
+```
+httpd-test.conf
+```
+
+```
+<Directory "${SRVROOT}/docs/test.example.com">
+    #
+    # Possible values for the Options directive are "None", "All",
+    # or any combination of:
+    #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+    #
+    # Note that "MultiViews" must be named *explicitly* --- "Options All"
+    # doesn't give it to you.
+    #
+    # The Options directive is both complicated and important.  Please see
+    # http://httpd.apache.org/docs/2.4/mod/core.html#options
+    # for more information.
+    #
+    Options Indexes FollowSymLinks
+
+    #
+    # AllowOverride controls what directives may be placed in .htaccess files.
+    # It can be "All", "None", or any combination of the keywords:
+    #   Options FileInfo AuthConfig Limit
+    #
+    AllowOverride None
+
+    #
+    # Controls who can get stuff from this server.
+    #
+    Require all granted
+</Directory>
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@test.example.com
+    DocumentRoot "${SRVROOT}/docs/test.example.com"
+    ServerName test.example.com
+    ServerAlias www.test.example.com
+    ErrorLog "logs/test.example.com-error.log"
+    CustomLog "logs/test.example.com-access.log" common
+
+    ProxyPass /test/ http://127.0.0.1:8080/
+    ProxyPassReverse /test/ http://127.0.0.1:8080/
+
+    ProxyPass /test2 http://127.0.0.1:8230/
+    ProxyPassReverse /test2 http://127.0.0.1:8230/
+
+</VirtualHost>
+```
+
 ## 2023-01-18
 
 ### 모든 글꼴 가져오기
