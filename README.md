@@ -2,7 +2,53 @@
 
 [할 일(To Do)](todo/2022.md)
 
-## 20230-01-18
+## 2023-01-19
+
+### JBoss EAP 7.4.0
+- Red Hat JBoss Enterprise Application Platform
+- https://www.redhat.com/ko/technologies/jboss-middleware/application-platform
+- https://developers.redhat.com/products/eap/download?extIdCarryOver=true&sc_cid=701f2000001OH7EAAW
+- 7.4.0
+- https://developers.redhat.com/content-gateway/file/jboss-eap-7.4.0.zip
+
+```
+C:\jboss-eap-7.4\bin
+```
+
+JAVA_HOME 추가
+```
+common.bat
+```
+
+```
+set JAVA_HOME=C:\EGOVFRAME\eGovCI-4.0.0_64bit\bin\jdk8u242-b08
+
+@echo off
+```
+
+콘솔 사용자 추가
+```
+add-user.bat
+```
+
+admin / admin
+
+시작
+```
+domain.bat
+```
+
+주소
+```
+http://localhost:8080/
+```
+
+콘솔 주소
+```
+http://localhost:9990
+```
+
+## 2023-01-18
 
 ### 모든 글꼴 가져오기
 
