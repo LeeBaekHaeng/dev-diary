@@ -181,6 +181,10 @@ httpd-test.conf
 </VirtualHost>
 ```
 
+### k8s v1.15버전 설치 (실습 강의 버전)
+
+https://kubetm.github.io/k8s/02-beginner/cluster-install-case2/
+
 ## 2023-01-18
 
 ### 모든 글꼴 가져오기
