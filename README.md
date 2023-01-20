@@ -2,6 +2,27 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-21
+
+### vscode 설치
+- https://code.visualstudio.com/
+- https://code.visualstudio.com/Download
+- VSCodeUserSetup-x64-1.74.3.exe
+- C:\Users\godsoft\AppData\Local\Programs\Microsoft VS Code
+- Visual Studio Code
+```
+설치 위치:
+      C:\Users\godsoft\AppData\Local\Programs\Microsoft VS Code
+
+시작 메뉴 폴더:
+      Visual Studio Code
+
+추가 작업:
+      기타:
+         Code을(를) 지원되는 파일 형식에 대한 편집기로 등록합니다.
+         PATH에 추가(다시 시작한 후 사용 가능)
+```
+
 ## 2023-01-20
 
 ### windows ubuntu 설치
