@@ -2,6 +2,90 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-20
+
+### windows ubuntu 설치
+
+- Windows 10에 WSL2 으로 Ubuntu 설치
+	- https://cpuu.postype.com/post/10265353
+- ubuntu
+	- Ubuntu 오류가 발생했습니다.
+	- Ubuntu 22.04.1 LTS 오류가 발생했습니다.
+	- Ubuntu 20.04.5 LTS 오류가 발생했습니다.
+	- Ubuntu 18.04.5 LTS 오류가 발생했습니다.
+
+wsl 활성화
+
+cmd 관리자 권한으로 실행
+```
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
+
+```
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+```
+C:\WINDOWS\system32>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
+배포 이미지 서비스 및 관리 도구
+버전: 10.0.19041.844
+
+이미지 버전: 10.0.19044.2486
+
+기능을 사용하도록 설정하는 중
+[==========================100.0%==========================]
+작업을 완료했습니다.
+
+C:\WINDOWS\system32>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+배포 이미지 서비스 및 관리 도구
+버전: 10.0.19041.844
+
+이미지 버전: 10.0.19044.2486
+
+기능을 사용하도록 설정하는 중
+[==========================100.0%==========================]
+작업을 완료했습니다.
+
+C:\WINDOWS\system32>
+```
+
+WSL을 사용하여 Windows에 Linux 설치
+
+https://learn.microsoft.com/ko-kr/windows/wsl/install?ranMID=24542&ranEAID=je6NUbpObpQ&ranSiteID=je6NUbpObpQ-x_jVxEPS9jTkP7jwU8K4Cg&epi=je6NUbpObpQ-x_jVxEPS9jTkP7jwU8K4Cg&irgwc=1&OCID=AID2200057_aff_7593_1243925&tduid=(ir__xpmp6jocmokfbkojyoie3x9eqn2xcra1fx9ei0hy00)(7593)(1243925)(je6NUbpObpQ-x_jVxEPS9jTkP7jwU8K4Cg)()&irclickid=_xpmp6jocmokfbkojyoie3x9eqn2xcra1fx9ei0hy00
+
+```Windows PowerShell
+wsl --install
+```
+
+```
+wsl --list --online
+```
+
+```
+PS C:\Users\it1385> wsl --list --online
+다음은 설치할 수 있는 유효한 배포 목록입니다.
+기본 배포는 ‘*’로 표시됩니다.
+'wsl --install -d <Distro>'을(를) 사용하여 설치하세요.
+
+  NAME               FRIENDLY NAME
+* Ubuntu             Ubuntu
+  Debian             Debian GNU/Linux
+  kali-linux         Kali Linux Rolling
+  SLES-12            SUSE Linux Enterprise Server v12
+  SLES-15            SUSE Linux Enterprise Server v15
+  Ubuntu-18.04       Ubuntu 18.04 LTS
+  Ubuntu-20.04       Ubuntu 20.04 LTS
+  OracleLinux_8_5    Oracle Linux 8.5
+  OracleLinux_7_9    Oracle Linux 7.9
+PS C:\Users\it1385>
+```
+
+```
+wsl.exe --install -d Ubuntu
+```
+
 ## 2023-01-19
 
 ### JBoss EAP 7.4.0
