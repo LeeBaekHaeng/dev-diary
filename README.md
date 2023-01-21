@@ -64,6 +64,10 @@ SourceTree 3.3.9
 
 SourceTreeSetup-3.4.11.exe
 
+C:\Users\godsoft\AppData\Local\Atlassian 삭제
+
+C:\Users\godsoft\AppData\Roaming\Atlassian 삭제
+
 ## 2023-01-20
 
 ### windows ubuntu 설치
