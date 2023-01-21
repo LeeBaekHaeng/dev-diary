@@ -23,6 +23,31 @@
          PATH에 추가(다시 시작한 후 사용 가능)
 ```
 
+### mobaxterm 설치
+- MobaXterm
+- https://mobaxterm.mobatek.net/
+- https://mobaxterm.mobatek.net/download.html
+- Home Edition
+- https://mobaxterm.mobatek.net/download-home-edition.html
+- MobaXterm_Installer_v22.3.zip
+- MobaXterm_Portable_v22.3.zip
+- C:\test\MobaXterm_Portable_v22.3
+
+Windows 10 Ubuntu 20.05.5 LTS ssh 접속
+```
+sudo service ssh status
+```
+
+```
+sudo service ssh start
+```
+
+```
+192.168.219.107
+```
+
+god / god
+
 ## 2023-01-20
 
 ### windows ubuntu 설치
