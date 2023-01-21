@@ -48,6 +48,22 @@ sudo service ssh start
 
 god / god
 
+```
+sudo apt install openjdk-8-jre-headless
+```
+
+```
+http://localhost:8080/jenkins
+```
+
+```
+http://192.168.219.107:8080/jenkins
+```
+
+SourceTree 3.3.9
+
+SourceTreeSetup-3.4.11.exe
+
 ## 2023-01-20
 
 ### windows ubuntu 설치
