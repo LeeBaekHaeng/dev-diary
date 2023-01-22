@@ -2,6 +2,32 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-22
+
+### 실행 중인 WSL 버전 확인
+
+```
+wsl -l -v
+```
+
+```
+C:\Users\godsoft>wsl -l -v
+  NAME            STATE           VERSION
+* Ubuntu-20.04    Running         1
+```
+
+```
+service ssh status
+```
+
+```
+sudo service ssh start
+```
+
+```
+sudo service ssh stop
+```
+
 ## 2023-01-21
 
 ### vscode 설치
