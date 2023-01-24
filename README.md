@@ -2,6 +2,18 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-24
+
+### WSL을 사용하여 Windows에 Linux 설치
+
+https://learn.microsoft.com/ko-kr/windows/wsl/install
+
+WSL 설치 명령
+
+```PowerShell
+wsl --install
+```
+
 ## 2023-01-22
 
 ### 실행 중인 WSL 버전 확인
