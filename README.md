@@ -2,6 +2,22 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-25
+
+### Get-AppxPackage
+
+https://learn.microsoft.com/en-us/powershell/module/appx/get-appxpackage?view=windowsserver2022-ps
+
+```PowerShell
+Get-AppxPackage -AllUsers
+```
+
+Windows PowerShell > 관리자 권한으로 실행
+
+```PowerShell
+Get-AppxPackage -Name "ubuntu"
+```
+
 ## 2023-01-24
 
 ### WSL을 사용하여 Windows에 Linux 설치
