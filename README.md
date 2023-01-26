@@ -2,6 +2,21 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-26
+
+### Hyper-V NAT 네트워크 설정
+
+https://learn.microsoft.com/ko-kr/virtualization/hyper-v-on-windows/user-guide/setup-nat-network
+
+### 오라클 프로시저 디버깅 권한 주는 방법
+
+https://wakestand.tistory.com/374
+
+```
+GRANT DEBUG CONNECT SESSION TO "계정명";
+GRANT DEBUG ANY PROCEDURE TO "계정명";
+```
+
 ## 2023-01-25
 
 ### Get-AppxPackage
