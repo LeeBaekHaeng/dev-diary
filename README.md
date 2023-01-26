@@ -2,6 +2,14 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-27
+
+### Goldilocks
+
+- https://www.sunjesoft.co.kr/
+- in memory DBMS | Goldilocks | SUNJESOFT
+- 세계에서 가장 빠른 in memory DBMS - Goldilocks. 성능측정 국제기관이 TPC.ORG에서 인증된 가장 빠른 DBMS
+
 ## 2023-01-26
 
 ### Hyper-V NAT 네트워크 설정
