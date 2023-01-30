@@ -2,6 +2,20 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-30
+
+### JEUS(4.2.2 or Earlier), WebtoB 데모라이선스 신청
+- https://technet.tmaxsoft.com/ko/front/main/main.do
+- 데모라이선스 신청
+- Jeus Fix#19 Over Demo license Information
+	- license
+	- Expiration Date	2 months from the date issued
+		- 유효기간 발급일로부터 2개월
+- WebtoB Demo license Information
+	- license.dat
+	- Expiration Date	2 months from the date issued
+		- 유효기간 발급일로부터 2개월
+
 ## 2023-01-28
 
 ### Install Docker Engine
