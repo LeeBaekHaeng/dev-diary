@@ -2,6 +2,14 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-01-31
+
+항상 기뻐하라
+
+### 맥 파일 비교 프로그램 : FileMerge
+
+- https://devshin93.tistory.com/128
+
 ## 2023-01-30
 
 ### JEUS(4.2.2 or Earlier), WebtoB 데모라이선스 신청
