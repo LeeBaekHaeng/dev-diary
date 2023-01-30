@@ -16,6 +16,9 @@
 	- Expiration Date	2 months from the date issued
 		- 유효기간 발급일로부터 2개월
 
+### vscode 다운로드
+- https://code.visualstudio.com/Download
+
 ## 2023-01-28
 
 ### Install Docker Engine
