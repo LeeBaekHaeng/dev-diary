@@ -2,6 +2,23 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-02-01
+
+신중한 계획으로 성실하게 일하면 부유해지고 조급하게 굴면 가난해진다.
+
+### VBoxManage list
+- https://www.virtualbox.org/manual/UserManual.html#vboxmanage-list
+
+VBoxManage list [--long] [--sorted] [ bridgedifs | cloudnets | cloudprofiles | cloudproviders | cpu-profiles | dhcpservers | dvds | extpacks | floppies | groups | hddbackends | hdds | hostcpuids | hostdrives | hostdvds | hostfloppies | hostinfo | hostonlyifs | hostonlynets | intnets | natnets | ostypes | runningvms | screenshotformats | systemproperties | usbfilters | usbhost | vms | webcams ]
+
+```
+VBoxManage list groups
+```
+
+```
+VBoxManage list runningvms
+```
+
 ## 2023-01-31
 
 항상 기뻐하라
