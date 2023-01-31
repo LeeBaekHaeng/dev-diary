@@ -10,6 +10,27 @@
 
 - https://devshin93.tistory.com/128
 
+### 넥사크로 N 엑셀 익스포트/임포트
+- nexacro-xeni
+- http://docs.tobesoft.com/server_setup_guide_nexacro_n_ko#0257812f11d2010d
+
+Import
+
+```js
+this.Button00_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+    this.importObj = new ExcelImportObject("Import00",this); 
+    this.importObj.addEventHandler("onsuccess", this.Import_onsuccess, this);
+    this.importObj.set_importurl("http://localhost:8080/XExportImport");
+    this.importObj.importData("","output=ds","Dataset00=ds");
+}
+
+this.Import_onsuccess = function(obj,e) 
+{
+    this.Grid00.createFormat();
+}
+```
+
 ## 2023-01-30
 
 ### JEUS(4.2.2 or Earlier), WebtoB 데모라이선스 신청
