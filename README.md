@@ -31,6 +31,9 @@ this.Import_onsuccess = function(obj,e)
 }
 ```
 
+### 기념일관리 테스트
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.0:uss:기념일관리
+
 ## 2023-01-30
 
 ### JEUS(4.2.2 or Earlier), WebtoB 데모라이선스 신청
