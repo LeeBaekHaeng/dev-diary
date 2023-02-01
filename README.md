@@ -2,6 +2,39 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-02-02
+
+누가복음 16:10 지극히 작은 것에 충성된 자는 큰 것에도 충성되고 지극히 작은 것에 불의한 자는 큰 것에도 불의하니라
+
+### 통합 문서 읽기 및 다시 쓰기
+
+- https://poi.apache.org/
+- https://poi.apache.org/components/index.html
+- https://poi.apache.org/components/spreadsheet/quick-guide.html
+- https://poi.apache.org/components/spreadsheet/quick-guide.html#ReadWriteWorkbook
+- Reading and writing
+	- 읽기와 쓰기
+- Reading and Rewriting Workbooks
+	- 통합 문서 읽기 및 다시 쓰기
+
+```java
+try (InputStream inp = new FileInputStream("workbook.xls")) {
+//InputStream inp = new FileInputStream("workbook.xlsx");
+    Workbook wb = WorkbookFactory.create(inp);
+    Sheet sheet = wb.getSheetAt(0);
+    Row row = sheet.getRow(2);
+    Cell cell = row.getCell(3);
+    if (cell == null)
+        cell = row.createCell(3);
+    cell.setCellType(CellType.STRING);
+    cell.setCellValue("a test");
+    // Write the output to a file
+    try (OutputStream fileOut = new FileOutputStream("workbook.xls")) {
+        wb.write(fileOut);
+    }
+}
+```
+
 ## 2023-02-01
 
 신중한 계획으로 성실하게 일하면 부유해지고 조급하게 굴면 가난해진다.
