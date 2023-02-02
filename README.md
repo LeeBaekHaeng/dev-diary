@@ -2,6 +2,35 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-02-03
+
+새길말씀(요한복음 4:14)
+
+내가 주는 물을 마시는 자는 영원히 목마르지 아니하리니 내가 주는 물은 그 속에서 영생하도록 솟아나는 샘물이 되리라
+
+### G-클라우드 S존 설계 기준
+- 국가정보자원관리원
+- https://www.nirs.go.kr/ncia_MJS/board/dev/board/board.jsp?id=data_202&cate=&key=subject&search=&order=&desc=asc&menu_num=null&mode=view&pg=1&idx=3222
+- G-클라우드_S존_설계_기준.hwp
+
+OS
+- CentOS
+- RHEL
+- Oracle Linux
+
+WEB
+- Apache
+
+WAS
+- OpenJDK
+- JBoss
+
+DB
+- Cubrid
+- PostgreSQL
+- MariaDB
+- AltibaseDB
+
 ## 2023-02-02
 
 누가복음 16:10 지극히 작은 것에 충성된 자는 큰 것에도 충성되고 지극히 작은 것에 불의한 자는 큰 것에도 불의하니라
