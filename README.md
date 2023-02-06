@@ -2,6 +2,16 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-02-06
+
+새길말씀(요한복음 5:23)
+
+이는 모든 사람으로 아버지를 공경하는 것 같이 아들을 공경하게 하려 하심이라 아들을 공경하지 아니하는 자는 그를 보내신 아버지도 공경하지 아니하느니라
+
+### NexacroN_SetupStudio_x64 다운로드
+- http://support.tobesoft.co.kr/Support/?menu=Download_N&page=1
+- NexacroN_SetupStudio_x64.exe
+
 ## 2023-02-03
 
 새길말씀(요한복음 4:14)
