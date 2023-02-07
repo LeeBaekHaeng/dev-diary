@@ -2,6 +2,33 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-02-08
+
+새길말씀(요한복음 6:35)
+
+예수께서 이르시되 나는 생명의 떡이니 내게 오는 자는 결코 주리지 아니할 터이요 나를 믿는 자는 영원히 목마르지 아니하리라
+
+### 구글 번역 API
+- https://cloud.google.com/translate/docs/samples/translate-text-with-model?hl=ko#translate_text_with_model-java
+- 문자열 번역(기본 버전)
+
+```java
+Translation translation =
+    translate.translate(
+        "Hola Mundo!",
+        Translate.TranslateOption.sourceLanguage("es"),
+        Translate.TranslateOption.targetLanguage("de"),
+        // Use "base" for standard edition, "nmt" for the premium model.
+        Translate.TranslateOption.model("nmt"));
+
+System.out.printf("TranslatedText:\nText: %s\n", translation.getTranslatedText());
+```
+
+환경에서 서비스 계정 키 파일 사용
+- https://cloud.google.com/translate/docs/setup?hl=ko#using_the_service_account_key_file_in_your_environment
+- GOOGLE_APPLICATION_CREDENTIALS 환경 변수를 설정하여 애플리케이션 코드에 사용자 인증 정보를 제공합니다. 이 변수는 현재 셸 세션에만 적용됩니다. 이후 셸 세션에 이 변수를 적용하려면 셸 시작 파일(예: ~/.bashrc 또는 ~/.profile 파일)에서 변수를 설정합니다.
+
+
 ## 2023-02-07
 
 새길말씀(요한복음 6:11)
