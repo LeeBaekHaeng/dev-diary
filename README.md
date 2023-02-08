@@ -2,6 +2,17 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-02-09
+
+새길말씀(요한1서 1:7)
+
+그가 빛 가운데 계신 것 같이 우리도 빛 가운데 행하면 우리가 서로 사귐이 있고 그 아들 예수의 피가 우리를 모든 죄에서 깨끗하게 하실 것이요
+
+### 서비스 계정 키 만들기
+- 설정 | Cloud Translation | Google Cloud
+- https://cloud.google.com/translate/docs/setup?hl=ko#creating_service_accounts_and_keys
+- 프로젝트에 대한 액세스 권한을 제공하려면 서비스 계정에 Cloud Translation > Cloud Translation API Admin 역할을 부여합니다.
+
 ## 2023-02-08
 
 새길말씀(요한복음 6:35)
