@@ -2,6 +2,31 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-02-10
+
+새길말씀(요한1서 2:29)
+
+너희가 그가 의로우신 줄을 알면 의를 행하는 자마다 그에게서 난 줄을 알리라
+
+### [Google Cloud] 애플리케이션 기본 사용자 인증 정보 작동 방식
+
+https://cloud.google.com/docs/authentication/application-default-credentials?hl=ko
+
+애플리케이션 기본 사용자 인증 정보(ADC)
+
+gcloud CLI로 설정된 사용자 인증 정보
+
+Windows: %APPDATA%\gcloud\application_default_credentials.json
+
+Windows:
+```
+%APPDATA%\gcloud
+```
+
+```
+application_default_credentials.json
+```
+
 ## 2023-02-09
 
 새길말씀(요한1서 1:7)
