@@ -2,6 +2,64 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-02-11
+
+새길말씀(요한1서 3:24)
+
+그의 계명을 지키는 자는 주 안에 거하고 주는 그의 안에 거하시나니 우리에게 주신 성령으로 말미암아 그가 우리 안에 거하시는 줄을 우리가 아느니라
+
+### 클라이언트 라이브러리를 사용하여 클라우드 서비스에 인증
+
+https://cloud.google.com/docs/authentication/client-libraries?hl=ko#java
+
+```java
+
+import com.google.api.gax.paging.Page;
+import com.google.cloud.storage.Bucket;
+import com.google.cloud.storage.Storage;
+import com.google.cloud.storage.StorageOptions;
+import java.io.IOException;
+
+public class AuthenticateImplicitWithAdc {
+
+  public static void main(String[] args) throws IOException {
+    // TODO(Developer):
+    //  1. Before running this sample,
+    //  set up Application Default Credentials as described in
+    //  https://cloud.google.com/docs/authentication/external/set-up-adc
+    //  2. Replace the project variable below.
+    //  3. Make sure you have the necessary permission to list storage buckets
+    //  "storage.buckets.list"
+    String projectId = "your-google-cloud-project-id";
+    authenticateImplicitWithAdc(projectId);
+  }
+
+  // When interacting with Google Cloud Client libraries, the library can auto-detect the
+  // credentials to use.
+  public static void authenticateImplicitWithAdc(String project) throws IOException {
+
+    // *NOTE*: Replace the client created below with the client required for your application.
+    // Note that the credentials are not specified when constructing the client.
+    // Hence, the client library will look for credentials using ADC.
+    //
+    // Initialize client that will be used to send requests. This client only needs to be created
+    // once, and can be reused for multiple requests.
+    Storage storage = StorageOptions.newBuilder().setProjectId(project).build().getService();
+
+    System.out.println("Buckets:");
+    Page<Bucket> buckets = storage.list();
+    for (Bucket bucket : buckets.iterateAll()) {
+      System.out.println(bucket.toString());
+    }
+    System.out.println("Listed all storage buckets.");
+  }
+}
+```
+
+https://cloud.google.com/docs/authentication/provide-credentials-adc?hl=ko
+
+로컬 개발에 사용자 인증 정보를 사용할 수 없으면 서비스 계정 키를 사용할 수 있습니다. 서비스 계정 키는 불필요한 위험을 초래하므로 가능하면 피해야 합니다.
+
 ## 2023-02-10
 
 새길말씀(요한1서 2:29)
