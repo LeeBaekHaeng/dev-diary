@@ -2,6 +2,67 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-02-12
+
+새길말씀(요한1서 4:19)
+
+우리가 사랑함은 그가 먼저 우리를 사랑하셨음이라
+
+### 파일 목록
+
+```xml
+<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.7</version>
+</dependency>
+```
+
+```java
+import java.io.File;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
+import org.junit.Test;
+
+public class 파일_목록 {
+
+	@Test
+	public void test() {
+		String pathname = "C:\\Users\\LeeBaekHaeng\\Documents\\egovframe-common-components";
+
+		File directory = new File(pathname);
+		String[] extensions = null;
+//		String[] extensions = {};
+//		String[] extensions = { "html", "js", "jsp" };
+		boolean recursive = true;
+
+		Collection<File> listFiles = FileUtils.listFiles(directory, extensions, recursive);
+
+		Set<String> exts = new HashSet<>();
+
+		for (File listFile : listFiles) {
+//			System.out.println(listFile.getName());
+//			System.out.println(FilenameUtils.getExtension(listFile.getName()));
+			exts.add(FilenameUtils.getExtension(listFile.getName()));
+		}
+
+		for (String ext : exts) {
+			System.out.println(ext);
+		}
+	}
+
+}
+```
+
+- html
+- js
+- jsp
+
 ## 2023-02-11
 
 새길말씀(요한1서 3:24)
