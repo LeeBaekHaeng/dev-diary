@@ -2,6 +2,41 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-02-14
+
+새길말씀(고린도전서 13:7)
+
+모든 것을 참으며 모든 것을 믿으며 모든 것을 바라며 모든 것을 견디느니라
+
+### byteCountToDisplaySize
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#byteCountToDisplaySize-long-
+
+```java
+248    /**
+249     * Returns a human-readable version of the file size, where the input represents a specific number of bytes.
+250     * <p>
+251     * If the size is over 1GB, the size is returned as the number of whole GB, i.e. the size is rounded down to the
+252     * nearest GB boundary.
+253     * </p>
+254     * <p>
+255     * Similarly for the 1MB and 1KB boundaries.
+256     * </p>
+257     *
+258     * @param size the number of bytes
+259     * @return a human-readable display value (includes units - EB, PB, TB, GB, MB, KB or bytes)
+260     * @see <a href="https://issues.apache.org/jira/browse/IO-226">IO-226 - should the rounding be changed?</a>
+261     */
+262    // See https://issues.apache.org/jira/browse/IO-226 - should the rounding be changed?
+263    public static String byteCountToDisplaySize(final long size) {
+264        return byteCountToDisplaySize(BigInteger.valueOf(size));
+265    }
+```
+
+Returns a human-readable version of the file size, where the input represents a specific number of bytes.
+
+파일 크기의 사람이 읽을 수 있는 버전을 반환합니다. 여기서 입력은 특정 바이트 수를 나타냅니다.
+
 ## 2023-02-13
 
 새길말씀(요한1서 5:20)
