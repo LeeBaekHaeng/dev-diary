@@ -2,6 +2,91 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-02-13
+
+새길말씀(요한1서 5:20)
+
+또 아는 것은 하나님의 아들이 이르러 우리에게 지각을 주사 우리로 참된 자를 알게 하신 것과 또한 우리가 참된 자 곧 그의 아들 예수 그리스도 안에 있는 것이니 그는 참 하나님이시요 영생이시라
+
+### 표시 크기에 대한 바이트 수
+
+FileUtils.byteCountToDisplaySize
+
+```java
+import org.apache.commons.io.FileUtils;
+import org.junit.Test;
+
+public class 표시_크기에_대한_바이트_수 {
+
+	@Test
+	public void test() {
+		System.out.println("bytes");
+		System.out.println(FileUtils.byteCountToDisplaySize(0));
+		System.out.println("");
+
+		System.out.println("KB");
+		System.out.println(FileUtils.ONE_KB_BI);
+		System.out.println(FileUtils.byteCountToDisplaySize(FileUtils.ONE_KB_BI));
+		System.out.println("");
+
+		System.out.println("MB");
+		System.out.println(FileUtils.ONE_MB_BI);
+		System.out.println(FileUtils.byteCountToDisplaySize(FileUtils.ONE_MB_BI));
+		System.out.println("");
+
+		System.out.println("GB");
+		System.out.println(FileUtils.ONE_GB_BI);
+		System.out.println(FileUtils.byteCountToDisplaySize(FileUtils.ONE_GB_BI));
+		System.out.println("");
+
+		System.out.println("TB");
+		System.out.println(FileUtils.ONE_TB_BI);
+		System.out.println(FileUtils.byteCountToDisplaySize(FileUtils.ONE_TB_BI));
+		System.out.println("");
+
+		System.out.println("PB");
+		System.out.println(FileUtils.ONE_PB_BI);
+		System.out.println(FileUtils.byteCountToDisplaySize(FileUtils.ONE_PB_BI));
+		System.out.println("");
+
+		System.out.println("EB");
+		System.out.println(FileUtils.ONE_EB_BI);
+		System.out.println(FileUtils.byteCountToDisplaySize(FileUtils.ONE_EB_BI));
+		System.out.println("");
+	}
+
+}
+```
+
+```
+bytes
+0 bytes
+
+KB
+1024
+1 KB
+
+MB
+1048576
+1 MB
+
+GB
+1073741824
+1 GB
+
+TB
+1099511627776
+1 TB
+
+PB
+1125899906842624
+1 PB
+
+EB
+1152921504606846976
+1 EB
+```
+
 ## 2023-02-12
 
 새길말씀(요한1서 4:19)
