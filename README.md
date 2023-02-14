@@ -2,6 +2,30 @@
 
 [할 일(To Do)](todo/2022.md)
 
+## 2023-02-15
+
+새길말씀(요한복음 10:11)
+
+나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와
+
+### checksum
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#checksum-java.io.File-java.util.zip.Checksum-
+
+```java
+public static Checksum checksum(File file,
+                                Checksum checksum)
+                         throws IOException
+```
+
+Computes the checksum of a file using the specified checksum object. Multiple files may be checked using one Checksum instance if desired simply by reusing the same checksum object. For example:
+
+지정된 체크섬 개체를 사용하여 파일의 체크섬을 계산합니다. 원하는 경우 단순히 동일한 체크섬 개체를 재사용하여 하나의 체크섬 인스턴스를 사용하여 여러 파일을 검사할 수 있습니다. 예를 들어:
+
+```java
+long checksum = FileUtils.checksum(file, new CRC32()).getValue();
+```
+
 ## 2023-02-14
 
 새길말씀(고린도전서 13:7)
