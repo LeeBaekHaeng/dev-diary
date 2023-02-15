@@ -4,6 +4,26 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-02-16
+
+새길말씀(요한복음 10:27)
+
+내 양은 내 음성을 들으며 나는 그들을 알며 그들은 나를 따르느니라
+
+### checksumCRC32
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#checksumCRC32-java.io.File-
+
+
+```java
+public static long checksumCRC32(File file)
+                          throws IOException
+```
+
+Computes the checksum of a file using the CRC32 checksum routine. The value of the checksum is returned.
+
+CRC32 체크섬 루틴을 사용하여 파일의 체크섬을 계산합니다. 체크섬 값이 반환됩니다.
+
 ## 2023-02-15
 
 새길말씀(요한복음 10:11)
