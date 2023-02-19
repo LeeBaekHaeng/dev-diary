@@ -4,6 +4,31 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-02-20
+
+새길말씀(에베소서 4:15)
+
+오직 사랑 안에서 참된 것을 하여 범사에 그에게까지 자랄지라 그는 머리니 곧 그리스도라
+
+### contentEqualsIgnoreEOL
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#contentEqualsIgnoreEOL-java.io.File-java.io.File-java.lang.String-
+
+```java
+public static boolean contentEqualsIgnoreEOL(File file1,
+                                             File file2,
+                                             String charsetName)
+                                      throws IOException
+```
+
+Compares the contents of two files to determine if they are equal or not.
+
+두 파일의 내용을 비교하여 동일한지 여부를 확인합니다.
+
+This method checks to see if the two files point to the same file, before resorting to line-by-line comparison of the contents.
+
+이 메서드는 내용을 한 줄씩 비교하기 전에 두 파일이 동일한 파일을 가리키는지 확인합니다.
+
 ## 2023-02-18
 
 새길말씀(마가복음 12:30)
