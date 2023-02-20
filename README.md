@@ -4,6 +4,26 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-02-21
+
+새길말씀(시편 23:1)
+
+여호와는 나의 목자시니 내게 부족함이 없으리로다
+
+### convertFileCollectionToFileArray
+
+파일 컬렉션을 파일 배열로 변환
+
+```java
+public static File[] convertFileCollectionToFileArray(Collection<File> files)
+```
+
+Converts a Collection containing java.io.File instanced into array representation. This is to account for the difference between File.listFiles() and FileUtils.listFiles().
+
+인스턴스화된 java.io.File을 포함하는 Collection을 배열 표현으로 변환합니다. 이는 File.listFiles()와 FileUtils.listFiles() 간의 차이를 설명하기 위한 것입니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#convertFileCollectionToFileArray-java.util.Collection-
+
 ## 2023-02-20
 
 새길말씀(에베소서 4:15)
