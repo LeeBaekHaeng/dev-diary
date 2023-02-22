@@ -4,6 +4,36 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-02-22
+
+새길말씀(시편 51:1)
+
+하나님이여 주의 인자를 따라 내게 은혜를 베푸시며 주의 많은 긍휼을 따라 내 죄악을 지워 주소서
+
+### copyDirectory
+
+복사 디렉토리
+
+```java
+public static void copyDirectory(File srcDir,
+                                 File destDir)
+                          throws IOException
+```
+
+Copies a whole directory to a new location preserving the file dates.
+
+파일 날짜를 보존하면서 전체 디렉토리를 새 위치에 복사합니다.
+
+This method copies the specified directory and all its child directories and files to the specified destination. The destination is the new location and name of the directory.
+
+이 메소드는 지정된 디렉토리와 모든 하위 디렉토리 및 파일을 지정된 대상에 복사합니다. 대상은 디렉터리의 새 위치와 이름입니다.
+
+The destination directory is created if it does not exist. If the destination directory did exist, then this method merges the source with the destination, with the source taking precedence.
+
+대상 디렉토리가 없으면 생성됩니다. 대상 디렉터리가 존재하는 경우 이 메서드는 소스를 대상과 병합하며 소스가 우선합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyDirectory-java.io.File-java.io.File-
+
 ## 2023-02-21
 
 새길말씀(시편 23:1)
