@@ -4,6 +4,43 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-02-23
+
+새길말씀(시편 52:8)
+
+그러나 나는 하나님의 집에 있는 푸른 감람나무 같음이여 하나님의 인자하심을 영원히 의지하리로다
+
+### copyDirectory
+
+복사 디렉터리(디렉토리)
+
+```java
+public static void copyDirectory(File srcDir,
+                                 File destDir,
+                                 boolean preserveFileDate)
+                          throws IOException
+```
+
+Copies a whole directory to a new location.
+
+전체 디렉토리를 새 위치에 복사합니다.
+
+This method copies the contents of the specified source directory to within the specified destination directory.
+
+이 메서드는 지정된 소스 디렉터리의 내용을 지정된 대상 디렉터리 내로 복사합니다.
+
+The destination directory is created if it does not exist. If the destination directory did exist, then this method merges the source with the destination, with the source taking precedence.
+
+대상 디렉토리가 없으면 생성됩니다. 대상 디렉터리가 존재하는 경우 이 메서드는 소스를 대상과 병합하며 소스가 우선합니다.
+
+preserveFileDate 보존 파일 날짜
+
+preserveFileDate - true if the file date of the copy should be the same as the original.
+
+preserveFileDate - 복사본의 파일 날짜가 원본과 동일해야 하는 경우 true입니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyDirectory-java.io.File-java.io.File-boolean-
+
 ## 2023-02-22
 
 새길말씀(시편 51:1)
