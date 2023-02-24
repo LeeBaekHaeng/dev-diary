@@ -4,6 +4,48 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-02-24
+
+새길말씀(요한복음 13:14)
+
+내가 주와 또는 선생이 되어 너희 발을 씻었으니 너희도 서로 발을 씻어 주는 것이 옳으니라
+
+### copyDirectory FileFilter
+
+```java
+public static void copyDirectory(File srcDir,
+                                 File destDir,
+                                 FileFilter filter)
+                          throws IOException
+```
+
+Copies a filtered directory to a new location preserving the file dates.
+
+파일 날짜를 보존하는 새 위치에 필터링된 디렉터리를 복사합니다.
+
+This method copies the contents of the specified source directory to within the specified destination directory.
+
+이 메서드는 지정된 소스 디렉터리의 내용을 지정된 대상 디렉터리 내로 복사합니다.
+
+The destination directory is created if it does not exist. If the destination directory did exist, then this method merges the source with the destination, with the source taking precedence.
+
+대상 디렉토리가 없으면 생성됩니다. 대상 디렉터리가 존재하는 경우 이 메서드는 소스를 대상과 병합하며 소스가 우선합니다.
+
+Example: Copy directories and txt files
+```java
+ // Create a filter for ".txt" files
+ IOFileFilter txtSuffixFilter = FileFilterUtils.suffixFileFilter(".txt");
+ IOFileFilter txtFiles = FileFilterUtils.andFileFilter(FileFileFilter.FILE, txtSuffixFilter);
+
+ // Create a filter for either directories or ".txt" files
+ FileFilter filter = FileFilterUtils.orFileFilter(DirectoryFileFilter.DIRECTORY, txtFiles);
+
+ // Copy using the filter
+ FileUtils.copyDirectory(srcDir, destDir, filter);
+```
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyDirectory-java.io.File-java.io.File-java.io.FileFilter-
+
 ## 2023-02-23
 
 새길말씀(시편 52:8)
