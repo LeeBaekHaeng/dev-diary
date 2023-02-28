@@ -4,6 +4,30 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-01
+
+새길말씀(역대하 5:13)
+
+나팔 부는 자와 노래하는 자들이 일제히 소리를 내어 여호와를 찬송하며 감사하는데 나팔 불고 제금 치고 모든 악기를 울리며 소리를 높여 여호와를 찬송하여 이르되 선하시도다 그의 자비하심이 영원히 있도다 하매 그 때에 여호와의 전에 구름이 가득한지라
+
+### copyFile-java.io.File-java.io.File-
+
+```java
+public static void copyFile(File srcFile,
+                            File destFile)
+                     throws IOException
+```
+
+Copies a file to a new location preserving the file date.
+
+파일 날짜를 유지하면서 파일을 새 위치에 복사합니다.
+
+This method copies the contents of the specified source file to the specified destination file. The directory holding the destination file is created if it does not exist. If the destination file exists, then this method will overwrite it.
+
+이 메서드는 지정된 소스 파일의 내용을 지정된 대상 파일에 복사합니다. 대상 파일이 들어 있는 디렉토리가 없으면 생성됩니다. 대상 파일이 존재하는 경우 이 메서드는 파일을 덮어씁니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyFile-java.io.File-java.io.File-
+
 ## 2023-02-28
 
 새길말씀(신명기 6:13)
