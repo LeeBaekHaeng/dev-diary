@@ -4,6 +4,31 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-02
+
+새길말씀(역대하 6:11)
+
+내가 또 그 곳에 여호와께서 이스라엘 자손과 더불어 세우신 언약을 넣은 궤를 두었노라 하니라
+
+### copyFile-java.io.File-java.io.File-boolean-
+
+```java
+public static void copyFile(File srcFile,
+                            File destFile,
+                            boolean preserveFileDate)
+                     throws IOException
+```
+
+Copies an existing file to a new file location.
+
+기존 파일을 새 파일 위치에 복사합니다.
+
+This method copies the contents of the specified source file to the specified destination file. The directory holding the destination file is created if it does not exist. If the destination file exists, then this method will overwrite it.
+
+이 메서드는 지정된 소스 파일의 내용을 지정된 대상 파일에 복사합니다. 대상 파일이 들어 있는 디렉토리가 없으면 생성됩니다. 대상 파일이 존재하는 경우 이 메서드는 파일을 덮어씁니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyFile-java.io.File-java.io.File-boolean-
+
 ## 2023-03-01
 
 새길말씀(역대하 5:13)
