@@ -4,6 +4,31 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-04
+
+새길말씀(역대하 7:15)
+
+이제 이 곳에서 하는 기도에 내가 눈을 들고 귀를 기울이리니
+
+### copyFile-java.io.File-java.io.File-boolean-java.nio.file.CopyOption...-
+
+```java
+public static void copyFile(File srcFile,
+                            File destFile,
+                            CopyOption... copyOptions)
+                     throws IOException
+```
+
+Copies a file to a new location.
+
+파일을 새 위치에 복사합니다.
+
+This method copies the contents of the specified source file to the specified destination file. The directory holding the destination file is created if it does not exist. If the destination file exists, you can overwrite it if you use StandardCopyOption.REPLACE_EXISTING.
+
+이 메서드는 지정된 소스 파일의 내용을 지정된 대상 파일에 복사합니다. 대상 파일이 들어 있는 디렉토리가 없으면 생성됩니다. 대상 파일이 존재하는 경우 StandardCopyOption.REPLACE_EXISTING을 사용하면 덮어쓸 수 있습니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyFile-java.io.File-java.io.File-boolean-java.nio.file.CopyOption...-
+
 ## 2023-03-03
 
 새길말씀(역대하 6:14)
