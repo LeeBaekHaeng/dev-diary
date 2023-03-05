@@ -4,6 +4,30 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-06
+
+새길말씀(역대하 35:16)
+
+이와 같이 당일에 여호와를 섬길 일이 다 준비되매 요시야 왕의 명령대로 유월절을 지키며 번제를 여호와의 제단에 드렸으며
+
+### copyFile-java.io.File-java.io.OutputStream-
+
+```java
+public static long copyFile(File input,
+                            OutputStream output)
+                     throws IOException
+```
+
+Copies bytes from a File to an OutputStream.
+
+File에서 OutputStream으로 바이트를 복사합니다.
+
+This method buffers the input internally, so there is no need to use a BufferedInputStream.
+
+이 메서드는 입력을 내부적으로 버퍼링하므로 BufferedInputStream을 사용할 필요가 없습니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyFile-java.io.File-java.io.OutputStream-
+
 ## 2023-03-05
 
 새길말씀(역대하 34:31)
