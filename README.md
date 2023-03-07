@@ -4,6 +4,35 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-08
+
+새길말씀(느헤미야 9:1)
+
+그 달 스무나흗 날에 이스라엘 자손이 다 모여 금식하며 굵은 베 옷을 입고 티끌을 무릅쓰며
+
+### copyFileToDirectory-java.io.File-java.io.File-boolean-
+
+```java
+public static void copyFileToDirectory(File sourceFile,
+                                       File destinationDir,
+                                       boolean preserveFileDate)
+                                throws IOException
+```
+
+Copies a file to a directory optionally preserving the file date.
+
+선택적으로 파일 날짜를 보존하는 디렉토리에 파일을 복사합니다.
+
+This method copies the contents of the specified source file to a file of the same name in the specified destination directory. The destination directory is created if it does not exist. If the destination file exists, then this method will overwrite it.
+
+이 메소드는 지정된 소스 파일의 내용을 지정된 대상 디렉토리에 있는 동일한 이름의 파일에 복사합니다. 대상 디렉토리가 없으면 생성됩니다. 대상 파일이 존재하는 경우 이 메서드는 파일을 덮어씁니다.
+
+Note: Setting preserveFileDate to true tries to preserve the file's last modified date/times using File.setLastModified(long), however it is not guaranteed that the operation will succeed. If the modification operation fails, the methods throws IOException.
+
+참고: preserveFileDate를 true로 설정하면 File.setLastModified(long)를 사용하여 파일의 마지막 수정 날짜/시간을 보존하려고 시도하지만 작업이 성공할 것이라고 보장할 수는 없습니다. 수정 작업이 실패하면 메서드에서 IOException이 발생합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyFileToDirectory-java.io.File-java.io.File-boolean-
+
 ## 2023-03-07
 
 새길말씀(에스라 8:23)
