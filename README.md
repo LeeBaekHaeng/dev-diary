@@ -4,6 +4,34 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-09
+
+새길말씀(다니엘 9:4)
+
+내 하나님 여호와께 기도하며 자복하여 이르기를 크시고 두려워할 주 하나님, 주를 사랑하고 주의 계명을 지키는 자를 위하여 언약을 지키시고 그에게 인자를 베푸시는 이시여
+
+## copyInputStreamToFile-java.io.InputStream-java.io.File-
+
+```java
+public static void copyInputStreamToFile(InputStream source,
+                                         File destination)
+                                  throws IOException
+```
+
+Copies bytes from an InputStream source to a file destination. The directories up to destination will be created if they don't already exist. destination will be overwritten if it already exists.
+
+InputStream 소스에서 파일 대상으로 바이트를 복사합니다. 아직 존재하지 않는 경우 목적지까지의 디렉토리가 생성됩니다. 이미 존재하는 경우 대상을 덮어씁니다.
+
+The source stream is closed.
+
+소스 스트림이 닫힙니다.
+
+See copyToFile(InputStream, File) for a method that does not close the input stream.
+
+입력 스트림을 닫지 않는 메서드는 copyToFile(InputStream, File)을 참조하십시오.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyInputStreamToFile-java.io.InputStream-java.io.File-
+
 ## 2023-03-08
 
 새길말씀(느헤미야 9:1)
