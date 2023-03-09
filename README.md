@@ -4,6 +4,38 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-10
+
+새길말씀(사무엘상 1:15)
+
+한나가 대답하여 이르되 내 주여 그렇지 아니하니이다 나는 마음이 슬픈 여자라 포도주나 독주를 마신 것이 아니요 여호와 앞에 내 심정을 통한 것뿐이오니
+
+### copyToDirectory-java.io.File-java.io.File-
+
+```java
+public static void copyToDirectory(File sourceFile,
+                                   File destinationDir)
+                            throws IOException
+```
+
+Copies a file or directory to within another directory preserving the file dates.
+
+파일 날짜를 보존하는 다른 디렉토리 내에서 파일 또는 디렉토리를 복사합니다.
+
+This method copies the source file or directory, along all its contents, to a directory of the same name in the specified destination directory.
+
+이 방법은 모든 내용과 함께 소스 파일 또는 디렉토리를 지정된 대상 디렉토리에 있는 동일한 이름의 디렉토리에 복사합니다.
+
+The destination directory is created if it does not exist. If the destination directory did exist, then this method merges the source with the destination, with the source taking precedence.
+
+대상 디렉토리가 없으면 생성됩니다. 대상 디렉터리가 존재하는 경우 이 메서드는 소스를 대상과 병합하며 소스가 우선합니다.
+
+Note: This method tries to preserve the files' last modified date/times using File.setLastModified(long), however it is not guaranteed that those operations will succeed. If the modification operation fails, the methods throws IOException.
+
+참고: 이 방법은 File.setLastModified(long)를 사용하여 파일의 마지막 수정 날짜/시간을 보존하려고 시도하지만 이러한 작업이 성공할 것이라고 보장할 수는 없습니다. 수정 작업이 실패하면 메서드에서 IOException이 발생합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyToDirectory-java.io.File-java.io.File-
+
 ## 2023-03-09
 
 새길말씀(다니엘 9:4)
