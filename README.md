@@ -4,6 +4,34 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-11
+
+새길말씀(사무엘상 2:1)
+
+한나가 기도하여 이르되 내 마음이 여호와로 말미암아 즐거워하며 내 뿔이 여호와로 말미암아 높아졌으며 내 입이 내 원수들을 향하여 크게 열렸으니 이는 내가 주의 구원으로 말미암아 기뻐함이니이다
+
+### copyToDirectory-java.lang.Iterable-java.io.File-
+
+```java
+public static void copyToDirectory(Iterable<File> sourceIterable,
+                                   File destinationDir)
+                            throws IOException
+```
+
+Copies a files to a directory preserving each file's date.
+
+각 파일의 날짜를 보존하는 디렉토리에 파일을 복사합니다.
+
+This method copies the contents of the specified source files to a file of the same name in the specified destination directory. The destination directory is created if it does not exist. If the destination file exists, then this method will overwrite it.
+
+이 메소드는 지정된 소스 파일의 내용을 지정된 대상 디렉토리에 있는 동일한 이름의 파일에 복사합니다. 대상 디렉토리가 없으면 생성됩니다. 대상 파일이 존재하는 경우 이 메서드는 파일을 덮어씁니다.
+
+Note: This method tries to preserve the file's last modified date/times using File.setLastModified(long), however it is not guaranteed that the operation will succeed. If the modification operation fails, the methods throws IOException.
+
+참고: 이 방법은 File.setLastModified(long)를 사용하여 파일의 마지막 수정 날짜/시간을 보존하려고 시도하지만 작업이 성공할 것이라는 보장은 없습니다. 수정 작업이 실패하면 메서드에서 IOException이 발생합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyToDirectory-java.lang.Iterable-java.io.File-
+
 ## 2023-03-10
 
 새길말씀(사무엘상 1:15)
