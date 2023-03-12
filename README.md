@@ -4,11 +4,35 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-13
+
+새길말씀(시편 5:12)
+
+여호와여 주는 의인에게 복을 주시고 방패로 함 같이 은혜로 그를 호위하시리이다
+
 ## 2023-03-12
 
 새길말씀(시편 4:3)
 
 여호와께서 자기를 위하여 경건한 자를 택하신 줄 너희가 알지어다 내가 그를 부를 때에 여호와께서 들으시리로다
+
+### copyURLToFile-java.net.URL-java.io.File-
+
+```java
+public static void copyURLToFile(URL source,
+                                 File destination)
+                          throws IOException
+```
+
+Copies bytes from the URL source to a file destination. The directories up to destination will be created if they don't already exist. destination will be overwritten if it already exists.
+
+URL 소스에서 파일 대상으로 바이트를 복사합니다. 아직 존재하지 않는 경우 목적지까지의 디렉토리가 생성됩니다. 이미 존재하는 경우 대상을 덮어씁니다.
+
+Warning: this method does not set a connection or read timeout and thus might block forever. Use copyURLToFile(URL, File, int, int) with reasonable timeouts to prevent this.
+
+경고: 이 메서드는 연결 또는 읽기 제한 시간을 설정하지 않으므로 영원히 차단될 수 있습니다. 이를 방지하려면 적절한 시간 제한과 함께 copyURLToFile(URL, File, int, int)을 사용하십시오.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyURLToFile-java.net.URL-java.io.File-
 
 ### copyToFile-java.io.InputStream-java.io.File-
 
