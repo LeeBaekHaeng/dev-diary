@@ -4,6 +4,26 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-12
+
+새길말씀(시편 4:3)
+
+여호와께서 자기를 위하여 경건한 자를 택하신 줄 너희가 알지어다 내가 그를 부를 때에 여호와께서 들으시리로다
+
+### copyToFile-java.io.InputStream-java.io.File-
+
+```java
+public static void copyToFile(InputStream inputStream,
+                              File file)
+                       throws IOException
+```
+
+Copies bytes from an InputStream source to a File destination. The directories up to destination will be created if they don't already exist. destination will be overwritten if it already exists. The source stream is left open, e.g. for use with ZipInputStream. See copyInputStreamToFile(InputStream, File) for a method that closes the input stream.
+
+InputStream 소스에서 파일 대상으로 바이트를 복사합니다. 아직 존재하지 않는 경우 목적지까지의 디렉토리가 생성됩니다. 이미 존재하는 경우 대상을 덮어씁니다. 소스 스트림은 열려 있습니다. ZipInputStream과 함께 사용합니다. 입력 스트림을 닫는 메서드는 copyInputStreamToFile(InputStream, File)을 참조하십시오.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyToFile-java.io.InputStream-java.io.File-
+
 ## 2023-03-11
 
 새길말씀(사무엘상 2:1)
