@@ -4,6 +4,28 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-14
+
+새길말씀(시편 11:7)
+
+여호와는 의로우사 의로운 일을 좋아하시나니 정직한 자는 그의 얼굴을 뵈오리로다
+
+### copyURLToFile-java.net.URL-java.io.File-int-int-
+
+```java
+public static void copyURLToFile(URL source,
+                                 File destination,
+                                 int connectionTimeoutMillis,
+                                 int readTimeoutMillis)
+                          throws IOException
+```
+
+Copies bytes from the URL source to a file destination. The directories up to destination will be created if they don't already exist. destination will be overwritten if it already exists.
+
+URL 소스에서 파일 대상으로 바이트를 복사합니다. 아직 존재하지 않는 경우 목적지까지의 디렉토리가 생성됩니다. 이미 존재하는 경우 대상을 덮어씁니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyURLToFile-java.net.URL-java.io.File-int-int-
+
 ## 2023-03-13
 
 새길말씀(시편 5:12)
