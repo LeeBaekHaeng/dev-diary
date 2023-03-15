@@ -4,6 +4,27 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-16
+
+새길말씀(시편 13:6)
+
+내가 여호와를 찬송하리니 이는 주께서 내게 은덕을 베푸심이로다
+
+### delete-java.io.File-
+
+```java
+public static File delete(File file)
+                   throws IOException
+```
+
+Deletes the given File but throws an IOException if it cannot, unlike File.delete() which returns a boolean.
+
+주어진 File을 삭제하지만 부울을 반환하는 File.delete()와 달리 삭제할 수 없는 경우 IOException을 발생시킵니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#delete-java.io.File-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1173
+
 ## 2023-03-15
 
 새길말씀(시편 12:6)
