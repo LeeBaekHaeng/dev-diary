@@ -4,6 +4,44 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-20
+
+새길말씀(시편 33:5)
+
+그는 공의와 정의를 사랑하심이여 세상에는 여호와의 인자하심이 충만하도다
+
+### directoryContains-java.io.File-java.io.File-
+
+```
+public static boolean directoryContains(File directory,
+                                        File child)
+                                 throws IOException
+```
+
+Determines whether the parent directory contains the child element (a file or directory).
+
+부모 디렉터리에 자식 요소(파일 또는 디렉터리)가 포함되어 있는지 여부를 결정합니다.
+
+Files are normalized before comparison.
+
+파일은 비교 전에 정규화됩니다.
+
+Edge cases:
+- A directory must not be null: if null, throw IllegalArgumentException
+- A directory must be a directory: if not a directory, throw IllegalArgumentException
+- A directory does not contain itself: return false
+- A null child file is not contained in any parent: return false
+
+에지 케이스:
+- 디렉토리는 null이 아니어야 합니다: null인 경우 IllegalArgumentException 발생
+- 디렉터리는 디렉터리여야 합니다. 디렉터리가 아니면 IllegalArgumentException 발생
+- 디렉토리는 자신을 포함하지 않습니다: false 반환
+- null 자식 파일이 부모에 포함되어 있지 않음: false 반환
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#directoryContains-java.io.File-java.io.File-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1272
+
 ## 2023-03-19
 
 새길말씀(시편 32:1)
