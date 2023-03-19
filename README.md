@@ -4,6 +4,34 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-19
+
+새길말씀(시편 32:1)
+
+허물의 사함을 받고 자신의 죄가 가려진 자는 복이 있도다
+
+### deleteQuietly-java.io.File-
+
+```java
+public static boolean deleteQuietly(File file)
+```
+
+Deletes a file, never throwing an exception. If file is a directory, delete it and all sub-directories.
+
+예외를 발생시키지 않고 파일을 삭제합니다. 파일이 디렉토리인 경우 파일과 모든 하위 디렉토리를 삭제합니다.
+
+The difference between File.delete() and this method are:
+- A directory to be deleted does not have to be empty.
+- No exceptions are thrown when a file or directory cannot be deleted.
+
+File.delete()와 이 메서드의 차이점은 다음과 같습니다.
+- 삭제할 디렉터리는 비어 있지 않아도 됩니다.
+- 파일이나 디렉토리를 삭제할 수 없는 경우 예외가 발생하지 않습니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#deleteQuietly-java.io.File-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1230
+
 ## 2023-03-17
 
 새길말씀(시편 30:4)
