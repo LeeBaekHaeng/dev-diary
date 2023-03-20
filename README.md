@@ -4,6 +4,36 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-21
+
+새길말씀(시편 34:8)
+
+너희는 여호와의 선하심을 맛보아 알지어다 그에게 피하는 자는 복이 있도다
+
+### forceDelete-java.io.File-
+
+```java
+public static void forceDelete(File file)
+                        throws IOException
+```
+
+Deletes a file or directory. For a directory, delete it and all sub-directories.
+
+파일 또는 디렉토리를 삭제합니다. 디렉토리의 경우 해당 디렉토리와 모든 하위 디렉토리를 삭제하십시오.
+
+The difference between File.delete() and this method are:
+
+File.delete()와 이 메서드의 차이점은 다음과 같습니다.
+
+- The directory does not have to be empty.
+- 디렉토리는 비어 있을 필요가 없습니다.
+- You get an exception when a file or directory cannot be deleted.
+- 파일이나 디렉터리를 삭제할 수 없는 경우 예외가 발생합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#forceDelete-java.io.File-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1337
+
 ## 2023-03-20
 
 새길말씀(시편 33:5)
