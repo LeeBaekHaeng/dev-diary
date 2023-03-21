@@ -4,6 +4,27 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-22
+
+새길말씀(히브리서 1:3)
+
+이는 하나님의 영광의 광채시요 그 본체의 형상이시라 그의 능력의 말씀으로 만물을 붙드시며 죄를 정결하게 하는 일을 하시고 높은 곳에 계신 지극히 크신 이의 우편에 앉으셨느니라
+
+### forceDeleteOnExit-java.io.File-
+
+```java
+public static void forceDeleteOnExit(File file)
+                              throws IOException
+```
+
+Schedules a file to be deleted when JVM exits. If file is directory delete it and all sub-directories.
+
+JVM이 종료될 때 파일이 삭제되도록 예약합니다. 파일이 디렉토리이면 파일과 모든 하위 디렉토리를 삭제하십시오.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#forceDeleteOnExit-java.io.File-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1361
+
 ## 2023-03-21
 
 새길말씀(시편 34:8)
