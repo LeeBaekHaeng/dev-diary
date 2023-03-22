@@ -4,6 +4,27 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-23
+
+새길말씀(히브리서 2:10)
+
+그러므로 만물이 그를 위하고 또한 그로 말미암은 이가 많은 아들들을 이끌어 영광에 들어가게 하시는 일에 그들의 구원의 창시자를 고난을 통하여 온전하게 하심이 합당하도다
+
+### forceMkdir-java.io.File-
+
+```java
+public static void forceMkdir(File directory)
+                       throws IOException
+```
+
+Makes a directory, including any necessary but nonexistent parent directories. If a file already exists with specified name but it is not a directory then an IOException is thrown. If the directory cannot be created (or the file already exists but is not a directory) then an IOException is thrown.
+
+필요하지만 존재하지 않는 상위 디렉토리를 포함하여 디렉토리를 만듭니다. 지정된 이름을 가진 파일이 이미 존재하지만 디렉토리가 아닌 경우 IOException이 발생합니다. 디렉토리를 생성할 수 없는 경우(또는 파일이 이미 존재하지만 디렉토리가 아닌 경우) IOException이 발생합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#forceMkdir-java.io.File-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1382
+
 ## 2023-03-22
 
 새길말씀(히브리서 1:3)
