@@ -4,6 +4,27 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-24
+
+새길말씀(히브리서 3:14)
+
+우리가 시작할 때에 확신한 것을 끝까지 견고히 잡고 있으면 그리스도와 함께 참여한 자가 되리라
+
+### forceMkdirParent-java.io.File-
+
+```java
+public static void forceMkdirParent(File file)
+                             throws IOException
+```
+
+Makes any necessary but nonexistent parent directories for a given File. If the parent directory cannot be created then an IOException is thrown.
+
+지정된 파일에 대해 필요하지만 존재하지 않는 상위 디렉토리를 만듭니다. 상위 디렉토리를 작성할 수 없으면 IOException이 발생합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#forceMkdirParent-java.io.File-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1395
+
 ## 2023-03-23
 
 새길말씀(히브리서 2:10)
