@@ -4,6 +4,27 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-27
+
+새길말씀(요한복음 11:45)
+
+마리아에게 와서 예수께서 하신 일을 본 많은 유대인이 그를 믿었으나
+
+### getFile-java.io.File-java.lang.String...-
+
+```java
+public static File getFile(File directory,
+                           String... names)
+```
+
+Construct a file from the set of name elements.
+
+이름 요소 세트에서 파일을 구성하십시오.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#getFile-java.io.File-java.lang.String...-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1412
+
 ## 2023-03-24
 
 새길말씀(히브리서 3:14)
