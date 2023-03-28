@@ -4,6 +4,26 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-29
+
+새길말씀(골로새서 1:9)
+
+이로써 우리도 듣던 날부터 너희를 위하여 기도하기를 그치지 아니하고 구하노니 너희로 하여금 모든 신령한 지혜와 총명에 하나님의 뜻을 아는 것으로 채우게 하시고
+
+### getTempDirectory--
+
+```java
+public static File getTempDirectory()
+```
+
+Returns a File representing the system temporary directory.
+
+시스템 임시 디렉토리를 나타내는 파일을 반환합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#getTempDirectory--
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1459
+
 ## 2023-03-28
 
 새길말씀(요한복음 12:8)
