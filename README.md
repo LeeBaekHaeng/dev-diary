@@ -4,6 +4,36 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-03-30
+
+새길말씀(골로새서 2:6)
+
+그러므로 너희가 그리스도 예수를 주로 받았으니 그 안에서 행하되
+
+### getTempDirectoryPath--
+
+```java
+public static String getTempDirectoryPath()
+```
+
+Returns the path to the system temporary directory.
+
+시스템 임시 디렉토리의 경로를 반환합니다.
+
+Returns:
+
+the path to the system temporary directory.
+
+시스템 임시 디렉토리의 경로.
+
+Since:
+
+2.0
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#getTempDirectoryPath--
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1470
+
 ## 2023-03-29
 
 새길말씀(골로새서 1:9)
