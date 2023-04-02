@@ -4,6 +4,53 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-04-02
+
+새길말씀(요한복음 12:13)
+
+종려나무 가지를 가지고 맞으러 나가 외치되 호산나 찬송하리로다 주의 이름으로 오시는 이 곧 이스라엘의 왕이시여 하더라
+
+### isDirectory-java.io.File-java.nio.file.LinkOption...-
+
+```java
+public static boolean isDirectory(File file,
+                                  LinkOption... options)
+```
+
+Tests whether the specified File is a directory or not. Implemented as a null-safe delegate to Files.isDirectory(Path path, LinkOption... options).
+
+지정된 파일이 디렉토리인지 여부를 테스트합니다. Files.isDirectory(경로 경로, LinkOption... 옵션)에 대한 null 안전 위임으로 구현되었습니다.
+
+Parameters:
+
+file - the path to the file.
+
+파일 - 파일의 경로.
+
+options - options indicating how symbolic links are handled
+
+options - 심볼릭 링크를 처리하는 방법을 나타내는 옵션
+
+Returns:
+
+true if the file is a directory; false if the path is null, the file does not exist, is not a directory, or it cannot be determined if the file is a directory or not.
+
+파일이 디렉토리이면 true이고, 그렇지 않으면 false입니다. 경로가 null이거나, 파일이 존재하지 않거나, 디렉터리가 아니거나, 파일이 디렉터리인지 여부를 확인할 수 없는 경우 false입니다.
+
+Throws:
+
+SecurityException - In the case of the default provider, and a security manager is installed, the checkRead method is invoked to check read access to the directory.
+
+SecurityException - 기본 공급자이고 보안 관리자가 설치된 경우 checkRead 메서드가 호출되어 디렉터리에 대한 읽기 액세스를 확인합니다.
+
+Since:
+
+2.9.0
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#isDirectory-java.io.File-java.nio.file.LinkOption...-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1510
+
 ## 2023-04-01
 
 새길말씀(골로새서 4:2)
