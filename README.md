@@ -4,6 +4,53 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-04-03
+
+새길말씀(요한복음 12:46)
+
+나는 빛으로 세상에 왔나니 무릇 나를 믿는 자로 어둠에 거하지 않게 하려 함이로라
+
+### isEmptyDirectory-java.io.File-
+
+```java
+public static boolean isEmptyDirectory(File directory)
+                                throws IOException
+```
+
+Tests whether the directory is empty.
+
+디렉토리가 비어 있는지 테스트합니다.
+
+Parameters:
+
+directory - the directory to query.
+
+디렉토리 - 조회할 디렉토리.
+
+Returns:
+
+whether the directory is empty.
+
+디렉토리가 비어 있는지 여부.
+
+Throws:
+
+IOException - if an I/O error occurs.
+
+IOException - I/O 에러가 발생했을 경우
+
+NotDirectoryException - if the file could not otherwise be opened because it is not a directory (optional specific exception).
+
+NotDirectoryException - 파일이 디렉토리가 아니기 때문에 열 수 없는 경우(선택적 특정 예외).
+
+Since:
+
+2.9.0
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#isEmptyDirectory-java.io.File-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1524
+
 ## 2023-04-02
 
 새길말씀(요한복음 12:13)
