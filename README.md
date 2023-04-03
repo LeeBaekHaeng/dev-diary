@@ -4,6 +4,33 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-04-04
+
+새길말씀(요한복음 17:20-21)
+
+내가 비옵는 것은 이 사람들만 위함이 아니요 또 그들의 말로 말미암아 나를 믿는 사람들도 위함이니
+
+아버지여, 아버지께서 내 안에, 내가 아버지 안에 있는 것 같이 그들도 다 하나가 되어 우리 안에 있게 하사 세상으로 아버지께서 나를 보내신 것을 믿게 하옵소서
+
+### isFileNewer-java.io.File-java.time.chrono.ChronoLocalDate-
+
+```java
+public static boolean isFileNewer(File file,
+                                  ChronoLocalDate chronoLocalDate)
+```
+
+Tests if the specified File is newer than the specified ChronoLocalDate at the current time.
+
+지정된 파일이 현재 시간에 지정된 ChronoLocalDate보다 최신인지 테스트합니다.
+
+Note: The input date is assumed to be in the system default time-zone with the time part set to the current time. To use a non-default time-zone use the method isFileNewer(file, chronoLocalDate.atTime(LocalTime.now(zoneId)), zoneId) where zoneId is a valid ZoneId.
+
+참고: 입력 날짜는 시간 부분이 현재 시간으로 설정된 시스템 기본 시간대에 있는 것으로 가정합니다. 기본이 아닌 시간대를 사용하려면 isFileNewer(file, chronoLocalDate.atTime(LocalTime.now(zoneId)), zoneId) 메소드를 사용하십시오. 여기서 zoneId는 유효한 ZoneId입니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#isFileNewer-java.io.File-java.time.chrono.ChronoLocalDate-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1546
+
 ## 2023-04-03
 
 새길말씀(요한복음 12:46)
