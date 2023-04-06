@@ -4,6 +4,28 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-04-07
+
+새길말씀(요한복음 19:30)
+
+예수께서 신 포도주를 받으신 후에 이르시되 다 이루었다 하시고 머리를 숙이니 영혼이 떠나가시니라
+
+### isFileNewer-java.io.File-java.time.chrono.ChronoLocalDateTime-java.time.ZoneId-
+
+```java
+public static boolean isFileNewer(File file,
+                                  ChronoLocalDateTime<?> chronoLocalDateTime,
+                                  ZoneId zoneId)
+```
+
+Tests if the specified File is newer than the specified ChronoLocalDateTime at the specified ZoneId.
+
+지정된 File이 지정된 ZoneId에서 지정된 ChronoLocalDateTime보다 최신인지 테스트합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#isFileNewer-java.io.File-java.time.chrono.ChronoLocalDateTime-java.time.ZoneId-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1608
+
 ## 2023-04-06
 
 새길말씀(요한복음 18:36)
