@@ -4,6 +4,27 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-04-09
+
+새길말씀(요한복음 20:15)
+
+예수께서 이르시되 여자여 어찌하여 울며 누구를 찾느냐 하시니 마리아는 그가 동산지기인 줄 알고 이르되 주여 당신이 옮겼거든 어디 두었는지 내게 이르소서 그리하면 내가 가져가리이다
+
+### isFileNewer-java.io.File-java.util.Date-
+
+```java
+public static boolean isFileNewer(File file,
+                                  Date date)
+```
+
+Tests if the specified File is newer than the specified Date.
+
+지정된 파일이 지정된 날짜보다 최신인지 테스트합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#isFileNewer-java.io.File-java.util.Date-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1639
+
 ## 2023-04-08
 
 새길말씀(요한복음 19:40)
