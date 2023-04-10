@@ -4,6 +4,27 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-04-11
+
+새길말씀(요한복음 21:16)
+
+또 두 번째 이르시되 요한의 아들 시몬아 네가 나를 사랑하느냐 하시니 이르되 주님 그러하나이다 내가 주님을 사랑하는 줄 주님께서 아시나이다 이르시되 내 양을 치라 하시고
+
+### isFileNewer-java.io.File-java.time.Instant-
+
+```java
+public static boolean isFileNewer(File file,
+                                  Instant instant)
+```
+
+Tests if the specified File is newer than the specified Instant.
+
+지정된 File이 지정된 Instant보다 최신인지 테스트합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#isFileNewer-java.io.File-java.time.Instant-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1669
+
 ## 2023-04-10
 
 새길말씀(요한복음 20:29)
