@@ -4,6 +4,29 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-04-14
+
+새길말씀(베드로전서 3:15-16)
+
+너희 마음에 그리스도를 주로 삼아 거룩하게 하고 너희 속에 있는 소망에 관한 이유를 묻는 자에게는 대답할 것을 항상 준비하되 온유와 두려움으로 하고
+선한 양심을 가지라 이는 그리스도 안에 있는 너희의 선행을 욕하는 자들로 그 비방하는 일에 부끄러움을 당하게 하려 함이라
+
+### isFileOlder-java.io.File-java.time.chrono.ChronoLocalDate-java.time.LocalTime-
+
+```java
+public static boolean isFileOlder(File file,
+                                  ChronoLocalDate chronoLocalDate,
+                                  LocalTime localTime)
+```
+
+Tests if the specified File is older than the specified ChronoLocalDate at the specified LocalTime.
+
+지정된 파일이 지정된 LocalTime에서 지정된 ChronoLocalDate보다 오래된지 테스트합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#isFileOlder-java.io.File-java.time.chrono.ChronoLocalDate-java.time.LocalTime-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1731
+
 ## 2023-04-13
 
 새길말씀(베드로전서 2:9)
