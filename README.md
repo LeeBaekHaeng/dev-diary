@@ -4,6 +4,28 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-04-17
+
+새길말씀(베드로후서 1:3)
+
+그의 신기한 능력으로 생명과 경건에 속한 모든 것을 우리에게 주셨으니 이는 자기의 영광과 덕으로써 우리를 부르신 이를 앎으로 말미암음이라
+
+### isFileOlder-java.io.File-java.time.chrono.ChronoLocalDateTime-java.time.ZoneId-
+
+```java
+public static boolean isFileOlder(File file,
+                                  ChronoLocalDateTime<?> chronoLocalDateTime,
+                                  ZoneId zoneId)
+```
+
+Tests if the specified File is older than the specified ChronoLocalDateTime at the specified ZoneId.
+
+지정된 파일이 지정된 ZoneId에서 지정된 ChronoLocalDateTime보다 오래된지 테스트합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#isFileOlder-java.io.File-java.time.chrono.ChronoLocalDateTime-java.time.ZoneId-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1772
+
 ## 2023-04-16
 
 새길말씀(베드로전서 5:4)
