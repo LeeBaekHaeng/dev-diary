@@ -4,6 +4,27 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-04-23
+
+새길말씀(요한계시록 22:14)
+
+자기 두루마기를 빠는 자들은 복이 있으니 이는 그들이 생명나무에 나아가며 문들을 통하여 성에 들어갈 권세를 받으려 함이로다
+
+### isFileOlder-java.io.File-long-
+
+```java
+public static boolean isFileOlder(File file,
+                                  long timeMillis)
+```
+
+Tests if the specified File is older than the specified time reference.
+
+지정된 파일이 지정된 시간 참조보다 오래된지 테스트합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#isFileOlder-java.io.File-long-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1844
+
 ## 2023-04-22
 
 새길말씀(요한계시록 21:7)
