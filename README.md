@@ -4,6 +4,27 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-04-24
+
+새길말씀(로마서 1:17)
+
+복음에는 하나님의 의가 나타나서 믿음으로 믿음에 이르게 하나니 기록된 바 오직 의인은 믿음으로 말미암아 살리라 함과 같으니라
+
+### isRegularFile-java.io.File-java.nio.file.LinkOption...-
+
+```java
+public static boolean isRegularFile(File file,
+                                    LinkOption... options)
+```
+
+Tests whether the specified File is a regular file or not. Implemented as a null-safe delegate to Files.isRegularFile(Path path, LinkOption... options).
+
+지정된 파일이 일반 파일인지 여부를 테스트합니다. Files.isRegularFile(경로 경로, LinkOption... 옵션)에 대한 null 안전 위임으로 구현되었습니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#isRegularFile-java.io.File-java.nio.file.LinkOption...-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1863
+
 ## 2023-04-23
 
 새길말씀(요한계시록 22:14)
