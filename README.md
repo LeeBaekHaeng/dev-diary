@@ -4,6 +4,28 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-04-27
+
+새길말씀(로마서 5:8)
+
+우리가 아직 죄인 되었을 때에 그리스도께서 우리를 위하여 죽으심으로 하나님께서 우리에 대한 자기의 사랑을 확증하셨느니라
+
+### iterateFiles-java.io.File-java.lang.String:A-boolean-
+
+```java
+public static Iterator<File> iterateFiles(File directory,
+                                          String[] extensions,
+                                          boolean recursive)
+```
+
+Iterates over the files in a given directory (and optionally its subdirectories) which match an array of extensions.
+
+확장 배열과 일치하는 지정된 디렉토리(및 선택적으로 해당 하위 디렉토리)의 파일을 반복합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#iterateFiles-java.io.File-java.lang.String:A-boolean-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1922
+
 ## 2023-04-26
 
 새길말씀(로마서 4:25)
