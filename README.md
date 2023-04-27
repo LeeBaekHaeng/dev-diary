@@ -26,6 +26,63 @@ https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileU
 
 https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1954
 
+### Rocky-8.7-x86_64-minimal.iso httpd-2.4.57.tar.gz 설치
+
+#### apr-util-devel gcc pcre2-devel make redhat-rpm-config 설치
+
+su - root
+
+```sh
+cd ~
+yum -y install apr-util-devel gcc pcre2-devel make redhat-rpm-config
+mkdir -p /GOD
+chown god:god /GOD
+```
+
+```sh
+systemctl status firewalld
+```
+
+```sh
+systemctl stop firewalld
+```
+
+```sh
+systemctl disable firewalld
+```
+
+#### httpd-2.4.57.tar.gz 설치
+
+su - god
+
+```sh
+cd ~
+tar xvf httpd-2.4.57.tar.gz
+cd httpd-2.4.57/
+./configure --prefix=/GOD/httpd-2.4.57
+make
+make install
+```
+
+```
+/GOD/httpd-2.4.57/conf/
+```
+
+```
+httpd.conf
+```
+
+```
+ServerName www.example.com:80
+```
+
+su - root
+
+```sh
+chown root:god /GOD/httpd-2.4.57/bin/httpd
+chmod +s /GOD/httpd-2.4.57/bin/httpd
+```
+
 ## 2023-04-27
 
 새길말씀(로마서 5:8)
