@@ -26,6 +26,56 @@ https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileU
 
 https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1922
 
+### Rocky-8.7-x86_64-minimal.iso httpd-2.4.57.tar.gz 설치
+
+su - root
+
+```sh
+yum -y install apr-util-devel gcc pcre2-devel make redhat-rpm-config
+mkdir -p /NIRS
+chown god:god /NIRS
+chown root:god /NIRS/httpd-2.4.57/bin/httpd
+chmod +s /NIRS/httpd-2.4.57/bin/httpd
+systemctl status firewalld
+systemctl stop firewalld
+systemctl disable firewalld
+```
+
+su - god
+
+```sh
+tar xvf httpd-2.4.57.tar.gz
+cd httpd-2.4.57/
+./configure --prefix=/NIRS/httpd-2.4.57
+make
+make install
+chmod +x /NIRS/httpd-2.4.57/bin/apachectl
+```
+
+```
+/NIRS/httpd-2.4.57/conf/
+```
+
+```
+httpd.conf
+```
+
+```
+ServerName www.example.com:80
+```
+
+```sh
+/NIRS/httpd-2.4.57/bin/apachectl start
+```
+
+```sh
+/NIRS/httpd-2.4.57/bin/apachectl stop
+```
+
+```sh
+ps -ef | grep httpd
+```
+
 ## 2023-04-26
 
 새길말씀(로마서 4:25)
