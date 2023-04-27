@@ -4,6 +4,28 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-04-28
+
+새길말씀(로마서 6:8)
+
+만일 우리가 그리스도와 함께 죽었으면 또한 그와 함께 살 줄을 믿노니
+
+### iterateFilesAndDirs-java.io.File-org.apache.commons.io.filefilter.IOFileFilter-org.apache.commons.io.filefilter.IOFileFilter-
+
+```java
+public static Iterator<File> iterateFilesAndDirs(File directory,
+                                                 IOFileFilter fileFilter,
+                                                 IOFileFilter dirFilter)
+```
+
+Iterates over the files in given directory (and optionally its subdirectories).
+
+지정된 디렉터리(및 선택적으로 해당 하위 디렉터리)의 파일을 반복합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#iterateFilesAndDirs-java.io.File-org.apache.commons.io.filefilter.IOFileFilter-org.apache.commons.io.filefilter.IOFileFilter-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1954
+
 ## 2023-04-27
 
 새길말씀(로마서 5:8)
