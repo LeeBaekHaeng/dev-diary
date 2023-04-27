@@ -83,6 +83,30 @@ chown root:god /GOD/httpd-2.4.57/bin/httpd
 chmod +s /GOD/httpd-2.4.57/bin/httpd
 ```
 
+### mariadb-10.11 설치
+
+```
+https://mariadb.com/kb/en/mariadb-package-repository-setup-and-usage/
+
+curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.6"
+
+curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.11"
+
+yum install MariaDB-server MariaDB-client MariaDB-backup -y
+
+yum remove MariaDB-server MariaDB-client MariaDB-backup -y
+
+systemctl status mariadb
+systemctl enable mariadb
+systemctl start mariadb
+systemctl stop mariadb
+
+mysql
+
+CREATE USER 'root'@'_gateway' IDENTIFIED BY '';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'_gateway' IDENTIFIED BY '';
+```
+
 ## 2023-04-27
 
 새길말씀(로마서 5:8)
