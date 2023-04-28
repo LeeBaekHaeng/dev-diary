@@ -4,6 +4,27 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-04-29
+
+새길말씀(로마서 7:6)
+
+이제는 우리가 얽매였던 것에 대하여 죽었으므로 율법에서 벗어났으니 이러므로 우리가 영의 새로운 것으로 섬길 것이요 율법 조문의 묵은 것으로 아니할지니라
+
+### lastModified-java.io.File-
+
+```java
+public static long lastModified(File file)
+                         throws IOException
+```
+
+Returns the last modification time in milliseconds via Files.getLastModifiedTime(Path, LinkOption...).
+
+Files.getLastModifiedTime(Path, LinkOption...)을 통해 마지막 수정 시간을 밀리초 단위로 반환합니다.
+
+https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#lastModified-java.io.File-
+
+https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1973
+
 ## 2023-04-28
 
 새길말씀(로마서 6:8)
