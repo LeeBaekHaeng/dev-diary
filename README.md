@@ -24,6 +24,80 @@ https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileU
 
 https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.1994
 
+### mariadb-10.11 yum 설치
+
+```
+MariaDB Package Repository Setup and Usage
+
+su - root
+
+curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.11"
+
+yum install MariaDB-server MariaDB-client MariaDB-backup -y
+
+시스템 서비스 상태 표시
+systemctl status mariadb
+
+시스템 서비스 시작
+systemctl start mariadb
+
+시스템 서비스 중지
+systemctl stop mariadb
+
+시스템 서비스 다시 시작
+systemctl restart mariadb
+
+시스템 서비스 활성화
+systemctl enable mariadb
+
+시스템 서비스 비활성화
+systemctl disable mariadb
+
+mysql
+
+create user 'root'@'_gateway' identified by '';
+grant all on *.* to 'root'@'_gateway';
+```
+
+su - root
+
+MariaDB 10.11의 리포지토리에서 설치하도록 시스템을 구성
+
+```sh
+curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.11"
+```
+
+MariaDB-server MariaDB-client MariaDB-backup 설치
+
+```sh
+yum install MariaDB-server MariaDB-client MariaDB-backup -y
+```
+
+mariadb 시스템 서비스 활성화
+
+```sh
+systemctl enable mariadb
+```
+
+mariadb 시스템 서비스 시작
+
+```sh
+systemctl start mariadb
+```
+
+mysql 실행
+
+```sh
+mysql
+```
+
+root@_gateway 사용자 생성/권한 모두 부여
+
+```
+create user 'root'@'_gateway' identified by '';
+grant all on *.* to 'root'@'_gateway';
+```
+
 ## 2023-04-29
 
 새길말씀(로마서 7:6)
