@@ -98,6 +98,25 @@ create user 'root'@'_gateway' identified by '';
 grant all on *.* to 'root'@'_gateway';
 ```
 
+/etc/my.cnf.d
+
+server.cnf
+
+```cnf
+[mysqld]
+
+port=3306
+character-set-server=utf8
+```
+
+client.cnf
+
+```cnf
+[client]
+
+port=3306
+```
+
 ## 2023-04-29
 
 새길말씀(로마서 7:6)
