@@ -25,6 +25,22 @@ https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileU
 
 https://commons.apache.org/proper/commons-io/apidocs/src-html/org/apache/commons/io/FileUtils.html#line.2017
 
+### mariadb 권한 부여
+
+Oracle VM VirtualBox NAT
+
+```
+CREATE USER 'root'@'_gateway' IDENTIFIED BY '';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'_gateway' WITH GRANT OPTION;
+```
+
+Oracle VM VirtualBox 네트워크 어댑터에 브리지
+
+```
+CREATE USER 'root'@'192.168.0.254' IDENTIFIED BY '';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.0.254' WITH GRANT OPTION;
+```
+
 ## 2023-04-30
 
 새길말씀(로마서 15:13)
