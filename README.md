@@ -41,6 +41,16 @@ CREATE USER 'root'@'192.168.0.254' IDENTIFIED BY '';
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.0.254' WITH GRANT OPTION;
 ```
 
+### 톰캣 캐시의 최대 크기를 증가
+
+E:\EGOVFRAME2\eGovFrameDev-4.1.0-64bit\workspace\Servers\egovframe-common-components-config\context.xml
+
+```xml
+    <!-- 캐시의 최대 크기를 증가시키는 것을 고려해 보십시오. -->
+    <!-- 10240 10MB 에서 102400 100MB 로 수정 -->
+    <Resources cacheMaxSize="10240"></Resources>
+```
+
 ## 2023-04-30
 
 새길말씀(로마서 15:13)
