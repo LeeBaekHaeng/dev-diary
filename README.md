@@ -48,7 +48,7 @@ E:\EGOVFRAME2\eGovFrameDev-4.1.0-64bit\workspace\Servers\egovframe-common-compon
 ```xml
     <!-- 캐시의 최대 크기를 증가시키는 것을 고려해 보십시오. -->
     <!-- 10240 10MB 에서 102400 100MB 로 수정 -->
-    <Resources cacheMaxSize="10240"></Resources>
+    <Resources cacheMaxSize="102400"></Resources>
 ```
 
 ## 2023-04-30
