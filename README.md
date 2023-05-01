@@ -4,6 +4,35 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-05-02
+
+새길말씀(고린도전서 14:40)
+
+모든 것을 품위 있게 하고 질서 있게 하라
+
+2023 전자정부 표준프레임워크 컨트리뷰션 참가
+
+### 2023-05-02 SmsBasicDBUtil.java Java Problem 버그수정 Bug fixes
+
+GenericObjectPoolConfig is a raw type. References to generic type GenericObjectPoolConfig<T> should be parameterized
+- GenericObjectPoolConfig는 원시 유형입니다. 제네릭 형식 GenericObjectPoolConfig<T>에 대한 참조는 매개 변수화되어야 합니다.
+
+Type safety: The expression of type GenericObjectPoolConfig needs unchecked conversion to conform to GenericObjectPoolConfig<PoolableConnection>
+- 형식 안전성: GenericObjectPoolConfig 형식의 식은 GenericObjectPoolConfig<PoolableConnection>을 준수하기 위해 확인되지 않은 변환이 필요합니다.
+
+```java
+// GenericObjectPoolConfig poolConfig = new GenericObjectPoolConfig();
+GenericObjectPoolConfig<PoolableConnection> poolConfig = new GenericObjectPoolConfig<>();
+```
+
+The method setTimeBetweenEvictionRunsMillis(long) from the type BaseObjectPoolConfig is deprecated
+- BaseObjectPoolConfig 유형의 setTimeBetweenEvictionRunsMillis(long) 메서드는 더 이상 사용되지 않습니다.
+
+```java
+// poolConfig.setTimeBetweenEvictionRunsMillis(1000L * 60L * 1L);
+poolConfig.setTimeBetweenEvictionRuns(Duration.ofMillis(1000L * 60L * 1L));
+```
+
 ## 2023-05-01
 
 새길말씀(고린도전서 12:7)
