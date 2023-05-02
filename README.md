@@ -4,6 +4,21 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-05-03
+
+새길말씀(고린도전서 15:3)
+
+내가 받은 것을 먼저 너희에게 전하였노니 이는 성경대로 그리스도께서 우리 죄를 위하여 죽으시고
+
+### EgovUtlJsonController.java HashMap<K,V> 매개 변수화함
+
+HashMap is a raw type. References to generic type HashMap<K,V> should be parameterized
+- HashMap은 원시 유형입니다. 일반 유형 HashMap<K,V>에 대한 참조는 매개변수화되어야 합니다.
+
+https://github.com/eGovFramework/egovframe-common-components/pull/89
+
+https://www.youtube.com/watch?v=mrspPUecagQ
+
 ## 2023-05-02
 
 새길말씀(고린도전서 14:40)
