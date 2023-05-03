@@ -19,6 +19,24 @@ https://github.com/eGovFramework/egovframe-common-components/pull/89
 
 https://www.youtube.com/watch?v=mrspPUecagQ
 
+### DeptSchdulManageDao.java list()를 명명규칙에 맞춰 selectList()로 변경
+
+List is a raw type. References to generic type List<E> should be parameterized
+- 목록은 원시 유형입니다. 제네릭 형식 List<E>에 대한 참조는 매개 변수화되어야 합니다.
+
+The method list(String, Object) from the type EgovComAbstractDAO is deprecated
+- EgovComAbstractDAO 유형의 list(String, Object) 메서드는 더 이상 사용되지 않습니다.
+
+list()를 명명규칙에 맞춰 selectList()로 변경한다.
+
+https://github.com/GSITM2023/egovframe-common-components/commit/222cbe6a0284d39d561c26b027a9b36e0bf5037e
+
+https://github.com/eGovFramework/egovframe-common-components/pull/90
+
+https://github.com/eGovFramework/egovframe-common-components/pull/90/commits/222cbe6a0284d39d561c26b027a9b36e0bf5037e
+
+https://youtu.be/ACa5DGQ9XGQ
+
 ## 2023-05-02
 
 새길말씀(고린도전서 14:40)
