@@ -54,6 +54,23 @@ ResultHandler is a raw type. References to generic type ResultHandler<T> should 
 - https://github.com/GSITM2023/egovframe-common-components/commit/5b9591f44ef2184ae8a75345b5bc291863d2c215
 - https://github.com/eGovFramework/egovframe-common-components/pull/92
 
+### DefaultFileSaveManager.java EgovWebUtil import 사용 안 함
+
+The import egovframework.com.cmm.EgovWebUtil is never used
+- 가져오기 egovframework.com.cmm.EgovWebUtil이 사용되지 않음 DefaultFileSaveManager.java /egovframe-common-components/src/main/java/egovframework/com/utl/wed/filter line 32 Java 문제
+- DefaultFileSaveManager.java
+- /egovframe-common-components/src/main/java/egovframework/com/utl/wed/filter
+- line 32
+- Java Problem
+
+```java
+// import egovframework.com.cmm.EgovWebUtil;
+```
+
+- https://youtu.be/3l_iMrf9vNQ
+- https://github.com/GSITM2023/egovframe-common-components/commit/2a74d37ea84ded1f414786b0bf5d3f540549bd05
+- https://github.com/eGovFramework/egovframe-common-components/pull/93
+
 ## 2023-05-03
 
 새길말씀(고린도전서 15:3)
