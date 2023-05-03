@@ -4,6 +4,56 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+## 2023-05-04
+
+새길말씀(고린도전서 15:22)
+
+아담 안에서 모든 사람이 죽은 것 같이 그리스도 안에서 모든 사람이 삶을 얻으리라
+
+### TestBean.java 컨텍스트 닫음/LOGGER 사용/주석 제거
+
+Resource leak: 'context' is never closed
+- 리소스 누수: '컨텍스트'가 닫히지 않습니다.
+- TestBean.java
+- /egovframe-common-components/src/test/java/egovframework/com/bean
+- line 32
+- Java Problem
+
+```java
+((ClassPathXmlApplicationContext) context).close();
+```
+
+The value of the field TestBean.LOGGER is not used
+- TestBean.LOGGER 필드의 값은 사용되지 않습니다.
+- line 26
+
+```java
+LOGGER.debug("currentTimeMills={}", myBean.getCurrentTimeMills());
+LOGGER.debug("currentTimeMills={}", myBean1.getCurrentTimeMills());
+LOGGER.error("InterruptedException");
+```
+
+- https://youtu.be/98WEQmqpsxI
+- https://github.com/GSITM2023/egovframe-common-components/commit/44ead38044d54a79c9da581aa46f9b9aeadfdf5b
+- https://github.com/eGovFramework/egovframe-common-components/pull/91
+
+### EgovComAbstractDAO.java @SuppressWarnings("rawtypes") 추가
+
+ResultHandler is a raw type. References to generic type ResultHandler<T> should be parameterized
+- ResultHandler는 원시 유형입니다. 일반 유형 ResultHandler<T>에 대한 참조는 매개변수화되어야 합니다.
+- EgovComAbstractDAO.java
+- /egovframe-common-components/src/main/java/egovframework/com/cmm/service/impl
+- line 302
+- Java Problem
+
+```java
+@SuppressWarnings("rawtypes")
+```
+
+- https://youtu.be/lBMBaEfLBNg
+- https://github.com/GSITM2023/egovframe-common-components/commit/5b9591f44ef2184ae8a75345b5bc291863d2c215
+- https://github.com/eGovFramework/egovframe-common-components/pull/92
+
 ## 2023-05-03
 
 새길말씀(고린도전서 15:3)
