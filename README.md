@@ -29,6 +29,87 @@ The import egovframework.com.cmm.EgovWebUtil is never used
 - https://github.com/GSITM2023/egovframe-common-components/commit/c6b21374b25a0298881e413964e3b50d87f8fc24
 - https://github.com/eGovFramework/egovframe-common-components/pull/94
 
+### EgovProperties import 사용 안 함
+
+The import egovframework.com.cmm.service.EgovProperties is never used
+- egovframework.com.cmm.service.EgovProperties 가져오기는 사용되지 않습니다.
+- CkImageSaver.java
+- /egovframe-common-components/src/main/java/egovframework/com/utl/wed/filter
+- line 41
+- Java Problem
+
+```java
+//import egovframework.com.cmm.service.EgovProperties;
+```
+
+- EgovFaqController.java
+- TestLoadFile.java
+- TestWhiteListLink.java
+
+```
+[log4j]2023-05-05 09:33:08,061 DEBUG [egovframework.com.cmm.service.EgovProperties] Property file not found.
+java.io.FileNotFoundException: D:\EGOVFRAME2\eGovFrameDev-4.1.0-64bit\workspace\egovframe-common-components\target\test-classes\egovframework\egovProps\globals.properties (지정된 파일을 찾을 수 없습니다)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_242]
+```
+
+```
+[log4j]2023-05-05 09:34:08,246 DEBUG [egovframework.com.cmm.service.EgovProperties] getProperty : /D:/EGOVFRAME2/eGovFrameDev-4.1.0-64bit/workspace/egovframe-common-components/target/test-classes/egovframework/egovProps\globals.properties = Globals.linkWhitelistFile
+Exception in thread "main" java.lang.RuntimeException: Globals.linkWhitelistFile is not defined!
+	at egovframework.com.cmm.service.EgovWhiteList.check(EgovWhiteList.java:28)
+	at egovframework.com.cmm.service.TestLoadFile.main(TestLoadFile.java:20)
+```
+
+Globals.linkWhitelistFile 추가
+
+```
+/egovframe-common-components/src/test/resources/egovframework/egovProps/globals.properties
+```
+
+```
+Globals.linkWhitelistFile=conf/linkWhitelistFile.properties
+```
+
+linkWhitelistFile.properties 파일 생성
+
+```
+/egovframe-common-components/src/test/resources/egovframework/egovProps/conf/linkWhitelistFile.properties
+```
+
+```properties
+# /EgovPageLink.do 화이트 리스트 처리 (대상목록)
+
+/egovframework/com/sym/mnu/stm/EgovSiteMap
+/cmm/sym/mpm/EgovSiteMap
+/egovframework/com/main_bottom
+
+#egovPageLinkWhitelist=/egovframework/com/sym/mnu/stm/EgovSiteMap
+#egovPageLinkWhitelist2=/cmm/sym/mpm/EgovSiteMap
+#egovPageLinkWhitelist3=/egovframework/com/main_bottom
+
+# 820. RSS태그관리
+
+comthtrsmrcvmntrngloginfo
+comtczip
+
+#egovRSSWhitelist=comthtrsmrcvmntrngloginfo
+#egovRSSWhitelist2=comtczip
+
+# 실명인증 nextUrl
+
+/uss/umt/EgovMberSbscrbView.do
+/uss/umt/EgovEntrprsMberSbscrbView.do
+/uss/olh/qna/QnaCnRegistView.do
+
+#egovNextUrlWhitelist=/uss/umt/EgovMberSbscrbView.do
+#egovNextUrlWhitelist2=/uss/umt/EgovEntrprsMberSbscrbView.do
+#egovNextUrlWhitelist3=/uss/olh/qna/QnaCnRegistView.do
+
+```
+
+- https://youtu.be/XG1BoRmH2Zk
+- https://github.com/GSITM2023/egovframe-common-components/commit/f3bca323c583d6a34e000a0ed7b9a71c749d8c91
+- https://github.com/eGovFramework/egovframe-common-components/pull/95
+
 ## 2023-05-04
 
 새길말씀(고린도전서 15:22)
