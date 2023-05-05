@@ -6,6 +6,60 @@
 
 https://github.com/GSITM2023/egovframe-common-components
 
+## 2023-05-06
+
+새길말씀(로마서 8:2)
+
+이는 그리스도 예수 안에 있는 생명의 성령의 법이 죄와 사망의 법에서 너를 해방하였음이라
+
+### EgovDataCryptoTest.java 외 사용하지 않는 import 제거
+
+The import java.io.IOException is never used
+- 가져오기 java.io.IOException은 사용되지 않습니다.
+- EgovDataCryptoTest.java
+- /egovframe-common-components/src/test/java/egovframework/com/crypto/data
+- line 9
+- Java Problem
+
+```java
+//import java.io.IOException;
+//import org.junit.Ignore;
+```
+
+- EgovFileMngController.java
+- AuthenticInterceptor.java
+- TestCopyCollections.java
+- OAuthLogin.java
+- TestTwitter.java
+- EgovFileMngController.java
+- DefaultItemReader.java
+- EgovBndtManageServiceImpl.java
+- EgovCcmZipManageController.java
+- EgovFileUploadUtil.java
+- EgovMenuManageController.java
+- OAuthLogin.java
+- TestMessage.java
+- EgovDataCryptoTest.java
+- TestController.java
+- TestController.java
+- TestController.java
+- TestController.java
+- TestController.java
+- TestMessage.java
+- EgovFileDownloadController.java
+- EgovFileMngController.java
+- EgovFileDownloadController.java
+- EgovFileMngController.java
+- EgovBindingInitializer.java
+- TestTwitter.java
+- TestTwitter.java
+
+https://youtu.be/W2hms-Tgk1w
+
+https://github.com/GSITM2023/egovframe-common-components/commit/e350be7965a64358a149d3deb93d729847cca31e
+
+https://github.com/eGovFramework/egovframe-common-components/pull/96
+
 ## 2023-05-05
 
 새길말씀(고린도전서 15:52)
