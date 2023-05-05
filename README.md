@@ -4,6 +4,31 @@
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
+https://github.com/GSITM2023/egovframe-common-components
+
+## 2023-05-05
+
+새길말씀(고린도전서 15:52)
+
+나팔 소리가 나매 죽은 자들이 썩지 아니할 것으로 다시 살아나고 우리도 변화되리라
+
+### EgovXMLDoc.java EgovWebUtil import 사용 안 함
+
+The import egovframework.com.cmm.EgovWebUtil is never used
+- import egovframework.com.cmm.EgovWebUtil은 사용되지 않습니다.
+- EgovXMLDoc.java
+- /egovframe-common-components/src/main/java/egovframework/com/utl/sim/service
+- line 43
+- Java Problem
+
+```java
+// import egovframework.com.cmm.EgovWebUtil;
+```
+
+- https://youtu.be/H9Kk0uw52Uw
+- https://github.com/GSITM2023/egovframe-common-components/commit/c6b21374b25a0298881e413964e3b50d87f8fc24
+- https://github.com/eGovFramework/egovframe-common-components/pull/94
+
 ## 2023-05-04
 
 새길말씀(고린도전서 15:22)
