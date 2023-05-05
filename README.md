@@ -110,6 +110,89 @@ comtczip
 - https://github.com/GSITM2023/egovframe-common-components/commit/f3bca323c583d6a34e000a0ed7b9a71c749d8c91
 - https://github.com/eGovFramework/egovframe-common-components/pull/95
 
+### CentOS 최소 설치후 수동으로 Network 설정(CentOS static ip 설정)
+
+https://www.lesstif.com/system-admin/centos-network-centos-static-ip-13631535.html
+
+ifcfg-enp0s3 폴더 위치
+
+```
+/etc/sysconfig/network-scripts
+```
+
+ifcfg-enp0s3 파일명
+
+```
+ifcfg-enp0s3
+```
+
+BOOTPROTO=dhcp 주석
+
+```
+#BOOTPROTO=dhcp
+```
+
+BOOTPROTO=none 으로 수정 및 IPADDR, NETMASK, GATEWAY, DNS1 추가
+
+```
+BOOTPROTO=none
+IPADDR=192.168.0.200
+NETMASK=255.255.255.0
+GATEWAY=192.168.0.1
+DNS1=8.8.8.8
+```
+
+최종
+
+```
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+#BOOTPROTO=dhcp
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=eui64
+NAME=enp0s3
+UUID=d0b40f05-542c-49a4-9818-be37515aaea2
+DEVICE=enp0s3
+ONBOOT=yes
+
+BOOTPROTO=none
+IPADDR=192.168.0.200
+NETMASK=255.255.255.0
+GATEWAY=192.168.0.1
+DNS1=8.8.8.8
+
+```
+
+시스템 서비스 나열
+
+```
+systemctl list-units --type service
+```
+
+network 시스템 서비스 다시 시작
+
+```sh
+systemctl restart NetworkManager.service
+```
+
+https://access.redhat.com/documentation/ko-kr/red_hat_enterprise_linux/8/html/configuring_basic_system_settings/managing-system-services-with-systemctl_configuring-basic-system-settings
+
+1. 8.8.8.8이 무엇인가요?
+
+8.8.8.8은 Google LLC의 무료 및 공개 DNS 서버의 IP 주소입니다.
+
+https://ko.ipshu.com/dns-ip/8.8.8.8
+
+Rocky Linux Network Setting 록키리눅스 네트워크 설정
+
+https://hwang890.tistory.com/entry/Rocky-Linux-Network-Setting-%EB%A1%9D%ED%82%A4%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%84%A4%EC%A0%95
+
 ## 2023-05-04
 
 새길말씀(고린도전서 15:22)
