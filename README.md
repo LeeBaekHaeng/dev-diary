@@ -8,6 +8,8 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+[업무 분업 구조(WBS) AA](2023/%EC%97%85%EB%AC%B4%20%EB%B6%84%EC%97%85%20%EA%B5%AC%EC%A1%B0(WBS)%20AA/%EC%97%85%EB%AC%B4%20%EB%B6%84%EC%97%85%20%EA%B5%AC%EC%A1%B0(WBS)%20AA.md)
+
 ## 2023-05-06
 
 새길말씀(로마서 8:2)
