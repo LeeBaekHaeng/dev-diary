@@ -292,6 +292,17 @@ svnadmin load test2 < test.dump
 
 https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev:scm:subversion
 
+[svn-backup.sh](svn-backup.sh)
+
+```bash
+DATETIME=$(date +%Y/%m/%d/%H/%M/%S)
+
+mkdir -p /GOD/backup/svn/$DATETIME
+
+svnadmin dump /var/svn/test > /GOD/backup/svn/$DATETIME/test.dump
+
+```
+
 ## 운영자 매뉴얼
 
 운영자 매뉴얼은 시스템 운영자들이 시스템을 유지보수하고 관리하기 위한 문서입니다. 운영자 매뉴얼은 시스템의 사용자 매뉴얼과는 달리, 시스템 운영에 필요한 기술적인 정보와 절차에 대한 내용이 포함됩니다. 이 매뉴얼은 시스템 운영자들이 시스템을 효과적으로 운영할 수 있도록 돕습니다.
