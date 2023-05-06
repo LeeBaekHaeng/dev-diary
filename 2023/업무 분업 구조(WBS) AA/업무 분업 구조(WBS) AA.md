@@ -25,6 +25,9 @@ application architect
       1. DB
       1. 배치
    1. 개발 서버
+      1. 형상 관리 서버
+         1. svn
+         2. git
       1. 파일 서버
       1. CI 서버
       1. WEB
@@ -47,6 +50,247 @@ application architect
 1. 솔루션 구성
 1. 배포
 1. [운영자 매뉴얼](#%EC%9A%B4%EC%98%81%EC%9E%90-%EB%A7%A4%EB%89%B4%EC%96%BC)
+
+## 서버 구성
+
+### 개발 서버
+
+#### 형상 관리 서버
+
+##### svn
+
+운영체제(OS)
+- Rocky Linux
+- https://rockylinux.org/ko/
+
+Rocky 8 다운로드
+- Enterprise Linux v8 Compatible
+- 지원 중단일: 2029년 5월 31일
+- https://download.rockylinux.org/pub/rocky/8/isos/x86_64/Rocky-8.7-x86_64-minimal.iso
+- https://download.rockylinux.org/pub/rocky/8/isos/x86_64/Rocky-8.7-x86_64-dvd1.iso
+
+아파치 서브버전 설치
+
+Centos Linux
+- CentOS project (client and server)
+
+```bash
+yum install subversion -y
+```
+
+https://subversion.apache.org/packages.html
+
+---
+
+```
+14. systemctl을 사용하여 시스템 서비스 관리
+14.1. 시스템 서비스 나열
+14.2. 시스템 서비스 상태 표시
+14.3. 시스템 서비스 시작
+14.4. 시스템 서비스 중지
+14.5. 시스템 서비스 다시 시작
+14.6. 시스템 서비스 활성화
+14.7. 시스템 서비스 비활성화
+```
+
+https://access.redhat.com/documentation/ko-kr/red_hat_enterprise_linux/8/html/configuring_basic_system_settings/managing-system-services-with-systemctl_configuring-basic-system-settings#listing-system-services_managing-system-services-with-systemctl
+
+---
+
+14.1. 시스템 서비스 나열
+
+사용 가능한 모든 서비스 단위의 상태(활성화 또는 비활성화)를 나열하려면 다음을 입력합니다.
+
+```bash
+systemctl list-unit-files --type service > service.txt
+```
+
+```
+firewalld.service
+
+mariadb.service
+mysql.service
+mysqld.service
+
+svnserve.service
+```
+
+---
+
+14.2 시스템 서비스 상태 표시
+
+systemctl status <name>.service
+
+```bash
+systemctl status svnserve.service
+```
+
+---
+
+14.3. 시스템 서비스 시작
+
+systemctl start <name>.service
+
+```bash
+systemctl start svnserve.service
+```
+
+---
+
+14.4. 시스템 서비스 중지
+
+systemctl stop <name>.service
+
+```bash
+systemctl stop svnserve.service
+```
+
+---
+
+14.5. 시스템 서비스 다시 시작
+
+systemctl restart <name>.service
+
+```bash
+systemctl restart svnserve.service
+```
+
+---
+
+14.6. 시스템 서비스 활성화
+
+systemctl enable <name>.service
+
+```bash
+systemctl enable svnserve.service
+```
+
+---
+
+14.7. 시스템 서비스 비활성화
+
+systemctl disable <name>.service
+
+```bash
+systemctl disable svnserve.service
+```
+
+---
+
+아파치 서브버전 설정
+
+`/etc/sysconfig`
+
+`svnserve`
+
+`OPTIONS="-r /var/svn"`
+
+Subversion 저장소 만들기
+
+su - root
+
+Root Repository 를 위한 directory를 생성한다.
+
+```bash
+mkdir -p /var/svn
+```
+
+각각의 Repository를 생성한다.
+
+```bash
+svnadmin create --fs-type fsfs /var/svn/test
+svnadmin create --fs-type fsfs /var/svn/test2
+```
+
+인증/권한 정보 설정 (conf/svnserve.conf)
+
+```
+/var/svn/test/conf
+```
+
+```
+svnserve.conf
+```
+
+```conf
+# anon-access = read
+# auth-access = write
+anon-access = none
+auth-access = write
+
+# password-db = passwd
+password-db = passwd
+
+# authz-db = authz
+authz-db = authz
+```
+
+인증 추가
+
+```
+authz
+```
+
+```
+[/]
+god_rw = rw
+god_r = r
+```
+
+패스워드 추가
+
+```
+passwd
+```
+
+```
+god_rw = god_rw
+god_r = god_r
+```
+
+```
+chown -R god:god /var/svn
+```
+
+chmod -R 755 /var/svn
+
+/usr/lib/systemd/system/svnserve.service
+
+```
+svn: E000013: file '/var/svn/test/format' 를 열 수 없습니다: 허가 거부
+
+CentOS SELinux 설정 및 해제하기
+
+sestatus
+
+/etc/selinux
+config
+#SELINUX=enforcing
+SELINUX=disabled
+
+https://www.lesstif.com/system-admin/centos-selinux-6979732.html
+```
+
+```
+svn://192.168.0.3/test
+```
+
+백업 및 복구
+
+Dump : 표준 입출력을 통해서 저장소의 내용을 파일로 생성한다. svnadmin dump 명령을 사용하며 이 명령은 저장소 디렉토리 바깥에서 사용해야 한다.
+
+```bash
+svnadmin dump test > test.dump
+```
+
+Load : 저장소 백업 파일을 이용해서 저장소를 복구한다. svnadmin load 명령을 사용하며, 빈 저장소를 생성한 뒤 백업 파일을 이용해서 복구 한다.
+
+```bash
+svnadmin create test2
+svnadmin load test2 < test.dump
+```
+
+https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev:scm:subversion
 
 ## 운영자 매뉴얼
 
