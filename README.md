@@ -16,6 +16,29 @@ https://github.com/GSITM2023/egovframe-common-components
 
 높음이나 깊음이나 다른 어떤 피조물이라도 우리를 우리 주 그리스도 예수 안에 있는 하나님의 사랑에서 끊을 수 없으리라
 
+### PasswordValidationTest.java deprecated method 주석함
+
+deprecated 안 된 패스워드 점검 method 추가함
+- checkCharacterType
+  - isMoreThan2CharTypeComb
+  - isMoreThan3CharTypeComb
+- checkSeries
+  - isSeriesCharacter
+  - isRepeatCharacter
+
+The method checkCharacterType(String) from the type RteGenericValidator is deprecated
+- RteGenericValidator 유형의 checkCharacterType(String) 메서드는 더 이상 사용되지 않습니다.
+- PasswordValidationTest.java
+- /egovframe-common-components/src/test/java/egovframework/com/uss/umt/validation
+- line 56
+- Java Problem
+
+```java
+//assertFalse(RteGenericValidator.checkCharacterType(notOk[i]));
+assertFalse(RteGenericValidator.isMoreThan2CharTypeComb(notOk[i]));
+assertFalse(RteGenericValidator.isMoreThan3CharTypeComb(notOk[i]));
+```
+
 ## 2023-05-06
 
 새길말씀(로마서 8:2)
