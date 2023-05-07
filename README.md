@@ -1,14 +1,20 @@
 # 개발일기
 
-[할 일(To Do)](todo/2022.md)
+https://github.com/GSITM2023/egovframe-common-components
 
 [2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
 
-https://github.com/GSITM2023/egovframe-common-components
+[2023 업무 분업 구조(WBS) AA 애플리케이션 아키텍트](2023/%EC%97%85%EB%AC%B4%20%EB%B6%84%EC%97%85%20%EA%B5%AC%EC%A1%B0(WBS)%20AA/%EC%97%85%EB%AC%B4%20%EB%B6%84%EC%97%85%20%EA%B5%AC%EC%A1%B0(WBS)%20AA.md)
+
+[2022 할 일(To Do)](todo/2022.md)
 
 [2022 개발일기](2022/README.md)
 
-[업무 분업 구조(WBS) AA](2023/%EC%97%85%EB%AC%B4%20%EB%B6%84%EC%97%85%20%EA%B5%AC%EC%A1%B0(WBS)%20AA/%EC%97%85%EB%AC%B4%20%EB%B6%84%EC%97%85%20%EA%B5%AC%EC%A1%B0(WBS)%20AA.md)
+## 2023-05-07
+
+새길말씀(로마서 8:39)
+
+높음이나 깊음이나 다른 어떤 피조물이라도 우리를 우리 주 그리스도 예수 안에 있는 하나님의 사랑에서 끊을 수 없으리라
 
 ## 2023-05-06
 
