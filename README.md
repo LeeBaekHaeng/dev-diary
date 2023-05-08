@@ -10,6 +10,47 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-05-08
+
+새길말씀(로마서 12:1)
+
+그러므로 형제들아 내가 하나님의 모든 자비하심으로 너희를 권하노니 너희 몸을 하나님이 기뻐하시는 거룩한 산 제물로 드리라 이는 너희가 드릴 영적 예배니라
+
+### EgovFileMngController.java 사용하지 않는 URLDecoder.decode 제거함
+
+The method decode(String) from the type URLDecoder is deprecated
+- URLDecoder 유형의 decode(String) 메서드는 더 이상 사용되지 않습니다.
+- EgovFileMngController.java
+- /egovframe-common-components/src/main/java/egovframework/com/cmm/web
+- line 99
+- Java Problem
+
+```java
+//model.addAttribute("atchFileId", URLDecoder.decode(param_atchFileId));
+model.addAttribute("atchFileId", param_atchFileId);
+
+//model.addAttribute("atchFileId", URLDecoder.decode(param_atchFileId));
+model.addAttribute("atchFileId", param_atchFileId);
+```
+
+```sql
+select * from COMTNFILE /* 파일속성 */
+;
+
+select * from COMTNFILEDETAIL /* 파일상세정보 */
+;
+```
+
+`ATCH_FILE_ID` char(20) NOT NULL COMMENT '첨부파일ID',
+
+FILE_000000000000001
+
+https://youtu.be/Ut6zUrvprCc
+
+https://github.com/GSITM2023/egovframe-common-components/commit/256fad5993ae1c8d5a2b3f860c4e7d55eca1faeb
+
+https://github.com/eGovFramework/egovframe-common-components/pull/99
+
 ## 2023-05-07
 
 새길말씀(로마서 8:39)
