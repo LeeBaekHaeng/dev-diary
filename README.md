@@ -49,6 +49,8 @@ https://youtu.be/Ut6zUrvprCc
 
 https://github.com/GSITM2023/egovframe-common-components/commit/256fad5993ae1c8d5a2b3f860c4e7d55eca1faeb
 
+https://github.com/LeeBaekHaeng/dev-diary#egovfilemngcontrollerjava-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94-urldecoderdecode-%EC%A0%9C%EA%B1%B0%ED%95%A8
+
 https://github.com/eGovFramework/egovframe-common-components/pull/99
 
 ## 2023-05-07
