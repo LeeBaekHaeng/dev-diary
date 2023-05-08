@@ -10,6 +10,30 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-05-09
+
+새길말씀(고린도후서 1:4)
+
+우리의 모든 환난 중에서 우리를 위로하사 우리로 하여금 하나님께 받는 위로로써 모든 환난 중에 있는 자들을 능히 위로하게 하시는 이시로다
+
+### EgovAtchFileIdPropertyEditor.java 에서 encode(String s, String enc) 메서드를 사용함
+
+The method encode(String) from the type URLEncoder is deprecated
+- URLEncoder 유형의 encode(String) 메서드는 더 이상 사용되지 않습니다.
+- EgovAtchFileIdPropertyEditor.java
+- /egovframe-common-components/src/main/java/egovframework/com/cmm/web
+- line 18
+- Java Problem
+
+```java
+//String encText = URLEncoder.encode(text);
+String encText = URLEncoder.encode(text, StandardCharsets.UTF_8.name());
+```
+
+https://youtu.be/2SOBEsLcmeA
+
+https://github.com/GSITM2023/egovframe-common-components/commit/8b1e96743025d1b8a1565e328cc0c11d4f1f170b
+
 ## 2023-05-08
 
 새길말씀(로마서 12:1)
