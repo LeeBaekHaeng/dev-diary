@@ -34,6 +34,10 @@ https://youtu.be/2SOBEsLcmeA
 
 https://github.com/GSITM2023/egovframe-common-components/commit/8b1e96743025d1b8a1565e328cc0c11d4f1f170b
 
+https://github.com/LeeBaekHaeng/dev-diary#egovatchfileidpropertyeditorjava-%EC%97%90%EC%84%9C-encodestring-s-string-enc-%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%A8
+
+https://github.com/eGovFramework/egovframe-common-components/pull/100
+
 ## 2023-05-08
 
 새길말씀(로마서 12:1)
