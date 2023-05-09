@@ -10,6 +10,64 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-05-10
+
+새길말씀(고린도후서 2:14)
+
+항상 우리를 그리스도 안에서 이기게 하시고 우리로 말미암아 각처에서 그리스도를 아는 냄새를 나타내시는 하나님께 감사하노라
+
+### EgovFileSysMntrngServiceImpl.java 에서 java.nio.file.FileStore#getUsableSpace() 사용함
+
+The method freeSpaceKb(String) from the type FileSystemUtils is deprecated
+- FileSystemUtils 유형의 freeSpaceKb(String) 메서드는 더 이상 사용되지 않습니다.
+- EgovFileSysMntrngServiceImpl.java
+- /egovframe-common-components/src/main/java/egovframework/com/utl/sys/fsm/service/impl
+- line 111
+- Java Problem
+
+@deprecated As of 2.6 deprecated without replacement. Please use {@link java.nio.file.FileStore#getUsableSpace()}.
+
+@deprecated 2.6부터 대체 없이 사용되지 않습니다. {@link java.nio.file.FileStore#getUsableSpace()}를 사용하십시오.
+
+사용 가능한 공간 얻기
+
+```java
+//		FileSystemUtils.freeSpaceKb("");
+//		return 0;
+		Path path = Paths.get("");
+		FileStore fs = null;
+		long usableSpaceBytes = 0;
+		try {
+			fs = Files.getFileStore(path);
+			usableSpaceBytes = fs.getUsableSpace();
+		} catch (IOException e) {
+			egovLogger.error("IOException");
+		}
+		long usableSpaceKb = usableSpaceBytes / 1024;
+		//return (int) usableSpaceKb;
+		return  Math.toIntExact(usableSpaceKb);
+```
+
+java long to int safe
+- Math.toIntExact
+- https://www.baeldung.com/java-convert-long-to-int
+
+```
+freeSpaceBytes=160471506944
+freeSpaceKb=156710456
+freeSpaceMb=149 GB
+
+usableSpaceBytes=160471506944
+usableSpaceKb=156710456
+usableSpaceMb=149 GB
+```
+
+https://youtu.be/RnHsxfBCJ70
+
+https://github.com/GSITM2023/egovframe-common-components/commit/43966639165631b9939aa8f3f61630ba9a212655
+
+https://github.com/eGovFramework/egovframe-common-components/pull/101
+
 ## 2023-05-09
 
 새길말씀(고린도후서 1:4)
