@@ -10,6 +10,40 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-05-11
+
+새길말씀(고린도후서 4:15)
+
+이는 모든 것이 너희를 위함이니 많은 사람의 감사로 말미암아 은혜가 더하여 넘쳐서 하나님께 영광을 돌리게 하려 함이라
+
+### TestCopyDate.java 에서 Date.setYear 를 Calendar.set 으로 대체
+
+The method getYear() from the type Date is deprecated
+- Date 유형의 getYear() 메서드는 더 이상 사용되지 않습니다.
+- TestCopyDate.java
+- /egovframe-common-components/src/test/java/egovframework/code/security/copyobj
+- line 17
+- Java Problem
+
+Deprecated.  As of JDK version 1.1,replaced by Calendar.set(Calendar.YEAR, year + 1900).
+
+더 이상 사용되지 않습니다. JDK 버전 1.1부터는 Calendar.set(Calendar.YEAR, year + 1900)으로 대체되었습니다.
+
+```java
+//d.setYear(2021-1900);
+//LOGGER.debug("Org Date.year = "+(d.getYear()+1900));
+Calendar calendar = Calendar.getInstance();
+calendar.set(Calendar.YEAR, 2021);
+d = calendar.getTime();
+LOGGER.debug("Org Date.year = "+(calendar.get(Calendar.YEAR)));
+```
+
+https://youtu.be/8mp2ajqyrVE
+
+https://github.com/GSITM2023/egovframe-common-components/commit/176886fce40ced03af896259c6c7623e8deb72da
+
+https://github.com/eGovFramework/egovframe-common-components/pull/102
+
 ## 2023-05-10
 
 새길말씀(고린도후서 2:14)
