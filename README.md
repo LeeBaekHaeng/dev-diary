@@ -85,6 +85,65 @@ https://github.com/GSITM2023/egovframe-common-components/commit/d33ae99ce790a3a7
 
 https://github.com/eGovFramework/egovframe-common-components/pull/103
 
+### @SuppressWarnings("unchecked")/@SuppressWarnings("deprecation") 제거
+
+Unnecessary @SuppressWarnings("unchecked")
+- 불필요한 @SuppressWarnings("선택하지 않음")
+- ReprtStatsDAO.java
+- /egovframe-common-components/src/main/java/egovframework/com/sts/rst/service/impl
+- line 106
+- Java Problem
+
+```java
+//@SuppressWarnings("unchecked")
+@SuppressWarnings("unchecked")
+
+//@SuppressWarnings("deprecation")
+@SuppressWarnings("deprecation")
+```
+
+```
+ReprtStatsDAO.java
+ReprtStatsDAO.java
+ReprtStatsDAO.java
+ReprtStatsDAO.java
+ReprtStatsDAO.java
+TroblReqstDAO.java
+OrgManageLdapDAO.java
+NtwrkDAO.java
+EgovUserInfManageDAO.java
+EgovUserInfManageDAO.java
+EgovUserInfManageDAO.java
+EgovUserInfManageDAO.java
+EgovUserInfManageDAO.java
+EgovUserInfManageDAO.java
+EgovUserInfManageDAO.java
+EgovOrgManageLdapServiceImpl.java
+EgovOrgManageLdapServiceImpl.java
+EgovOrgManageLdapServiceImpl.java
+EgovOrgManageLdapServiceImpl.java
+EgovOrgManageLdapServiceImpl.java
+DtaUseStatsDAO.java
+DtaUseStatsDAO.java
+DtaUseStatsDAO.java
+DeptManageLdapDAO.java
+BkmkMenuManageDAO.java
+BkmkMenuManageDAO.java
+BkmkMenuManageDAO.java
+BatchSchdulDao.java
+BatchSchdulDao.java
+EgovQnaController.java
+EgovQnaController.java
+EgovQnaController.java
+EgovQnaController.java
+```
+
+https://youtu.be/0NGrs7yPydM
+
+https://github.com/GSITM2023/egovframe-common-components/commit/d081e72ce659c126e0af2565b66e6db1e91fbbe9
+
+https://github.com/eGovFramework/egovframe-common-components/pull/104
+
 ## 2023-05-11
 
 새길말씀(고린도후서 4:15)
