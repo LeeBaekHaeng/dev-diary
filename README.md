@@ -10,6 +10,75 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-05-12
+
+새길말씀(고린도후서 5:1)
+
+만일 땅에 있는 우리의 장막 집이 무너지면 하나님께서 지으신 집 곧 손으로 지은 것이 아니요 하늘에 있는 영원한 집이 우리에게 있는 줄 아느니라
+
+### AllSchdulManageDao.java 에서 list 를 selectList 로 대체
+
+The method list(String, Object) from the type EgovComAbstractDAO is deprecated
+- EgovComAbstractDAO 유형의 list(String, Object) 메서드는 더 이상 사용되지 않습니다.
+- AllSchdulManageDao.java
+- /egovframe-common-components/src/main/java/egovframework/com/cop/smt/sam/service/impl
+- line 37
+- Java Problem
+
+명명규칙에 맞춰 selectList()로 변경한다.
+
+```java
+//@SuppressWarnings("rawtypes")
+//public List selectAllSchdulManageeList(ComDefaultVO searchVO) throws Exception{
+//return (List)list("AllSchdulManage.selectIndvdlSchdulManage", searchVO);
+public List<EgovMap> selectAllSchdulManageeList(ComDefaultVO searchVO) throws Exception{
+return selectList("AllSchdulManage.selectIndvdlSchdulManage", searchVO);
+```
+
+```
+AuthorGroupDAO.java
+AuthorManageDAO.java
+AuthorManageDAO.java
+AuthorRoleManageDAO.java
+CmmnClCodeManageDAO.java
+CmmnCodeManageDAO.java
+CmmnDetailCodeManageDAO.java
+CnsltManageDAO.java
+CnsltManageDAO.java
+DeptAuthorDAO.java
+DeptAuthorDAO.java
+```
+
+---
+
+/egovframe-common-components/src/main/resources/egovframework/mapper/com/cop/smt/sam/EgovAllSchdulManage_SQL_altibase.xml
+
+```xml
+<!-- 전제일정::목록조회_게시물정보 -->
+<select id="selectIndvdlSchdulManage" parameterType="comDefaultVO" resultType="egovMap">
+```
+
+resultType="egovMap"
+
+```java
+//@SuppressWarnings("rawtypes")
+//public List selectAllSchdulManageeList(ComDefaultVO searchVO) throws Exception{
+public List<EgovMap> selectAllSchdulManageeList(ComDefaultVO searchVO) throws Exception{
+```
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sam/EgovAllSchdulManageList.do
+
+CmmnClCodeManageDAO.java TODO List<?>
+public List<?> selectCmmnClCodeList(CmmnClCodeVO searchVO) throws Exception {
+
+CmmnCodeManageDAO.java
+
+CmmnDetailCodeManageDAO.java
+
+CnsltManageDAO.java
+
+list 를 selectList 로 대체
+
 ## 2023-05-11
 
 새길말씀(고린도후서 4:15)
