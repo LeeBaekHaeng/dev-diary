@@ -36,6 +36,32 @@ https://github.com/GSITM2023/egovframe-common-components/commit/8cb1ca4628334980
 
 https://github.com/eGovFramework/egovframe-common-components/pull/105
 
+### EgovSignupController.java 사용되지 않는 변수 제거
+
+The value of the local variable resultDBInfo is not used
+- 로컬 변수 resultDBInfo의 값은 사용되지 않습니다.
+- EgovSignupController.java
+- /egovframe-common-components/src/main/java/egovframework/com/ext/oauth/web
+- line 151
+- Java Problem
+
+```java
+//String resultDBInfo = ""; // DB 체크 결과
+```
+
+```
+EgovMybatisUtil.java
+EgovAuthorRoleController.java
+EgovAdministrationWordController.java
+AuthenticInterceptor.java
+```
+
+https://youtu.be/FfBBs3UlS6U
+
+https://github.com/GSITM2023/egovframe-common-components/commit/76c87e34d960afc1f215390c0878667b88321932
+
+https://github.com/eGovFramework/egovframe-common-components/pull/106
+
 ## 2023-05-12
 
 새길말씀(고린도후서 5:1)
