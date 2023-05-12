@@ -10,6 +10,32 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-05-13
+
+새길말씀(고린도후서 5:17)
+
+그런즉 누구든지 그리스도 안에 있으면 새로운 피조물이라 이전 것은 지나갔으니 보라 새 것이 되었도다
+
+### EgovBBSMasterDAO.java list 를 selectList 로 대체
+
+Type safety: Unchecked cast from List<capture#4-of ?> to List<BoardMasterVO>
+- 유형 안전성: List<capture#4-of ?>에서 List<BoardMasterVO>로 확인되지 않은 캐스트
+- EgovBBSMasterDAO.java
+- /egovframe-common-components/src/main/java/egovframework/com/cop/bbs/service/impl
+- line 77
+- Java Problem
+
+```java
+//return (List<BlogVO>) list("BBSMaster.selectBlogListPortlet", blogVO);
+return selectList("BBSMaster.selectBlogListPortlet", blogVO);
+```
+
+https://youtu.be/lq76-leHs40
+
+https://github.com/GSITM2023/egovframe-common-components/commit/8cb1ca4628334980c43c6f6592cdc66c75e8981c
+
+https://github.com/eGovFramework/egovframe-common-components/pull/105
+
 ## 2023-05-12
 
 새길말씀(고린도후서 5:1)
