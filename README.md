@@ -62,6 +62,83 @@ https://github.com/GSITM2023/egovframe-common-components/commit/76c87e34d960afc1
 
 https://github.com/eGovFramework/egovframe-common-components/pull/106
 
+### EgovWebLogInterceptor.java 사용되지 않는 HandlerInterceptorAdapter 를 HandlerInterceptor 로 수정
+
+The type HandlerInterceptorAdapter is deprecated
+- HandlerInterceptorAdapter 유형은 더 이상 사용되지 않습니다.
+- EgovWebLogInterceptor.java
+- /egovframe-common-components/src/main/java/egovframework/com/sym/log/wlg/web
+- line 31
+- Java Problem
+
+
+@deprecated as of 5.3 in favor of implementing {@link HandlerInterceptor}
+
+@deprecated 구현에 찬성하는 5.3 기준 {@link HandlerInterceptor}
+
+```java
+//public class EgovWebLogInterceptor extends HandlerInterceptorAdapter {
+public class EgovWebLogInterceptor implements HandlerInterceptor {
+```
+
+```sql
+select
+/* COMTNWEBLOG_PK */
+	A.*
+from COMTNWEBLOG A /* 웹로그 */
+order by
+	A.REQUST_ID desc /* 요청ID */
+;
+```
+
+```
+IpObtainInterceptor.java
+/egovframe-common-components/src/main/webapp/WEB-INF/config/egovframework/springmvc/egov-com-interceptor.xml
+<!-- 세션(Session) 방식 인증시에만 AuthenticInterceptor 동작  -->
+<beans profile="session">
+<bean class="egovframework.com.cmm.interceptor.IpObtainInterceptor" />
+```
+
+```
+FacebookUserInterceptor.java
+/egovframe-common-components/src/main/webapp/WEB-INF/config/egovframework/springmvc/egov-com-servlet.xml
+<bean class="egovframework.com.uss.ion.fbk.web.FacebookUserInterceptor" >
+```
+
+```
+EgovWebLogInterceptor.java
+/egovframe-common-components/src/main/webapp/WEB-INF/config/egovframework/springmvc/egov-com-servlet.xml
+<bean id="egovWebLogInterceptor" class="egovframework.com.sym.log.wlg.web.EgovWebLogInterceptor" />
+```
+
+```
+AuthenticInterceptor.java
+/egovframe-common-components/src/main/webapp/WEB-INF/config/egovframework/springmvc/egov-com-interceptor.xml
+<!-- 세션(Session) 방식 인증시에만 AuthenticInterceptor 동작  -->
+<!-- 동작모드(프로파일명) : dummy, session, security ex)<beans profile="session"/> -->
+<beans profile="dummy">
+<bean class="egovframework.com.cmm.interceptor.AuthenticInterceptor">
+```
+
+```
+IpObtainInterceptor.java
+IpObtainInterceptor.java
+FacebookUserInterceptor.java
+FacebookUserInterceptor.java
+EgovWebLogInterceptor.java
+EgovWebLogInterceptor.java
+AuthenticInterceptor.java
+AuthenticInterceptor.java
+```
+
+http://localhost:8080/egovframework-all-in-one
+
+https://youtu.be/BWUA9C9ozeA
+
+https://github.com/GSITM2023/egovframe-common-components/commit/2207d2d14c0b416c43d14c31d128aae9e9ac4ba7
+
+https://github.com/eGovFramework/egovframe-common-components/pull/107
+
 ## 2023-05-12
 
 새길말씀(고린도후서 5:1)
