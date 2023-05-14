@@ -10,6 +10,46 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-05-15
+
+새길말씀(요한복음 15:26)
+
+내가 아버지께로부터 너희에게 보낼 보혜사 곧 아버지께로부터 나오시는 진리의 성령이 오실 때에 그가 나를 증언하실 것이요
+
+### WebLogDAO.java list 를 selectList 로 변경
+
+The method list(String, Object) from the type EgovComAbstractDAO is deprecated
+- EgovComAbstractDAO 유형의 list(String, Object) 메서드는 더 이상 사용되지 않습니다.
+- WebLogDAO.java
+- /egovframe-common-components/src/main/java/egovframework/com/sym/log/wlg/service/impl
+- line 72
+- Java Problem
+
+```java
+//return list("WebLog.selectWebLogInf", webLog);
+return selectList("WebLog.selectWebLogInf", webLog);
+```
+
+```
+WebLogDAO.java
+UserLogDAO.java
+SysLogDAO.java
+StplatManageDAO.java
+SndngMailDtlsDAO.java
+UserManageDAO.java
+RoleManageDAO.java
+RoleManageDAO.java
+QustnrRespondManageDao.java
+QustnrRespondManageDao.java
+QustnrQestnManageDao.java
+```
+
+https://youtu.be/wRVe294rZEY
+
+https://github.com/GSITM2023/egovframe-common-components/commit/bf7a56fccfc2377d4c7b4def7c3f94f71775824f
+
+https://github.com/eGovFramework/egovframe-common-components/pull/108
+
 ## 2023-05-13
 
 새길말씀(고린도후서 5:17)
