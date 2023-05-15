@@ -10,6 +10,34 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-05-16
+
+새길말씀(요한복음 16:13)
+
+그러나 진리의 성령이 오시면 그가 너희를 모든 진리 가운데로 인도하시리니 그가 스스로 말하지 않고 오직 들은 것을 말하며 장래 일을 너희에게 알리시리라
+
+### EgovServerResrceMntrng.java 사용되지 않는 필드 제거
+
+The value of the field EgovServerResrceMntrng.LOGGER is not used
+- EgovServerResrceMntrng.LOGGER 필드의 값은 사용되지 않습니다.
+- EgovServerResrceMntrng.java
+- /egovframe-common-components/src/main/java/egovframework/com/utl/sys/srm/example
+- line 35
+- Java Problem
+
+```java
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
+
+//private static final Logger LOGGER = LoggerFactory.getLogger(EgovServerResrceMntrng.class);
+```
+
+https://youtu.be/9XHMetw7AeQ
+
+https://github.com/GSITM2023/egovframe-common-components/commit/484cc0fc82c947949edb204fa023bdb6bb1b5288
+
+https://github.com/eGovFramework/egovframe-common-components/pull/109
+
 ## 2023-05-15
 
 새길말씀(요한복음 15:26)
