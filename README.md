@@ -10,6 +10,35 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-05-17
+
+새길말씀(에스겔 1:3)
+
+갈대아 땅 그발 강 가에서 여호와의 말씀이 부시의 아들 제사장 나 에스겔에게 특별히 임하고 여호와의 권능이 내 위에 있으니라
+
+### EgovWhiteList.java checkNew 메서드 추가
+
+EgovWhiteList.java 에서
+checkNew 메서드를 추가했습니다.
+loadWhiteListNew(String) 메서드는 로컬에서 사용되지 않기 때문에.
+
+The method loadWhiteListNew(String) from the type EgovWhiteList is never used locally
+- EgovWhiteList 유형의 loadWhiteListNew(String) 메서드는 로컬에서 사용되지 않습니다.
+- EgovWhiteList.java
+- /egovframe-common-components/src/test/java/egovframework/com/cmm/service
+- line 58
+- Java Problem
+
+/egovframe-common-components/src/test/java/egovframework/com/cmm/service/TestLoadFile.java
+
+/egovframe-common-components/src/test/java/egovframework/com/cmm/service/TestWhiteListLink.java
+
+https://youtu.be/oz4tQou8l3A
+
+https://github.com/GSITM2023/egovframe-common-components/commit/0907e496371dda3071b13341954e4a2ffbc9ee9a
+
+https://github.com/eGovFramework/egovframe-common-components/pull/111
+
 ## 2023-05-16
 
 새길말씀(요한복음 16:13)
