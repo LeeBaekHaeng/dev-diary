@@ -16,6 +16,8 @@ https://github.com/GSITM2023/egovframe-common-components
 
 때에 주의 영이 나를 들어올리시는데 내가 내 뒤에서 크게 울리는 소리를 들으니 찬송할지어다 여호와의 영광이 그의 처소로부터 나오는도다 하니
 
+[EgovNetworkState 유형의 정적 메서드 getMyPortScan()은 정적 방식으로 액세스함](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md#egovnetworkstate-%EC%9C%A0%ED%98%95%EC%9D%98-%EC%A0%95%EC%A0%81-%EB%A9%94%EC%84%9C%EB%93%9C-getmyportscan%EC%9D%80-%EC%A0%95%EC%A0%81-%EB%B0%A9%EC%8B%9D%EC%9C%BC%EB%A1%9C-%EC%95%A1%EC%84%B8%EC%8A%A4%ED%95%A8)
+
 ## 2023-05-18
 
 새길말씀(에스겔 2:2)
