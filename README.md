@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-05-20
+
+매일성경묵상 새길말씀(에스겔 34:31)
+
+내 양 곧 내 초장의 양 너희는 사람이요 나는 너희 하나님이라 주 여호와의 말씀이니라
+
+[EgovAdministrationWordController.java @SuppressWarnings("unused") 제거]()
+
 ## 2023-05-19
 
 새길말씀(에스겔 3:12)
