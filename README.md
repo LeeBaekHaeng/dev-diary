@@ -16,7 +16,7 @@ https://github.com/GSITM2023/egovframe-common-components
 
 또 내게 이르시되 너는 이 모든 뼈에게 대언하여 이르기를 너희 마른 뼈들아 여호와의 말씀을 들을지어다
 
-[]()
+[EgovFileMngController.java java.net.URLDecoder 제거](2023/contribution/contribution.md#egovfilemngcontrollerjava-javaneturldecoder-%EC%A0%9C%EA%B1%B0)
 
 ## 2023-05-20
 
