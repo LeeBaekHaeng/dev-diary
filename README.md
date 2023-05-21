@@ -2,13 +2,21 @@
 
 https://github.com/GSITM2023/egovframe-common-components
 
-[2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80/2023%20%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%20%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98%20%EC%B0%B8%EA%B0%80.md)
+[2023 전자정부 표준프레임워크 컨트리뷰션 참가](2023/contribution/contribution.md)
 
-[2023 업무 분업 구조(WBS) AA 애플리케이션 아키텍트](2023/%EC%97%85%EB%AC%B4%20%EB%B6%84%EC%97%85%20%EA%B5%AC%EC%A1%B0(WBS)%20AA/%EC%97%85%EB%AC%B4%20%EB%B6%84%EC%97%85%20%EA%B5%AC%EC%A1%B0(WBS)%20AA.md)
+[2023 업무 분업 구조(WBS) AA 애플리케이션 아키텍트](2023/wbs-aa/wbs-aa.md)
 
 [2022 할 일(To Do)](todo/2022.md)
 
 [2022 개발일기](2022/README.md)
+
+## 2023-05-22
+
+매일성경묵상 새길말씀(에스겔 37:4)
+
+또 내게 이르시되 너는 이 모든 뼈에게 대언하여 이르기를 너희 마른 뼈들아 여호와의 말씀을 들을지어다
+
+[]()
 
 ## 2023-05-20
 

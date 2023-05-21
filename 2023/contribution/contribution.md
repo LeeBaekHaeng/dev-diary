@@ -6,6 +6,29 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-05-22
+
+### EgovFileMngController.java java.net.URLDecoder 제거
+
+EgovFileMngController.java 에서
+
+import java.net.URLDecoder 제거했습니다.
+
+사용되지 않아.
+
+The import java.net.URLDecoder is never used
+- 가져오기 java.net.URLDecoder는 사용되지 않습니다.
+- EgovFileMngController.java
+- /egovframe-common-components/src/main/java/egovframework/com/cmm/web
+- line 3
+- Java Problem
+
+https://youtu.be/OnBTzfJNZa8
+
+https://github.com/GSITM2023/egovframe-common-components/commit/e2f4fe700b4a1844e706571f0a2fbe4255d6a303
+
+https://github.com/eGovFramework/egovframe-common-components/pull/116
+
 ## 2023-05-20
 
 ### EgovAdministrationWordController.java @SuppressWarnings("unused") 제거
