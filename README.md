@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-05-23
+
+새길말씀(요엘 2:32)
+
+누구든지 여호와의 이름을 부르는 자는 구원을 얻으리니 이는 나 여호와의 말대로 시온 산과 예루살렘에서 피할 자가 있을 것임이요 남은 자 중에 나 여호와의 부름을 받을 자가 있을 것임이니라
+
+[List<?> voList 를 List<ComDefaultCodeVO> voList 로 수정](2023/contribution/contribution.md#2023-05-23)
+
 ## 2023-05-22
 
 매일성경묵상 새길말씀(에스겔 37:4)

@@ -6,6 +6,20 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-05-23
+
+### List<?> voList 를 List<ComDefaultCodeVO> voList 로 수정
+
+57: public Map<String, List<CmmnDetailCode>> selectCmmCodeDetails(List<?> voList) throws Exception {  
+
+https://youtu.be/jtFbOzexhh0
+
+https://github.com/GSITM2023/egovframe-common-components/commit/ccac1efb7db0d880b8f2311cd8bc1d42c68a7353
+
+https://github.com/eGovFramework/egovframe-common-components/pull/117
+
+https://github.com/GSITM2023/egovframe-common-components/blob/2023/05/23/src/test/java/egovframework/com/cmm/service/impl/EgovCmmUseServiceImplTest_selectCmmCodeDetails.java
+
 ## 2023-05-22
 
 ### EgovFileMngController.java java.net.URLDecoder 제거
