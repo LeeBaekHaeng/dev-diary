@@ -6,6 +6,20 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-05-24
+
+### ? 를 FileVO 로 수정
+
+List<?> fvoList 를 List<FileVO> fvoList 로 수정
+
+42: public void deleteFileInfs(List<?> fvoList) throws Exception {
+
+https://youtu.be/Bo41p78Zwz8
+
+https://github.com/GSITM2023/egovframe-common-components/commit/95a3cf5a01f68c9cb8e90ac8140002c14261b10e
+
+https://github.com/eGovFramework/egovframe-common-components/pull/119
+
 ## 2023-05-23
 
 ### List<?> voList 를 List<ComDefaultCodeVO> voList 로 수정
