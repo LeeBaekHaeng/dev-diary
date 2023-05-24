@@ -6,6 +6,36 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-05-25
+
+### ? 를 BoardVO 로 수정
+
+List<?> boardVO 를 List<BoardVO> boardVO 로 수정
+
+14: public List<?> selectArticleList(BoardVO boardVO) {
+
+https://youtu.be/3E9DRSWBDI0
+
+https://github.com/GSITM2023/egovframe-common-components/tree/2023/05/25/src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleDAOTest_selectArticleList.java
+
+https://github.com/GSITM2023/egovframe-common-components/tree/2023/05/25/src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleDAOTest_selectBlogListManager.java
+
+https://github.com/GSITM2023/egovframe-common-components/tree/2023/05/25/src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleDAOTest_selectGuestArticleList.java
+
+https://github.com/GSITM2023/egovframe-common-components/tree/2023/05/25/src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleList.java
+
+https://github.com/GSITM2023/egovframe-common-components/tree/2023/05/25/src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectBlogListManager.java
+
+https://github.com/GSITM2023/egovframe-common-components/tree/2023/05/25/src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectBlogNmList.java
+
+https://github.com/GSITM2023/egovframe-common-components/tree/2023/05/25/src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectGuestArticleList.java
+
+https://github.com/GSITM2023/egovframe-common-components/tree/2023/05/25/src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectLoginUser.java
+
+https://github.com/GSITM2023/egovframe-common-components/commit/8a66db9c50a016f7a10f5b7eb05b29ec3588e6da
+
+https://github.com/eGovFramework/egovframe-common-components/pull/120
+
 ## 2023-05-24
 
 ### ? 를 FileVO 로 수정
