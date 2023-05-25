@@ -6,6 +6,20 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-05-26
+
+### ? 를 AtchmnFileVO 로 수정
+
+List<?> 를 List<AtchmnFileVO> 로 수정
+
+134: List<?> atchmnFileList = sndngMailRegistDAO.selectAtchmnFileList(vo);
+
+https://youtu.be/nEzYheaxhG0
+
+https://github.com/GSITM2023/egovframe-common-components/commit/ce9dcc6fbec1a608e632bd4ce6e1e1941d5e4a55
+
+https://github.com/eGovFramework/egovframe-common-components/pull/121
+
 ## 2023-05-25
 
 ### ? 를 BoardVO 로 수정
