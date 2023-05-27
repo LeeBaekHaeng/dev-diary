@@ -6,6 +6,22 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-05-27
+
+### ? listWeek 를 String 으로 수정
+
+List<?> listWeek 를 List<String> 으로 수정
+
+318: List<?> listWeek = (List<?>)listWeekGrop.get(iNowWeek);
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/lsm/usr/selectLeaderSchdulWeekList.do
+
+https://youtu.be/_L4-nHKOYdc
+
+https://github.com/GSITM2023/egovframe-common-components/commit/cc6a6b22c018f472e809cc4626bc749493e5d15c
+
+https://github.com/eGovFramework/egovframe-common-components/pull/122
+
 ## 2023-05-26
 
 ### ? 를 AtchmnFileVO 로 수정
