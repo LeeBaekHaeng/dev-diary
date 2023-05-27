@@ -16,6 +16,8 @@ https://github.com/GSITM2023/egovframe-common-components
 
 누가 지혜가 있어 이런 일을 깨달으며 누가 총명이 있어 이런 일을 알겠느냐 여호와의 도는 정직하니 의인은 그 길로 다니거니와 그러나 죄인은 그 길에 걸려 넘어지리라
 
+[? listWeek 를 String 으로 수정](2023/contribution/contribution.md#2023-05-27)
+
 ## 2023-05-26
 
 매일성경묵상 새길말씀(호세아 11:9)
