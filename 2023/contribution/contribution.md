@@ -6,6 +6,20 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-05-29
+
+### selectDeptSchdulManageAuthorGroupPopup ? 를 EgovMap 으로 수정
+
+37: public List<?> selectDeptSchdulManageAuthorGroupPopup(ComDefaultVO searchVO){
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sdm/EgovDeptSchdulManageAuthorGroupPopup.do
+
+https://youtu.be/plpksbmsoVc
+
+https://github.com/GSITM2023/egovframe-common-components/commit/5ab4e59c40ef7137e7abebf0ff8ff6a909df48b8
+
+https://github.com/eGovFramework/egovframe-common-components/pull/123
+
 ## 2023-05-27
 
 ### ? listWeek 를 String 으로 수정

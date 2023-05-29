@@ -10,6 +10,15 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-05-29
+
+매일성경묵상 새길말씀(사도행전 2:38)
+
+베드로가 이르되 너희가 회개하여 각각 예수 그리스도의 이름으로 세례를 받고 죄 사함을 받으라 그리하면 성령의 선물을 받으리니
+
+[selectDeptSchdulManageAuthorGroupPopup ? 를 EgovMap 으로 수정
+](2023/contribution/contribution.md#2023-05-29)
+
 ## 2023-05-27
 
 매일성경묵상 새길말씀(호세아 14:9)
