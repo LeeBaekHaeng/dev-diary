@@ -6,6 +6,20 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-05-30
+
+### selectDeptSchdulManageEmpLyrPopup ? 를 EgovMap 으로 수정
+
+47: public List<?> selectDeptSchdulManageEmpLyrPopup(ComDefaultVO searchVO){
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sdm/EgovDeptSchdulManageEmpLyrPopup.do
+
+https://youtu.be/FAbHn3Amn0s
+
+https://github.com/GSITM2023/egovframe-common-components/commit/5b3ee132e104746484070a8d5eff30e6573ff449
+
+https://github.com/eGovFramework/egovframe-common-components/pull/124
+
 ## 2023-05-29
 
 ### selectDeptSchdulManageAuthorGroupPopup ? 를 EgovMap 으로 수정

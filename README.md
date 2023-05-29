@@ -10,14 +10,21 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-05-30
+
+매일성경묵상 새길말씀(갈라디아서 1:4)
+
+그리스도께서 하나님 곧 우리 아버지의 뜻을 따라 이 악한 세대에서 우리를 건지시려고 우리 죄를 대속하기 위하여 자기 몸을 주셨으니
+
+[selectDeptSchdulManageEmpLyrPopup ? 를 EgovMap 으로 수정](2023/contribution/contribution.md#2023-05-30)
+
 ## 2023-05-29
 
 매일성경묵상 새길말씀(사도행전 2:38)
 
 베드로가 이르되 너희가 회개하여 각각 예수 그리스도의 이름으로 세례를 받고 죄 사함을 받으라 그리하면 성령의 선물을 받으리니
 
-[selectDeptSchdulManageAuthorGroupPopup ? 를 EgovMap 으로 수정
-](2023/contribution/contribution.md#2023-05-29)
+[selectDeptSchdulManageAuthorGroupPopup ? 를 EgovMap 으로 수정](2023/contribution/contribution.md#2023-05-29)
 
 ## 2023-05-27
 
