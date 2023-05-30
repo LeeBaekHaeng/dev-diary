@@ -6,6 +6,20 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-05-31
+
+### selectDeptSchdulManageMainList ? 를 EgovMap 으로 수정
+
+46: public List[?] selectDeptSchdulManageMainList(Map[?, ?] map) throws Exception;
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sdm/EgovDeptSchdulManageMainList.do
+
+https://youtu.be/ISw2V14DhSE
+
+https://github.com/GSITM2023/egovframe-common-components/commit/213f0d5d853c04ed13d3f5a12ed5171b9bc93a8d
+
+https://github.com/eGovFramework/egovframe-common-components/pull/126
+
 ## 2023-05-30
 
 ### selectDeptSchdulManageEmpLyrPopup ? 를 EgovMap 으로 수정
