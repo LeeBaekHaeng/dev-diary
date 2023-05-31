@@ -6,6 +6,24 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-01
+
+### selectDeptSchdulManageRetrieve ? 를 EgovMap 으로 수정
+
+54: public List<?> selectDeptSchdulManageRetrieve(Map<?, ?> map) throws Exception;
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sdm/EgovDeptSchdulManageDailyList.do
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sdm/EgovDeptSchdulManageMonthList.do
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sdm/EgovDeptSchdulManageWeekList.do
+
+https://youtu.be/5pX4VfzT-Fc
+
+https://github.com/eGovFramework/egovframe-common-components/pull/127
+
+https://github.com/eGovFramework/egovframe-common-components/pull/127
+
 ## 2023-05-31
 
 ### selectDeptSchdulManageMainList ? 를 EgovMap 으로 수정

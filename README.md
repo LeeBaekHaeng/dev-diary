@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-06-01
+
+매일성경묵상 새길말씀(갈라디아서 3:11)
+
+또 하나님 앞에서 아무도 율법으로 말미암아 의롭게 되지 못할 것이 분명하니 이는 의인은 믿음으로 살리라 하였음이라
+
+[selectDeptSchdulManageRetrieve ? 를 EgovMap 으로 수정](2023/contribution/contribution.md#2023-06-01)
+
 ## 2023-05-31
 
 새길말씀(갈라디아서 2:16)
