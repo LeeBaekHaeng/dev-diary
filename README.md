@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-06-02
+
+새길말씀(갈라디아서 4:6)
+
+너희가 아들이므로 하나님이 그 아들의 영을 우리 마음 가운데 보내사 아빠 아버지라 부르게 하셨느니라
+
+[selectDeptSchdulManageList ? 를 EgovMap 으로 수정](2023/contribution/contribution.md#2023-06-02)
+
 ## 2023-06-01
 
 매일성경묵상 새길말씀(갈라디아서 3:11)
