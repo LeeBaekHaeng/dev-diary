@@ -6,6 +6,22 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-03
+
+### 제네릭 타입 명시-selectDeptSchdulManageDetail
+
+78: public List<?> selectDeptSchdulManageDetail(DeptSchdulManageVO deptSchdulManageVO) throws Exception;
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sdm/EgovDeptSchdulManageList.do
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sdm/EgovDeptSchdulManageDetail.do
+
+https://youtu.be/HYmaBol5Lt4
+
+https://github.com/GSITM2023/egovframe-common-components/commit/b0633a5b51606c247c2994ca533b95750b0743c0
+
+https://github.com/eGovFramework/egovframe-common-components/pull/129
+
 ## 2023-06-02
 
 ### selectDeptSchdulManageList ? 를 EgovMap 으로 수정

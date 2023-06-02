@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-06-03
+
+매일성경묵상 새길말씀(갈라디아서 5:25)
+
+만일 우리가 성령으로 살면 또한 성령으로 행할지니
+
+[제네릭 타입 명시-selectDeptSchdulManageDetail](2023/contribution/contribution.md#2023-06-03)
+
 ## 2023-06-02
 
 새길말씀(갈라디아서 4:6)
