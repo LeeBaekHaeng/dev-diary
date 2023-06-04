@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-06-05
+
+매일성경묵상 새길말씀(요엘 2:13)
+
+너희는 옷을 찢지 말고 마음을 찢고 너희 하나님 여호와께로 돌아올지어다 그는 은혜로우시며 자비로우시며 노하기를 더디하시며 인애가 크시사 뜻을 돌이켜 재앙을 내리지 아니하시나니
+
+[제네릭 타입 명시-selectDeptSchdulManageDetail](2023/contribution/contribution.md#2023-06-05)
+
 ## 2023-06-03
 
 매일성경묵상 새길말씀(갈라디아서 5:25)
