@@ -25,6 +25,11 @@
 4. [개발환경 실행](#4-개발환경-실행)
    1. [개발자용 개발환경 실행](#41-개발자용-개발환경-실행)
    2. [MariaDB Server 10.11.3 실행](#42-mariadb-server-10113-실행)
+5. [GitHub 깃허브](#5-github-깃허브)
+   1. [Sign up 가입하기](#51-sign-up-가입하기)
+   2. [Sign in 로그인](#52-sign-in-로그인)
+   3. [Generate new token 새 토큰 생성](#53-generate-new-token-새-토큰-생성)
+   4. [egovframe-common-components Fork 포크](#54-egovframe-common-components-fork-포크)
 
 ## 1. 개발환경 다운로드
 
@@ -304,3 +309,101 @@ C:\EGOVFRAME\mariadb-10.11.3-winx64\bin
 ```
 
 DBeaver 실행
+
+### 5. GitHub 깃허브
+
+https://github.com/
+
+### 5.1. Sign up 가입하기
+
+Enter your email*
+- 이메일을 입력하세요*
+```
+godsoft23@gmail.com
+```
+
+Create a password*
+- 비밀번호 만들기*
+
+Enter a username*
+- 사용자 이름을 입력하세요*
+```
+godsoft230606
+```
+
+Would you like to receive product updates and announcements via email?
+- 이메일을 통해 제품 업데이트 및 공지 사항을 수신하시겠습니까?
+- Type "y" for yes or "n" for no
+- 예인 경우 "y"를 입력하고 아니요인 경우 "n"을 입력합니다.
+```
+n
+```
+
+Verify your account
+- 계정 확인
+
+Create account
+- 계정 만들기
+
+### 5.2. Sign in 로그인
+
+Username or email address 
+- 아이디 또는 이메일 주소
+
+Password
+- 비밀번호
+
+### 5.3 Generate new token 새 토큰 생성
+
+https://github.com/settings/tokens
+
+Settings > Developer settings > Personal access tokens > Tokens (classic)
+- Generate new token 버튼 클릭
+  - 새 토큰 생성
+- Generate new token (classic) 버튼 클릭
+  - 새 토큰 생성(클래식)
+
+Note 메모
+- godsoft23
+
+Expiration 만료
+- 30 days
+  - 30 일
+- No expiration
+  - 유효 기간 없음
+
+repo 선택
+
+Generate token 버튼 클릭
+- 토큰 생성
+
+Make sure to copy your personal access token now. You won’t be able to see it again!
+- 지금 개인 액세스 토큰을 복사해야 합니다. 다시 볼 수 없게 됩니다!
+
+### 5.4 egovframe-common-components Fork 포크
+
+https://github.com/eGovFramework/egovframe-common-components
+
+Fork 버튼 클릭
+- 포크
+
+Create fork 버튼 클릭
+- 포크 만들기
+
+Sourcetree 실행
+
+Clone
+- 클론
+
+소스 경로 / URL:
+```
+https://github.com/GSITM2023/egovframe-common-components.git
+```
+
+목적지 경로:
+```
+C:\EGOVFRAME\eGovFrameDev-4.1.0-64bit\workspace\egovframe-common-components
+```
+
+이름:
+- egovframe-common-components
