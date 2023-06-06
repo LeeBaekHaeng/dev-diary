@@ -266,9 +266,41 @@ eclipse.exe 더블 클릭
 C:\EGOVFRAME\eGovFrameDev-4.1.0-64bit\eclipse
 ```
 
+Window > Preferences > Maven > User Settings
+```
+C:\EGOVFRAME\eGovCI-4.0.0_64bit\bin\apache-maven-3.8.4\conf\settings.xml
+```
+
+Window > Preferences > Validation
+- Suspend all validators 체크
+
+Window > Preferences > Java > Installed JREs
+- JRE home:
+```
+C:\EGOVFRAME\eGovCI-4.0.0_64bit\bin\jdk8u242-b08
+```
+
+Window > Preferences > Server > Runtime Environments
+- Tomcat installation directory:
+```
+C:\EGOVFRAME\eGovCI-4.0.0_64bit\bin\apache-tomcat-8.5.73-jenkins
+```
+- JRE: jdk8u242-b08 선택
+
+Window > Preferences > Genenal > Editors > Text Editors
+- Insert spaces for tabs 체크
+- Show whitespace characters 체크
+
+Window > Preferences > Java > Code Style > Formatter
+- New 버튼 클릭
+- Profile name: egov
+- Indentation > Tab Policy: Spaces only
+
 ### 4.2. MariaDB Server 10.11.3 실행
 
 mysqld.exe 더블 클릭
 ```
 C:\EGOVFRAME\mariadb-10.11.3-winx64\bin
 ```
+
+DBeaver 실행
