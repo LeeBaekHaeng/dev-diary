@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-06-07
+
+매일성경묵상 새길말씀(스바냐 3:17)
+
+너의 하나님 여호와가 너의 가운데에 계시니 그는 구원을 베푸실 전능자이시라 그가 너로 말미암아 기쁨을 이기지 못하시며 너를 잠잠히 사랑하시며 너로 말미암아 즐거이 부르며 기뻐하시리라 하리라
+
+[제네릭 타입 명시-deptSchdulManageRegist](2023/contribution/contribution.md#2023-06-07)
+
 ## 2023-06-06
 
 매일성경묵상 새길말씀(아모스 9:11)

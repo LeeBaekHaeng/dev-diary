@@ -6,6 +6,26 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-07
+
+### 제네릭 타입 명시-deptSchdulManageRegist
+
+```
+792: List<?> listComCode = cmmUseService.selectCmmCodeDetail(voComCode);
+806: model.addAttribute("schdulBgndeHH", (List<?>)getTimeHH());
+808: model.addAttribute("schdulBgndeMM", (List<?>)getTimeMM());
+810: model.addAttribute("schdulEnddeHH", (List<?>)getTimeHH());
+812: model.addAttribute("schdulEnddeMM", (List<?>)getTimeMM());
+```
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sdm/EgovDeptSchdulManageRegist.do
+
+https://youtu.be/TLdsULW4DiE
+
+https://github.com/GSITM2023/egovframe-common-components/commit/5cf7d09165379d3485b72a0f58526c6aebb7152b
+
+https://github.com/eGovFramework/egovframe-common-components/pull/132
+
 ## 2023-06-06
 
 ### 제네릭 타입 명시-deptSchdulManageModifyActor
