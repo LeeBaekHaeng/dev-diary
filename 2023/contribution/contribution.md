@@ -6,6 +6,45 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-06
+
+### 제네릭 타입 명시-deptSchdulManageModifyActor
+
+```
+695: List<?> listComCode = cmmUseService.selectCmmCodeDetail(voComCode);  
+709: model.addAttribute("schdulBgndeHH", (List<?>)getTimeHH());  
+711: model.addAttribute("schdulBgndeMM", (List<?>)getTimeMM());  
+713: model.addAttribute("schdulEnddeHH", (List<?>)getTimeHH());  
+715: model.addAttribute("schdulEnddeMM", (List<?>)getTimeMM());  
+```
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sdm/EgovDeptSchdulManageList.do
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sdm/EgovDeptSchdulManageModifyActor.do
+
+oO3rGEfD8twsMG5pYVeQOiJkyefKpslO5QzpmaxzXpo%3D
+oO3rGEfD8twsMG5pYVeQOiJkyefKpslO5QzpmaxzXpo%253D
+FILE_000000000000043
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'ATCH_FILE_ID' at row 1
+
+/egovframe-common-components/src/main/java/egovframework/com/cmm/web/EgovBindingInitializer.java
+
+/egovframe-common-components/src/main/java/egovframework/com/cmm/web/EgovAtchFileIdPropertyEditor.java
+
+URLEncoder.encode 안 해도 된 것 같음
+
+String encText = URLEncoder.encode(text, StandardCharsets.UTF_8.name());
+
+/egovframe-common-components/src/main/webapp/WEB-INF/jsp/egovframework/com/cop/smt/sdm/EgovDeptSchdulManageModify.jsp
+
+<c:param name="param_atchFileId" value="${egovc:encrypt(deptSchdulManageVO.atchFileId)}" />
+
+https://youtu.be/oYo0JUjzHU8
+
+https://github.com/GSITM2023/egovframe-common-components/commit/1d232a4d962f88264b469285b3b16da4fea283f6
+
+https://github.com/eGovFramework/egovframe-common-components/pull/131
+
 ## 2023-06-05
 
 ### 제네릭 타입 명시-deptSchdulManageModify

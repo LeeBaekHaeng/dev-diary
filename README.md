@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-06-06
+
+매일성경묵상 새길말씀(아모스 9:11)
+
+그 날에 내가 다윗의 무너진 장막을 일으키고 그것들의 틈을 막으며 그 허물어진 것을 일으켜서 옛적과 같이 세우고
+
+[제네릭 타입 명시-deptSchdulManageModifyActor](2023/contribution/contribution.md#2023-06-06)
+
 ## 2023-06-05
 
 매일성경묵상 새길말씀(요엘 2:13)
