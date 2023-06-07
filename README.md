@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-06-08
+
+매일성경묵상 새길말씀(학개 1:13)
+
+그 때에 여호와의 사자 학개가 여호와의 위임을 받아 백성에게 말하여 이르되 여호와가 말하노니 내가 너희와 함께 하노라 하니라
+
+[제네릭 타입 명시-selectIndvdlSchdulManageMainList](2023/contribution/contribution.md#2023-06-08)
+
 ## 2023-06-07
 
 매일성경묵상 새길말씀(스바냐 3:17)

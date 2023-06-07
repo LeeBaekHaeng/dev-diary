@@ -6,6 +6,25 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-08
+
+### 제네릭 타입 명시-selectIndvdlSchdulManageMainList
+
+```
+52: public List<?> selectIndvdlSchdulManageMainList(Map<?, ?> map) throws Exception{
+38: public List<?> selectIndvdlSchdulManageMainList(Map<?, ?> map) throws Exception{
+32: public List<?> selectIndvdlSchdulManageMainList(Map<?, ?> map) throws Exception;
+116: List<?> reusltList = egovIndvdlSchdulManageService.selectIndvdlSchdulManageMainList(hmParam);
+```
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sim/EgovIndvdlSchdulManageMainList.do
+
+https://youtu.be/RwybK5oXxb4
+
+https://github.com/GSITM2023/egovframe-common-components/commit/521c452ac68bc800e6d91c223d16f1ba99dffeb2
+
+https://github.com/eGovFramework/egovframe-common-components/pull/133
+
 ## 2023-06-07
 
 ### 제네릭 타입 명시-deptSchdulManageRegist
