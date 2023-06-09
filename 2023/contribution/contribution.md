@@ -6,6 +6,48 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-10
+
+### 제네릭 타입 명시-EgovTemplateManageController.java
+
+setFrstRegisterId, setLastUpdusrId 를 isAuthenticated 조건문 안으로 이동하고 중복 조건문 제거함
+
+```
+tpl
+web
+EgovTemplateManageController.java (4 matches)
+115: List<?> result = cmmUseService.selectCmmCodeDetail(codeVO);
+148: List<?> result = cmmUseService.selectCmmCodeDetail(vo);
+178: List<?> result = cmmUseService.selectCmmCodeDetail(vo);
+208: List<?> result = cmmUseService.selectCmmCodeDetail(codeVO);
+```
+
+템플릿 목록을 조회한다.
+
+http://localhost:8080/egovframework-all-in-one/cop/tpl/selectTemplateInfs.do
+
+템플릿에 대한 상세정보를 조회한다.
+
+http://localhost:8080/egovframework-all-in-one/cop/tpl/selectTemplateInf.do
+
+템플릿 정보를 등록한다.
+
+http://localhost:8080/egovframework-all-in-one/cop/tpl/insertTemplateInf.do
+
+템플릿 등록을 위한 등록페이지로 이동한다.
+
+http://localhost:8080/egovframework-all-in-one/cop/tpl/addTemplateInf.do
+
+템플릿 정보를 수정한다.
+
+http://localhost:8080/egovframework-all-in-one/cop/tpl/updateTemplateInf.do
+
+https://youtu.be/pS-pak5fgPc
+
+https://github.com/GSITM2023/egovframe-common-components/commit/0e2eede1a98684c50e0d75ae6dec97e77591478b
+
+https://github.com/eGovFramework/egovframe-common-components/pull/135
+
 ## 2023-06-09
 
 ### 제네릭 타입 명시-selectIndvdlSchdulManageRetrieve

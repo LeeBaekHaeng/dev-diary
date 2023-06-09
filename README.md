@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-06-10
+
+매일성경묵상 새길말씀(스가랴 1:3)
+
+그러므로 너는 그들에게 말하기를 만군의 여호와께서 이처럼 이르시되 너희는 내게로 돌아오라 만군의 여호와의 말이니라 그리하면 내가 너희에게로 돌아가리라 만군의 여호와의 말이니라
+
+[제네릭 타입 명시-EgovTemplateManageController.java](2023/contribution/contribution.md#2023-06-10)
+
 ## 2023-06-09
 
 매일성경묵상 새길말씀(학개 2:4)
