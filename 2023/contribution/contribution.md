@@ -6,6 +6,73 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-09
+
+### 제네릭 타입 명시-selectIndvdlSchdulManageRetrieve
+
+comCopSmtSdm.Gbn.Daily 를 comCopSmtSim.Gbn.Daily 로 수정
+
+부서일정관리를 일정관리로 수정
+
+```
+EgovIndvdlSchdulManageServiceImpl.java (4 matches)
+63: public List<?> selectIndvdlSchdulManageRetrieve(Map<?, ?> map) throws 
+
+IndvdlSchdulManageDao.java (4 matches)
+48: public List<?> selectIndvdlSchdulManageRetrieve(Map<?, ?> map) throws 
+
+EgovIndvdlSchdulManageService.java (4 matches)
+40: public List<?> selectIndvdlSchdulManageRetrieve(Map<?, ?> map) throws Exception;
+
+EgovIndvdlSchdulManageController.java (9 matches)
+183: List<?> resultList = egovIndvdlSchdulManageService.selectIndvdlSchdulManageRetrieve(commandMap);
+```
+
+일정관리 일간
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sim/EgovIndvdlSchdulManageDailyList.do
+
+부서일정관리 일간
+
+http://localhost:8080/egovframework-all-in-one/cop/smt/sdm/EgovDeptSchdulManageDailyList.do
+
+```jsp
+<h1>searchVO</h1>
+searchKeyword=<c:out value="${searchVO.searchKeyword}" /><br>
+searchKeyword=<c:out value="${searchVO.searchCondition}" /><br>
+
+<h1>param</h1>
+searchKeyword=<c:out value="${param.searchKeyword}" /><br>
+searchKeyword=<c:out value="${param.searchCondition}" /><br>
+year=<c:out value="${param.year}" /><br>
+month=<c:out value="${param.month}" /><br>
+day=<c:out value="${param.day}" /><br>
+
+<h1>commandMap</h1>
+searchMode=<c:out value="${param.searchMode}" /><br>
+searchMonth=<c:out value="${param.searchMonth}" /><br>
+schdulBgnde=<c:out value="${param.schdulBgnde}" /><br>
+schdulEndde=<c:out value="${param.schdulEndde}" /><br>
+searchDay=<c:out value="${param.searchDay}" /><br>
+searchKeyword=<c:out value="${param.searchKeyword}" /><br>
+searchCondition=<c:out value="${param.searchCondition}" /><br>
+
+<h1>model</h1>
+searchKeyword=<c:out value="${searchKeyword}" /><br>
+searchCondition=<c:out value="${searchCondition}" /><br>
+resultList=<c:out value="${resultList}" /><br>
+year=<c:out value="${year}" /><br>
+month=<c:out value="${month}" /><br>
+day=<c:out value="${day}" /><br>
+resultList=<c:out value="${resultList}" /><br>
+```
+
+https://youtu.be/dL4l_Gu2NcA
+
+https://github.com/GSITM2023/egovframe-common-components/commit/a1b1bea1f4a158e50ec375089ebd12507c571ab1
+
+https://github.com/eGovFramework/egovframe-common-components/pull/134
+
 ## 2023-06-08
 
 ### 제네릭 타입 명시-selectIndvdlSchdulManageMainList

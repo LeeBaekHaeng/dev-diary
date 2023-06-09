@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-06-09
+
+매일성경묵상 새길말씀(학개 2:4)
+
+그러나 여호와가 이르노라 스룹바벨아 스스로 굳세게 할지어다 여호사닥의 아들 대제사장 여호수아야 스스로 굳세게 할지어다 여호와의 말이니라 이 땅 모든 백성아 스스로 굳세게 하여 일할지어다 내가 너희와 함께 하노라 만군의 여호와의 말이니라
+
+[제네릭 타입 명시-selectIndvdlSchdulManageRetrieve](2023/contribution/contribution.md#2023-06-09)
+
 ## 2023-06-08
 
 매일성경묵상 새길말씀(학개 1:13)
