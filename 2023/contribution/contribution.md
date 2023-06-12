@@ -6,6 +6,57 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-12
+
+### 제네릭 타입 명시-지식평가관리
+
+Spring Security 사용자권한 처리되어 setEmplyrId 조건문 제거함
+
+사용하지 않는 컨트롤러 파라미터 제거함
+
+최종수정자ID 추가함 ,  LAST_UPDUSR_ID = #{lastUpdusrId}
+
+```
+dam
+app
+service
+impl
+EgovKnoAppraisalServiceImpl.java
+41: public List<?> selectKnoAppraisalList(KnoAppraisalVOsearchVO) throws Exception {
+KnoAppraisalDAO.java
+33: public List<?> selectKnoAppraisalList(KnoAppraisalVO searchVO) throws Exception {
+EgovKnoAppraisalService.java
+26: List<?> selectKnoAppraisalList(KnoAppraisalVO searchVO) throws Exception;
+web
+EgovKnoAppraisalController.java
+105: List<?> KnoAppraisalList = knoAppraisalService.selectKnoAppraisalList(searchVO);
+```
+
+```java
+    /**
+     * 권한 인증방식(dummy, session, security) - 사용자의 로그인시 인증 방식을 결정함
+     */
+    public static final String GLOBALS_AUTH = EgovProperties.getProperty("Globals.Auth");
+```
+
+if (!"security".equals(Globals.GLOBALS_AUTH)) {
+
+등록된 지식정보평가 정보를 조회 한다.
+
+http://localhost:8080/egovframework-all-in-one/dam/app/EgovComDamAppraisalList.do
+
+https://youtu.be/0pw4aDHEOJ4
+
+https://github.com/GSITM2023/egovframe-common-components/commit/944e3328336c9bfe8f770ffb646ec880657804bd
+
+https://github.com/GSITM2023/egovframe-common-components/commit/f465ddcb3c0a5d4f9a959f2b2b53d15843b760f4
+
+https://github.com/GSITM2023/egovframe-common-components/commit/2a156df326242f5a05b29364d310f5ca3d075f7f
+
+https://github.com/GSITM2023/egovframe-common-components/commit/8baf9b8903e31f8498a51b7802fb746018a49cca
+
+https://github.com/eGovFramework/egovframe-common-components/pull/136
+
 ## 2023-06-10
 
 ### 제네릭 타입 명시-EgovTemplateManageController.java
