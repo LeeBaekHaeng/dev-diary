@@ -10,7 +10,7 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
-## 2023-06-23
+## 2023-06-13
 
 매일성경묵상 새길말씀(스가랴 4:10)
 

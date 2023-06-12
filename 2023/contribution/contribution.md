@@ -6,7 +6,7 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
-## 2023-06-23
+## 2023-06-13
 
 ### 제네릭 타입 명시-지식맵관리(유형)
 
