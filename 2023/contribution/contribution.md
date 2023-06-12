@@ -6,6 +6,36 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-23
+
+### 제네릭 타입 명시-지식맵관리(유형)
+
+```java
+map
+mat
+service
+impl
+EgovMapMaterialServiceImpl.java
+41: public List<?> selectMapMaterialList(MapMaterialVO searchVO) throws Exception {
+MapMaterialDAO.java
+33: public List<?> selectMapMaterialList(MapMaterialVO searchVO) throws Exception {
+EgovMapMaterialService.java
+25: List<?> selectMapMaterialList(MapMaterialVO searchVO) throws Exception;
+web
+EgovMapMaterialController.java (3 matches)
+94: List<?> MapMaterialList = mapMaterialService.selectMapMaterialList(searchVO);
+```
+
+등록된 지식맵(지식유형) 정보를 조회 한다.
+
+http://localhost:8080/egovframework-all-in-one/dam/map/mat/EgovComDamMapMaterialList.do
+
+https://youtu.be/O_Rl1yImRW8
+
+https://github.com/GSITM2023/egovframe-common-components/commit/b32e32779e749217485299b93d086c2b31923ccf
+
+https://github.com/eGovFramework/egovframe-common-components/pull/137
+
 ## 2023-06-12
 
 ### 제네릭 타입 명시-지식평가관리
