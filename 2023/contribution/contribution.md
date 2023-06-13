@@ -6,6 +6,41 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-14
+
+### 제네릭 타입 명시-지식맵관리(조직)
+
+```java
+map
+mat
+web
+EgovMapMaterialController.java (3 matches)
+142: List<?> MapMaterialList = mapTeamService.selectMapTeamList(searchVO);
+156: List<?> MapMaterialList = mapTeamService.selectMapTeamList(searchVO);
+tea
+service
+impl
+EgovMapTeamServiceImpl.java
+40: public List<?> selectMapTeamList(MapTeamVO searchVO) throws Exception {
+MapTeamDAO.java
+32: public List<?> selectMapTeamList(MapTeamVO searchVO) throws Exception {
+EgovMapTeamService.java
+25: List<?> selectMapTeamList(MapTeamVO searchVO) throws Exception;
+web
+EgovMapTeamController.java
+89: List<?> MapTeamList = mapTeamService.selectMapTeamList(searchVO);
+```
+
+등록된 지식맵(조직별) 정보를 조회 한다.
+
+http://localhost:8080/egovframework-all-in-one/dam/map/tea/EgovComDamMapTeamList.do
+
+https://youtu.be/KbjeNHQznlM
+
+https://github.com/GSITM2023/egovframe-common-components/commit/2ad0b81812febe6c4933327dc41f2bb262f0d614
+
+https://github.com/eGovFramework/egovframe-common-components/pull/138
+
 ## 2023-06-13
 
 ### 제네릭 타입 명시-지식맵관리(유형)
