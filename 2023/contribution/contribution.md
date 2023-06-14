@@ -6,6 +6,35 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-15
+
+### 제네릭 타입 명시-디지털자산관리 - 지식정보관리
+
+```java
+mgm
+service
+impl
+EgovKnoManagementServiceImpl.java
+41: public List<?> selectKnoManagementList(KnoManagementVO searchVO) throws Exception {
+KnoManagementDAO.java
+33: public List<?> selectKnoManagementList(KnoManagementVO searchVO) throws Exception {
+EgovKnoManagementService.java
+26: List<?> selectKnoManagementList(KnoManagementVO searchVO) throws Exception;
+web
+EgovKnoManagementController.java
+94: List<?> KnoManagementList = knoManagementService.selectKnoManagementList(searchVO);
+```
+
+등록된 지식정보 정보를 조회 한다.
+
+http://localhost:8080/egovframework-all-in-one/dam/mgm/EgovComDamManagementList.do
+
+https://youtu.be/S153tXnsIJw
+
+https://github.com/GSITM2023/egovframe-common-components/commit/6c43bcddebef5cfe3c326f614f4f00b4a8787d74
+
+https://github.com/eGovFramework/egovframe-common-components/pull/139
+
 ## 2023-06-14
 
 ### 제네릭 타입 명시-지식맵관리(조직)
