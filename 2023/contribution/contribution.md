@@ -6,6 +6,90 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-16
+
+### 제네릭 타입 명시-디지털자산관리 - 개인지식관리
+
+```java
+per
+service
+impl
+EgovKnoPersonalServiceImpl.java
+47: public List<?> selectKnoPersonalList(KnoPersonalVO searchVO) throws Exception {
+KnoPersonalDAO.java
+33: public List<?> selectKnoPersonalList(KnoPersonalVO searchVO) throws Exception {
+EgovKnoPersonalService.java
+26: List<?> selectKnoPersonalList(KnoPersonalVO searchVO) throws Exception;
+web
+EgovKnoPersonalController.java (5 matches)
+133: List<?> KnoPersonalList = knoPersonalService.selectKnoPersonalList(searchVO);
+
+188: List<?> MapTeamList = mapTeamService.selectMapTeamList(searchVO);
+203: List<?> MapMaterialList = mapMaterialService.selectMapMaterialList(searchMatVO);
+217: List<?> MapTeamList = mapTeamService.selectMapTeamList(searchVO);
+232: List<?> MapMaterialList = mapMaterialService.selectMapMaterialList(searchMatVO);
+```
+
+등록된 개인지식 정보를 조회 한다.
+
+http://localhost:8080/egovframework-all-in-one/dam/per/EgovComDamPersonalList.do
+
+resultType="egovMap" 를 resultMap="KnoPersonalList" 로 수정
+
+비교
+
+```
+<result property="orgnztNm" column="ORGNZT_NM"/>	
+C.ORGNZT_NM					ORGNZT_NM
+orgnztNm
+
+<result property="knoTypeNm" column="KNWLDG_TY_NM"/>
+B.KNWLDG_TY_NM				KNO_TYPE_NM
+knoTypeNm
+
+<result property="knoId" column="KNWLDG_ID"/>
+A.KNWLDG_ID					KNO_ID
+knoId
+
+<result property="knoNm" column="KNWLDG_NM"/>
+A.KNWLDG_NM					KNO_NM
+knoNm
+
+<result property="userNm" column="USER_NM"/>
+D.USER_NM        			USER_NM
+userNm
+
+<result property="colYmd" column="COLCT_DE"/>
+DATE_FORMAT(A.COLCT_DE,'%Y-%m-%d') COL_YMD
+colYmd
+
+<result property="othbcAt" column="OTHBC_AT"/>
+A.OTHBC_AT					OTHBC_AT
+othbcAt
+
+<result property="frstRegisterId" column="FRST_REGISTER_ID"/>
+A.FRST_REGISTER_ID			FRST_REGISTER_ID
+private String frstRegisterId = "";
+
+<result property="frstRegisterPnttm" column="FRST_REGIST_PNTTM"/>
+DATE_FORMAT(A.FRST_REGIST_PNTTM,'%Y-%m-%d') FRST_REGIST_PNTTM
+private String frstRegisterPnttm = "";
+
+<result property="lastUpdusrId" column="LAST_UPDUSR_ID"/>
+A.LAST_UPDUSR_ID			LAST_UPDUSR_ID
+private String lastUpdusrId;
+
+<result property="lastUpdusrPnttm" column="LAST_UPDT_PNTTM"/>
+DATE_FORMAT(A.LAST_UPDT_PNTTM,'%Y-%m-%d') LAST_UPDUSR_PNTTM
+private String lastUpdusrPnttm;
+```
+
+https://youtu.be/fM21ThVE4cA
+
+https://github.com/GSITM2023/egovframe-common-components/commit/52060e77d09c95d92dc33c0c5428a05accb2b328
+
+https://github.com/eGovFramework/egovframe-common-components/pull/140
+
 ## 2023-06-15
 
 ### 제네릭 타입 명시-디지털자산관리 - 지식정보관리
