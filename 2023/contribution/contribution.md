@@ -6,6 +6,44 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-17
+
+### 제네릭 타입 명시-디지털자산관리 - 지식정보관리-수정화면/수정 분기 고찰
+
+post 메서드로 던지는 앞 단의 변동이 없어
+
+수정 화면 및 처리 분기는 GetMapping과 PostMapping이 아닌
+
+PostMapping 내의 bindingResult.hasErrors() 조건으로 분기 되고 있으므로
+
+이에 대한 고찰이 필요해 보임
+
+https://github.com/eGovFramework/egovframe-common-components/pull/139
+
+1. 수정화면으로 form method 를 get 으로 수정
+2. 수정화면에서 상세조회와 수정폼을 분리
+3. 수정화면과 수정 유효성 검증에서 같이 사용하려고 '지식정보 상세 정보를 조회 한다.' 초기값 분리
+4. 지식정제 <form:errors path="knoAps" /> 추가
+5. 수정 유호성 검증에서 폐기일자 포맷 yyyy-MM-dd 맞춤
+6. 저장을 수정으로 수정함
+
+수정화면
+- http://localhost:8080/egovframework-all-in-one/dam/mgm/EgovComDamManagementModify.do?knoId=DMID_000000000000001&knoCn=test+%EC%9D%B4%EB%B0%B1%ED%96%89+2023-06-10+%EC%A7%80%EC%8B%9D%EB%82%B4%EC%9A%A9&atchFileId=oO3rGEfD8twsMG5pYVeQOvXRVZDYkZMlAF88rDkQ48k%253D&fileSn=&fileListCnt=1
+
+https://youtu.be/YUqTb1HgQI0
+
+https://github.com/GSITM2023/egovframe-common-components/commit/ec2a0a82b4af6190185391d82e6a373560280de8
+
+https://github.com/GSITM2023/egovframe-common-components/commit/28b3cb5c9371c35e6a72ecb58f589649c541f7ed
+
+https://github.com/GSITM2023/egovframe-common-components/commit/c2c7bf61ddf200977c5ac7fea3e3188180130032
+
+https://github.com/GSITM2023/egovframe-common-components/commit/15f8fdfbc362afe68223d09a6a88b655584af6f1
+
+https://github.com/GSITM2023/egovframe-common-components/commit/9bd98dda243fbc9b223c9637b4f36ef47c33f4ce
+
+https://github.com/GSITM2023/egovframe-common-components/commit/25b1a059873e74aab4a062627543ba8cdccf2853
+
 ## 2023-06-16
 
 ### 제네릭 타입 명시-디지털자산관리 - 개인지식관리
