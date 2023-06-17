@@ -419,9 +419,11 @@ C:\EGOVFRAME\eGovFrameDev-4.1.0-64bit\workspace\egovframe-common-components
 
 ## 6. 버그수정
 
-제로버그를 위하여!
+***제로버그를 위하여! 일일 버그수정!***
 
 ### 6.1 버그찾기
+
+제네릭 타입 명시 안 된 버그찾기
 
 ```
 List<?>
@@ -434,7 +436,8 @@ List<?>
 - Constructor-based Dependency Injection 생성자 기반 종속성 주입
   - https://docs.spring.io/spring-framework/docs/5.3.28/reference/html/core.html#beans-constructor-injection
 - Map 파라미터를 VO(컬럼), DefaultVO(컬럼외)로
-- Controller에 Dto 추가해서 요청/응답을 명세화
+- Controller에 Dto 추가해서 요청/응답을 명시적으로 명세화
+- DAO, ServiceImpl, Controller 등 throws Exception 제거하기
 
 ### 6.2 Sync fork 동기화 포크
 
@@ -444,8 +447,76 @@ List<?>
 
 ### 6.5 제네릭 타입 명시-연계정보목록
 
+```
+trm
+service
+impl
+TrsmrcvMntrngDao.java (3 matches)
+144: public List<?> selectCntcList(CntcVO searchVO) throws Exception {  
+```
+
+로그인
+- http://localhost:8080/egovframework-all-in-one/
+
+ID
+```
+TEST1
+```
+
+PW
+```
+rhdxhd12
+```
+
+ID/PW
+
+구분|ID|PW|비고
+-|-|-|-
+업무사용자|TEST1|rhdxhd12|영문으로 공통12
+||webmaster|rhdxhd12|영문으로 공통12
+일반사용자|USER|rhdxhd12|영문으로 공통12
+기업사용자|ENTERPRISE|rhdxhd12|영문으로 공통12
+
+https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:init_table#%ED%85%8C%EC%9D%B4%EB%B8%94_%EC%B4%88%EA%B8%B0%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%83%9D%EC%84%B1_%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8
+
+연계 조회 목록
+```
+http://localhost:8080/egovframework-all-in-one/utl/sys/trm/getCntcList.do
+```
+
+#### TrsmrcvMntrngDao.java
+
+List<?>
+```java
+List<CntcVO>
+```
+
+#### EgovTrsmrcvMntrngServiceImpl.java
+
+- @SuppressWarnings("unchecked") 제거
+- (List<CntcVO>) 제거
+
+#### EgovTrsmrcvMntrngController.java
+
+- @SuppressWarnings("unused") 제거
+- @ModelAttribute("searchVO") 제거
+- LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser(); 제거
+
 ### 6.6 수동 테스트 Manual testing
 
 ### 6.7 Compare & pull request 비교 및 풀 리퀘스트
 
 ### 6.8 한 번 더! 제네릭 타입 명시-송수신모니터링로그목록
+
+```
+trm
+service
+impl
+TrsmrcvMntrngDao.java (3 matches)
+112: public List<?> selectTrsmrcvMntrngLogList(TrsmrcvMntrngLog searchVO) throws Exception {
+```
+
+송수신모니터링로그 목록
+```
+http://localhost:8080/egovframework-all-in-one/utl/sys/trm/getTrsmrcvMntrngLogList.do
+```
