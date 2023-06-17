@@ -38,7 +38,7 @@
    5. [제네릭 타입 명시-연계정보목록](#65-제네릭-타입-명시-연계정보목록)
    6. [수동 테스트 Manual testing](#66-수동-테스트-Manual-testing)
    7. [Compare & pull request 비교 및 풀 리퀘스트](#67-Compare-&-pull-request-비교-및-풀-리퀘스트)
-   8. [한 번 더! 제네릭 타입 명시-송수신모니터링로그목록](#68-한-번-더! 제네릭-타입-명시-송수신모니터링로그목록)
+   8. [한 번 더! 제네릭 타입 명시-송수신모니터링로그목록](#68-한-번-더-제네릭-타입-명시-송수신모니터링로그목록)
 
 ## 1. 개발환경 다운로드
 
@@ -417,7 +417,7 @@ C:\EGOVFRAME\eGovFrameDev-4.1.0-64bit\workspace\egovframe-common-components
 이름:
 - egovframe-common-components
 
-## 버그수정
+## 6. 버그수정
 
 ### 6.1 버그찾기
 
