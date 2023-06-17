@@ -454,6 +454,40 @@ impl
 TrsmrcvMntrngDao.java (3 matches)
 144: public List<?> selectCntcList(CntcVO searchVO) throws Exception {  
 ```
+#### TrsmrcvMntrngDao.java
+
+List<?>
+```java
+List<CntcVO>
+```
+
+#### EgovTrsmrcvMntrngServiceImpl.java
+
+- @SuppressWarnings("unchecked") 제거
+- (List<CntcVO>) 제거
+
+#### EgovTrsmrcvMntrngController.java
+
+- @SuppressWarnings("unused") 제거
+- @ModelAttribute("searchVO") 제거
+- LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser(); 제거
+- searchVO 를 cntcVO 로 수정
+
+#### EgovCntcListPopup.jsp
+
+```jsp
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+```
+
+```jsp
+<form:form modelAttribute="cntcVO" name="frm" id="frm" action="${pageContext.request.contextPath}/utl/sys/trm/getCntcList.do" method="get">
+```
+
+- searchVO 를 cntcVO 로 수정
+
+### 6.6 수동 테스트 Manual testing
+
+톰캣 실행
 
 로그인
 - http://localhost:8080/egovframework-all-in-one/
@@ -483,26 +517,6 @@ https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:init_table#%
 ```
 http://localhost:8080/egovframework-all-in-one/utl/sys/trm/getCntcList.do
 ```
-
-#### TrsmrcvMntrngDao.java
-
-List<?>
-```java
-List<CntcVO>
-```
-
-#### EgovTrsmrcvMntrngServiceImpl.java
-
-- @SuppressWarnings("unchecked") 제거
-- (List<CntcVO>) 제거
-
-#### EgovTrsmrcvMntrngController.java
-
-- @SuppressWarnings("unused") 제거
-- @ModelAttribute("searchVO") 제거
-- LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser(); 제거
-
-### 6.6 수동 테스트 Manual testing
 
 ### 6.7 Compare & pull request 비교 및 풀 리퀘스트
 
