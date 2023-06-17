@@ -419,7 +419,22 @@ C:\EGOVFRAME\eGovFrameDev-4.1.0-64bit\workspace\egovframe-common-components
 
 ## 6. 버그수정
 
+제로버그를 위하여!
+
 ### 6.1 버그찾기
+
+```
+List<?>
+```
+
+버그수정 할 것들
+- `Map<?, ?>`
+- @SuppressWarnings
+- System.out.println
+- Constructor-based Dependency Injection 생성자 기반 종속성 주입
+  - https://docs.spring.io/spring-framework/docs/5.3.28/reference/html/core.html#beans-constructor-injection
+- Map 파라미터를 VO(컬럼), DefaultVO(컬럼외)로
+- Controller에 Dto 추가해서 요청/응답을 명세화
 
 ### 6.2 Sync fork 동기화 포크
 
