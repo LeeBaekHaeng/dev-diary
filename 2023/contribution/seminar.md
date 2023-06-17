@@ -562,8 +562,8 @@ http://localhost:8080/egovframework-all-in-one/utl/sys/trm/getTrsmrcvMntrngLogLi
 
 ***끝!***
 
-***표준프레임워크 제로버그를 위하여!***
+***전자정부 표준프레임워크 제로버그를 위하여!***
 
-***일일 버그수정! 함께해요!***
+***매일 10분 버그수정! 함께해요!***
 
 ***고맙습니다!***
