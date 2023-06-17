@@ -438,6 +438,8 @@ List<?>
 - Map 파라미터를 VO(컬럼), DefaultVO(컬럼외)로
 - Controller에 Dto 추가해서 요청/응답을 명시적으로 명세화
 - DAO, ServiceImpl, Controller 등 throws Exception 제거하기
+- 탭을 공백으로 수정하기
+- eclipse formatter 사용하기
 
 ### 6.2 Sync fork 동기화 포크
 
@@ -558,4 +560,10 @@ http://localhost:8080/egovframework-all-in-one/utl/sys/trm/getTrsmrcvMntrngLogLi
 - https://github.com/LeeBaekHaeng/dev-diary/blob/main/2023/contribution/contribution.md
 - https://www.youtube.com/watch?v=mrspPUecagQ&list=PL6pSCmAEuNPHkHLGZqXbsXIdek_ywo3w2
 
-***끝! 표준프레임워크 제로버그를 위하여! 일일 버그수정! 함께해요! 고맙습니다!***
+***끝!***
+
+***표준프레임워크 제로버그를 위하여!***
+
+***일일 버그수정! 함께해요!***
+
+***고맙습니다!***
