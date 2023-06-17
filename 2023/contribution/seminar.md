@@ -554,4 +554,8 @@ List<TrsmrcvMntrngLog>
 http://localhost:8080/egovframework-all-in-one/utl/sys/trm/getTrsmrcvMntrngLogList.do
 ```
 
-***끝! 표준프레임워크 제로버그를 위하여! 일일 버그수정! 함께해요!***
+2023 전자정부 표준프레임워크 컨트리뷰션 매일 참가하고 있는 URL
+- https://github.com/LeeBaekHaeng/dev-diary/blob/main/2023/contribution/contribution.md
+- https://www.youtube.com/watch?v=mrspPUecagQ&list=PL6pSCmAEuNPHkHLGZqXbsXIdek_ywo3w2
+
+***끝! 표준프레임워크 제로버그를 위하여! 일일 버그수정! 함께해요! 고맙습니다!***
