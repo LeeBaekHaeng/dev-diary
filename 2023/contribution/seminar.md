@@ -530,7 +530,28 @@ TrsmrcvMntrngDao.java (3 matches)
 112: public List<?> selectTrsmrcvMntrngLogList(TrsmrcvMntrngLog searchVO) throws Exception {
 ```
 
+#### TrsmrcvMntrngDao.java
+
+List<?>
+```java
+List<TrsmrcvMntrngLog>
+```
+
+#### EgovTrsmrcvMntrngServiceImpl.java
+
+- @SuppressWarnings("unchecked") 제거
+- (List<TrsmrcvMntrngLog>) 제거
+
+#### EgovTrsmrcvMntrngController.java
+
+- @SuppressWarnings("unused") 제거
+- @ModelAttribute("searchVO") 제거
+- LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser(); 제거
+- searchVO 를 cntcVO 로 수정
+
 송수신모니터링로그 목록
 ```
 http://localhost:8080/egovframework-all-in-one/utl/sys/trm/getTrsmrcvMntrngLogList.do
 ```
+
+***끝! 표준프레임워크 제로버그를 위하여! 일일 버그수정! 함께해요!***
