@@ -438,6 +438,7 @@ List<?>
 - DAO, ServiceImpl, Controller 등 throws Exception 제거하기
 - 탭을 공백으로 수정하기
 - eclipse formatter 사용하기
+- 변수명 카멜 표기법 안된 것
 
 ### 6.2 Sync fork 동기화 포크
 
