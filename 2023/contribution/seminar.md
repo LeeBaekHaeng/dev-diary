@@ -419,8 +419,6 @@ C:\EGOVFRAME\eGovFrameDev-4.1.0-64bit\workspace\egovframe-common-components
 
 ## 6. 버그수정
 
-***제로버그를 위하여! 일일 버그수정!***
-
 ### 6.1 버그찾기
 
 제네릭 타입 명시 안 된 버그찾기
@@ -444,6 +442,14 @@ List<?>
 ### 6.2 Sync fork 동기화 포크
 
 ### 6.3 Pull 당기다
+
+클론
+
+```
+LeeBaekHaeng:토근@
+```
+
+https://LeeBaekHaeng:토근@github.com/GSITM2023/egovframe-common-components.git
 
 ### 6.4 새 브랜치 생성
 
