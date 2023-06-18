@@ -6,6 +6,47 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-19
+
+### 제네릭 타입 명시: 디지털자산관리 - 지식요청제공관리
+
+```java
+spe
+req
+service
+impl
+EgovRequestOfferServiceImpl.java
+78: public List<?> selectRequestOfferList(RequestOfferVO RequestOfferVO) throws Exception {
+RequestOfferDao.java
+55: public List<?> selectRequestOfferList(RequestOfferVO RequestOfferVO) throws Exception {
+EgovRequestOfferService.java
+45: public List<?> selectRequestOfferList(RequestOfferVO RequestOfferVO) throws Exception;
+web
+EgovRequestOfferController.java (7 matches)
+129: List<?> resultList = egovRequestOfferVOService.selectRequestOfferList(searchVO);
+217: List<?> MapTeamList = mapTeamService.selectMapTeamList(mapTeamVO);
+226: List<?> MapMaterialList = mapMaterialService.selectMapMaterialList(searchMatVO);
+288: List<?> MapTeamList = mapTeamService.selectMapTeamList(mapTeamVO);
+302: List<?> MapMaterialList = mapMaterialService.selectMapMaterialList(searchMatVO);
+431: List<?> MapTeamList = mapTeamService.selectMapTeamList(mapTeamVO);
+445: List<?> MapMaterialList = mapMaterialService.selectMapMaterialList(searchMatVO);
+```
+
+지식정보제공/지식정보요청 목록을 조회한다.
+
+http://localhost:8080/egovframework-all-in-one/dam/spe/req/listRequestOffer.do
+
+1. 제네릭 타입 명시: 디지털자산관리 - 지식요청제공관리
+2. 카멜 표기법: RequestOfferVO 를 requestOfferVO 로 수정
+
+https://youtu.be/0AR5IHuw-NY
+
+https://github.com/GSITM2023/egovframe-common-components/commit/cf1f937bcf5138852dd0a7fd6a89866bc9649bde
+
+https://github.com/GSITM2023/egovframe-common-components/commit/c78d93eb3206bae323a831b0fdde5eeb26627596
+
+https://github.com/eGovFramework/egovframe-common-components/pull/142
+
 ## 2023-06-17
 
 ### 제네릭 타입 명시-디지털자산관리 - 지식정보관리-수정화면/수정 분기 고찰
