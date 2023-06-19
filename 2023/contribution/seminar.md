@@ -451,7 +451,7 @@ List<?>
 클론
 
 ```
-LeeBaekHaeng:토근@
+LeeBaekHaeng:토큰@
 ```
 
 https://LeeBaekHaeng:토근@github.com/GSITM2023/egovframe-common-components.git
