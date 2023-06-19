@@ -454,7 +454,7 @@ List<?>
 LeeBaekHaeng:토큰@
 ```
 
-https://LeeBaekHaeng:토근@github.com/GSITM2023/egovframe-common-components.git
+https://LeeBaekHaeng:토큰@github.com/GSITM2023/egovframe-common-components.git
 
 ### 6.4 새 브랜치 생성
 
