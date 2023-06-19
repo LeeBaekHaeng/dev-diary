@@ -442,6 +442,7 @@ List<?>
 - 저장화면/저장처리, 수정화면/수정처리 같이 있는 것 분리하기
 - @Service("KnoSpecialistService") 를 @Service 로 수정하기(@Repository/@Controller)
 - PMD 정적 소스 코드 분석
+- 오타수정: lastUpdusrPnttm(LAST_UPDT_PNTTM) 를 lastUpdtPnttm 로 수정
 
 ### 6.2 Sync fork 동기화 포크
 
