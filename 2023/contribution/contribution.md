@@ -6,6 +6,87 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-20
+
+### 제네릭 타입 명시: 디지털자산관리 - 지식전문가관리
+
+```java
+spe
+service
+impl
+EgovKnoSpecialistServiceImpl.java
+41: public List<?> selectKnoSpecialistList(KnoSpecialistVO searchVO) throws Exception {    
+KnoSpecialistDAO.java
+33: public List<?> selectKnoSpecialistList(KnoSpecialistVO searchVO) throws Exception {    
+EgovKnoSpecialistService.java
+25: List<?> selectKnoSpecialistList(KnoSpecialistVO searchVO) throws Exception;    
+web
+EgovKnoSpecialistController.java (5 matches)
+106: List<?> KnoSpecialistList = knoSpecialistService.selectKnoSpecialistList(searchVO);    
+171: List<?> MapTeamList = mapTeamService.selectMapTeamList(searchVO);    
+181: List<?> MapMaterialList = mapMaterialService.selectMapMaterialList(searchMatVO);    
+195: List<?> MapTeamList = mapTeamService.selectMapTeamList(searchVO);    
+210: List<?> MapMaterialList = mapMaterialService.selectMapMaterialList(searchMatVO);    
+```
+
+지식정보제공/지식정보요청 목록을 조회한다.
+
+http://localhost:8080/egovframework-all-in-one/dam/spe/spe/EgovComDamSpecialistList.do
+
+${resultInfo.orgnztNm}
+- <result property="orgnztNm" column="ORGNZT_NM"/>
+- C.ORGNZT_NM
+- C.ORGNZT_NM				ORGNZT_NM
+
+${resultInfo.knoTypeNm}
+- <result property="knoTypeNm" column="KNWLDG_TY_NM"/>
+- B.KNWLDG_TY_NM
+- B.KNWLDG_TY_NM			KNO_TYPE_NM
+  - B.KNWLDG_TY_NM
+
+${resultInfo.speId}
+- <result property="speId" column="EXPERT_ID"/>
+- A.EXPERT_ID
+- A.EXPERT_ID				SPE_ID
+  - A.EXPERT_ID
+
+${resultInfo.knoTypeCd}
+- <result property="knoTypeCd" column="KNWLDG_TY_CODE"/>
+- B.KNWLDG_TY_CODE
+- B.KNWLDG_TY_CODE		KNO_TYPE_CD
+  - B.KNWLDG_TY_CODE
+
+${resultInfo.appTypeCd}
+- <result property="appTypeCd" column="EXPERT_GRAD"/>
+- A.EXPERT_GRAD
+- A.EXPERT_GRAD			APP_TYPE_CD
+  - A.EXPERT_GRAD
+
+${resultInfo.userNm}
+- <result property="userNm" column="USER_NM"/>
+- D.USER_NM
+- D.USER_NM				USER_NM
+  - D.USER_NM
+
+${resultInfo.speConfmDe}
+- <result property="speConfmDe" column="EXPERT_CONFM_DE"/>
+- TO_CHAR(TO_DATE(A.EXPERT_CONFM_DE, 'YYYYmmdd'), 'YYYY-mm-dd') AS EXPERT_CONFM_DE
+- DATE_FORMAT(A.EXPERT_CONFM_DE,'%Y-%m-%d') SPE_CONFM_DE
+  - DATE_FORMAT(A.EXPERT_CONFM_DE,'%Y-%m-%d') EXPERT_CONFM_DE
+
+- /egovframe-common-components/src/main/resources/egovframework/mapper/com/dam/spe/spe/EgovDamKnoSpecialistList_SQL_maria.xml
+- /egovframe-common-components/src/main/resources/egovframework/mapper/com/dam/spe/spe/EgovDamKnoSpecialistList_SQL_mysql.xml
+- /egovframe-common-components/src/main/resources/egovframework/mapper/com/dam/spe/spe/EgovDamKnoSpecialistList_SQL_postgres.xml
+
+1. 제네릭 타입 명시: 디지털자산관리 - 지식전문가관리
+2. maria/mysql/postgres에 resultType="egovMap" 를 resultMap="KnoSpecialistList" 로 수정
+
+https://youtu.be/0YGyjYq4mZo
+
+https://github.com/GSITM2023/egovframe-common-components/commit/6a7817f5465538b62f83fb80d4625c610a069bec
+
+https://github.com/eGovFramework/egovframe-common-components/pull/143
+
 ## 2023-06-19
 
 ### 제네릭 타입 명시: 디지털자산관리 - 지식요청제공관리
