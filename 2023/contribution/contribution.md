@@ -6,6 +6,68 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-27
+
+### 제네릭 타입 명시: 시스템/서비스연계 - 연계기관관리
+
+```java
+ssi
+syi
+iis
+service
+impl
+CntcInsttDAO.java (3 matches)
+124: public List<?> selectCntcInsttList(CntcInsttVO searchVO) throws Exception {    
+143: public List<?> selectCntcSystemList(CntcSystemVO searchVO) throws Exception {    
+162: public List<?> selectCntcServiceList(CntcServiceVO searchVO) throws Exception {    
+EgovCntcInsttServiceImpl.java (3 matches)
+125: public List<?> selectCntcInsttList(CntcInsttVO searchVO) throws Exception {    
+141: public List<?> selectCntcSystemList(CntcSystemVO searchVO) throws Exception {    
+157: public List<?> selectCntcServiceList(CntcServiceVO searchVO) throws Exception {    
+EgovCntcInsttService.java (3 matches)
+97: List<?> selectCntcInsttList(CntcInsttVO searchVO) throws Exception;    
+112: List<?> selectCntcSystemList(CntcSystemVO searchVO) throws Exception;    
+127: List<?> selectCntcServiceList(CntcServiceVO searchVO) throws Exception;    
+web
+EgovCntcInsttController.java (24 matches)
+186: List<?> cntcInsttList = cntcInsttService.selectCntcInsttList(searchCntcInsttVO);    
+200: List<?> cntcInsttList = cntcInsttService.selectCntcInsttList(searchCntcInsttVO);    
+242: List<?> cntcInsttList = cntcInsttService.selectCntcInsttList(searchCntcInsttVO);    
+258: List<?> cntcSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);    
+267: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);    
+281: List<?> cntcInsttList = cntcInsttService.selectCntcInsttList(searchCntcInsttVO);    
+297: List<?> cntcSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);    
+306: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);    
+345: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);    
+356: List<?> cntcSystemList = cntcInsttService.selectCntcSystemList(cntcSystemVO);    
+363: List<?> cntcServiceList = cntcInsttService.selectCntcServiceList(cntcServiceVO);    
+394: List<?> CmmnCodeList = cntcInsttService.selectCntcInsttList(searchVO);    
+465: List<?> cntcInsttList = cntcInsttService.selectCntcInsttList(searchCntcInsttVO);    
+481: List<?> cntcSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);    
+490: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);    
+506: List<?> cntcInsttList = cntcInsttService.selectCntcInsttList(searchCntcInsttVO);    
+522: List<?> cntcSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);    
+531: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);    
+573: List<?> cntcInsttList = cntcInsttService.selectCntcInsttList(searchCntcInsttVO);    
+589: List<?> cntcSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);    
+598: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);    
+614: List<?> cntcInsttList = cntcInsttService.selectCntcInsttList(searchCntcInsttVO);    
+630: List<?> cntcSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);    
+639: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);    
+```
+
+연계기관 목록
+- http://localhost:8080/egovframework-all-in-one/ssi/syi/iis/getCntcInsttList.do
+
+연계시스템을 등록한다.
+- http://localhost:8080/egovframework-all-in-one/ssi/syi/iis/addCntcSystem.do
+
+https://youtu.be/g0HvYD8fLPg
+
+https://github.com/GSITM2023/egovframe-common-components/commit/cd0e8d83ecba7b5b37ecf50e491794624129aa56
+
+https://github.com/eGovFramework/egovframe-common-components/pull/145
+
 ## 2023-06-26
 
 ### 제네릭 타입 명시: 보안 - 롤 관리
