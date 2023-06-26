@@ -16,6 +16,9 @@ https://github.com/GSITM2023/egovframe-common-components
 
 땅이 싹을 내며 동산이 거기 뿌린 것을 움돋게 함 같이 주 여호와께서 공의와 찬송을 모든 나라 앞에 솟아나게 하시리라
 
+[제네릭 타입 명시: 보안 - 롤 관리](2023/contribution/contribution.md#2023-06-26)
+
+
 ## 2023-06-20
 
 매일성경묵상 새길말씀(이사야 55:6)
