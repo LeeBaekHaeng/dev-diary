@@ -6,6 +6,28 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-26
+
+### 제네릭 타입 명시: 보안 - 롤 관리
+
+```java
+sec
+rmt
+web
+EgovRoleManageController.java
+172: public List<?> getCmmCodeDetailList(ComDefaultCodeVO comDefaultCodeVO, String codeId)    throws Exception {    
+```
+
+롤 등록화면 이동
+
+http://localhost:8080/egovframework-all-in-one/sec/rmt/EgovRoleInsertView.do
+
+https://youtu.be/iIIxvWlAtIM
+
+https://github.com/GSITM2023/egovframe-common-components/commit/d60977e3d9facd8b996db5bb1e46168c5cb7aa20
+
+https://github.com/eGovFramework/egovframe-common-components/pull/144
+
 ## 2023-06-20
 
 ### 제네릭 타입 명시: 디지털자산관리 - 지식전문가관리
