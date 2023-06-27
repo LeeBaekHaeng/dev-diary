@@ -6,6 +6,49 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-28
+
+### 제네릭 타입 명시: 시스템/서비스연계 - 연계메시지관리
+
+```java
+ims
+service
+impl
+CntcMessageDAO.java (2 matches)
+94: public List<?> selectCntcMessageList(CntcMessageVO searchVO) throws Exception {
+113: public List<?> selectCntcMessageItemList(CntcMessageItemVO searchVO) throws Exception {
+EgovCntcMessageServiceImpl.java (2 matches)
+95: public List<?> selectCntcMessageList(CntcMessageVO searchVO) throws Exception {
+111: public List<?> selectCntcMessageItemList(CntcMessageItemVO searchVO) throws Exception {
+EgovCntcMessageService.java (2 matches)
+75: List<?> selectCntcMessageList(CntcMessageVO searchVO) throws Exception;
+90: List<?> selectCntcMessageItemList(CntcMessageItemVO searchVO) throws Exception;
+web
+EgovCntcMessageController.java (10 matches)
+126: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);
+140: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);
+186: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);
+200: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);
+244: List<?> cntcMessageItemList = cntcMessageService.selectCntcMessageItemList(cntcMessageItemVO);
+277: List<?> CmmnCodeList = cntcMessageService.selectCntcMessageList(searchVO);
+311: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);
+327: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);
+372: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);
+388: List<?> cntcMessageList = cntcMessageService.selectCntcMessageList(searchCntcMessageVO);
+```
+
+연계메시지 목록
+- http://localhost:8080/egovframework-all-in-one/ssi/syi/ims/getCntcMessageList.do
+
+연계메시지를 등록한다.
+- http://localhost:8080/egovframework-all-in-one/ssi/syi/ims/addCntcMessage.do
+
+https://youtu.be/piXhsRFkuGA
+
+https://github.com/GSITM2023/egovframe-common-components/commit/74e549c9c4124517205a8250880837ea67475025
+
+https://github.com/eGovFramework/egovframe-common-components/pull/146
+
 ## 2023-06-27
 
 ### 제네릭 타입 명시: 시스템/서비스연계 - 연계기관관리
