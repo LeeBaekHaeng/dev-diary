@@ -6,6 +6,38 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-29
+
+### 제네릭 타입 명시: 시스템/서비스연계 - 연계현황관리
+
+```java
+ist
+service
+impl
+CntcSttusDAO.java
+49: public List<?> selectCntcSttusList(CntcSttusVO searchVO) throws Exception {
+EgovCntcSttusServiceImpl.java
+54: public List<?> selectCntcSttusList(CntcSttusVO searchVO) throws Exception {
+EgovCntcSttusService.java
+39: List<?> selectCntcSttusList(CntcSttusVO searchVO) throws Exception;
+web
+EgovCntcSttusController.java
+97: List<?> CmmnCodeList = cntcSttusService.selectCntcSttusList(searchVO);
+```
+
+연계현황 목록을 조회한다.
+- http://localhost:8080/egovframework-all-in-one/ssi/syi/ist/getCntcSttusList.do
+
+송수신 로그 목록
+- http://localhost:8080/egovframework-all-in-one/sym/log/tlg/SelectTrsmrcvLogList.do
+- 송수신테스트 버튼 클릭 > 전송요청 등 버튼 클릭
+
+https://youtu.be/1psUwQSQ8gE
+
+https://github.com/GSITM2023/egovframe-common-components/commit/f834ad3b3c8a09c765c87425988b81a31fe2d514
+
+https://github.com/eGovFramework/egovframe-common-components/pull/147
+
 ## 2023-06-28
 
 ### 제네릭 타입 명시: 시스템/서비스연계 - 연계메시지관리
