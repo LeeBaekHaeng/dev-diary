@@ -6,6 +6,55 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-06-30
+
+### 제네릭 타입 명시: 시스템/서비스연계 - 시스템연계관리
+
+```java
+sim
+service
+impl
+EgovSystemCntcServiceImpl.java
+78: public List<?> selectSystemCntcList(SystemCntcVO searchVO) throws Exception {
+SystemCntcDAO.java
+75: public List<?> selectSystemCntcList(SystemCntcVO searchVO) throws Exception {
+EgovSystemCntcService.java
+61: List<?> selectSystemCntcList(SystemCntcVO searchVO) throws Exception;
+web
+EgovSystemCntcController.java (22 matches)
+120: List<?> cntcInsttList = cntcInsttService.selectCntcInsttList(searchCntcInsttVO);
+136: List<?> cntcProvdSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);
+146: List<?> cntcRequstSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);
+163: List<?> cntcProvdServiceList = cntcInsttService.selectCntcServiceList(searchCntcServiceVO);
+223: List<?> cntcInsttList = cntcInsttService.selectCntcInsttList(searchCntcInsttVO);
+233: List<?> cntcProvdSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);
+237: List<?> cntcRequstSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);
+248: List<?> cntcProvdServiceList = cntcInsttService.selectCntcServiceList(searchCntcServiceVO);
+292: List<?> CmmnCodeList = systemCntcService.selectSystemCntcList(searchVO);
+333: List<?> cntcInsttList = cntcInsttService.selectCntcInsttList(searchCntcInsttVO);
+343: List<?> cntcProvdSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);
+347: List<?> cntcRequstSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);
+358: List<?> cntcProvdServiceList = cntcInsttService.selectCntcServiceList(searchCntcServiceVO);
+378: List<?> cntcInsttList = cntcInsttService.selectCntcInsttList(searchCntcInsttVO);
+388: List<?> cntcProvdSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);
+392: List<?> cntcRequstSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);
+403: List<?> cntcProvdServiceList = cntcInsttService.selectCntcServiceList(searchCntcServiceVO);
+461: List<?> CmmnCodeList = systemCntcService.selectSystemCntcList(searchVO);
+516: List<?> cntcInsttList = cntcInsttService.selectCntcInsttList(searchCntcInsttVO);
+526: List<?> cntcProvdSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);
+530: List<?> cntcRequstSystemList = cntcInsttService.selectCntcSystemList(searchCntcSystemVO);
+541: List<?> cntcProvdServiceList = cntcInsttService.selectCntcServiceList(searchCntcServiceVO);
+```
+
+시스템연계를 등록한다.
+- http://localhost:8080/egovframework-all-in-one/ssi/syi/sim/addSystemCntc.do
+
+https://youtu.be/zoZunzwWT2E
+
+https://github.com/GSITM2023/egovframe-common-components/commit/39b9858bd3b1be3f17d9343598933df2f9cef267
+
+https://github.com/eGovFramework/egovframe-common-components/pull/148
+
 ## 2023-06-29
 
 ### 제네릭 타입 명시: 시스템/서비스연계 - 연계현황관리
