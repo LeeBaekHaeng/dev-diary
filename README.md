@@ -18,6 +18,8 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [제네릭 타입 명시: 시스템/서비스연계 - 연계현황관리](2023/contribution/contribution.md#2023-06-29)
 
+[개발자용 Android](2023/android/android.md)
+
 ## 2023-06-28
 
 매일성경묵상 새길말씀(이사야 65:18)
