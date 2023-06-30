@@ -342,3 +342,166 @@ CordovaLib/CordovaLib.iml
 android.iml
 local.properties
 ```
+
+### 모바일 디바이스 API - 가이드 프로그램 (App) 빌드 에러 수정
+
+1. distributionUrl gradle 버전 수정
+2. app\build.gradle buildscript gradle 버전 수정
+3. build.gradle buildscript gradle 버전 수정
+4. task cdvPrintProps << 제거
+5. compile 을 implementation 로 수정
+6. namespace 'kr.go.egovframework.hyb.networkapp' 추가
+7. com.github.dcendents.android-maven 를 주석하고 maven-publish 를 추가
+8. install 주석
+9. classifier = 'sources' 주석
+10. namespace 'org.apache.cordova' 추가
+
+1. distributionUrl gradle 버전 수정
+
+```
+D:\EGOVFRAME\AndroidStudioProjects\egovframework-hyb-add-studio-interfaceapiguide-3.9.0\gradle\wrapper\gradle-wrapper.properties
+```
+
+```
+#distributionUrl=https\://services.gradle.org/distributions/gradle-4.10.1-all.zip
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.0.2-all.zip
+```
+
+2. app\build.gradle buildscript gradle 버전 수정
+
+```
+D:\EGOVFRAME\AndroidStudioProjects\egovframework-hyb-add-studio-networkapiguide-3.9.0\app\build.gradle
+```
+
+```
+    dependencies {
+//        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:8.0.2'
+```
+
+3. build.gradle buildscript gradle 버전 수정
+
+```
+D:\EGOVFRAME\AndroidStudioProjects\egovframework-hyb-add-studio-networkapiguide-3.9.0\build.gradle
+```
+
+```
+    dependencies {
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+//        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:8.0.2'
+```
+
+4. task cdvPrintProps << 제거
+
+```
+D:\EGOVFRAME\AndroidStudioProjects\egovframework-hyb-add-studio-networkapiguide-3.9.0\build.gradle
+```
+
+```
+//task cdvPrintProps << {
+task cdvPrintProps {
+```
+
+5. compile 을 implementation 로 수정
+
+```
+D:\EGOVFRAME\AndroidStudioProjects\egovframework-hyb-add-studio-networkapiguide-3.9.0\build.gradle
+```
+
+```
+dependencies {
+    implementation fileTree(include: '*.jar', dir: 'libs')
+    // SUB-PROJECT DEPENDENCIES START
+    implementation project(path: ':CordovaLib')
+//    compile 'com.android.support:support-v4:24.1.1+'
+    implementation 'com.android.support:support-v4:24.1.1+'
+    //compile 'com.google.android.gms:play-services-gcm:+'
+//    compile 'com.android.support:support-v4:27.+'
+    implementation 'com.android.support:support-v4:27.+'
+```
+
+6. namespace 'kr.go.egovframework.hyb.networkapp' 추가
+
+```
+D:\EGOVFRAME\AndroidStudioProjects\egovframework-hyb-add-studio-networkapiguide-3.9.0\build.gradle
+```
+
+```
+android {
+    namespace 'kr.go.egovframework.hyb.networkapp'
+```
+
+7. com.github.dcendents.android-maven 를 주석하고 maven-publish 를 추가
+
+```
+D:\EGOVFRAME\AndroidStudioProjects\egovframework-hyb-add-studio-networkapiguide-3.9.0\CordovaLib\build.gradle
+```
+
+```
+//apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven-publish'
+```
+
+8. install 주석
+
+```
+D:\EGOVFRAME\AndroidStudioProjects\egovframework-hyb-add-studio-networkapiguide-3.9.0\CordovaLib\build.gradle
+```
+
+```
+/*install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                name 'Cordova'
+                url 'https://cordova.apache.org'
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'stevengill'
+                        name 'Steve Gill'
+                    }
+                }
+                scm {
+                    connection 'https://git-wip-us.apache.org/repos/asf?p=cordova-android.git'
+                    developerConnection 'https://git-wip-us.apache.org/repos/asf?p=cordova-android.git'
+                    url 'https://git-wip-us.apache.org/repos/asf?p=cordova-android'
+
+                }
+            }
+        }
+    }
+}*/
+```
+
+9. classifier = 'sources' 주석
+
+```
+D:\EGOVFRAME\AndroidStudioProjects\egovframework-hyb-add-studio-networkapiguide-3.9.0\CordovaLib\build.gradle
+```
+
+```
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+//    classifier = 'sources'
+```
+
+10. namespace 'org.apache.cordova' 추가
+
+```
+D:\EGOVFRAME\AndroidStudioProjects\egovframework-hyb-add-studio-networkapiguide-3.9.0\CordovaLib\build.gradle
+```
+
+```
+android {
+    namespace 'org.apache.cordova'
+```
