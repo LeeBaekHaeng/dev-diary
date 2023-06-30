@@ -6,6 +6,113 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-01
+
+### 제네릭 타입 명시: 통계/리포팅 - 게시물 통계
+
+```java
+sts
+bst
+service
+impl
+BbsStatsDAO.java (6 matches)
+39: public List<?> selectBbsCretCntStats(StatsVO vo) throws Exception {  
+49: public List<?> selectBbsTotCntStats(StatsVO vo) throws Exception {  
+59: public List<?> selectBbsAvgCntStats(StatsVO vo) throws Exception {  
+69: public List<?> selectBbsMaxCntStats(StatsVO vo) throws Exception {  
+79: public List<?> selectBbsMinCntStats(StatsVO vo) throws Exception {  
+89: public List<?> selectBbsMaxUserStats(StatsVO vo) throws Exception {  
+EgovBbsStatsServiceImpl.java (6 matches)
+45: public List<?> selectBbsCretCntStats(StatsVO vo) throws Exception {  
+56: public List<?> selectBbsTotCntStats(StatsVO vo) throws Exception {  
+67: public List<?> selectBbsAvgCntStats(StatsVO vo) throws Exception {  
+78: public List<?> selectBbsMaxCntStats(StatsVO vo) throws Exception {  
+89: public List<?> selectBbsMinCntStats(StatsVO vo) throws Exception {  
+100: public List<?> selectBbsMaxUserStats(StatsVO vo) throws Exception {  
+EgovBbsStatsService.java (6 matches)
+32: List<?> selectBbsCretCntStats(StatsVO vo) throws Exception;  
+40: List<?> selectBbsTotCntStats(StatsVO vo) throws Exception;  
+48: List<?> selectBbsAvgCntStats(StatsVO vo) throws Exception;  
+56: List<?> selectBbsMaxCntStats(StatsVO vo) throws Exception;  
+64: List<?> selectBbsMinCntStats(StatsVO vo) throws Exception;  
+72: List<?> selectBbsMaxUserStats(StatsVO vo) throws Exception;  
+web
+EgovBbsStatsController.java (6 matches)
+66: List<?> code004 = cmmUseService.selectCmmCodeDetail(vo);  
+68: List<?> code005 = cmmUseService.selectCmmCodeDetail(vo);  
+76: List<?> bbsStatsList = null;  
+77: List<?> bbsMaxStatsList = null;  
+78: List<?> bbsMinStatsList = null;  
+79: List<?> bbsMaxNtcrList = null;  
+
+```
+
+게시물 통계를 조회한다
+- http://localhost:8080/egovframework-all-in-one/sts/bst/selectBbsStats.do
+
+검색 버튼 클릭
+- 기간 from 선택: 2022-06-30
+- 기간구분 선택: 연도별
+- 통계구분 선택: 게시판유형별
+
+검색 후 기간 값설정 에러
+- 2022-63-
+- ${statsInfo.fromDate}
+- ${statsInfo.toDate}
+- Validate Using Apache Commons Validator
+  - GenericValidator.isDate
+  - https://www.baeldung.com/java-string-valid-date#apache
+
+```java
+            if (GenericValidator.isDate(statsVO.getFromDate(), "yyyyMMdd", true)) {
+                model.addAttribute("fDate", (LocalDate.parse(statsVO.getFromDate(), DateTimeFormatter.BASIC_ISO_DATE).format(DateTimeFormatter.ISO_LOCAL_DATE)));
+            }
+            if (GenericValidator.isDate(statsVO.getToDate(), "yyyyMMdd", true)) {
+                model.addAttribute("tDate", (LocalDate.parse(statsVO.getToDate(), DateTimeFormatter.BASIC_ISO_DATE).format(DateTimeFormatter.ISO_LOCAL_DATE)));
+            }
+```
+
+게시물 통계
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sts:%EA%B2%8C%EC%8B%9C%EB%AC%BC%ED%86%B5%EA%B3%84
+
+```sql
+select
+	SUM(CREAT_CO) as statsCo ,
+	SUBSTR(OCCRRNC_DE, 1, 4) as statsDate
+from
+	COMTSBBSSUMMARY
+where
+	1 = 1
+-- 	and OCCRRNC_DE between '20230630' and '20230630'
+ 	and OCCRRNC_DE between '20220630' and '20230630'
+	and STATS_SE = 'COM101'
+group by
+	statsDate
+;
+
+select
+	CREAT_CO /* 생성수 */
+	, OCCRRNC_DE /* 발생일 */
+	, STATS_SE /* 통계구분 */
+from
+	COMTSBBSSUMMARY /* 게시물통계요약 */
+where
+	1 = 1
+-- 	and OCCRRNC_DE between '20230630' and '20230630' /* 발생일 */
+ 	and OCCRRNC_DE between '20220630' and '20230630' /* 발생일 */
+	and STATS_SE = 'COM101' /* 통계구분 */
+;
+
+```
+
+https://youtu.be/ihZKuckxtU8
+
+https://github.com/GSITM2023/egovframe-common-components/commit/39086a33ee3464b3af628d5021bdd1ea766703a4
+
+https://github.com/GSITM2023/egovframe-common-components/commit/cc4b45b98e17391e679a9f4c0bdd29c1042c615a
+
+https://github.com/eGovFramework/egovframe-common-components/pull/149
+
 ## 2023-06-30
 
 ### 제네릭 타입 명시: 시스템/서비스연계 - 시스템연계관리
