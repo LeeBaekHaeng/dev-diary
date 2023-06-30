@@ -355,6 +355,8 @@ local.properties
 8. install 주석
 9. classifier = 'sources' 주석
 10. namespace 'org.apache.cordova' 추가
+    
+---
 
 1. distributionUrl gradle 버전 수정
 
