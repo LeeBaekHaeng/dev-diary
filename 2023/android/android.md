@@ -330,3 +330,15 @@ device.manufacturer
 
 navigator.network.connection.type
 - wifi
+
+### svn/git ignore
+
+```
+.gradle
+.idea
+app/app.iml
+CordovaLib/CordovaLib.iml
+3.9.0_DEVICEAPI_Cordova8.1.iml
+android.iml
+local.properties
+```
