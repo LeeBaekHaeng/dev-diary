@@ -6,6 +6,61 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-04
+
+### 제네릭 타입 명시: 통계/리포팅 - 화면 통계
+
+```java
+sst
+service
+impl
+EgovScrinStatsServiceImpl.java
+45: public List<?> selectScrinStats(StatsVO vo) throws Exception {  
+ScrinStatsDAO.java
+36: public List<?> selectScrinStats(StatsVO vo) throws Exception {  
+EgovScrinStatsService.java
+32: List<?> selectScrinStats(StatsVO vo) throws Exception;  
+web
+EgovScrinStatsController.java (2 matches)
+59: List<?> list_menulist = menuManageService.selectMenuList();  
+64: List<?> scrinStats = scrinStatsService.selectScrinStats(statsVO);  
+
+```
+
+화면 통계를 조회한다
+
+http://localhost:8080/egovframework-all-in-one/sts/sst/selectScrinStats.do
+
+접속 통계 검색
+- 기간: 2022-07-04 ~ 2023-07-04 선택
+- 기간구분: 연도별 선택
+- 메뉴 클릭
+
+화면 통계
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sts:%ED%99%94%EB%A9%B4%ED%86%B5%EA%B3%84
+
+COMTSWEBLOGSUMMARY.URL 웹로그 요약.URL contextPath 도 같이 저장되어 like %% 로 수정해야 함. 확인 부탁드립니다.
+
+확인 되면 mysql 이외 것은 다시 PR 하겠습니다.
+
+/egovframe-common-components/src/main/resources/egovframework/mapper/com/sts/sst/EgovScrinStats_SQL_mysql.xml
+
+```xml
+AND a.URL LIKE CONCAT(b.URL,'%')
+```
+
+AND a.URL LIKE CONCAT('%', b.URL,'%')
+
+/egovframework-all-in-one/sts/bst/selectBbsStats.do
+
+https://youtu.be/2yDXiciska4
+
+https://github.com/GSITM2023/egovframe-common-components/commit/1cec8f9ed386c090ad047ee8ead807e138719b5f
+
+https://github.com/GSITM2023/egovframe-common-components/commit/876b99212837598b6cf2ad970efe68b52ebe9a3a
+
+https://github.com/eGovFramework/egovframe-common-components/pull/151
+
 ## 2023-07-03
 
 ### 제네릭 타입 명시: 통계/리포팅 - 접속 통계
