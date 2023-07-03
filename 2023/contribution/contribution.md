@@ -6,6 +6,65 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-03
+
+### 제네릭 타입 명시: 통계/리포팅 - 접속 통계
+
+```java
+cst
+service
+impl
+ConectStatsDAO.java
+36: public List<?> selectConectStats(StatsVO vo) throws Exception {  
+EgovConectStatsServiceImpl.java
+45: public List<?> selectConectStats(StatsVO vo) throws Exception {  
+EgovConectStatsService.java
+32: List<?> selectConectStats(StatsVO vo) throws Exception;  
+web
+EgovConectStatsController.java
+60: List<?> conectStats = conectStatsService.selectConectStats(statsVO);  
+
+```
+
+접속 통계를 조회한다
+
+http://localhost:8080/egovframework-all-in-one/sts/cst/selectConectStats.do
+
+접속 통계 검색
+- 기간: 2022-07-01 ~ 2023-07-01 선택
+- 기간구분: 연도별 선택
+- 통계구분: 서비스별 선택
+- 검색 버튼클릭
+
+### 검색 후 기간 값설정 에러
+
+- 2022-70- 를 2022-07-01 로 포맷 수정
+- ${statsInfo.fromDate}
+- ${statsInfo.toDate}
+- Validate Using Apache Commons Validator
+  - GenericValidator.isDate
+  - https://www.baeldung.com/java-string-valid-date#apache
+
+```java
+            if (GenericValidator.isDate(statsVO.getFromDate(), "yyyyMMdd", true)) {
+                model.addAttribute("fDate", (LocalDate.parse(statsVO.getFromDate(), DateTimeFormatter.BASIC_ISO_DATE).format(DateTimeFormatter.ISO_LOCAL_DATE)));
+            }
+            if (GenericValidator.isDate(statsVO.getToDate(), "yyyyMMdd", true)) {
+                model.addAttribute("tDate", (LocalDate.parse(statsVO.getToDate(), DateTimeFormatter.BASIC_ISO_DATE).format(DateTimeFormatter.ISO_LOCAL_DATE)));
+            }
+```
+
+접속 통계
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sts:%EC%A0%91%EC%86%8D%ED%86%B5%EA%B3%84
+
+https://youtu.be/aAu-hmR8juQ
+
+https://github.com/GSITM2023/egovframe-common-components/commit/cbae12789786282a051fa686aa3f1f7cea7d0534
+
+https://github.com/GSITM2023/egovframe-common-components/commit/6d8fa1cce3e748056502f089f68875e1b09119ae
+
+https://github.com/eGovFramework/egovframe-common-components/pull/150
+
 ## 2023-07-01
 
 ### 제네릭 타입 명시: 통계/리포팅 - 게시물 통계
