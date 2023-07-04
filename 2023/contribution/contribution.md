@@ -6,6 +6,62 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-05
+
+### 제네릭 타입 명시: 통계/리포팅 - 사용자 통계
+
+```java
+ust
+service
+impl
+EgovUserStatsServiceImpl.java
+45: public List<?> selectUserStats(StatsVO vo) throws Exception {  
+UserStatsDAO.java
+36: public List<?> selectUserStats(StatsVO vo) throws Exception {  
+EgovUserStatsService.java
+32: List<?> selectUserStats(StatsVO vo) throws Exception;  
+web
+EgovUserStatsController.java (4 matches)
+69: List<?> code012 = cmmUseService.selectCmmCodeDetail(vo);  
+71: List<?> code013 = cmmUseService.selectCmmCodeDetail(vo);  
+73: List<?> code014 = cmmUseService.selectCmmCodeDetail(vo);  
+81: List<?> userStats = userStatsService.selectUserStats(statsVO);  
+
+```
+
+사용자 통계를 조회한다
+
+http://localhost:8080/egovframework-all-in-one/sts/ust/selectUserStats.do
+
+기간: 2022-07-05 ~ 2023-07-05
+통계구분 : 회원유형별
+검색 버튼클릭
+
+사용자 통계
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sts:%EC%82%AC%EC%9A%A9%EC%9E%90%ED%86%B5%EA%B3%84
+
+### 날짜 포맷 오류 수정
+
+```jsp
+		document.listForm.fDate.value = fromDate.substring(0, 4) + "-" + fromDate.substring(5, 7) + "-" + fromDate.substring(8, 10);
+		document.listForm.tDate.value = toDate.substring(0, 4) + "-" + toDate.substring(5, 7) + "-" + toDate.substring(8, 10);
+```
+를
+
+```jsp
+		document.listForm.fDate.value = fromDate.substring(0, 4) + "-" + fromDate.substring(4, 6) + "-" + fromDate.substring(6, 8);
+		document.listForm.tDate.value = toDate.substring(0, 4) + "-" + toDate.substring(4, 6) + "-" + toDate.substring(6, 8);
+```
+로 수정
+
+https://youtu.be/G5tASFkQ8sc
+
+https://github.com/GSITM2023/egovframe-common-components/commit/9452463fc2fc94b023c442f13fba4f9f60a54af6
+
+https://github.com/GSITM2023/egovframe-common-components/commit/5fe9e7578785db6348a9bd37ea2c5439f624c7cd
+
+https://github.com/eGovFramework/egovframe-common-components/pull/152
+
 ## 2023-07-04
 
 ### 제네릭 타입 명시: 통계/리포팅 - 화면 통계
