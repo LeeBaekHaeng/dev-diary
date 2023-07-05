@@ -6,6 +6,60 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-06
+
+### 제네릭 타입 명시: 시스템관리 - 배치작업관리
+
+```java
+sym
+bat
+service
+impl
+BatchOpertDao.java
+67: public List<?> selectBatchOpertList(BatchOpert searchVO) throws Exception {  
+EgovBatchOpertServiceImpl.java (2 matches)
+79: public List<?> selectBatchOpertList(BatchOpert searchVO) throws Exception {  
+80: List<?> result = dao.selectBatchOpertList(searchVO);  
+EgovBatchOpertService.java
+55: public List<?> selectBatchOpertList(BatchOpert searchVO) throws Exception;  
+```
+
+시스템관리 - 배치작업관리
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EB%B0%B0%EC%B9%98%EC%9E%91%EC%97%85%EA%B4%80%EB%A6%AC
+
+배치작업 목록을 조회한다.
+- http://localhost:8080/egovframework-all-in-one/sym/bat/getBatchOpertList.do
+
+배치작업 등록
+
+배치작업명
+```
+test 이백행 2023-07-05 배치작업명 
+```
+
+배치프로그램 
+```
+test 이백행 2023-07-05 배치프로그램 
+```
+배치프로그램 test 이백행 2023-07-05 배치프로그램이 존재하지 않습니다.
+
+```
+C:\EGOVFRAME\eGovFrameDev-4.1.0-64bit\workspace\egovframe-common-components\src\main\resources\egovframework\egovProps\prg\getDiskAttrb.bat
+```
+
+### 코드 정리
+
+- @SuppressWarnings("unchecked") 제거
+- (List<BatchOpert>) 제거
+
+https://youtu.be/ueja4B9seYI
+
+https://github.com/GSITM2023/egovframe-common-components/commit/b128ca0ea004bf40252ebfe996857612bb7679cc
+
+https://github.com/GSITM2023/egovframe-common-components/commit/d1a2ca4e8837dd1d3a9865cafc462e51e2851753
+
+https://github.com/eGovFramework/egovframe-common-components/pull/155
+
 ## 2023-07-05
 
 ### 제네릭 타입 명시: 통계/리포팅 - 사용자 통계
