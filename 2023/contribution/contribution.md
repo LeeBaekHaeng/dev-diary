@@ -6,6 +6,45 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-07
+
+### 제네릭 타입 명시: 시스템관리 - 배치결과관리
+
+- 제네릭 타입 명시: 시스템관리 - 배치결과관리
+  - List<?> 를 List<BatchResult> 로 수정
+- 코드 정리
+  - @SuppressWarnings("unchecked") 제거
+  - (List<BatchResult>) 제거
+  - debugger; 제거
+
+```java
+sym
+bat
+service
+impl
+BatchResultDao.java
+67: public List<?> selectBatchResultList(BatchResult searchVO) throws Exception {  
+EgovBatchResultServiceImpl.java (2 matches)
+69: public List<?> selectBatchResultList(BatchResult searchVO) throws Exception {  
+70: List<?> result = dao.selectBatchResultList(searchVO);  
+EgovBatchResultService.java
+47: public List<?> selectBatchResultList(BatchResult searchVO) throws Exception;  
+```
+
+배치결과 목록을 조회한다.
+- http://localhost:8080/egovframework-all-in-one/sym/bat/getBatchResultList.do
+
+시스템관리 - 배치결과관리
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EB%B0%B0%EC%B9%98%EA%B2%B0%EA%B3%BC%EA%B4%80%EB%A6%AC
+
+https://youtu.be/nDe7r06PljU
+
+https://github.com/GSITM2023/egovframe-common-components/commit/ec9e257ab88a4bc1985b5db4d58fbb78f1e58590
+
+https://github.com/GSITM2023/egovframe-common-components/commit/74ce85916e6fae5654a87596bf6f0f36efbaa9a6
+
+https://github.com/eGovFramework/egovframe-common-components/pull/157
+
 ## 2023-07-06
 
 ### 제네릭 타입 명시: 시스템관리 - 배치작업관리
