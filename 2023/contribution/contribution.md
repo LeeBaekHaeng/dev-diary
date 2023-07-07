@@ -6,6 +6,44 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-08
+
+### 제네릭 타입 명시: 시스템관리 - 스케줄처리
+
+- 제네릭 타입 명시: 시스템관리 - 스케줄처리
+  - List<?> 를 List<BatchSchdul> 로 수정
+- 코드 정리
+  - (BatchSchdul)  제거
+  - @SuppressWarnings("unchecked") 제거
+  - (List<BatchSchdul>) 제거
+
+```java
+sym
+bat
+service
+impl
+BatchSchdulDao.java (2 matches)
+96: public List<?> selectBatchSchdulList(BatchSchdul searchVO)  
+98: List<?> resultList = selectList("BatchSchdulDao.selectBatchSchdulList", searchVO);  
+EgovBatchSchdulServiceImpl.java (2 matches)
+86: public List<?> selectBatchSchdulList(BatchSchdul searchVO) throws Exception {  
+87: List<?> result = batchSchdulDao.selectBatchSchdulList(searchVO);  
+EgovBatchSchdulService.java
+55: public List<?> selectBatchSchdulList(BatchSchdul searchVO) throws Exception;  
+```
+
+배치스케줄 목록을 조회한다.
+- http://localhost:8080/egovframework-all-in-one/sym/bat/getBatchSchdulList.do
+
+시스템관리 - 스케줄처리
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EC%8A%A4%EC%BC%80%EC%A4%84%EC%B2%98%EB%A6%AC
+
+https://youtu.be/UvjqGzt5gi4
+
+https://github.com/GSITM2023/egovframe-common-components/commit/504440f76b495241ecbd7d5d1ba647ad800c6c69
+
+https://github.com/eGovFramework/egovframe-common-components/pull/160
+
 ## 2023-07-07
 
 ### 제네릭 타입 명시: 시스템관리 - 배치결과관리
