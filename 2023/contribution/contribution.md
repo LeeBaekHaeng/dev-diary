@@ -6,6 +6,245 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-10
+
+### 제네릭 타입 명시: 시스템관리 - 일반달력/행정달력/휴일관리
+
+- 제네릭 타입 명시: 시스템관리 - 일반달력/행정달력/휴일관리
+  - List<?> 를 List<EgovMap> 로 수정
+- mysql/postgres ORDER BY 추가
+  - mysql/postgres 에 ORDER BY 없어, ORDER BY DUMMY.ROWNUM 추가
+  - maria ORDER BY ROWNUM 을 ORDER BY DUMMY.ROWNUM 으로 수정
+
+selectNormalRestdePopup
+
+일반달력 팝업 정보를 조회한다.
+
+```java
+cal
+service
+impl
+EgovCalRestdeManageServiceImpl.java (9 matches)
+44: public List<?> selectNormalRestdePopup(Restde restde) throws Exception {  
+52: public List<?> selectAdministRestdePopup(Restde restde) throws Exception {  
+60: public List<?> selectNormalDayCal(Restde restde) throws Exception {  
+68: public List<?> selectNormalDayRestde(Restde restde) throws Exception {  
+76: public List<?> selectNormalMonthRestde(Restde restde) throws Exception {  
+84: public List<?> selectAdministDayCal(Restde restde) throws Exception {  
+92: public List<?> selectAdministDayRestde(Restde restde) throws Exception {  
+100: public List<?> selectAdministMonthRestde(Restde restde) throws Exception {  
+133: public List<?> selectRestdeList(RestdeVO searchVO) throws Exception {  
+RestdeManageDAO.java (9 matches)
+37: public List<?> selectNormalRestdePopup(Restde restde) throws Exception {  
+47: public List<?> selectAdministRestdePopup(Restde restde) throws Exception {  
+57: public List<?> selectNormalDayCal(Restde restde) throws Exception {  
+67: public List<?> selectNormalDayRestde(Restde restde) throws Exception {  
+77: public List<?> selectNormalMonthRestde(Restde restde) throws Exception {  
+87: public List<?> selectAdministDayCal(Restde restde) throws Exception {  
+97: public List<?> selectAdministDayRestde(Restde restde) throws Exception {  
+107: public List<?> selectAdministMonthRestde(Restde restde) throws Exception {  
+147: public List<?> selectRestdeList(RestdeVO searchVO) throws Exception {  
+EgovCalRestdeManageService.java (9 matches)
+30: List<?> selectNormalRestdePopup(Restde restde) throws Exception;  
+38: List<?> selectAdministRestdePopup(Restde restde) throws Exception;  
+46: List<?> selectNormalDayCal(Restde restde) throws Exception;  
+54: List<?> selectNormalDayRestde(Restde restde) throws Exception;  
+62: List<?> selectNormalMonthRestde(Restde restde) throws Exception;  
+70: List<?> selectAdministDayCal(Restde restde) throws Exception;  
+78: List<?> selectAdministDayRestde(Restde restde) throws Exception;  
+86: List<?> selectAdministMonthRestde(Restde restde) throws Exception;  
+116: List<?> selectRestdeList(RestdeVO searchVO) throws Exception;  
+web
+EgovCalRestdeManageController.java (92 matches)
+268: List<?> CalInfoList = restdeManageService.selectNormalRestdePopup(restde);  
+344: List<?> CalInfoList = restdeManageService.selectAdministRestdePopup(restde);  
+421: List<?> CalInfoList          = restdeManageService.selectNormalDayCal(restde);  
+422: List<?> NormalWeekRestdeList = restdeManageService.selectNormalDayRestde(restde);  
+525: List<?> CalInfoList_1          = restdeManageService.selectNormalDayCal(vo);  
+526: List<?> NormalWeekRestdeList_1 = restdeManageService.selectNormalDayRestde(vo);  
+534: List<?> CalInfoList_2          = restdeManageService.selectNormalDayCal(vo);  
+535: List<?> NormalWeekRestdeList_2 = restdeManageService.selectNormalDayRestde(vo);  
+543: List<?> CalInfoList_3          = restdeManageService.selectNormalDayCal(vo);  
+544: List<?> NormalWeekRestdeList_3 = restdeManageService.selectNormalDayRestde(vo);  
+552: List<?> CalInfoList_4          = restdeManageService.selectNormalDayCal(vo);  
+553: List<?> NormalWeekRestdeList_4 = restdeManageService.selectNormalDayRestde(vo);  
+561: List<?> CalInfoList_5          = restdeManageService.selectNormalDayCal(vo);  
+562: List<?> NormalWeekRestdeList_5 = restdeManageService.selectNormalDayRestde(vo);  
+570: List<?> CalInfoList_6          = restdeManageService.selectNormalDayCal(vo);  
+571: List<?> NormalWeekRestdeList_6 = restdeManageService.selectNormalDayRestde(vo);  
+579: List<?> CalInfoList_7          = restdeManageService.selectNormalDayCal(vo);  
+580: List<?> NormalWeekRestdeList_7 = restdeManageService.selectNormalDayRestde(vo);  
+597: List<?> CalInfoList = restdeManageService.selectNormalDayCal(restde);  
+659: List<?> CalInfoList = restdeManageService.selectNormalRestdePopup(restde);  
+662: List<?> NormalMonthRestdeList = restdeManageService.selectNormalMonthRestde(restde);  
+728: List<?> CalInfoList_1 = restdeManageService.selectNormalRestdePopup(restde);  
+729: List<?> NormalMonthRestdeList_1 = restdeManageService.selectNormalMonthRestde(restde);  
+737: List<?> CalInfoList_2 = restdeManageService.selectNormalRestdePopup(restde);  
+738: List<?> NormalMonthRestdeList_2 = restdeManageService.selectNormalMonthRestde(restde);  
+746: List<?> CalInfoList_3 = restdeManageService.selectNormalRestdePopup(restde);  
+747: List<?> NormalMonthRestdeList_3 = restdeManageService.selectNormalMonthRestde(restde);  
+755: List<?> CalInfoList_4 = restdeManageService.selectNormalRestdePopup(restde);  
+756: List<?> NormalMonthRestdeList_4 = restdeManageService.selectNormalMonthRestde(restde);  
+764: List<?> CalInfoList_5 = restdeManageService.selectNormalRestdePopup(restde);  
+765: List<?> NormalMonthRestdeList_5 = restdeManageService.selectNormalMonthRestde(restde);  
+773: List<?> CalInfoList_6 = restdeManageService.selectNormalRestdePopup(restde);  
+774: List<?> NormalMonthRestdeList_6 = restdeManageService.selectNormalMonthRestde(restde);  
+782: List<?> CalInfoList_7 = restdeManageService.selectNormalRestdePopup(restde);  
+783: List<?> NormalMonthRestdeList_7 = restdeManageService.selectNormalMonthRestde(restde);  
+791: List<?> CalInfoList_8 = restdeManageService.selectNormalRestdePopup(restde);  
+792: List<?> NormalMonthRestdeList_8 = restdeManageService.selectNormalMonthRestde(restde);  
+800: List<?> CalInfoList_9 = restdeManageService.selectNormalRestdePopup(restde);  
+801: List<?> NormalMonthRestdeList_9 = restdeManageService.selectNormalMonthRestde(restde);  
+809: List<?> CalInfoList_10 = restdeManageService.selectNormalRestdePopup(restde);  
+810: List<?> NormalMonthRestdeList_10 = restdeManageService.selectNormalMonthRestde(restde);  
+818: List<?> CalInfoList_11 = restdeManageService.selectNormalRestdePopup(restde);  
+819: List<?> NormalMonthRestdeList_11 = restdeManageService.selectNormalMonthRestde(restde);  
+827: List<?> CalInfoList_12 = restdeManageService.selectNormalRestdePopup(restde);  
+828: List<?> NormalMonthRestdeList_12 = restdeManageService.selectNormalMonthRestde(restde);  
+929: List<?> CalInfoList          = restdeManageService.selectAdministDayCal(restde);  
+930: List<?> AdministWeekRestdeList = restdeManageService.selectAdministDayRestde(restde);  
+1,025: List<?> CalInfoList = restdeManageService.selectAdministDayCal(restde);  
+1,035: List<?> CalInfoList_1          = restdeManageService.selectAdministDayCal(vo);  
+1,036: List<?> AdministWeekRestdeList_1 = restdeManageService.selectAdministDayRestde(vo);  
+1,044: List<?> CalInfoList_2          = restdeManageService.selectAdministDayCal(vo);  
+1,045: List<?> AdministWeekRestdeList_2 = restdeManageService.selectAdministDayRestde(vo);  
+1,053: List<?> CalInfoList_3          = restdeManageService.selectAdministDayCal(vo);  
+1,054: List<?> AdministWeekRestdeList_3 = restdeManageService.selectAdministDayRestde(vo);  
+1,062: List<?> CalInfoList_4          = restdeManageService.selectAdministDayCal(vo);  
+1,063: List<?> AdministWeekRestdeList_4 = restdeManageService.selectAdministDayRestde(vo);  
+1,071: List<?> CalInfoList_5          = restdeManageService.selectAdministDayCal(vo);  
+1,072: List<?> AdministWeekRestdeList_5 = restdeManageService.selectAdministDayRestde(vo);  
+1,080: List<?> CalInfoList_6          = restdeManageService.selectAdministDayCal(vo);  
+1,081: List<?> AdministWeekRestdeList_6 = restdeManageService.selectAdministDayRestde(vo);  
+1,089: List<?> CalInfoList_7          = restdeManageService.selectAdministDayCal(vo);  
+1,090: List<?> AdministWeekRestdeList_7 = restdeManageService.selectAdministDayRestde(vo);  
+1,168: List<?> CalInfoList = restdeManageService.selectAdministRestdePopup(restde);  
+1,171: List<?> AdministMonthRestdeList = restdeManageService.selectAdministMonthRestde(restde);  
+1,238: List<?> CalInfoList_1 = restdeManageService.selectAdministRestdePopup(restde);  
+1,239: List<?> AdministMonthRestdeList_1 = restdeManageService.selectAdministMonthRestde(restde);  
+1,247: List<?> CalInfoList_2 = restdeManageService.selectAdministRestdePopup(restde);  
+1,248: List<?> AdministMonthRestdeList_2 = restdeManageService.selectAdministMonthRestde(restde);  
+1,256: List<?> CalInfoList_3 = restdeManageService.selectAdministRestdePopup(restde);  
+1,257: List<?> AdministMonthRestdeList_3 = restdeManageService.selectAdministMonthRestde(restde);  
+1,265: List<?> CalInfoList_4 = restdeManageService.selectAdministRestdePopup(restde);  
+1,266: List<?> AdministMonthRestdeList_4 = restdeManageService.selectAdministMonthRestde(restde);  
+1,274: List<?> CalInfoList_5 = restdeManageService.selectAdministRestdePopup(restde);  
+1,275: List<?> AdministMonthRestdeList_5 = restdeManageService.selectAdministMonthRestde(restde);  
+1,283: List<?> CalInfoList_6 = restdeManageService.selectAdministRestdePopup(restde);  
+1,284: List<?> AdministMonthRestdeList_6 = restdeManageService.selectAdministMonthRestde(restde);  
+1,292: List<?> CalInfoList_7 = restdeManageService.selectAdministRestdePopup(restde);  
+1,293: List<?> AdministMonthRestdeList_7 = restdeManageService.selectAdministMonthRestde(restde);  
+1,301: List<?> CalInfoList_8 = restdeManageService.selectAdministRestdePopup(restde);  
+1,302: List<?> AdministMonthRestdeList_8 = restdeManageService.selectAdministMonthRestde(restde);  
+1,310: List<?> CalInfoList_9 = restdeManageService.selectAdministRestdePopup(restde);  
+1,311: List<?> AdministMonthRestdeList_9 = restdeManageService.selectAdministMonthRestde(restde);  
+1,319: List<?> CalInfoList_10 = restdeManageService.selectAdministRestdePopup(restde);  
+1,320: List<?> AdministMonthRestdeList_10 = restdeManageService.selectAdministMonthRestde(restde);  
+1,328: List<?> CalInfoList_11 = restdeManageService.selectAdministRestdePopup(restde);  
+1,329: List<?> AdministMonthRestdeList_11 = restdeManageService.selectAdministMonthRestde(restde);  
+1,337: List<?> CalInfoList_12 = restdeManageService.selectAdministRestdePopup(restde);  
+1,338: List<?> AdministMonthRestdeList_12 = restdeManageService.selectAdministMonthRestde(restde);  
+1,407: List<?> restdeCodeList = cmmUseService.selectCmmCodeDetail(vo);  
+1,473: List<?> CmmnCodeList = restdeManageService.selectRestdeList(searchVO);  
+1,507: List<?> restdeCodeList = cmmUseService.selectCmmCodeDetail(CodeVO);  
+1,516: List<?> restdeCodeList = cmmUseService.selectCmmCodeDetail(CodeVO);  
+
+```
+
+일반달력 월간
+- http://localhost:8080/egovframework-all-in-one/sym/cal/EgovNormalMonthCalendar.do
+
+year=2023, month=7, day=, cellNum=1, weeks=1, week=1, restAt=Y
+
+```jsp
+<c:forEach var="result" items="${resultList}" varStatus="status">
+    <c:out value="${result}" />
+    <c:out value="${result.year}" />
+    <c:out value="${result.month}" />
+    <c:out value="${result.day}" />
+    <c:out value="${result.cellNum}" />
+    <c:out value="${result.weeks}" />
+    <c:out value="${result.week}" />
+    <c:out value="${result.restAt}" />
+</c:forEach>
+```
+
+일반달력 팝업 정보를 조회한다.
+- http://localhost:8080/egovframework-all-in-one/sym/cal/EgovselectNormalCalendar.do
+
+일반달력 연간
+- http://localhost:8080/egovframework-all-in-one/sym/cal/EgovNormalYearCalendar.do
+
+요소기술 > 1300. 공휴일관리(달력)
+- http://localhost:8080/egovframework-all-in-one/sym/cal/EgovRestdeList.do
+- 휴일 등록
+  - http://localhost:8080/egovframework-all-in-one/sym/cal/EgovRestdeRegist.do
+  - 휴일일자 달력 이미지 클릭
+
+시스템관리 - 일반달력/행정달력/휴일관리
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%ED%9C%B4%EC%9D%BC%EA%B4%80%EB%A6%AC#%EC%9D%BC%EB%B0%98%EB%8B%AC%EB%A0%A5_%EC%9D%BC%EA%B0%84_%EC%A3%BC%EA%B0%84_%EC%9B%94%EA%B0%84_%EC%97%B0%EA%B0%84
+
+### mysql/postgres ORDER BY 추가
+
+EgovRestdeManage_SQL_altibase.xml
+```xml
+,  T_DUMMY.RNUM           CELL_NUM
+ORDER BY T_DUMMY.RNUM
+```
+
+EgovRestdeManage_SQL_cubrid.xml
+```xml
+,  T_DUMMY.RNUM           CELL_NUM
+ORDER BY T_DUMMY.RNUM
+```
+
+EgovRestdeManage_SQL_goldilocks.xml
+```xml
+,  T_DUMMY.RNUM           CELL_NUM
+ORDER BY T_DUMMY.RNUM
+```
+
+***EgovRestdeManage_SQL_maria.xml***
+```xml
+,  DUMMY.ROWNUM         CELL_NUM
+ORDER BY ROWNUM
+ORDER BY DUMMY.ROWNUM
+```
+
+***EgovRestdeManage_SQL_mysql.xml***
+```xml
+,  DUMMY.ROWNUM         CELL_NUM
+ORDER BY 없음
+ORDER BY DUMMY.ROWNUM
+```
+
+EgovRestdeManage_SQL_oracle.xml
+```xml
+,  T_DUMMY.RNUM           CELL_NUM
+ORDER BY T_DUMMY.RNUM
+```
+
+***EgovRestdeManage_SQL_postgres.xml***
+```xml
+,  DUMMY.ROWNUM         CELL_NUM
+ORDER BY 없음
+ORDER BY DUMMY.ROWNUM
+```
+
+EgovRestdeManage_SQL_tibero.xml
+```xml
+,  T_DUMMY.RNUM           CELL_NUM
+ORDER BY T_DUMMY.RNUM
+```
+
+https://youtu.be/Jac4eYK1KFA
+
+https://github.com/GSITM2023/egovframe-common-components/commit/e398b02804ba8c5acb843b4e3e266693c425ce4c
+
+https://github.com/GSITM2023/egovframe-common-components/commit/fb9ac4e88116b05b5153ae72d3f8e0b88e7d445d
+
+https://github.com/eGovFramework/egovframe-common-components/pull/162
+
 ## 2023-07-08
 
 ### 제네릭 타입 명시: 시스템관리 - 스케줄처리
