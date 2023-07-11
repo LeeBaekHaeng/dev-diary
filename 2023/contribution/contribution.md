@@ -6,6 +6,57 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-12
+
+### 제네릭 타입 명시: 법정동코드
+
+- ```List<?>``` 를 ```List<EgovMap>``` 로 수정
+- 법정동코드수신 목록 화면에 디자인 버그있음
+- 법정동코드수신 개인화페이지용 목록 화면에서 404 버그있음
+
+```java
+ccm
+acr
+service
+impl
+AdministCodeRecptnDAO.java (2 matches)
+108: public List<?> selectAdministCodeRecptnList(AdministCodeRecptnVO searchVO) throws Exception {  
+127: public List<?> selectAdministCodeList(AdministCodeRecptnVO searchVO) throws Exception {  
+EgovAdministCodeRecptnServiceImpl.java (2 matches)
+413: public List<?> selectAdministCodeRecptnList(AdministCodeRecptnVO searchVO) throws Exception {  
+427: public List<?> selectAdministCodeList(AdministCodeRecptnVO searchVO) throws Exception {  
+EgovAdministCodeRecptnService.java (2 matches)
+46: List<?> selectAdministCodeRecptnList(AdministCodeRecptnVO searchVO) throws Exception;  
+61: List<?> selectAdministCodeList(AdministCodeRecptnVO searchVO) throws Exception;  
+web
+EgovAdministCodeRecptnController.java (5 matches)
+113: List<?> changeSeCodeList = cmmUseService.selectCmmCodeDetail(comCodeVO);  
+118: List<?> processSeList = cmmUseService.selectCmmCodeDetail(comCodeVO);  
+122: List<?> administCodeRecptnList = administCodeManageService.selectAdministCodeRecptnList(administCodeRecptnVO);  
+155: List<?> administCodeRecptnList = administCodeManageService.selectAdministCodeRecptnList(searchVO);  
+181: List<?> administCodeRecptnList = administCodeManageService.selectAdministCodeRecptnList(searchVO);  
+```
+
+법정동코드 상세내역을 조회한다.
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/acr/getAdministCodeDetail.do
+
+법정동코드수신 목록을 조회한다.
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/acr/getAdministCodeRecptnList.do
+
+법정동코드수신 개인화페이지용 목록을 조회한다.
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/acr/getAdministCodeRecptnMainList.do
+
+법정동코드
+
+https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EB%B2%95%EC%A0%95%EB%8F%99%EC%BD%94%EB%93%9C
+
+https://youtu.be/1AWPHTETx-Q
+
+https://github.com/GSITM2023/egovframe-common-components/commit/2f2e3d1e5edb7a0cee8a768eb832f82242269994
+
 ## 2023-07-11
 
 ### 제네릭 타입 명시: 시스템관리 - 행정달력
