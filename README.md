@@ -16,7 +16,7 @@ https://github.com/GSITM2023/egovframe-common-components
 
 여호와께 능하지 못한 일이 있겠느냐 기한이 이를 때에 내가 네게로 돌아오리니 사라에게 아들이 있으리라
 
-[제네릭 타입 명시: 법정동코드](2023/contribution/contribution.md#2023-07-13)
+[제네릭 타입 명시: 행정코드 목록을 조회한다.](2023/contribution/contribution.md#2023-07-13)
 
 ## 2023-07-12
 
