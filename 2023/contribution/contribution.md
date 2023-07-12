@@ -6,6 +6,52 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-13
+
+### 제네릭 타입 명시: 행정코드 목록을 조회한다.
+
+- `List<?>` 를 `List<EgovMap>` 로 수정
+
+```java
+adc
+service
+impl
+AdministCodeManageDAO.java
+66: public List<?> selectAdministCodeList(AdministCodeVO searchVO) throws Exception {  
+EgovCcmAdministCodeManageServiceImpl.java
+69: public List<?> selectAdministCodeList(AdministCodeVO searchVO) throws Exception {  
+EgovCcmAdministCodeManageService.java
+52: List<?> selectAdministCodeList(AdministCodeVO searchVO) throws Exception;  
+web
+EgovCcmAdministCodeManageController.java (2 matches)
+169: List<?> CmmnCodeList = administCodeManageService.selectAdministCodeList(searchVO);  
+218: List<?> CmmnCodeList = administCodeManageService.selectAdministCodeList(searchVO);  
+
+```
+
+행정코드 목록을 조회한다.
+`http://localhost:8080/egovframework-all-in-one/sym/ccm/adc/EgovCcmAdministCodeList.do`
+
+행정코드 팝업 목록을 조회한다.
+`http://localhost:8080/egovframework-all-in-one/sym/ccm/adc/EgovCcmAdministCode.do`
+
+1010. 행정코드관리
+`http://localhost:8080/egovframework-all-in-one/sym/ccm/adc/EgovCcmAdministCodeList.do`
+
+행정코드관리
+`https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%ED%96%89%EC%A0%95%EC%BD%94%EB%93%9C%EA%B4%80%EB%A6%AC`
+
+행정표준코드관리시스템
+`https://www.code.go.kr/index.do`
+`법정동`
+
+`https://youtu.be/4XH5z3DWdKc`
+
+`https://github.com/GSITM2023/egovframe-common-components/commit/94d44a144410d1e0e77d3467d7e49de4467dd6e6`
+
+`https://github.com/eGovFramework/egovframe-common-components/pull/165`
+
+
 ## 2023-07-12
 
 ### 제네릭 타입 명시: 법정동코드
