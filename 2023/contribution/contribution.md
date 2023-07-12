@@ -30,26 +30,31 @@ EgovCcmAdministCodeManageController.java (2 matches)
 ```
 
 행정코드 목록을 조회한다.
-`http://localhost:8080/egovframework-all-in-one/sym/ccm/adc/EgovCcmAdministCodeList.do`
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/adc/EgovCcmAdministCodeList.do
 
 행정코드 팝업 목록을 조회한다.
-`http://localhost:8080/egovframework-all-in-one/sym/ccm/adc/EgovCcmAdministCode.do`
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/adc/EgovCcmAdministCode.do
 
 1010. 행정코드관리
-`http://localhost:8080/egovframework-all-in-one/sym/ccm/adc/EgovCcmAdministCodeList.do`
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/adc/EgovCcmAdministCodeList.do
 
 행정코드관리
-`https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%ED%96%89%EC%A0%95%EC%BD%94%EB%93%9C%EA%B4%80%EB%A6%AC`
+
+https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%ED%96%89%EC%A0%95%EC%BD%94%EB%93%9C%EA%B4%80%EB%A6%AC
 
 행정표준코드관리시스템
-`https://www.code.go.kr/index.do`
-`법정동`
 
-`https://youtu.be/4XH5z3DWdKc`
+https://www.code.go.kr/index.do
+```법정동```
 
-`https://github.com/GSITM2023/egovframe-common-components/commit/94d44a144410d1e0e77d3467d7e49de4467dd6e6`
+https://youtu.be/4XH5z3DWdKc
 
-`https://github.com/eGovFramework/egovframe-common-components/pull/165`
+https://github.com/GSITM2023/egovframe-common-components/commit/94d44a144410d1e0e77d3467d7e49de4467dd6e6
+
+https://github.com/eGovFramework/egovframe-common-components/pull/165
 
 
 ## 2023-07-12
