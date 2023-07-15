@@ -6,6 +6,38 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-15
+
+### 제네릭 타입 명시: 공통코드를 등록한다.
+
+- `List<?>` 를 `List<CmmnClCodeVO>` 로 수정
+
+```java
+cca
+web
+EgovCcmCmmnCodeManageController.java
+178: List<?> CmmnCodeList = cmmnClCodeManageService.selectCmmnClCodeList(searchVO);  
+
+```
+
+공통코드를 등록한다.
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/cca/RegistCcmCmmnCode.do
+
+시스템관리 > 980. 공통코드
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/cca/SelectCcmCmmnCodeList.do
+
+시스템관리 > 공통코드관리 > 공통코드
+
+https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EA%B3%B5%ED%86%B5%EC%BD%94%EB%93%9C
+
+https://youtu.be/XwIl38be1Og
+
+https://github.com/GSITM2023/egovframe-common-components/commit/775993b4fdbaa0b6709c92bf6b90bda9cb858ebb
+
+https://github.com/eGovFramework/egovframe-common-components/pull/169
+
 ## 2023-07-14
 
 ### 제네릭 타입 명시: 일반달력 일간 정보를 조회한다.
