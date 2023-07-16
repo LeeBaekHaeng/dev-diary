@@ -6,6 +6,41 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-17
+
+### 제네릭 타입 명시: 공통상세코드를 등록한다.
+
+- `List<?>` 를 `List<CmmnClCodeVO>` 로 수정
+- searchClCodeVO.setFirstIndex(0); 추가
+- 변수명 카멜 표기법: CmmnClCodeList 를 clCodeList 로 수정
+- 변수명 카멜 표기법: CmmnCodeList 를 codeList 로 수정
+
+```java
+cde
+web
+EgovCcmCmmnDetailCodeManageController.java
+213: List<?> CmmnClCodeList = cmmnClCodeManageService.selectCmmnClCodeList(searchClCodeVO);  
+
+```
+
+970. 공통상세코드
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/cde/SelectCcmCmmnDetailCodeList.do
+
+공통상세코드를 등록한다.
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/cde/RegistCcmCmmnDetailCode.do
+
+시스템관리 > 공통코드관리 > 공통상세코드
+
+https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EA%B3%B5%ED%86%B5%EC%83%81%EC%84%B8%EC%BD%94%EB%93%9C
+
+https://youtu.be/ujdzXE5iMm0
+
+https://github.com/GSITM2023/egovframe-common-components/commit/838b82d0926af3800e400bb2ae88e7dc3c4795a8
+
+https://github.com/eGovFramework/egovframe-common-components/pull/171
+
 ## 2023-07-15
 
 ### 제네릭 타입 명시: 공통코드를 등록한다.
