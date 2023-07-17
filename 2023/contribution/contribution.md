@@ -6,6 +6,61 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-18
+
+### 제네릭 타입 명시: 기관코드수신 목록을 조회한다.
+
+- `List<?>` 를 `List<EgovMap>` 로 수정
+
+```java
+icr
+service
+impl
+EgovInsttCodeRecptnServiceImpl.java (2 matches)
+416: public List<?> selectInsttCodeRecptnList(InsttCodeRecptnVO searchVO) throws Exception {  
+430: public List<?> selectInsttCodeList(InsttCodeRecptnVO searchVO) throws Exception {  
+InsttCodeRecptnDAO.java (2 matches)
+106: public List<?> selectInsttCodeRecptnList(InsttCodeRecptnVO searchVO) throws Exception {  
+125: public List<?> selectInsttCodeList(InsttCodeRecptnVO searchVO) throws Exception {  
+EgovInsttCodeRecptnService.java (2 matches)
+46: List<?> selectInsttCodeRecptnList(InsttCodeRecptnVO searchVO) throws Exception;  
+61: List<?> selectInsttCodeList(InsttCodeRecptnVO searchVO) throws Exception;  
+web
+EgovInsttCodeRecptnController.java (5 matches)
+114: List<?> changeSeCodeList = cmmUseService.selectCmmCodeDetail(comCodeVO);  
+119: List<?> processSeList = cmmUseService.selectCmmCodeDetail(comCodeVO);  
+123: List<?> insttCodeRecptnList = insttCodeManageService.selectInsttCodeRecptnList(insttCodeRecptnVO);  
+155: List<?> insttCodeRecptnList = insttCodeManageService.selectInsttCodeRecptnList(searchVO);  
+181: List<?> insttCodeRecptnList = insttCodeManageService.selectInsttCodeRecptnList(searchVO);  
+
+```
+
+기관코드수신 목록을 조회한다.
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/icr/getInsttCodeRecptnList.do
+
+기관코드 상세내역을 조회한다.
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/icr/getInsttCodeDetail.do
+
+기관코드수신 개인화페이지용 목록을 조회한다.
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/icr/getInsttCodeRecptnMainList.do
+
+1020. 기관코드수신
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/icr/getInsttCodeRecptnList.do
+
+시스템관리 > 공통코드관리 > 기관코드수신 > 기관코드
+
+https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EA%B8%B0%EA%B4%80%EC%BD%94%EB%93%9C
+
+https://youtu.be/WXFikLufx88
+
+https://github.com/GSITM2023/egovframe-common-components/commit/86344575c6a975753b77d1cfe82f971aae559732
+
+https://github.com/eGovFramework/egovframe-common-components/pull/173
+
 ## 2023-07-17
 
 ### 제네릭 타입 명시: 공통상세코드를 등록한다.
