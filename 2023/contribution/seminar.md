@@ -439,10 +439,16 @@ List<?>
 - 탭을 공백으로 수정하기
 - eclipse formatter 사용하기
 - 변수명 카멜 표기법 안된 것
+  - CmmnCodeList
 - 저장화면/저장처리, 수정화면/수정처리 같이 있는 것 분리하기
 - @Service("KnoSpecialistService") 를 @Service 로 수정하기(@Repository/@Controller)
 - PMD 정적 소스 코드 분석
 - 오타수정: lastUpdusrPnttm(LAST_UPDT_PNTTM) 를 lastUpdtPnttm 로 수정
+- 법정동코드수신 목록 화면에 디자인 버그있음
+  - http://localhost:8080/egovframework-all-in-one/sym/ccm/acr/getAdministCodeRecptnList.do
+- 법정동코드수신 개인화페이지용 목록 화면에서 404 버그있음
+  - http://localhost:8080/egovframework-all-in-one/sym/ccm/acr/getAdministCodeRecptnMainList.do
+  - https://github.com/LeeBaekHaeng/dev-diary/blob/main/2023/contribution/contribution.md#%EC%A0%9C%EB%84%A4%EB%A6%AD-%ED%83%80%EC%9E%85-%EB%AA%85%EC%8B%9C-%EB%B2%95%EC%A0%95%EB%8F%99%EC%BD%94%EB%93%9C
 
 ### 6.2 Sync fork 동기화 포크
 
