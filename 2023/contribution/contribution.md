@@ -6,6 +6,56 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-19
+
+### 제네릭 타입 명시: 우편번호 찾기 목록을 조회한다.
+
+- `List<?>` 를 `List<EgovMap>` 로 수정
+
+```java
+zip
+service
+impl
+EgovCcmRdnmadZipServiceImpl.java
+92: public List<?> selectZipList(ZipVO searchVO) throws Exception {  
+EgovCcmZipManageServiceImpl.java
+93: public List<?> selectZipList(ZipVO searchVO) throws Exception {  
+RdnmadZipDAO.java
+83: public List<?> selectZipList(ZipVO searchVO) throws Exception {  
+ZipManageDAO.java
+83: public List<?> selectZipList(ZipVO searchVO) throws Exception {  
+EgovCcmRdnmadZipManageService.java
+67: List<?> selectZipList(ZipVO searchVO) throws Exception;  
+EgovCcmZipManageService.java
+67: List<?> selectZipList(ZipVO searchVO) throws Exception;  
+web
+EgovCcmZipManageController.java (4 matches)
+125: List<?> CmmnCodeList = zipManageService.selectZipList(searchVO);  
+132: List<?> CmmnCodeList = rdnmadZipService.selectZipList(searchVO);  
+324: List<?> CmmnCodeList = zipManageService.selectZipList(searchVO);  
+331: List<?> CmmnCodeList = rdnmadZipService.selectZipList(searchVO);  
+
+```
+
+우편번호 찾기 목록을 조회한다.
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/zip/EgovCcmZipSearchList.do
+
+- 우편번호 목록을 조회한다.
+- 1000. 우편번호관리
+
+http://localhost:8080/egovframework-all-in-one/sym/ccm/zip/EgovCcmZipList.do
+
+시스템관리 > 공통코드관리 > 우편번호관리 > 도로명 주소찾기, 우편번호관리
+
+https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EC%9A%B0%ED%8E%B8%EB%B2%88%ED%98%B8%EA%B4%80%EB%A6%AC
+
+https://youtu.be/6scH-_Gfnsw
+
+https://github.com/GSITM2023/egovframe-common-components/commit/593861c3188dfc46d3df126b3edde35477eb8566
+
+https://github.com/eGovFramework/egovframe-common-components/pull/175
+
 ## 2023-07-18
 
 ### 제네릭 타입 명시: 기관코드수신 목록을 조회한다.
