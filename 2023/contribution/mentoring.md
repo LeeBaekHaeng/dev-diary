@@ -5,8 +5,14 @@
 DAO 단위 테스트 추가를 한다.
 
 - EgovArticleCommentDAOTest 댓글
+  - https://github.com/LeeBaekHaeng/god.codegen/blob/main/god.com/src/test/java/egovframework/com/cop/cmt/service/impl/EgovArticleCommentDAOTest.java
+  - https://github.com/LeeBaekHaeng/god.codegen/blob/main/god.com/src/test/java/egovframework/com/cop/cmt/service/impl/EgovArticleCommentDAO2Test.java
 - EgovCommuBBSMasterDAO 게시판마스터
+  - https://github.com/LeeBaekHaeng/god.codegen/blob/main/god.com/src/test/java/egovframework/com/cop/cmy/service/impl/EgovCommuBBSMasterDAOTest.java
 - EgovCommuManageDAO 커뮤니티사용자
+  - https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:cop:cmt:%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%ED%9A%8C%EC%9B%90%EA%B4%80%EB%A6%AC
+  - 커뮤니티 사용자 및 승인정보 관리를 위한 데이터 접근 클래스
+  - 커뮤니티 사용자 및 승인정보 관리를 위한 DAO 단위 테스트
 - EgovCommuMasterDAO 커뮤니티 속성
 - EgovUserInfManageDAO 주소록관리
 - SndngMailDetailDAO 메일발신관리
