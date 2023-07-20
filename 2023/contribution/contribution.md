@@ -6,6 +6,44 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-21
+
+### 제네릭 타입 명시: 시스템 이력정보 목록을 조회한다.
+
+- `List<?>` 를 `List<SysHistoryVO>` 로 수정
+- 코드 정리
+- HashMap 보다 ModelMap 을 사용하는 게 좋을 것 같음
+
+```java
+slg
+service
+impl
+EgovSysHistoryServiceImpl.java
+90: List<?> _result = sysHistoryDAO.selectSysHistorList(historyVO);  
+SysHistoryDAO.java
+61: public List<?> selectSysHistorList(SysHistoryVO historyVO) throws Exception{  
+web
+EgovSysHistoryController.java (4 matches)
+96: List<?> _result = cmmUseService.selectCmmCodeDetail(vo);  
+132: List<?> _result = cmmUseService.selectCmmCodeDetail(vo);  
+163: List<?> _result = cmmUseService.selectCmmCodeDetail(vo);  
+211: List<?> _result = cmmUseService.selectCmmCodeDetail(vo);  
+```
+
+시스템이력 목록 조회
+- http://localhost:8080/egovframework-all-in-one/sym/log/slg/SelectSysHistoryList.do
+
+시스템이력관리
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EC%8B%9C%EC%8A%A4%ED%85%9C_%EC%9D%B4%EB%A0%A5%EA%B4%80%EB%A6%AC
+
+https://youtu.be/A7AEiOGLetg
+
+https://github.com/GSITM2023/egovframe-common-components/commit/2887746255c0d37f90fae2764c68320560b1c312
+
+https://github.com/GSITM2023/egovframe-common-components/commit/04267790560ad1b0d10ed0b679cb78dccb7a9f38
+
+https://github.com/eGovFramework/egovframe-common-components/pull/179
+
 ## 2023-07-20
 
 ### 제네릭 타입 명시: 일반달력 월간 휴일을 조회한다.
