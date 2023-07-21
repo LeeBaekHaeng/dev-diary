@@ -6,6 +6,53 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-22
+
+### 제네릭 타입 명시: 송수신 로그정보 목록을 조회한다.
+
+- `List<?>` 를 `List<TrsmrcvLog>` 로 수정
+- 코드 정리
+  - `Map<?, ?>` 을 `Map<String, Object>` 로 수정
+  - commons-collections-3.2.2.jar, commons-collections4-4.4.jar
+  - `@SuppressWarnings({ "rawtypes", "unchecked" })` 제거
+- selectCmmCodeDetail 사용 안 해 제거
+- Source > Format 탭을 공백으로
+
+```java
+tlg
+service
+impl
+EgovTrsmrcvLogServiceImpl.java
+89: List<?> _result = trsmrcvLogDAO.selectTrsmrcvLogInf(trsmrcvLog);  
+TrsmrcvLogDAO.java
+71: public List<?> selectTrsmrcvLogInf(TrsmrcvLog trsmrcvLog) throws Exception{  
+web
+EgovTrsmrcvLogController.java
+121: List<?> _result = cmmUseService.selectCmmCodeDetail(vo);  
+```
+
+송수신 로그 목록 조회
+- 1050. 송/수신로그관리
+- http://localhost:8080/egovframework-all-in-one/sym/log/tlg/SelectTrsmrcvLogList.do
+
+송수신 로그 테스트 화면
+- http://localhost:8080/egovframework-all-in-one/sym/log/tlg/AddTrsmrcvLog.do
+
+송수신로그관리
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EC%86%A1_%EC%88%98%EC%8B%A0_%EB%A1%9C%EA%B7%B8%EA%B4%80%EB%A6%AC
+
+https://youtu.be/WckpOEoRBJg
+
+https://github.com/GSITM2023/egovframe-common-components/commit/7fe3bceb1d51cd7a05cc10c43137bbe352546e16
+
+https://github.com/GSITM2023/egovframe-common-components/commit/4b988e90607295805c15efe1ee1a2c5838c3a6d9
+
+https://github.com/GSITM2023/egovframe-common-components/commit/91853d9db16e3dd96787845ce78b66e54d5d6ad4
+
+https://github.com/GSITM2023/egovframe-common-components/commit/d1cea8a9a03cfb455a698945c9bf5cf1e685d673
+
+https://github.com/eGovFramework/egovframe-common-components/pull/181
+
 ## 2023-07-21
 
 ### 제네릭 타입 명시: 시스템 이력정보 목록을 조회한다.
