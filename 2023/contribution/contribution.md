@@ -6,6 +6,50 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-24
+
+### 제네릭 타입 명시: 웹 로그 목록 조회
+
+- `List<?>` 를 `List<WebLog>` 로 수정
+- 코드 정리
+  - _result 를 resultList 로 수정
+  - _cnt 를 totCnt 로 수정
+  - _map 을 map 으로 수정
+  - Integer.toString 제거
+  - `HashMap<?, ?>` 을 `Map<String, Object>` 으로 수정
+  - (HashMap<?, ?>) 제거
+  - _map.get("resultCnt") 를 totCnt 로 수정
+  - (String)_map.get("resultCnt") 를 MapUtils.getInteger 로 수정
+  - `model.addAttribute("resultCnt", _map.get("resultCnt"));` 사용 안 해 제거
+- Source > Format 탭을 공백으로
+
+```java
+wlg
+service
+impl
+EgovWebLogServiceImpl.java
+88: List<?> _result = webLogDAO.selectWebLogInf(webLog);  
+WebLogDAO.java
+71: public List<?> selectWebLogInf(WebLog webLog) throws Exception{  
+```
+
+웹 로그 목록 조회
+- 1070. 웹로그관리
+- http://localhost:8080/egovframework-all-in-one/sym/log/wlg/SelectWebLogList.do
+
+웹로그관리
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EC%9B%B9%EB%A1%9C%EA%B7%B8%EA%B4%80%EB%A6%AC
+
+https://youtu.be/rXMPf03wbKg
+
+https://github.com/GSITM2023/egovframe-common-components/commit/308cda71f459d005ca8ccbe58a668a4ecfe1b20d
+
+https://github.com/GSITM2023/egovframe-common-components/commit/014daa9dfd73c34585b4e1688c799e03b2ac613b
+
+https://github.com/GSITM2023/egovframe-common-components/commit/b87120ee30ac388b75c81c84b02528df40187e22
+
+https://github.com/eGovFramework/egovframe-common-components/pull/183
+
 ## 2023-07-22
 
 ### 제네릭 타입 명시: 송수신 로그정보 목록을 조회한다.
