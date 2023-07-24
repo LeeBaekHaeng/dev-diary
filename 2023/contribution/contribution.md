@@ -6,6 +6,40 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-25
+
+### 제네릭 타입 명시: 미리보기를 할 바로가기메뉴관리의 목록을 조회한다.
+
+- `List<?>` 를 `List<MenuManageVO>` 로 수정
+- 코드 정리
+  - `List<MenuManageVO>` result 제거하고 바로 리턴
+- Source > Format 탭을 공백으로
+
+```java
+mnu
+bmm
+service
+EgovBkmkMenuManageservice.java
+72: public List<?> selectBkmkPreviewList(BkmkMenuManageVO bkmkMenuManageVO) throws Exception;  
+```
+
+미리보기를 할 바로가기메뉴관리의 목록을 조회한다.
+
+사용하는 컨트롤러 없어 수동 테스트 Manual testing 못함
+
+바로가기메뉴관리
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EB%B0%94%EB%A1%9C%EA%B0%80%EA%B8%B0%EB%A9%94%EB%89%B4%EA%B4%80%EB%A6%AC
+
+https://youtu.be/iPdiWWcJ3dw
+
+https://github.com/GSITM2023/egovframe-common-components/commit/61194fadf5d8b7feb2afe8b7affd1a14992fbb59
+
+https://github.com/GSITM2023/egovframe-common-components/commit/08169b5e94bf8381a4180dd2149322d9326c2608
+
+https://github.com/GSITM2023/egovframe-common-components/commit/6d7c25d7832579286e3a556696dc541033b838ae
+
+https://github.com/eGovFramework/egovframe-common-components/pull/184
+
 ## 2023-07-24
 
 ### 제네릭 타입 명시: 웹 로그 목록 조회

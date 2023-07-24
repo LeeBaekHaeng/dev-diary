@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-07-25
+
+매일성경묵상 새길말씀(창세기 47:16)
+
+요셉이 이르되 너희의 가축을 내라 돈이 떨어졌은즉 내가 너희의 가축과 바꾸어 주리라
+
+[제네릭 타입 명시: 웹 로그 목록 조회](2023/contribution/contribution.md#2023-07-25)
+
 ## 2023-07-24
 
 매일성경묵상 새길말씀(창세기 46:3)
@@ -17,7 +25,6 @@ https://github.com/GSITM2023/egovframe-common-components
 하나님이 이르시되 나는 하나님이라 네 아버지의 하나님이니 애굽으로 내려가기를 두려워하지 말라 내가 거기서 너로 큰 민족을 이루게 하리라
 
 [제네릭 타입 명시: 웹 로그 목록 조회](2023/contribution/contribution.md#2023-07-24)
-
 
 ## 2023-07-22
 
