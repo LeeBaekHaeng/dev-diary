@@ -16,7 +16,7 @@ https://github.com/GSITM2023/egovframe-common-components
 
 당신들은 나를 해하려 하였으나 하나님은 그것을 선으로 바꾸사 오늘과 같이 많은 백성의 생명을 구원하게 하시려 하셨나니
 
-[제네릭 타입 명시: 메뉴생성 세부화면을 조회한다.](2023/contribution/contribution.md#2023-07-27)
+[제네릭 타입 명시: 메뉴 목록을 조회](2023/contribution/contribution.md#2023-07-27)
 
 ## 2023-07-26
 
