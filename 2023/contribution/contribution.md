@@ -6,6 +6,71 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-29
+
+### 제네릭 타입 명시: 프로그램 목록을 조회
+
+- `List<?>` 를 `List<ProgrmManageVO>` 로 수정
+- 코드 정리
+  - `list_progrmmanage` 를 `resultList` 로 수정
+  - `model.addAttribute("searchVO", searchVO);` 제거
+- Source > Format 탭을 공백으로 수정
+
+selectProgrmList
+
+프로그램 목록을 조회
+
+```java
+prm
+service
+impl
+EgovProgrmManageServiceImpl.java (3 matches)
+56: public List<?> selectProgrmList(ComDefaultVO vo) throws Exception {  
+128: public List<?> selectProgrmChangeRequstList(ComDefaultVO vo) throws Exception {  
+191: public List<?> selectChangeRequstProcessList(ComDefaultVO vo) throws Exception {  
+ProgrmManageDAO.java (3 matches)
+37: public List<?> selectProgrmList(ComDefaultVO vo) throws Exception{  
+106: public List<?> selectProgrmChangeRequstList(ComDefaultVO vo) throws Exception{  
+173: public List<?> selectChangeRequstProcessList(ComDefaultVO vo) throws Exception{  
+EgovProgrmManageService.java (3 matches)
+38: List<?> selectProgrmList(ComDefaultVO vo) throws Exception;  
+89: List<?> selectProgrmChangeRequstList(ComDefaultVO vo) throws Exception;  
+133: List<?> selectChangeRequstProcessList(ComDefaultVO vo) throws Exception;  
+web
+EgovProgrmManageController.java (6 matches)
+131: List<?> list_progrmmanage = progrmManageService.selectProgrmList(searchVO);  
+312: List<?> list_changerequst = progrmManageService.selectProgrmChangeRequstList(searchVO);  
+513: List<?> list_changerequst = progrmManageService.selectChangeRequstProcessList(searchVO);  
+687: List<?> list_changerequst = progrmManageService.selectProgrmChangeRequstList(searchVO);  
+756: List<?> list_progrmmanage = progrmManageService.selectProgrmList(searchVO);  
+798: List<?> list_progrmmanage = progrmManageService.selectProgrmList(searchVO);  
+```
+
+프로그램목록 리스트조회한다.
+- 프로그램관리
+- http://localhost:8080/egovframework-all-in-one/sym/prm/EgovProgramListManageSelect.do
+
+프로그램파일명을 조회한다.
+- http://localhost:8080/egovframework-all-in-one/sym/prm/EgovProgramListSearch.do
+
+프로그램파일명을 조회한다. (New)
+- http://localhost:8080/egovframework-all-in-one/sym/prm/EgovProgramListSearchNew.do
+
+프로그램관리
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EA%B4%80%EB%A6%AC
+
+https://youtu.be/m6wxvIMBEAc
+
+https://github.com/GSITM2023/egovframe-common-components/commit/89b8cbb020569af30e1743800be83b07ff7bee42
+
+https://github.com/GSITM2023/egovframe-common-components/commit/608776efc6c0c7a5afb9aed6b605ebc32ea5102f
+
+https://github.com/GSITM2023/egovframe-common-components/commit/550440eda824772c7db9d8d1bcdff16d406bb0a9
+
+https://github.com/GSITM2023/egovframe-common-components/commit/27b60eb9d350a96b366599a36b74ef4e97cac26d
+
+https://github.com/eGovFramework/egovframe-common-components/pull/194
+
 ## 2023-07-28
 
 ### 제네릭 타입 명시: 행정달력 일간 정보를 조회한다.
