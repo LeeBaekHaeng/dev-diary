@@ -16,6 +16,8 @@ https://github.com/GSITM2023/egovframe-common-components
 
 그의 이웃 여인들이 그에게 이름을 지어 주되 나오미에게 아들이 태어났다 하여 그의 이름을 오벳이라 하였는데 그는 다윗의 아버지인 이새의 아버지였더라
 
+[제네릭 타입 명시: 메뉴생성관리 목록을 조회](2023/contribution/contribution.md#2023-07-31)
+
 ## 2023-07-29
 
 매일성경묵상 새길말씀(룻기 2:12)
