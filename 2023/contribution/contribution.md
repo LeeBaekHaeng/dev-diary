@@ -6,6 +6,65 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-07-31
+
+### 제네릭 타입 명시: 메뉴생성관리 목록을 조회
+
+- `List<?>` 을 `List<EgovMap>` 로 수정
+- 코드 정리
+  - `list_menumanage` 을 `resultList` 로 수정
+  - `if ( list_menumanage.size() == 0 )` 중괄호 추가
+- Source > Format 탭을 공백으로 로 수정
+
+selectMenuCreatManagList
+
+메뉴생성관리 목록을 조회
+
+```java
+mcm
+service
+impl
+EgovMenuCreateManageServiceImpl.java (4 matches)
+68: public List<?> selectMenuCreatList(MenuCreatVO vo) throws Exception {  
+105: public List<?> selectMenuCreatManagList(ComDefaultVO vo) throws Exception {  
+135: public List<?> selectMenuCreatSiteMapList(MenuSiteMapVO vo) throws Exception {  
+145: public List<?> selectSiteMapByUser(MenuSiteMapVO vo) throws Exception {  
+MenuCreateManageDAO.java (4 matches)
+61: public List<?> selectMenuCreatManagList(ComDefaultVO vo) throws Exception{  
+82: public List<?> selectMenuCreatList(MenuCreatVO vo) throws Exception{  
+101: public List<?> selectMenuCreatSiteMapList(MenuSiteMapVO vo) throws Exception{  
+122: public List<?> selectSiteMapByUser(MenuSiteMapVO vo) throws Exception{  
+EgovMenuCreateManageService.java (4 matches)
+49: List<?> selectMenuCreatManagList(ComDefaultVO vo) throws Exception;  
+65: List<?> selectMenuCreatList(MenuCreatVO vo) throws Exception;  
+82: List<?> selectMenuCreatSiteMapList(MenuSiteMapVO vo) throws Exception;  
+90: List<?> selectSiteMapByUser(MenuSiteMapVO vo) throws Exception;  
+web
+EgovMenuCreateManageController.java (5 matches)
+114: List<?> list_menumanage = menuCreateManageService.selectMenuCreatManagList(searchVO);  
+143: List<?> list_menulist = menuCreateManageService.selectMenuCreatList(menuCreatVO);  
+198: List<?> list_menulist = menuCreateManageService.selectMenuCreatSiteMapList(menuSiteMapVO);  
+257: List<?> list_menulist = menuCreateManageService.selectMenuCreatSiteMapList(menuSiteMapVO);  
+287: List<?> list_menulist = menuCreateManageService.selectSiteMapByUser(menuSiteMapVO);  
+```
+
+메뉴생성목록을 조회한다.
+- 메뉴생성관리
+- http://localhost:8080/egovframework-all-in-one/sym/mnu/mcm/EgovMenuCreatManageSelect.do
+
+메뉴생성관리
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EB%A9%94%EB%89%B4%EC%83%9D%EC%84%B1%EA%B4%80%EB%A6%AC
+
+https://youtu.be/zGuiC3Bmm8Q
+
+https://github.com/GSITM2023/egovframe-common-components/commit/c642d2694e2c12211c8d9dc3c28e65d18907dc20
+
+https://github.com/GSITM2023/egovframe-common-components/commit/8e74dd06cec1607a527c1ad718115ac5b262dd62
+
+https://github.com/GSITM2023/egovframe-common-components/commit/d273740ce767b5de112730423a1625bb82bdc825
+
+https://github.com/eGovFramework/egovframe-common-components/pull/195
+
 ## 2023-07-29
 
 ### 제네릭 타입 명시: 프로그램 목록을 조회
