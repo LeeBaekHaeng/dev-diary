@@ -6,6 +6,102 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-01
+
+### 제네릭 타입 명시: 백업작업정보목록을  조회한다.
+
+- `List<?>` 을 `List<BackupOpert>` 로 수정
+- 코드 정리
+  - `for (int i = 0; i < resultList.size(); i++) {` 을 `for (BackupOpert result : resultList) {` 로 수정
+  - `for (int i = 0; i < targetList.size(); i++) {` 을 `for (BackupOpert target : targetList) {` 로 수정
+  - result.setExecutSchdulDfkSes stream 으로 수정
+  - `List<?> result = ` 제거하고 바로 return
+  - `@SuppressWarnings("unchecked")` 제거
+  - `(List<BackupOpert>) ` 제거
+  - `model.addAttribute("resultCnt", totCnt);` 사용하지 않아 제거
+- Source > Format 탭을 공백으로 로 수정
+
+selectBackupOpertList
+
+백업작업정보목록을  조회한다.
+
+```java
+sym
+bak
+service
+impl
+BackupOpertDao.java (2 matches)
+98: public List<?> selectBackupOpertList(BackupOpert searchVO)  
+100: List<?> resultList = selectList("BackupOpertDao.selectBackupOpertList", searchVO);  
+BackupResultDao.java
+69: public List<?> selectBackupResultList(BackupResult searchVO)  
+EgovBackupOpertServiceImpl.java (2 matches)
+88: public List<?> selectBackupOpertList(BackupOpert searchVO)  
+90: List<?> result = backupOpertDao.selectBackupOpertList(searchVO);  
+EgovBackupResultServiceImpl.java (2 matches)
+70: public List<?> selectBackupResultList(BackupResult searchVO)  
+72: List<?> result = dao.selectBackupResultList(searchVO);  
+EgovBackupOpertService.java
+55: public List<?> selectBackupOpertList(BackupOpert searchVO) throws Exception;  
+EgovBackupResultService.java
+47: public List<?> selectBackupResultList(BackupResult searchVO) throws Exception;  
+```
+
+```java
+			String [] dfkSes = new String [dfkSeList.size()];
+			for (int j = 0; j < dfkSeList.size(); j++) {
+				dfkSes[j] = dfkSeList.get(j).getExecutSchdulDfkSe();
+			}
+			result.setExecutSchdulDfkSes(dfkSes);
+```
+를
+
+```java
+result.setExecutSchdulDfkSes(dfkSeList.stream().map(BackupSchdulDfk::getExecutSchdulDfkSe).toArray(String[]::new));
+```
+로 수정
+
+# 파일 동기화 컴포넌트에서 사용할 파일 업로드 경로(경로 설정은 반드시 절대경로를 사용해야함, 경로 뒤에 /를 붙여 주어야함.)
+
+Globals.SynchrnServerPath = C:/egovframework/upload/Synch/
+
+백업작업 등록
+- 백업작업명: test 이백행 2023-08-01 백업작업명
+- 백업원본디렉토리: src1
+- 백업저장디렉토리: target1
+- 실행주기: 매주 요일 전체 선택
+
+백업작업 목록을 조회한다.
+- 백업관리
+- http://localhost:8080/egovframework-all-in-one/sym/sym/bak/getBackupOpertList.do
+
+시스템관리 - 백업관리
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EB%B0%B1%EC%97%85%EA%B4%80%EB%A6%AC
+
+```sql
+select
+	A.BACKUP_OPERT_ID,
+	A.EXECUT_SCHDUL_DFK_SE,
+	B.CODE_NM EXECUT_SCHDUL_DFK_SE_NM
+from
+	COMTNBACKUPSCHDULDFK 
+A,
+	COMTCCMMNDETAILCODE B
+where
+	A.BACKUP_OPERT_ID = 'BAK00000000000000001'
+	and A.EXECUT_SCHDUL_DFK_SE = B.CODE
+	and B.CODE_ID = 'COM074'
+;
+```
+
+https://github.com/GSITM2023/egovframe-common-components/commit/8a5cbc9c13f067acfc49ae28b296f1794fc29cbd
+
+https://github.com/GSITM2023/egovframe-common-components/commit/ed4986c3a9bf24ec1b23cd009c44db5f55f00caf
+
+https://github.com/GSITM2023/egovframe-common-components/commit/b2972cd7848c5df3bd6240bc1b222ac2095a0847
+
+https://github.com/eGovFramework/egovframe-common-components/pull/197
+
 ## 2023-07-31
 
 ### 제네릭 타입 명시: 메뉴생성관리 목록을 조회
