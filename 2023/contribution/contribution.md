@@ -6,6 +6,71 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-02
+
+### 제네릭 타입 명시: 메뉴리스트관리
+
+- `List<?>` 를 `List<EgovMap>` 로 수정
+
+selectMenuList
+
+메뉴리스트관리
+
+```java
+mpm
+service
+impl
+EgovMenuManageServiceImpl.java (4 matches)
+75: public List<?> selectMenuManageList(ComDefaultVO vo) throws Exception {  
+163: public List<?> selectMenuList() throws Exception {  
+174: public List<?> selectMainMenuHead(MenuManageVO vo) throws Exception {  
+184: public List<?> selectMainMenuLeft(MenuManageVO vo) throws Exception {  
+MenuManageDAO.java (4 matches)
+38: public List<?> selectMenuManageList(ComDefaultVO vo) throws Exception{  
+94: public List<?> selectMenuList() throws Exception{  
+152: public List<?> selectMainMenuHead(MenuManageVO vo) throws Exception{  
+162: public List<?> selectMainMenuLeft(MenuManageVO vo) throws Exception{  
+EgovMenuManageService.java (4 matches)
+43: List<?> selectMenuManageList(ComDefaultVO vo) throws Exception;  
+98: List<?> selectMenuList() throws Exception;  
+107: List<?> selectMainMenuHead(MenuManageVO vo) throws Exception;  
+115: List<?> selectMainMenuLeft(MenuManageVO vo) throws Exception;  
+web
+EgovMainMenuManageController.java (4 matches)
+111: List<?> list_headmenu = menuManageService.selectMainMenuHead(menuManageVO);  
+145: List<?> list_headmenu = menuManageService.selectMainMenuHead(menuManageVO);  
+185: List<?> list_menulist = menuManageService.selectMainMenuLeft(menuManageVO);  
+242: List<?> list_headmenu = menuManageService.selectMainMenuHead(menuManageVO);  
+EgovMenuManageController.java (4 matches)
+149: List<?> list_menumanage = menuManageService.selectMenuManageList(searchVO);  
+343: List<?> list_menulist = menuManageService.selectMenuList();  
+487: List<?> list_menulist = menuManageService.selectMenuList();  
+510: List<?> list_menulist = menuManageService.selectMenuList();  
+```
+
+화면 통계를 조회한다
+- 화면통계
+- http://localhost:8080/egovframework-all-in-one/sts/sst/selectScrinStats.do
+
+메뉴리스트를 조회한다.
+- 메뉴리스트관리
+- http://localhost:8080/egovframework-all-in-one/sym/mnu/mpm/EgovMenuListSelect.do
+
+메뉴리스트의 메뉴정보를 이동 메뉴목록을 조회한다.
+- http://localhost:8080/egovframework-all-in-one/sym/mnu/mpm/EgovMenuListSelectMvmn.do
+
+메뉴리스트의 메뉴정보를 이동 메뉴목록을 조회한다. (New)
+- http://localhost:8080/egovframework-all-in-one/sym/mnu/mpm/EgovMenuListSelectMvmnNew.do
+
+메뉴관리
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v4.1:sym:%EB%A9%94%EB%89%B4%EA%B4%80%EB%A6%AC
+
+https://youtu.be/QjTLwyavDVQ
+
+https://github.com/GSITM2023/egovframe-common-components/commit/030a8c504be55eded29aaf99abf16ae57e96354b
+
+https://github.com/eGovFramework/egovframe-common-components/pull/200
+
 ## 2023-08-01
 
 ### 제네릭 타입 명시: 백업작업정보목록을  조회한다.
