@@ -6,6 +6,88 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-03
+
+### 제네릭 타입 명시: 프로그램변경요청 목록을 조회
+
+- `List<?>` 를 `List<ProgrmManageDtlVO>` 로 수정
+- `resultMap id="progrmManageDtlVO"` 을 `resultMap id="progrmManageDtl"` 로 수정
+- `resultType="egovMap"` 를 `resultMap="progrmManageDtl"` 로 수정
+
+selectProgrmChangeRequstList
+
+프로그램변경요청 목록을 조회
+
+```java
+prm
+service
+impl
+EgovProgrmManageServiceImpl.java (3 matches)
+56: public List<?> selectProgrmList(ComDefaultVO vo) throws Exception {  
+128: public List<?> selectProgrmChangeRequstList(ComDefaultVO vo) throws Exception {  
+191: public List<?> selectChangeRequstProcessList(ComDefaultVO vo) throws Exception {  
+ProgrmManageDAO.java (3 matches)
+37: public List<?> selectProgrmList(ComDefaultVO vo) throws Exception{  
+106: public List<?> selectProgrmChangeRequstList(ComDefaultVO vo) throws Exception{  
+173: public List<?> selectChangeRequstProcessList(ComDefaultVO vo) throws Exception{  
+EgovProgrmManageService.java (3 matches)
+38: List<?> selectProgrmList(ComDefaultVO vo) throws Exception;  
+89: List<?> selectProgrmChangeRequstList(ComDefaultVO vo) throws Exception;  
+133: List<?> selectChangeRequstProcessList(ComDefaultVO vo) throws Exception;  
+web
+EgovProgrmManageController.java (6 matches)
+131: List<?> list_progrmmanage = progrmManageService.selectProgrmList(searchVO);  
+312: List<?> list_changerequst = progrmManageService.selectProgrmChangeRequstList(searchVO);  
+513: List<?> list_changerequst = progrmManageService.selectChangeRequstProcessList(searchVO);  
+687: List<?> list_changerequst = progrmManageService.selectProgrmChangeRequstList(searchVO);  
+756: List<?> list_progrmmanage = progrmManageService.selectProgrmList(searchVO);  
+798: List<?> list_progrmmanage = progrmManageService.selectProgrmList(searchVO);  
+```
+
+selectProgrmChangeRequstList_D
+
+```
+egovframe-common-components
+src
+main
+resources
+egovframework
+mapper
+com
+sym
+prm
+EgovProgrmManageDtl_SQL_altibase.xml
+25: <select id="selectProgrmChangeRequstList_D" parameterType="comDefaultVO" resultMap="progrmManageDtl">  
+EgovProgrmManageDtl_SQL_cubrid.xml
+25: <select id="selectProgrmChangeRequstList_D" parameterType="comDefaultVO" resultType="egovMap">  
+EgovProgrmManageDtl_SQL_goldilocks.xml
+25: <select id="selectProgrmChangeRequstList_D" parameterType="comDefaultVO" resultMap="progrmManageDtl">  
+EgovProgrmManageDtl_SQL_maria.xml
+25: <select id="selectProgrmChangeRequstList_D" parameterType="comDefaultVO" resultType="egovMap">  
+EgovProgrmManageDtl_SQL_mysql.xml
+25: <select id="selectProgrmChangeRequstList_D" parameterType="comDefaultVO" resultType="egovMap">  
+EgovProgrmManageDtl_SQL_oracle.xml
+25: <select id="selectProgrmChangeRequstList_D" parameterType="comDefaultVO" resultType="egovMap">  
+EgovProgrmManageDtl_SQL_postgres.xml
+25: <select id="selectProgrmChangeRequstList_D" parameterType="comDefaultVO" resultType="egovMap">  
+EgovProgrmManageDtl_SQL_tibero.xml
+25: <select id="selectProgrmChangeRequstList_D" parameterType="comDefaultVO" resultType="egovMap">  
+```
+
+프로그램변경요청목록 조회한다.
+- 프로그램변경요청관리
+- http://localhost:8080/egovframework-all-in-one/sym/prm/EgovProgramChangeRequstSelect.do
+
+프로그램변경이력리스트를 조회한다.
+- 프로그램변경이력
+- http://localhost:8080/egovframework-all-in-one/sym/prm/EgovProgramChgHstListSelect.do
+
+https://youtu.be/jG1Tay8nTvE
+
+https://github.com/GSITM2023/egovframe-common-components/commit/20c0b76fd44337a8beed770410ab09179010ae0c
+
+https://github.com/eGovFramework/egovframe-common-components/pull/204
+
 ## 2023-08-02
 
 ### 제네릭 타입 명시: 메뉴리스트관리
