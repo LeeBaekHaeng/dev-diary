@@ -6,6 +6,59 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-04
+
+### 제네릭 타입 명시: 메뉴생성 사이트맵 내용 조회
+
+- `List<?>` 을 `List<EgovMap>` 로 수정
+- import egovframework.com.sym.mnu.stm.service.SiteMapngVO; 제거
+- debugger; 제거
+
+selectMenuCreatSiteMapList
+
+메뉴생성 사이트맵 내용 조회
+
+```java
+mcm
+service
+impl
+EgovMenuCreateManageServiceImpl.java (4 matches)
+68: public List<?> selectMenuCreatList(MenuCreatVO vo) throws Exception {  
+105: public List<?> selectMenuCreatManagList(ComDefaultVO vo) throws Exception {  
+135: public List<?> selectMenuCreatSiteMapList(MenuSiteMapVO vo) throws Exception {  
+145: public List<?> selectSiteMapByUser(MenuSiteMapVO vo) throws Exception {  
+MenuCreateManageDAO.java (4 matches)
+61: public List<?> selectMenuCreatManagList(ComDefaultVO vo) throws Exception{  
+82: public List<?> selectMenuCreatList(MenuCreatVO vo) throws Exception{  
+101: public List<?> selectMenuCreatSiteMapList(MenuSiteMapVO vo) throws Exception{  
+122: public List<?> selectSiteMapByUser(MenuSiteMapVO vo) throws Exception{  
+EgovMenuCreateManageService.java (4 matches)
+49: List<?> selectMenuCreatManagList(ComDefaultVO vo) throws Exception;  
+65: List<?> selectMenuCreatList(MenuCreatVO vo) throws Exception;  
+82: List<?> selectMenuCreatSiteMapList(MenuSiteMapVO vo) throws Exception;  
+90: List<?> selectSiteMapByUser(MenuSiteMapVO vo) throws Exception;  
+web
+EgovMenuCreateManageController.java (5 matches)
+114: List<?> list_menumanage = menuCreateManageService.selectMenuCreatManagList(searchVO);  
+143: List<?> list_menulist = menuCreateManageService.selectMenuCreatList(menuCreatVO);  
+198: List<?> list_menulist = menuCreateManageService.selectMenuCreatSiteMapList(menuSiteMapVO);  
+257: List<?> list_menulist = menuCreateManageService.selectMenuCreatSiteMapList(menuSiteMapVO);  
+287: List<?> list_menulist = menuCreateManageService.selectSiteMapByUser(menuSiteMapVO);  
+```
+
+메뉴사이트맵을 생성할 내용을 조회한다.
+- http://localhost:8080/egovframework-all-in-one/sym/mnu/mcm/EgovMenuCreatSiteMapSelect.do
+
+사이트맵 화면을 조회한다.
+- 사이트맵
+- http://localhost:8080/egovframework-all-in-one/sym/mnu/stm/EgovSiteMapng.do
+
+https://youtu.be/rJFb0DhkDsM
+
+https://github.com/GSITM2023/egovframe-common-components/commit/fdc9f3f7a5bc5bd164a274ca16121204656275bf
+
+https://github.com/eGovFramework/egovframe-common-components/pull/208
+
 ## 2023-08-03
 
 ### 제네릭 타입 명시: 프로그램변경요청 목록을 조회
