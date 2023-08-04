@@ -6,6 +6,51 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-05
+
+### 제네릭 타입 명시: 백업결과정보목록을  조회한다.
+
+- `List<?>` 을 `List<BackupResult>` 로 수정
+- `List<?> result = ` 제거
+- `(List<BackupResult>) ` 제거
+- `@SuppressWarnings("unchecked")` 제거
+
+selectBackupResultList
+
+백업작업정보목록을  조회한다.
+
+```java
+sym
+bak
+service
+impl
+BackupOpertDao.java (2 matches)
+98: public List<?> selectBackupOpertList(BackupOpert searchVO)  
+100: List<?> resultList = selectList("BackupOpertDao.selectBackupOpertList", searchVO);  
+BackupResultDao.java
+69: public List<?> selectBackupResultList(BackupResult searchVO)  
+EgovBackupOpertServiceImpl.java (2 matches)
+88: public List<?> selectBackupOpertList(BackupOpert searchVO)  
+90: List<?> result = backupOpertDao.selectBackupOpertList(searchVO);  
+EgovBackupResultServiceImpl.java (2 matches)
+70: public List<?> selectBackupResultList(BackupResult searchVO)  
+72: List<?> result = dao.selectBackupResultList(searchVO);  
+EgovBackupOpertService.java
+55: public List<?> selectBackupOpertList(BackupOpert searchVO) throws Exception;  
+EgovBackupResultService.java
+47: public List<?> selectBackupResultList(BackupResult searchVO) throws Exception;  
+```
+
+백업결과 목록을 조회한다.
+- 백업결과관리
+- http://localhost:8080/egovframework-all-in-one/sym/sym/bak/getBackupResultList.do
+
+https://youtu.be/u7NckvVd_lM
+
+https://github.com/GSITM2023/egovframe-common-components/commit/77394c39c3fba7ad0739d34abf1e7781680b7593
+
+https://github.com/eGovFramework/egovframe-common-components/pull/213
+
 ## 2023-08-04
 
 ### 제네릭 타입 명시: 메뉴생성 사이트맵 내용 조회
