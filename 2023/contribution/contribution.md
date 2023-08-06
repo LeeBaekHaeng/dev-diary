@@ -6,6 +6,37 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-07
+
+### 제네릭 타입 명시: 네트워크관리
+
+- `List<?>` 을 `List<NtwrkVO>` 로 수정
+- `List<?>` 을 `List<CmmnDetailCode>` 로 수정
+
+```java
+nwk
+service
+EgovNtwrkService.java
+24: public List<?> selectNtwrkList(NtwrkVO ntwrkVO) throws Exception;  
+NtwrkVO.java (3 matches)
+32: private List<?> ntwrkList;  
+65: public List<?> getNtwrkList() {  
+71: public void setNtwrkList(List<?> ntwrkList) {  
+web
+EgovNtwrkController.java
+251: public List<?> getCmmCodeDetailList(ComDefaultCodeVO comDefaultCodeVO, String codeId)  throws Exception {  
+```
+
+네트워크관리
+- 네트워크정보를 관리하기 위해 등록된 네트워크목록을 조회한다.
+- http://localhost:8080/egovframework-all-in-one/sym/sym/nwk/selectNtwrkList.do
+
+https://youtu.be/Qr-F0Ck454k
+
+https://github.com/GSITM2023/egovframe-common-components/commit/7394eb61c23bda908a1b7e1865e6e4ea1c9dc1a1
+
+https://github.com/eGovFramework/egovframe-common-components/pull/217
+
 ## 2023-08-05
 
 ### 제네릭 타입 명시: 백업결과정보목록을  조회한다.
