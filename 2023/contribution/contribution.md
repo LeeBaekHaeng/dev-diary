@@ -6,6 +6,61 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-08
+
+### 제네릭 타입 명시: 서버정보관리
+
+- `List<?>` 을 `List<ServerEqpmnRelateVO>` 로 수정
+  - `model.addAttribute("serverEqpmnRelateList", serverEqpmnRelateVO.getServerEqpmnRelateList());` 제거
+  - `items="${serverEqpmnRelateList}"` 을 `items="${serverEqpmnRelateVO.serverEqpmnRelateList}"` 로 수정
+  - `@ModelAttribute("serverEqpmnRelateVO") ServerEqpmnRelateVO serverEqpmnRelateVO` 을 `@ModelAttribute ServerEqpmnRelateVO serverEqpmnRelateVO` 로 수정
+- `List<?>` 을 `List<ServerEqpmnVO>` 로 수정
+  - `model.addAttribute("serverEqpmnList", serverEqpmnVO.getServerEqpmnList());` 제거
+  - `items="${serverEqpmnList}"` 을 `items="${serverEqpmnVO.serverEqpmnList}"` 로 수정
+- `List<?>` 을 `List<ServerVO>` 로 수정
+  - `model.addAttribute("serverList", serverVO.getServerList());` 제거
+  - `items="${serverList}"` 을 `items="${serverVO.serverList}"` 로 수정
+- `List<?>` 을 `List<CmmnDetailCode>` 로 수정
+
+```java
+srv
+service
+ServerEqpmnRelateVO.java (3 matches)
+32: private List<?> serverEqpmnRelateList;  
+50: public List<?> getServerEqpmnRelateList() {  
+57: public void setServerEqpmnRelateList(List<?> serverEqpmnRelateList) {  
+ServerEqpmnVO.java (3 matches)
+32: private List<?> serverEqpmnList;  
+45: public List<?> getServerEqpmnList() {  
+51: public void setServerEqpmnList(List<?> serverEqpmnList) {  
+ServerVO.java (3 matches)
+33: private List<?> serverList;  
+47: public List<?> getServerList() {  
+53: public void setServerList(List<?> serverList) {  
+web
+EgovServerController.java
+492: public List<?> getCmmCodeDetailList(ComDefaultCodeVO comDefaultCodeVO, String codeId)  throws Exception {  
+```
+
+서버장비관계정보를 관리하기 위해 대상 서버장비목록을 조회한다.
+- http://localhost:8080/egovframework-all-in-one/sym/sym/srv/selectServerEqpmnRelateList.do
+- 서버S/W 관리 > 서버H/W 등록
+- http://localhost:8080/egovframework-all-in-one/sym/sym/srv/selectServerEqpmnRelateList.do?strServerId=SRV_0000000000000001
+
+서버장비를 관리하기 위해 등록된 서버장비목록을 조회한다.
+- 서버정보관리
+- http://localhost:8080/egovframework-all-in-one/sym/sym/srv/selectServerEqpmnList.do
+
+서버정보를 관리하기 위해 등록된 서버목록을 조회한다.
+- 서버(S/W)목록
+- http://localhost:8080/egovframework-all-in-one/sym/sym/srv/selectServerList.do
+
+https://youtu.be/ht2HDXXna6s
+
+https://github.com/GSITM2023/egovframe-common-components/commit/7864f6b1f16d3dc8ba0b626ad97832f34c592642
+
+https://github.com/eGovFramework/egovframe-common-components/pull/219
+
 ## 2023-08-07
 
 ### 제네릭 타입 명시: 네트워크관리
