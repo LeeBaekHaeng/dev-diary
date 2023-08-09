@@ -6,6 +6,34 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-10
+
+### 제네릭 타입 명시: 장애신청관리
+
+- `List<?>` 을 `List<TroblReqstVO>` 로 수정
+- `List<?>` 을 `List<CmmnDetailCode>` 로 수정
+
+```java
+tbr
+service
+TroblReqstVO.java (3 matches)
+22: private List<?> troblReqstList;  
+44: public List<?> getTroblReqstList() {  
+51: public void setTroblReqstList(List<?> troblReqstList) {  
+web
+EgovTroblReqstController.java
+291: public List<?> getCmmCodeDetailList(ComDefaultCodeVO comDefaultCodeVO, String codeId)  throws Exception {  
+```
+
+장애신청관리
+- http://localhost:8080/egovframework-all-in-one/sym/tbm/tbr/selectTroblReqstList.do
+
+https://youtu.be/hSPWKdKn4Bc
+
+https://github.com/GSITM2023/egovframe-common-components/commit/2d931c5da8391286114f0dfb0b8caefd7b714e78
+
+https://github.com/eGovFramework/egovframe-common-components/pull/225
+
 ## 2023-08-09
 
 ### 제네릭 타입 명시: 장애처리결과관리
