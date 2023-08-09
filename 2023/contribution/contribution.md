@@ -6,6 +6,41 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-09
+
+### 제네릭 타입 명시: 장애처리결과관리
+
+- `List<?>` 을 `List<TroblProcessVO>` 로 수정
+- `List<?>` 을 `List<CmmnDetailCode>` 로 수정
+
+TODO
+- `setTroblProcessList` 제거
+- `@ModelAttribute("troblProcessVO") TroblProcessVO troblProcessVO` 에서 `("troblProcessVO")` 제거
+- `model.addAttribute("troblProcessList", troblProcessVO.getTroblProcessList());` 을 `model.addAttribute("troblProcessList", egovTroblProcessService.selectTroblProcessList(troblProcessVO));` 로 수정
+
+```java
+tbm
+tbp
+service
+TroblProcessVO.java (3 matches)
+22: private List<?> troblProcessList;  
+42: public List<?> getTroblProcessList() {  
+48: public void setTroblProcessList(List<?> troblProcessList) {  
+web
+EgovTroblProcessController.java
+182: public List<?> getCmmCodeDetailList(ComDefaultCodeVO comDefaultCodeVO, String codeId)  throws Exception {  
+```
+
+장애처리결과관리
+- 장애처리정보를 관리하기 위해 대상 장애처리목록을 조회한다.
+- http://localhost:8080/egovframework-all-in-one/sym/tbm/tbp/selectTroblProcessList.do
+
+https://youtu.be/-gQnHEH8UoU
+
+https://github.com/GSITM2023/egovframe-common-components/commit/821be57573f5752766ffd4662f6448529c8990aa
+
+https://github.com/eGovFramework/egovframe-common-components/pull/223
+
 ## 2023-08-08
 
 ### 제네릭 타입 명시: 서버정보관리
