@@ -6,6 +6,29 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-11
+
+### 제네릭 타입 명시: 아이디/비밀번호 찾기 화면으로 들어간다
+
+- `List<?>` 을 `List<CmmnDetailCode>` 로 수정
+
+```java
+uat
+uia
+web
+EgovLoginController.java
+367: List<?> code = cmmUseService.selectCmmCodeDetail(vo);  
+```
+
+아이디/비밀번호 찾기 화면으로 들어간다
+- http://localhost:8080/egovframework-all-in-one/uat/uia/egovIdPasswordSearch.do
+
+https://youtu.be/dFn9Kl_3lIc
+
+https://github.com/GSITM2023/egovframe-common-components/commit/f748c5fdb587871bdbd8ba1b474a1c649ee92479
+
+https://github.com/eGovFramework/egovframe-common-components/pull/228
+
 ## 2023-08-10
 
 ### 제네릭 타입 명시: 장애신청관리
