@@ -1,5 +1,44 @@
 # 2023 전자정부 표준프레임워크 컨트리뷰션 멘토링 DAO 단위 테스트 추가
 
+## 2023-08-11
+
+EgovUserInfManageDAO
+
+협업 활용 사용자 정보 조회를 위한 데이터 접근 클래스
+
+협업 활용 사용자 정보 조회를 위한 데이터 접근 클래스 단위 테스트
+
+EgovUserInfManageDAOTest 협업 활용 사용자 정보 조회를 위한 데이터 접근 클래스 단위 테스트
+
+EgovUserInfManageDAO.selectUserList 사용자 정보에 대한 목록을 조회한다.
+
+EgovUserInfManageDAO.selectUserListCnt 사용자 정보에 대한 목록 전체 건수를 조회한다.
+
+EgovUserInfManageDAO.selectCmmntyUserList 커뮤니티 사용자 목록을 조회한다.
+
+EgovUserInfManageDAO.selectCmmntyUserListCnt 커뮤니티 사용자 목록에 대한 전체 건수를 조회한다.
+
+EgovUserInfManageDAO.selectCmmntyMngrList 커뮤니티 관리자 목록을 조회한다.
+
+EgovUserInfManageDAO.selectCmmntyMngrListCnt 커뮤니티 관리자 목록에 대한 전체 건수를 조회한다.
+
+이백행
+
+SmsDAO.selectSmsInfs 문자메시지 목록을 조회한다.
+
+SmsDAO.selectSmsInfsCnt 문자메시지 목록 숫자를 조회한다
+
+SmsDAO.selectSmsInf 문자메시지에 대한 상세정보를 조회한다.
+
+SmsDAO.selectSmsRecptnInfs 문자메시지 수신 및 결과 목록을 조회한다.
+
+SmsDAO.updateSmsRecptnInf 문자메시지 전송 결과 수신을 처리한다.
+
+## 할 일
+
+깃허브 프로젝트 DAO 단위 테스트 추가
+- https://github.com/orgs/GSITM2023/projects/2
+
 주레피의 공통프레임워크 컨트리뷰션(멘토링) 진행 내용
 - https://m.blog.naver.com/dhan0213/223172513100
 
