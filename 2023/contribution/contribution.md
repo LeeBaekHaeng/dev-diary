@@ -6,6 +6,45 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-12
+
+### 제네릭 타입 명시: 기념일관리
+
+- `List<?>` 을 `List<CmmnDetailCode>` 로 수정
+
+```java
+ion
+ans
+web
+EgovAnnvrsryManageController.java (5 matches)
+187: List<?> annvrsrySeCodeList = cmmUseService.selectCmmCodeDetail(vo);  
+216: List<?> annvrsrySeCodeList = cmmUseService.selectCmmCodeDetail(vo);  
+240: List<?> annvrsrySeCodeList = cmmUseService.selectCmmCodeDetail(vo);  
+260: List<?> annvrsrySeCodeList = cmmUseService.selectCmmCodeDetail(vo);  
+302: List<?> annvrsrySeCodeList = cmmUseService.selectCmmCodeDetail(vo);  
+```
+
+등록된 기념일관리의 상세정보를 조회한다.
+- http://localhost:8080/egovframework-all-in-one/uss/ion/ans/selectAnnvrsryManage.do
+
+기념일관리 등록 화면으로 이동한다.
+- http://localhost:8080/egovframework-all-in-one/uss/ion/ans/insertViewAnnvrsry.do
+
+기념일관리정보를 신규로 등록한다.
+- http://localhost:8080/egovframework-all-in-one/uss/ion/ans/insertAnnvrsry.do
+
+기념일관리정보를 신규로 등록한다.
+- http://localhost:8080/egovframework-all-in-one/uss/ion/ans/insertAnnvrsry.do
+
+기 등록된 기념일관리정보를 수정한다.
+- http://localhost:8080/egovframework-all-in-one/uss/ion/ans/updateAnnvrsryManage.do
+
+https://youtu.be/Q2NHz74sPds
+
+https://github.com/GSITM2023/egovframe-common-components/commit/83de7072c83d855a4b32bbda2bdd0c7c86afce60
+
+https://github.com/eGovFramework/egovframe-common-components/pull/230
+
 ## 2023-08-11
 
 ### 제네릭 타입 명시: 아이디/비밀번호 찾기 화면으로 들어간다
