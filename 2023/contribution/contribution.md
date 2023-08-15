@@ -6,6 +6,47 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-15
+
+### 제네릭 타입 명시: 당직체크관리
+
+- `List<?>` 을 `List<BndtDiaryVO>` 로 수정
+- `List<?>` 을 `List<CmmnDetailCode>` 로 수정
+
+```java
+bnt
+service
+impl
+EgovBndtManageServiceImpl.java
+228: public List<?> selectBndtDiary(BndtDiaryVO bndtDiaryVO) throws Exception {  
+EgovBndtManageService.java
+124: public List<?> selectBndtDiary(BndtDiaryVO bndtDiaryVO) throws Exception;  
+web
+EgovBndtManageController.java (4 matches)
+321: List<?> bndtCeckSeList = cmmUseService.selectCmmCodeDetail(vo);  
+380: List<?> bndtCeckSeList = cmmUseService.selectCmmCodeDetail(vo);  
+406: List<?> bndtCeckSeList = cmmUseService.selectCmmCodeDetail(vo);  
+422: List<?> bndtCeckSeList = cmmUseService.selectCmmCodeDetail(vo);  
+```
+
+등록된 당직일지의 정보를 조회한다.
+- http://localhost:8080/egovframework-all-in-one/uss/ion/bnt/selectBndtDiary.do
+
+당직체크관리
+- http://localhost:8080/egovframework-all-in-one/uss/ion/bnt/EgovBndtCeckManageList.do
+
+당직체크 등록 화면으로 이동한다.
+- http://localhost:8080/egovframework-all-in-one/uss/ion/bnt/EgovBndtCeckManageRegist.do
+
+당직체크정보를 신규로 등록한다.
+- http://localhost:8080/egovframework-all-in-one/uss/ion/bnt/insertBndtCeckManage.do
+
+https://youtu.be/mnz10DZf_rM
+
+https://github.com/GSITM2023/egovframe-common-components/commit/250eed89ae0c274c37b0aebf7dcb129a78d0787a
+
+https://github.com/eGovFramework/egovframe-common-components/pull/235
+
 ## 2023-08-12
 
 ### 제네릭 타입 명시: 기념일관리
