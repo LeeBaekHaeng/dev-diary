@@ -6,6 +6,70 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-17
+
+### 제네릭 타입 명시: 행사/이벤트/캠페인 등록전 단계
+
+- `List<?>` 을 `List<CmmnDetailCode>` 로 수정
+
+```java
+ecc
+service
+impl
+EgovEventCmpgnDAO.java (2 matches)
+14: public List<?> selectEventCmpgnList(EventCmpgnVO searchVO) {
+38: public List<?> selectTnextrlHrList(TnextrlHrVO searchVO) {
+EgovEventCmpgnServiceImpl.java (2 matches)
+29: public List<?> selectEventCmpgnList(EventCmpgnVO searchVO) {
+70: public List<?> selectTnextrlHrList(TnextrlHrVO searchVO) {
+EgovEventCmpgnService.java (2 matches)
+9: List<?> selectEventCmpgnList(EventCmpgnVO searchVO);
+21: List<?> selectTnextrlHrList(TnextrlHrVO searchVO);
+web
+EgovEventCmpgnController.java (7 matches)
+93: List<?> sampleList = egovEventCmpgnService.selectEventCmpgnList(searchVO);
+129: List<?> sampleList = egovEventCmpgnService.selectEventCmpgnList(searchVO);
+175: List<?> _result = cmmUseService.selectCmmCodeDetail(vo);
+232: List<?> _result = cmmUseService.selectCmmCodeDetail(vo);
+316: List<?> sampleList = egovEventCmpgnService.selectTnextrlHrList(searchVO);
+358: List<?> _result = cmmUseService.selectCmmCodeDetail(vo);
+419: List<?> _result = cmmUseService.selectCmmCodeDetail(vo);
+```
+
+1. 행사/이벤트/캠페인 등록전 단계
+```java
+EgovEventCmpgnController.java (7 matches)
+175: List<?> _result = cmmUseService.selectCmmCodeDetail(vo);
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/ecc/insertEventCmpgnView.do
+
+2. 행사/이벤트/캠페인을 수정하기 전 처리
+```java
+EgovEventCmpgnController.java (7 matches)
+232: List<?> _result = cmmUseService.selectCmmCodeDetail(vo);
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/ecc/updateEventCmpgnView.do
+
+3. 외부인사정보 등록전 단계
+```java
+EgovEventCmpgnController.java (7 matches)
+358: List<?> _result = cmmUseService.selectCmmCodeDetail(vo);
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/ecc/insertTnextrlHrView.do
+
+4. 외부인사정보를 수정하기 전 처리
+```java
+EgovEventCmpgnController.java (7 matches)
+419: List<?> _result = cmmUseService.selectCmmCodeDetail(vo);
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/ecc/updateTnextrlHrView.do
+
+https://youtu.be/K4i4h4Kw7UY
+
+https://github.com/GSITM2023/egovframe-common-components/commit/f84cacf66d899229f018efd4daeeb729163125ec
+
+https://github.com/eGovFramework/egovframe-common-components/pull/237
+
 ## 2023-08-16
 
 ### 제네릭 타입 명시: 직원경조사관리
