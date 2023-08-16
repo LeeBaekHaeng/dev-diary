@@ -6,6 +6,63 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-16
+
+### 제네릭 타입 명시: 직원경조사관리
+
+- `List<?>` 을 `List<CmmnDetailCode>` 로 수정
+
+```java
+ctn
+web
+EgovCtsnnManageController.java (7 matches)
+75: List<?> ctsnnCdCodeList = null;  
+108: List<?> ctsnnCdCodeList = null;  
+143: List<?> ctsnnCdCodeList = null;  
+144: List<?> relateCodeList  = null;  
+185: List<?> ctsnnCdCodeList = null;  
+186: List<?> relateCodeList  = null;  
+297: List<?> ctsnnCdCodeList = null;  
+```
+
+경조관리 목록화면 이동
+```java
+75: List<?> ctsnnCdCodeList = null;
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/ctn/EgovCtsnnManageListView.do
+
+직원경조사관리
+```java
+108: List<?> ctsnnCdCodeList = null;
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/ctn/selectCtsnnManageList.do
+
+등록된 경조관리의 상세정보를 조회한다.
+```java
+143: List<?> ctsnnCdCodeList = null;
+144: List<?> relateCodeList  = null;
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/ctn/EgovCtsnnManageDetail.do
+
+경조관리 등록 화면으로 이동한다.
+```java
+185: List<?> ctsnnCdCodeList = null;
+186: List<?> relateCodeList  = null;
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/ctn/EgovCtsnnRegist.do
+
+직원경조사승인관리
+```java
+297: List<?> ctsnnCdCodeList = null;
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/ctn/EgovCtsnnConfmList.do
+
+https://youtu.be/gT3ND-nBpZ0
+
+https://github.com/GSITM2023/egovframe-common-components/commit/03cb89a0dc5a88c00eed9f20aec9da190f62ce0b
+
+https://github.com/eGovFramework/egovframe-common-components/pull/236
+
 ## 2023-08-15
 
 ### 제네릭 타입 명시: 당직체크관리
