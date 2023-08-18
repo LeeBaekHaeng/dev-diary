@@ -6,6 +6,56 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-18
+
+### 제네릭 타입 명시: 행사신청관리
+
+- `List<?>` 을 `List<CmmnDetailCode>` 로 수정
+
+```java
+evt
+web
+EgovEventManageController.java (4 matches)
+101: List<?> eventSeCodeList = cmmUseService.selectCmmCodeDetail(vo);
+186: List<?> eventSeCodeList = cmmUseService.selectCmmCodeDetail(vo);
+284: List<?> eventSeCodeList = cmmUseService.selectCmmCodeDetail(vo);
+469: List<?> eventSeCodeList = cmmUseService.selectCmmCodeDetail(vo);
+```
+
+### 행사신청관리
+```java
+EgovEventManageController.java (4 matches)
+101: List<?> eventSeCodeList = cmmUseService.selectCmmCodeDetail(vo);
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/evt/EgovEventReqstManageList.do
+
+### 행사관리 등록 화면으로 이동한다.
+```java
+EgovEventManageController.java (4 matches)
+186: List<?> eventSeCodeList = cmmUseService.selectCmmCodeDetail(vo);
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/evt/EgovEventReqstRegist.do
+
+### 행사접수관리
+```java
+EgovEventManageController.java (4 matches)
+284: List<?> eventSeCodeList = cmmUseService.selectCmmCodeDetail(vo);
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/evt/EgovEventRcrptManageList.do
+
+### 행사접수승인관리
+```java
+EgovEventManageController.java (4 matches)
+469: List<?> eventSeCodeList = cmmUseService.selectCmmCodeDetail(vo);
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/evt/selectEventRceptConfmList.do
+
+https://youtu.be/yTQUdskPcTw
+
+https://github.com/GSITM2023/egovframe-common-components/commit/8bcd3f6942377cd9b392b1ff5df437b044939532
+
+https://github.com/eGovFramework/egovframe-common-components/pull/240
+
 ## 2023-08-17
 
 ### 제네릭 타입 명시: 행사/이벤트/캠페인 등록전 단계
