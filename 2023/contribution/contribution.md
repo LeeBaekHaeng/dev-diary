@@ -6,6 +6,40 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-19
+
+### 제네릭 타입 명시: 등록된 회의실관리의 상세정보를 조회한다.
+
+- `List<?>` 을 `List<CmmnDetailCode>` 로 수정
+
+```java
+mtg
+web
+EgovMtgPlaceManageController.java (2 matches)
+142: List<?> lcSeCodeList = cmmUseService.selectCmmCodeDetail(vo);
+166: List<?> lcSeCodeList = cmmUseService.selectCmmCodeDetail(vo);
+```
+
+### 등록된 회의실관리의 상세정보를 조회한다.
+```java
+EgovMtgPlaceManageController.java (2 matches)
+142: List<?> lcSeCodeList = cmmUseService.selectCmmCodeDetail(vo);
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/mtg/selectMtgPlaceManage.do
+
+### 회의실관리 등록 화면으로 이동한다.
+```java
+EgovMtgPlaceManageController.java (2 matches)
+166: List<?> lcSeCodeList = cmmUseService.selectCmmCodeDetail(vo);
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/mtg/insertViewMtgPlace.do
+
+https://youtu.be/wNamgEKxzf8
+
+https://github.com/GSITM2023/egovframe-common-components/commit/c5fed5c9af6c882d8ad02a48b19d90365825af1b
+
+https://github.com/eGovFramework/egovframe-common-components/pull/243
+
 ## 2023-08-18
 
 ### 제네릭 타입 명시: 행사신청관리
