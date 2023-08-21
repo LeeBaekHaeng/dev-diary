@@ -6,6 +6,51 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-21
+
+### 제네릭 타입 명시: 쪽지관리
+
+- `List<?>` 을 `List<EgovMap>` 로 수정
+- `List<?>` 을 `List<CmmnDetailCode>` 로 수정
+
+```java
+ntm
+service
+impl
+EgovNoteManageServiceImpl.java
+124: public List<?> selectNoteEmpListPopup(ComDefaultVO searchVO) throws Exception{
+NoteManageDao.java
+73: public List<?> selectNoteEmpListPopup(ComDefaultVO searchVO) throws Exception {
+EgovNoteManageService.java
+48: public List<?> selectNoteEmpListPopup(ComDefaultVO searchVO) throws Exception;
+web
+EgovNoteManageController.java (3 matches)
+104: List<?> listComCode = cmmUseService.selectCmmCodeDetail(voComCode);
+234: List<?> resultList = egovNoteManageService.selectNoteEmpListPopup(searchVO);
+251: List<?> reusltList = egovNoteManageService.selectNoteEmpListPopup(searchVO);
+```
+
+### 쪽지 관리(보내기) 사용자 목록을 조회한다.
+```java
+EgovNoteManageController.java (3 matches)
+234: List<?> resultList = egovNoteManageService.selectNoteEmpListPopup(searchVO);
+251: List<?> reusltList = egovNoteManageService.selectNoteEmpListPopup(searchVO);
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/ntm/listEgovNoteEmpListPopup.do
+
+### 쪽지관리
+```java
+EgovNoteManageController.java (3 matches)
+104: List<?> listComCode = cmmUseService.selectCmmCodeDetail(voComCode);
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/ntm/registEgovNoteManage.do
+
+https://youtu.be/JIQc62ro9as
+
+https://github.com/GSITM2023/egovframe-common-components/commit/924ecb17c33d9983a77f93b69951fd8162632af6
+
+https://github.com/eGovFramework/egovframe-common-components/pull/247
+
 ## 2023-08-19
 
 ### 제네릭 타입 명시: 등록된 회의실관리의 상세정보를 조회한다.
