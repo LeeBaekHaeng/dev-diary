@@ -6,6 +6,40 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-22
+
+### 제네릭 타입 명시: 받은쪽지함관리
+
+- `List<?>` 을 `List<EgovMap>` 로 수정
+
+```java
+ntr
+service
+impl
+EgovNoteRecptnServiceImpl.java
+42: public List<?> selectNoteRecptnList(NoteRecptn noteRecptn) throws Exception {
+NoteRecptnDao.java
+34: public List<?> selectNoteRecptnList(NoteRecptn noteRecptn) throws Exception {
+EgovNoteRecptnService.java
+29: public List<?> selectNoteRecptnList(NoteRecptn noteRecptn) throws Exception;
+web
+EgovNoteRecptnController.java (2 matches)
+164: List<?> reusltList = egovNoteRecptnService.selectNoteRecptnList(searchVO);
+```
+
+### 받은쪽지함관리
+```java
+EgovNoteRecptnController.java (2 matches)
+164: List<?> reusltList = egovNoteRecptnService.selectNoteRecptnList(searchVO);
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/ntr/listNoteRecptn.do
+
+https://youtu.be/uEKBYUymsBg
+
+https://github.com/GSITM2023/egovframe-common-components/commit/5c07f58c90a218db803c4a499ca07a63cbfb6024
+
+https://github.com/eGovFramework/egovframe-common-components/pull/250
+
 ## 2023-08-21
 
 ### 제네릭 타입 명시: 쪽지관리
