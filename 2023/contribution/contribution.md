@@ -6,6 +6,46 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-23
+
+### 제네릭 타입 명시: 팝업창의 취약점을 관리하기 위해 등록된 팝업창 화이트리스트를 조회한다.
+
+- `List<?>` 을 `List<EgovMap>` 로 수정
+
+```java
+pwm
+service
+impl
+EgovPopupManageServiceImpl.java (3 matches)
+97: public List<?> selectPopupWhiteList() throws Exception {
+PopupManageDAO.java (3 matches)
+76: public List<?> selectPopupWhiteList() throws Exception {
+EgovPopupManageService.java (3 matches)
+61: public List<?> selectPopupWhiteList() throws Exception;
+web
+EgovPopupManageController.java (3 matches)
+321: List<?> popupWhiteList = egovPopupManageService.selectPopupWhiteList();
+```
+
+### 팝업창의 취약점을 관리하기 위해 등록된 팝업창 화이트리스트를 조회한다.
+```java
+EgovPopupManageController.java (3 matches)
+321: List<?> popupWhiteList = egovPopupManageService.selectPopupWhiteList();
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/pwm/openPopupManage.do
+
+720. 팝업창관리
+- http://localhost:8080/egovframework-all-in-one/uss/ion/pwm/listPopup.do
+- 등록
+- 체크박스
+- 미리보기
+
+https://youtu.be/JFE0ocZ9Xjk
+
+https://github.com/GSITM2023/egovframe-common-components/commit/194207d15cc85b71d361e479d0ded0e32c73ca0c
+
+https://github.com/eGovFramework/egovframe-common-components/pull/252
+
 ## 2023-08-22
 
 ### 제네릭 타입 명시: 받은쪽지함관리
