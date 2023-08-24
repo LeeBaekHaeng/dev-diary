@@ -6,6 +6,45 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-25
+
+### 제네릭 타입 명시: 팝업창관리 메인 테스트 목록을 조회한다.
+
+- `List<?>` 을 `List<EgovMap>` 로 수정
+
+```java
+pwm
+service
+impl
+EgovPopupManageServiceImpl.java (3 matches)
+133: public List<?> selectPopupMainList(PopupManageVO popupManageVO) throws Exception {
+PopupManageDAO.java (3 matches)
+109: public List<?> selectPopupMainList(PopupManageVO popupManageVO) throws Exception {
+EgovPopupManageService.java (3 matches)
+88: public List<?> selectPopupMainList(PopupManageVO popupManageVO) throws Exception;
+web
+EgovPopupManageController.java (3 matches)
+349: List<?> resultList = egovPopupManageService.selectPopupMainList(popupManageVO);
+```
+
+### 팝업창관리 메인 테스트 목록을 조회한다.
+```java
+EgovPopupManageController.java (3 matches)
+349: List<?> resultList = egovPopupManageService.selectPopupMainList(popupManageVO);
+```
+http://localhost:8080/egovframework-all-in-one/uss/ion/pwm/listMainPopup.do
+
+720. 팝업창관리
+- http://localhost:8080/egovframework-all-in-one/uss/ion/pwm/listPopup.do
+- 등록
+- 게시기간: 2023-08-23 00:00 ~ 2023-08-24 00:00
+
+https://youtu.be/lSdT8aabKRY
+
+https://github.com/GSITM2023/egovframe-common-components/commit/30e4dd03881e4a976f470cf641e35be594427d54
+
+https://github.com/eGovFramework/egovframe-common-components/pull/256
+
 ## 2023-08-23
 
 ### 제네릭 타입 명시: 팝업창의 취약점을 관리하기 위해 등록된 팝업창 화이트리스트를 조회한다.
