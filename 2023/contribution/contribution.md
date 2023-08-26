@@ -6,6 +6,35 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-26
+
+### 제네릭 타입 명시: 약도 관리
+
+- `List<?>` 을 `List<EgovMap>` 로 수정
+
+```java
+rmm
+service
+impl
+EgovRoughMapDAO.java
+43: public List<?> selectRoughMapList(RoughMapDefaultVO searchVO) throws Exception {  
+EgovRoughMapServiceImpl.java
+57: public List<?> selectRoughMapList(RoughMapDefaultVO searchVO) throws Exception {  
+EgovRoughMapService.java
+36: List<?> selectRoughMapList(RoughMapDefaultVO searchVO) throws Exception;  
+web
+EgovRoughMapController.java
+94: List<?> roughMapList = egovRoughMapService.selectRoughMapList(searchVO);  
+```
+
+http://localhost:8080/egovframework-all-in-one/com/uss/ion/rmm/selectRoughMapList.do
+
+https://youtu.be/txlMfES17w4
+
+https://github.com/GSITM2023/egovframe-common-components/commit/20ed56be84ccaf5dcdd2b491c38392de6a4d48b4
+
+https://github.com/eGovFramework/egovframe-common-components/pull/269
+
 ## 2023-08-25
 
 ### 제네릭 타입 명시: 팝업창관리 메인 테스트 목록을 조회한다.
