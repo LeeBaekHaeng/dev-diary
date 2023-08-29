@@ -6,6 +6,35 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-30
+
+### 제네릭 타입 명시: 최근검색어 조회
+
+- `List<?>` 을 `List<EgovMap>` 로 수정
+
+```java
+rsm
+service
+impl
+EgovRecentSrchwrdServiceImpl.java (3 matches)
+48: public List<?> selectRecentSrchwrdList(RecentSrchwrd searchVO) throws Exception {
+RecentSrchwrdDao.java (3 matches)
+33: public List<?> selectRecentSrchwrdList(RecentSrchwrd searchVO) throws Exception {
+EgovRecentSrchwrdService.java (3 matches)
+29: public List<?> selectRecentSrchwrdList(RecentSrchwrd searchVO) throws Exception;
+web
+EgovRecentSrchwrdController.java (3 matches)
+109: List<?> reusltList = egovRecentSrchwrdService.selectRecentSrchwrdList(searchVO);
+```
+
+http://localhost:8080/egovframework-all-in-one/uss/ion/rsm/listRecentSrchwrd.do
+
+https://youtu.be/ATI3iG_GRKU
+
+https://github.com/GSITM2023/egovframe-common-components/commit/d5e2735f264a7c5973a011b0afc38baf8cec93be
+
+https://github.com/eGovFramework/egovframe-common-components/pull/279
+
 ## 2023-08-26
 
 ### 제네릭 타입 명시: 약도 관리
