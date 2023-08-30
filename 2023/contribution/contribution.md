@@ -6,6 +6,35 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-08-31
+
+### 제네릭 타입 명시: 최근검색어 결과를 조회한다.
+
+- `List<?>` 을 `List<EgovMap>` 로 수정
+
+```java
+rsm
+service
+impl
+EgovRecentSrchwrdServiceImpl.java (3 matches)
+114: public List<?> selectRecentSrchwrdResultInquire(RecentSrchwrd recentSrchwrd) throws Exception {
+RecentSrchwrdDao.java (3 matches)
+90: public List<?> selectRecentSrchwrdResultInquire(RecentSrchwrd recentSrchwrd) throws Exception {
+EgovRecentSrchwrdService.java (3 matches)
+74: public List<?> selectRecentSrchwrdResultInquire(RecentSrchwrd recentSrchwrd) throws Exception;
+web
+EgovRecentSrchwrdController.java (3 matches)
+331: List<?> reusltList = null;
+```
+
+http://localhost:8080/egovframework-all-in-one/uss/ion/rsm/listRecentSrchwrdResultSerach.do?searchKeyword=공통코드관리&srchwrdManageId=SRCMGR_0000000000001&srchwrdManageUseYn=Y
+
+https://youtu.be/v1uY4aWUx3o
+
+https://github.com/GSITM2023/egovframe-common-components/commit/f313d5fb9f69467a361735346c08273bdb5f0a5a
+
+https://github.com/eGovFramework/egovframe-common-components/pull/284
+
 ## 2023-08-30
 
 ### 제네릭 타입 명시: 최근검색어 조회
