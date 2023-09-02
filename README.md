@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-09-02
+
+매일성경묵상 새길말씀(야고보서 2:26)
+
+영혼 없는 몸이 죽은 것 같이 행함이 없는 믿음은 죽은 것이니라
+
+[제네릭 타입 명시: RSS서비스 목록을 상세조회 조회한다.](2023/contribution/contribution.md#2023-00-02)
+
 ## 2023-09-01
 
 매일성경묵상 새길말씀(야고보서 1:27)

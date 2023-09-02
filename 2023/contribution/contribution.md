@@ -6,6 +6,46 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-09-02
+
+### 제네릭 타입 명시: RSS서비스 목록을 상세조회 조회한다.
+
+- `List<?>` 을 `List<Map<String, String>>` 로 수정
+
+```java
+rsn
+service
+impl
+EgovRssServiceImpl.java (2 matches)
+46: List<?> listResult = dao.selectRssTagServiceTable(param);
+RssDao.java (2 matches)
+33: public List<?> selectRssTagServiceTable(Map<?, ?> param) throws Exception {
+EgovRssService.java (2 matches)
+29: public List<?> selectRssTagServiceTable(Map<?, ?> param) throws Exception;
+```
+
+820. RSS태그관리 > 등록
+
+http://localhost:8080/egovframework-all-in-one/uss/ion/rsn/detailRssTagService.do?rssId=RSS_ID00000000000001
+
+TODO
+
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'FRST_REGISTER_PNTTM' in 'field list'
+
+FRST_REGISTER_PNTTM -> FRST_REGIST_PNTTM
+
+[log4j]2023-09-02 15:32:59,515 ERROR [egovframework.com.cmm.EgovComOthersExcepHndlr] egovframework.com.uss.ion.rsn.service.impl.EgovRssServiceImpl.selectRssTagServiceTable
+org.springframework.dao.InvalidDataAccessApiUsageException: Error attempting to get column 'FRST_REGIST_PNTTM' from result set.  Cause: java.sql.SQLFeatureNotSupportedException: resultSet=net.sf.log4jdbc.ResultSetSpy@686379b9, columnLabel=FRST_REGIST_PNTTM, type=class java.time.LocalDateTime
+; resultSet=net.sf.log4jdbc.ResultSetSpy@686379b9, columnLabel=FRST_REGIST_PNTTM, type=class java.time.LocalDateTime; nested exception is java.sql.SQLFeatureNotSupportedException: resultSet=net.sf.log4jdbc.ResultSetSpy@686379b9, columnLabel=FRST_REGIST_PNTTM, type=class java.time.LocalDateTime
+
+DATE_FORMAT(FRST_REGISTER_PNTTM,'%Y-%m-%d') AS FRST_REGISTER_PNTTM, -> TO_CHAR(FRST_REGIST_PNTTM,'YYYY-MM-DD') AS FRST_REGISTER_PNTTM,
+
+https://youtu.be/ULT4b4atX4I
+
+https://github.com/GSITM2023/egovframe-common-components/commit/81a7ebf041c3d781ad66b818b31b69fe45f0eb4d
+
+https://github.com/eGovFramework/egovframe-common-components/pull/302
+
 ## 2023-09-01
 
 ### 제네릭 타입 명시: 최근검색어결과 목록을 조회한다.
