@@ -6,6 +6,35 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-09-04
+
+### 제네릭 타입 명시: RSS태그서비스
+
+- `List<?>` 을 `List<EgovMap>` 로 수정
+
+```java
+rsn
+service
+impl
+EgovRssServiceImpl.java (2 matches)
+102: public List<?> selectRssTagServiceList(RssInfo rssInfo) throws Exception {
+RssDao.java (2 matches)
+43: public List<?> selectRssTagServiceList(RssInfo rssInfo) throws Exception {
+EgovRssService.java (2 matches)
+37: public List<?> selectRssTagServiceList(RssInfo rssInfo) throws Exception;
+web
+EgovRssController.java
+87: List<?> reusltList = egovRssService.selectRssTagServiceList(searchVO);
+```
+
+http://localhost:8080/egovframework-all-in-one/uss/ion/rsn/listRssTagService.do
+
+https://youtu.be/H24xUydGGLc
+
+https://github.com/GSITM2023/egovframe-common-components/commit/a79b9667c8f22cf4f8c267a898545d1f038c0cd3
+
+https://github.com/eGovFramework/egovframe-common-components/pull/303
+
 ## 2023-09-02
 
 ### 제네릭 타입 명시: RSS서비스 목록을 상세조회 조회한다.

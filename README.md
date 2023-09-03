@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-09-04
+
+매일성경묵상 새길말씀(야고보서 4:10)
+
+주 앞에서 낮추라 그리하면 주께서 너희를 높이시리라
+
+[제네릭 타입 명시: RSS태그서비스](2023/contribution/contribution.md#2023-00-04)
+
 ## 2023-09-02
 
 매일성경묵상 새길말씀(야고보서 2:26)
