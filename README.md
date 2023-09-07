@@ -10,13 +10,21 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-09-08
+
+매일성경묵상 새길말씀(열왕기상 3:28)
+
+온 이스라엘이 왕이 심리하여 판결함을 듣고 왕을 두려워하였으니 이는 하나님의 지혜가 그의 속에 있어 판결함을 봄이더라
+
+[제네릭 타입 명시: RSS태그관리를 수정한다.](2023/contribution/contribution.md#2023-09-08)
+
 ## 2023-09-04
 
 매일성경묵상 새길말씀(야고보서 4:10)
 
 주 앞에서 낮추라 그리하면 주께서 너희를 높이시리라
 
-[제네릭 타입 명시: RSS태그서비스](2023/contribution/contribution.md#2023-00-04)
+[제네릭 타입 명시: RSS태그서비스](2023/contribution/contribution.md#2023-09-04)
 
 ## 2023-09-02
 
@@ -24,7 +32,7 @@ https://github.com/GSITM2023/egovframe-common-components
 
 영혼 없는 몸이 죽은 것 같이 행함이 없는 믿음은 죽은 것이니라
 
-[제네릭 타입 명시: RSS서비스 목록을 상세조회 조회한다.](2023/contribution/contribution.md#2023-00-02)
+[제네릭 타입 명시: RSS서비스 목록을 상세조회 조회한다.](2023/contribution/contribution.md#2023-09-02)
 
 ## 2023-09-01
 
@@ -32,7 +40,7 @@ https://github.com/GSITM2023/egovframe-common-components
 
 하나님 아버지 앞에서 정결하고 더러움이 없는 경건은 곧 고아와 과부를 그 환난중에 돌보고 또 자기를 지켜 세속에 물들지 아니하는 그것이니라
 
-[제네릭 타입 명시: 최근검색어결과 목록을 조회한다.](2023/contribution/contribution.md#2023-00-01)
+[제네릭 타입 명시: 최근검색어결과 목록을 조회한다.](2023/contribution/contribution.md#2023-09-01)
 
 ## 2023-08-31
 
