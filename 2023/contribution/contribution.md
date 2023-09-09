@@ -6,6 +6,33 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-09-09
+
+### 제네릭 타입 명시: RSS태그관리 목록을 조회한다.
+
+- `List<?>` 을 `List<Map<String, String>>` 로 수정
+
+```java
+rss
+service
+impl
+EgovRssTagManageServiceImpl.java (3 matches)
+58: public List<?> selectRssTagManageTableColumnList(Map map) throws Exception {
+EgovRssTagManageService.java (3 matches)
+36: public List<?> selectRssTagManageTableColumnList(Map<?, ?> map) throws Exception;
+web
+EgovRssTagManageController.java (3 matches)
+83: ArrayList<?> arrListResult = (ArrayList<?>)egovRssManageService.selectRssTagManageTableColumnList(hmParam);
+```
+
+http://localhost:8080/egovframework-all-in-one/uss/ion/rss/listRssTagManageTableColumnList.do?tableName=comtczip
+
+https://youtu.be/MoXdZQ5R9Ac
+
+https://github.com/GSITM2023/egovframe-common-components/commit/57ba90e70abb7125699e66ae94b3c58c34081233
+
+https://github.com/eGovFramework/egovframe-common-components/pull/308
+
 ## 2023-09-08
 
 ### 제네릭 타입 명시: RSS태그관리를 수정한다.
