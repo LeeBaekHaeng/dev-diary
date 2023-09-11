@@ -6,6 +6,18 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-09-11
+
+DeptJobDAO.updateDeptJobBx 부서업무함 정보를 수정한다.
+- `void` 를 `int` 로 수정
+- `throws Exception` 제거
+
+https://youtu.be/vM2gYfIVowU
+
+https://github.com/eGovFramework/egovframe-common-components/pull/248/commits/ea93fd78cf702d5c1676b6b9622df5af8f8cbc2d
+
+https://github.com/eGovFramework/egovframe-common-components/pull/248
+
 ## 2023-09-09
 
 ### 제네릭 타입 명시: RSS태그관리 목록을 조회한다.

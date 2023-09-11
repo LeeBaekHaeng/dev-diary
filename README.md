@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-09-11
+
+매일성경묵상 새길말씀(열왕기상 6:13)
+
+내가 또한 이스라엘 자손 가운데에 거하며 내 백성 이스라엘을 버리지 아니하리라 하셨더라
+
+[DeptJobDAO.updateDeptJobBx 부서업무함 정보를 수정한다.](2023/contribution/contribution.md#2023-09-11)
+
 ## 2023-09-09
 
 매일성경묵상 새길말씀(열왕기상 4:29)
