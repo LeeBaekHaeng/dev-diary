@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-09-12
+
+매일성경묵상 새길말씀(욥기 28:28)
+
+또 사람에게 말씀하셨도다 보라 주를 경외함이 지혜요 악을 떠남이 명철이니라
+
+[DeptJobDAO.selectDeptJobBxOrdr 부서업무함의 표시순서가 중복되는지를 조회한다.](2023/contribution/contribution.md#2023-09-12)
+
 ## 2023-09-11
 
 매일성경묵상 새길말씀(열왕기상 6:13)

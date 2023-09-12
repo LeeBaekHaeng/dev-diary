@@ -6,6 +6,18 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-09-12
+
+DeptJobDAO.selectDeptJobBxOrdr 부서업무함의 표시순서가 중복되는지를 조회한다.
+- `throws Exception` 제거
+- `(Integer)` 제거
+
+https://youtu.be/UoCKdsS9Nb0
+
+https://github.com/eGovFramework/egovframe-common-components/pull/248/commits/068bb8a360a75033add15a3aad5cb23d54032190
+
+https://github.com/eGovFramework/egovframe-common-components/pull/248
+
 ## 2023-09-11
 
 DeptJobDAO.updateDeptJobBx 부서업무함 정보를 수정한다.
