@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-09-13
+
+매일성경묵상 새길말씀(고린도전서 1:9)
+
+너희를 불러 그의 아들 예수 그리스도 우리 주와 더불어 교제하게 하시는 하나님은 미쁘시도다
+
+[DeptJobDAO.updateDeptJobBxOrdrUp 부서업무함 정보의 표시순서를 수정한다. (표시순서 증가)](2023/contribution/contribution.md#2023-09-13)
+
 ## 2023-09-12
 
 매일성경묵상 새길말씀(욥기 28:28)
