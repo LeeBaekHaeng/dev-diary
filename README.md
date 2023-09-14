@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-09-14
+
+매일성경묵상 새길말씀(고린도전서 1:30)
+
+너희는 하나님으로부터 나서 그리스도 예수 안에 있고 예수는 하나님으로부터 나와서 우리에게 지혜와 의로움과 거룩함과 구원함이 되셨으니
+
+[DeptJobDAO.updateDeptJobBxOrdrDown 부서업무함 정보의 표시순서를 수정한다. (표시순서 감소)](2023/contribution/contribution.md#2023-09-14)
+
 ## 2023-09-13
 
 매일성경묵상 새길말씀(고린도전서 1:9)
