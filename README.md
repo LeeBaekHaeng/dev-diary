@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-09-15
+
+매일성경묵상 새길말씀(잠언 8:11)
+
+대저 지혜는 진주보다 나으므로 원하는 모든 것을 이에 비교할 수 없음이니라
+
+[DeptJobDAO.updateDeptJobBxOrdr 부서업무함 정보의 표시순서를 수정한다.](2023/contribution/contribution.md#2023-09-15)
+
 ## 2023-09-14
 
 매일성경묵상 새길말씀(고린도전서 1:30)
