@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-09-16
+
+매일성경묵상 새길말씀(잠언 9:10)
+
+여호와를 경외하는 것이 지혜의 근본이요 거룩하신 자를 아는 것이 명철이니라
+
+[DeptJobDAO.updateDeptJobBxOrdrAll 주어진 조건에 만족하는 전체 부서업무함 정보의 표시순서를 수정한다.](2023/contribution/contribution.md#2023-09-16)
+
 ## 2023-09-15
 
 매일성경묵상 새길말씀(잠언 8:11)

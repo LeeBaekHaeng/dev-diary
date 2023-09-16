@@ -6,6 +6,18 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-09-16
+
+DeptJobDAO.updateDeptJobBxOrdrAll 주어진 조건에 만족하는 전체 부서업무함 정보의 표시순서를 수정한다.
+- `void` 를 `int` 로 수정
+- `throws Exception` 제거
+
+https://youtu.be/9GrQ1Zg0DoM
+
+https://github.com/eGovFramework/egovframe-common-components/pull/248/commits/d6bc33cca6669c3cc69a4cb8679bb7ade1a2c37a
+
+https://github.com/eGovFramework/egovframe-common-components/pull/248
+
 ## 2023-09-15
 
 DeptJobDAO.updateDeptJobBxOrdr 부서업무함 정보의 표시순서를 수정한다.
