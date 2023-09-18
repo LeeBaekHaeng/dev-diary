@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-09-18
+
+매일성경묵상 새길말씀(잠언 13:14)
+
+지혜 있는 자의 교훈은 생명의 샘이니 사망의 그물에서 벗어나게 하느니라
+
+[DeptJobDAO.selectMaxDeptJobBxOrdr 등록시 부서업무함의 표시순서를 조회한다.](2023/contribution/contribution.md#2023-09-18)
+
 ## 2023-09-16
 
 매일성경묵상 새길말씀(잠언 9:10)
