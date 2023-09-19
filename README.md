@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-09-19
+
+매일성경묵상 새길말씀(잠언 14:2)
+
+정직하게 행하는 자는 여호와를 경외하여도 패역하게 행하는 자는 여호와를 경멸하느니라
+
+[DeptJobDAO.selectDeptJobBxCheck 부서내 부서업무함명의 건수를 조회한다.](2023/contribution/contribution.md#2023-09-19)
+
 ## 2023-09-18
 
 매일성경묵상 새길말씀(잠언 13:14)

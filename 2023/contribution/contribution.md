@@ -6,6 +6,18 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-09-19
+
+DeptJobDAO.selectDeptJobBxCheck 부서내 부서업무함명의 건수를 조회한다.
+- `throws Exception` 제거
+- `(Integer)` 제거
+
+https://youtu.be/Ud2kuNby-5M
+
+https://github.com/eGovFramework/egovframe-common-components/pull/248/commits/9f9701c5b48dfb57730bf3cba4c8fb5213d04921
+
+https://github.com/eGovFramework/egovframe-common-components/pull/248
+
 ## 2023-09-18
 
 DeptJobDAO.selectMaxDeptJobBxOrdr 등록시 부서업무함의 표시순서를 조회한다.
