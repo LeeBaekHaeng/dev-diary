@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-09-20
+
+매일성경묵상 새길말씀(잠언 15:33)
+
+여호와를 경외하는 것은 지혜의 훈계라 겸손은 존귀의 길잡이니라
+
+[DeptJobDAO.deleteDeptJobBx 부서업무함 정보를 삭제한다.](2023/contribution/contribution.md#2023-09-20)
+
 ## 2023-09-19
 
 매일성경묵상 새길말씀(잠언 14:2)

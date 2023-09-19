@@ -6,6 +6,18 @@ https://github.com/eGovFramework/egovframe-common-components
 
 https://github.com/eGovFramework/egovframe-common-components/pulls
 
+## 2023-09-20
+
+DeptJobDAO.deleteDeptJobBx 부서업무함 정보를 삭제한다.
+- `void` 를 `int` 로 수정
+- `throws Exception` 제거
+
+https://youtu.be/dscgwJy3OTw
+
+https://github.com/eGovFramework/egovframe-common-components/pull/248/commits/635322cac417d7255759b01b9fb2becf246ccf62
+
+https://github.com/eGovFramework/egovframe-common-components/pull/248
+
 ## 2023-09-19
 
 DeptJobDAO.selectDeptJobBxCheck 부서내 부서업무함명의 건수를 조회한다.
