@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-09-21
+
+매일성경묵상 새길말씀(잠언 16:1)
+
+마음의 경영은 사람에게 있어도 말의 응답은 여호와께로부터 나오느니라
+
+[DeptJobDAO.selectDeptJobList 주어진 조건에 따른 부서업무 목록을 불러온다.](2023/contribution/contribution.md#2023-09-21)
+
 ## 2023-09-20
 
 매일성경묵상 새길말씀(잠언 15:33)
