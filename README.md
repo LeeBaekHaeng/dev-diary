@@ -10,6 +10,14 @@ https://github.com/GSITM2023/egovframe-common-components
 
 [2022 개발일기](2022/README.md)
 
+## 2023-09-23
+
+매일성경묵상 새길말씀(잠언 22:6)
+
+마땅히 행할 길을 아이에게 가르치라 그리하면 늙어도 그것을 떠나지 아니하리라
+
+[DeptJobDAO.selectDeptJobListCnt 부서업무 목록에 대한 전체 건수를 조회한다.](2023/contribution/contribution.md#2023-09-23)
+
 ## 2023-09-21
 
 매일성경묵상 새길말씀(잠언 16:1)
