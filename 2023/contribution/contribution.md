@@ -38,6 +38,16 @@ https://github.com/eGovFramework/egovframe-common-components/pull/248/commits/12
 
 https://github.com/eGovFramework/egovframe-common-components/pull/248
 
+DeptJobDAO.deleteDeptJob 부서업무 정보를 삭제한다.
+- `void` 를 `int` 로 수정
+- `throws Exception` 제거
+
+https://youtu.be/71pVZTV1h60
+
+https://github.com/eGovFramework/egovframe-common-components/pull/248/commits/39b195000a674cff8b888e5420f6a9a14f5fb172
+
+https://github.com/eGovFramework/egovframe-common-components/pull/248
+
 ## 2023-09-21
 
 DeptJobDAO.selectDeptJobList 주어진 조건에 따른 부서업무 목록을 불러온다.
