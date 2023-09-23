@@ -18,6 +18,16 @@ https://github.com/eGovFramework/egovframe-common-components/pull/248/commits/b1
 
 https://github.com/eGovFramework/egovframe-common-components/pull/248
 
+DeptJobDAO.selectDeptJob 주어진 조건에 맞는 부서업무를 불러온다.
+- `throws Exception` 제거
+- `(DeptJobVO)` 제거
+
+https://youtu.be/EERrLQRs7cY
+
+https://github.com/eGovFramework/egovframe-common-components/pull/248/commits/94fd35e882ae2d2ee5fbe3691684e8070c8a501e
+
+https://github.com/eGovFramework/egovframe-common-components/pull/248
+
 ## 2023-09-21
 
 DeptJobDAO.selectDeptJobList 주어진 조건에 따른 부서업무 목록을 불러온다.
