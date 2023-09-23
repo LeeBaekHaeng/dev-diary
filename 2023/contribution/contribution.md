@@ -48,6 +48,34 @@ https://github.com/eGovFramework/egovframe-common-components/pull/248/commits/39
 
 https://github.com/eGovFramework/egovframe-common-components/pull/248
 
+### 제네릭 타입 명시: RSS태그관리
+
+- `List<?>` 을 `List<EgovMap>` 로 수정
+
+```java
+rss
+service
+impl
+EgovRssTagManageServiceImpl.java (3 matches)
+68: public List<?> selectRssTagManageList(RssManage rssManage) throws Exception {
+RssTagManageDao.java (2 matches)
+158: public List<?> selectRssTagManageList(RssManage rssManage) throws Exception {
+159: return (List<?>) selectList("RssTagManage.selectRssTagManage", rssManage);
+EgovRssTagManageService.java (3 matches)
+44: public List<?> selectRssTagManageList(RssManage rssManage) throws Exception;
+web
+EgovRssTagManageController.java (3 matches)
+150: List<?> reusltList = egovRssManageService.selectRssTagManageList(searchVO);
+```
+
+http://localhost:8080/egovframework-all-in-one/uss/ion/rss/listRssTagManage.do
+
+https://youtu.be/4Wjj1F4_olo
+
+https://github.com/GSITM2023/egovframe-common-components/commit/a2c374f36f684b82e6da602e932e5cabef7fbda1
+
+https://github.com/eGovFramework/egovframe-common-components/pull/311
+
 ## 2023-09-21
 
 DeptJobDAO.selectDeptJobList 주어진 조건에 따른 부서업무 목록을 불러온다.
