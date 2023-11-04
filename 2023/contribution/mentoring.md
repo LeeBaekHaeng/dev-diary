@@ -85,8 +85,8 @@ DAO 단위 테스트 추가를 한다.
 18|SmsBasicDAO||
 19|SmsDAO||
 20|DeptJobDAO||
-21|LeaderSchdulDAO||
-22|MemoReprtDAO||
+21|LeaderSchdulDAO||danheean
+22|MemoReprtDAO||LeeBaekHaeng
 23|MemoTodoDAO||
 24|WikMnthngReprtDAO||
 25|BBSSatisfactionDAO||
@@ -191,3 +191,66 @@ DAO 단위 테스트 추가를 한다.
 124|ServerResrceMntrngDAO||
 125|SynchrnServerDAO||
 
+## DAO 단위테스트 2023-11
+
+https://github.com/orgs/GSITM2023/projects/5
+
+EgovArticleDAOTest_JavaParser
+
+```java
+File file = new File("src\\main\\java\\egovframework\\com\\cop\\smt\\lsm\\service\\impl\\LeaderSchdulDAO.java");
+
+Path path = FileSystems.getDefault().getPath("src/main/java/egovframework/com/cop/smt/lsm/service/impl/LeaderSchdulDAO.java");
+
+Path path = FileSystems.getDefault().getPath("src/main/java/egovframework/com/cop/smt/lsm/service/impl", "LeaderSchdulDAO.java");
+
+Path path = FileSystems.getDefault().getPath("src/main/java/egovframework/com/cop/smt/mrm/service/impl/MemoReprtDAO.java");
+
+Optional<ClassOrInterfaceDeclaration> classEgovArticleDAO = compilationUnit.getClassByName(compilationUnit.getPrimaryTypeName().get());
+```
+
+LeaderSchdulDAO danheean
+
+간부일정에 대한 DAO 클래스를 정의한다.
+
+```
+LeaderSchdulDAO.selectEmplyrList
+LeaderSchdulDAO.selectEmplyrListCnt
+LeaderSchdulDAO.selectLeaderSchdulList
+LeaderSchdulDAO.selectLeaderSchdul
+LeaderSchdulDAO.updateLeaderSchdul
+LeaderSchdulDAO.insertLeaderSchdul
+LeaderSchdulDAO.insertLeaderSchdulDe
+LeaderSchdulDAO.deleteLeaderSchdul
+LeaderSchdulDAO.deleteLeaderSchdulDe
+LeaderSchdulDAO.selectLeaderSttusList
+LeaderSchdulDAO.selectLeaderSttusListCnt
+LeaderSchdulDAO.selectLeaderSttus
+LeaderSchdulDAO.updateLeaderSttus
+LeaderSchdulDAO.insertLeaderSttus
+LeaderSchdulDAO.selectLeaderSttusCheck
+LeaderSchdulDAO.deleteLeaderSttus
+```
+
+MemoReprtDAO LeeBaekHaeng
+
+메모보고에 대한 DAO 클래스를 정의한다.
+
+```
+MemoReprtDAO.selectReportrList
+MemoReprtDAO.selectReportrListCnt
+MemoReprtDAO.selectWrterClsfNm
+MemoReprtDAO.selectMemoReprtList
+MemoReprtDAO.selectMemoReprt
+MemoReprtDAO.readMemoReprt
+MemoReprtDAO.updateMemoReprt
+MemoReprtDAO.updateMemoReprtDrctMatter
+MemoReprtDAO.insertMemoReprt
+MemoReprtDAO.deleteMemoReprt
+MemoReprtDAO.selectMemoReprtListCnt
+```
+
+코드 정리
+- throws Exception 제거
+- return (Integer) 등 형변환 (Integer) 제거
+- insert/update/delete 반환타입 void 에서 int 로 수정
