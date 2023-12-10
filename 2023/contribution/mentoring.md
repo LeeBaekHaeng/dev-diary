@@ -87,9 +87,9 @@ DAO 단위 테스트 추가를 한다.
 20|DeptJobDAO||
 21|LeaderSchdulDAO||danheean
 22|MemoReprtDAO||LeeBaekHaeng
-23|MemoTodoDAO|[기능추가][DAO단위테스트] 메모할일정보 MemoTodoDAO 2023-12-02 ~|LeeBaekHaeng
+23|MemoTodoDAO|[기능추가][DAO단위테스트] 메모할일정보 MemoTodoDAO 2023-12-02 ~ 2023-12-11|LeeBaekHaeng
 24|WikMnthngReprtDAO|[기능추가][DAO단위테스트] 메모보고관리 WikMnthngReprtDAO 2023-12-07 ~|danheean
-25|BBSSatisfactionDAO||
+25|BBSSatisfactionDAO|[기능추가][DAO단위테스트] 만족도 BBSSatisfactionDAO 2023-12-12 ~|LeeBaekHaeng
 26|TemplateManageDAO||
 27|KnoAppraisalDAO||
 28|MapMaterialDAO||
