@@ -1,0 +1,60 @@
+LeeBaekHaeng 2024-01-06 MapMaterialDAO
+
+---
+
+등록 insert
+조회(단건) select
+조회(멀티건) selectList
+수정 update
+삭제 delete
+
+참여분야 : 오타수정, 버그수정, 기능추가, 개선의견 제시 등 모든분야
+
+- [x] 버그수정 Bug fixes
+- [ ] 기능개선 Enhancements
+- [x] 기능추가 Adding features
+- [ ] 기타 Others
+
+---
+
+MapMaterialDAO.selectMapMaterialList 등록된 지식맵(지식유형) 정보를 조회 한다.
+MapMaterialDAO.selectMapMaterialTotCnt 지식맵(지식유형) 목록 총 개수를 조회한다.
+MapMaterialDAO.selectMapMaterial 지식맵(지식유형)상세 정보를 조회 한다.
+MapMaterialDAO.insertMapMaterial 지식맵(지식유형) 정보를 신규로 등록한다.
+MapMaterialDAO.updateMapMaterial 기 등록 된 지식맵(지식유형)링 정보를 수정 한다.
+MapMaterialDAO.deleteMapMaterial 기 등록된 지식맵(지식유형) 정보를 삭제한다.
+MapMaterialDAO.knoTypeCdCheck 지식유형코드 중복 여부 체크(위치 : 1260.지식맵관리(유형) > 등록)
+
+---
+
+[기능추가][DAO단위테스트]지식평가관리 KnoAppraisalDAO
+
+버그수정
+- throws Exception 제거
+- insert, update, delete return int
+- 불필요한 형변환 제거
+
+기능추가
+- a01selectMapMaterialList 테스트 메서드 추가
+- a02selectMapMaterialTotCnt 테스트 메서드 추가
+- a03selectMapMaterial 테스트 메서드 추가
+- a04insertMapMaterial 테스트 메서드 추가
+- a05updateMapMaterial 테스트 메서드 추가
+- a06deleteMapMaterial 테스트 메서드 추가
+- a07knoTypeCdCheck 테스트 메서드 추가
+
+---
+
+등록된 지식정보평가 정보를 조회 한다. 테스트
+
+PMD
+```
+
+```
+
+버그수정
+- throws Exception 제거
+- final 추가
+
+기능추가
+- a01selectMapMaterialList 테스트 메서드 추가
