@@ -27,7 +27,7 @@ MapMaterialDAO.knoTypeCdCheck 지식유형코드 중복 여부 체크(위치 : 1
 
 ---
 
-[기능추가][DAO단위테스트]지식평가관리 KnoAppraisalDAO
+[기능추가][DAO단위테스트]지식맵(유형별) MapMaterialDAO
 
 버그수정
 - throws Exception 제거
@@ -45,16 +45,229 @@ MapMaterialDAO.knoTypeCdCheck 지식유형코드 중복 여부 체크(위치 : 1
 
 ---
 
-등록된 지식정보평가 정보를 조회 한다. 테스트
+등록된 지식맵(지식유형) 정보를 조회 한다. 테스트
 
 PMD
 ```
-
+Multiple markers at this line
+	- SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.
+	 Exception
+	- MethodArgumentCouldBeFinal: Parameter 'searchVO' is not assigned and could be declared final
 ```
 
 버그수정
 - throws Exception 제거
 - final 추가
+- <select id="selectMapMaterialList" parameterType="egovframework.com.dam.map.mat.service.MapMaterialVO" resultType="egovMap">
+  - resultType="egovframework.com.dam.map.mat.service.MapMaterialVO"
 
 기능추가
 - a01selectMapMaterialList 테스트 메서드 추가
+
+https://github.com/eGovFramework/egovframe-common-components/pull/321
+
+https://youtu.be/WnufiVIdPrM
+
+---
+
+등록된 지식맵(지식유형) 정보를 조회 한다. 테스트: resultMap id="MapMaterialList" 추가
+
+버그수정
+- resultMap="MapMaterialList" 수정
+- result property="knoTypeCd" column="KNWLDG_TY_CODE"
+  - result property="knoTypeCd" column="KNO_TYPE_CD"
+- 앨리어스 달라 통일
+- result property="clYmd" column="CL_DE"
+  - result property="clYmd" column="CL_YMD"
+- result property="knoUrl" column="KNWLDG_URL"
+  - result property="knoUrl" column="KNO_URL"
+- result property="speId" column="EXPERT_ID"
+  - result property="speId" column="SPE_ID"
+- result property="knoTypeNm" column="KNWLDG_TY_NM"
+  - result property="knoTypeNm" column="KNO_TYPE_NM"
+
+기능추가
+- a01selectMapMaterialList 테스트 메서드 추가
+
+https://github.com/eGovFramework/egovframe-common-components/pull/321/commits/04055a7934d12e3839b9ddd96ecf248dabc26d55
+
+https://youtu.be/dF1cvcpaxD8
+
+---
+
+등록된 지식맵(지식유형) 정보를 조회 한다. 테스트: 조직명, 지식유형명 검색
+
+버그수정
+- resultMap을 resultType로 수정
+  - resultMap="MapMaterialList"
+  - resultType="egovframework.com.dam.map.mat.service.MapMaterialVO"
+- resultMap="MapMaterialList" 제거
+
+기능추가
+- a01selectMapMaterialListSearchCondition1 테스트 메서드 추가
+- a01selectMapMaterialListSearchCondition2 테스트 메서드 추가
+
+https://github.com/eGovFramework/egovframe-common-components/pull/321/commits/4fd535f4ab4fa671f4d230b320f8da3038f15af8
+
+https://youtu.be/0Q_YPB4sccM
+
+---
+
+지식맵(지식유형) 목록 총 개수를 조회한다. 테스트
+
+PMD
+```
+Multiple markers at this line
+	- SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.
+	 Exception
+	- MethodArgumentCouldBeFinal: Parameter 'searchVO' is not assigned and could be declared final
+```
+
+버그수정
+- throws Exception 제거
+- final 추가
+- (Integer) 제거
+
+기능추가
+- a02selectMapMaterialTotCnt 테스트 메서드 추가
+- a02selectMapMaterialTotCntSearchCondition1 테스트 메서드 추가
+- a02selectMapMaterialTotCntSearchCondition2 테스트 메서드 추가
+
+https://github.com/eGovFramework/egovframe-common-components/pull/321/commits/eacabdf329be52576c0c4ce16ec73800b722a482
+
+https://youtu.be/H9ytNQfe3MQ
+
+---
+
+지식맵(지식유형)상세 정보를 조회 한다. 테스트
+
+PMD
+```
+Multiple markers at this line
+	- SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.
+	 Exception
+	- MethodArgumentCouldBeFinal: Parameter 'mapMaterial' is not assigned and could be declared 
+	 final
+```
+
+버그수정
+- throws Exception 제거
+- final 추가
+- (MapMaterial) 제거
+- MapMaterial mapMaterial
+  - MapMaterialVO mapMaterial
+- public MapMaterial
+  - public MapMaterialVO
+- select id="selectMapMaterial" parameterType="egovframework.com.dam.map.mat.service.MapMaterial" resultType="egovframework.com.dam.map.mat.service.MapMaterial"
+  - select id="selectMapMaterial" parameterType="egovframework.com.dam.map.mat.service.MapMaterialVO" resultType="egovframework.com.dam.map.mat.service.MapMaterialVO"
+- return selectOne("MapMaterialDAO.selectMapMaterial", mapMaterial);
+  - throw new BaseRuntimeException(egovMessageSource.getMessage("info.nodata.msg"));
+- FRST_REGIST_PNTTM
+  - frstRegistPnttm
+  - frstRegisterPnttm  er 오타 @Deprecated
+- sysdate()
+  - #{frstRegistPnttm}
+- 시분초 추가 %H:%i:%S
+
+기능추가
+- a03selectMapMaterial 테스트 메서드 추가
+
+TODO
+- resultMap="MapMaterial" 을 resultType 으로 수정
+
+https://github.com/eGovFramework/egovframe-common-components/pull/321/commits/3e0a83cc0b55f24a411bc989de5254859eea05d4
+
+https://youtu.be/qyFa0nB5eb8
+
+---
+
+지식맵(지식유형) 정보를 신규로 등록한다. 테스트
+
+버그수정
+- MapMaterial를 MapMaterialVO로 이름 바꾸기 후 관련 코드 리팩토링
+- mapMaterial를 mapMaterialVO로 이름 바꾸기
+- insert id="insertMapMaterial" parameterType="egovframework.com.dam.map.mat.service.MapMaterialVO" 추가
+
+기능추가
+- a04insertMapMaterial 테스트 메서드 추가
+
+https://github.com/eGovFramework/egovframe-common-components/pull/321/commits/d81aafdba153889bfc840eb6065d97193767f276
+
+https://youtu.be/A7sAusyq6pk
+
+---
+
+기 등록 된 지식맵(지식유형)링 정보를 수정 한다. 테스트
+
+PMD
+```
+MethodArgumentCouldBeFinal: Parameter 'mapMaterial' is not assigned and could be declared final
+```
+
+버그수정
+- final 추가
+- update return int
+- MapMaterial를 MapMaterialVO로 이름 바꾸기 후 관련 코드 리팩토링
+- mapMaterial를 mapMaterialVO로 이름 바꾸기
+- update id="updateMapMaterial" parameterType="egovframework.com.dam.map.mat.service.MapMaterialVO" 추가
+
+기능추가
+- a05updateMapMaterial 테스트 메서드 추가
+
+https://github.com/eGovFramework/egovframe-common-components/pull/321/commits/f7fc1a312cfce0d5309534c67a49201a36cc247e
+
+https://youtu.be/hIDoisFdGy4
+
+---
+
+기 등록된 지식맵(지식유형) 정보를 삭제한다. 테스트
+
+PMD
+```
+Multiple markers at this line
+	- SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.
+	 Exception
+	- MethodArgumentCouldBeFinal: Parameter 'mapMaterial' is not assigned and could be declared 
+	 final
+```
+
+버그수정
+- throws Exception 제거
+- final 추가
+- delete return int
+- MapMaterial를 MapMaterialVO로 이름 바꾸기 후 관련 코드 리팩토링
+- mapMaterial를 mapMaterialVO로 이름 바꾸기
+- delete id="deleteMapMaterial" parameterType="egovframework.com.dam.map.mat.service.MapMaterialVO"
+
+기능추가
+- a06deleteMapMaterial 테스트 메서드 추가
+
+https://github.com/eGovFramework/egovframe-common-components/pull/321/commits/fd0f7da338832a52a9ccf436f9bf88511fd8a451
+
+https://youtu.be/dLsJPrNoaEo
+
+---
+
+지식유형코드 중복 여부 체크(위치 : 1260.지식맵관리(유형) > 등록) 테스트
+
+PMD
+```
+Multiple markers at this line
+	- SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.
+	 Exception
+	- MethodArgumentCouldBeFinal: Parameter 'knoTypeCd' is not assigned and could be declared 
+	 final
+```
+
+버그수정
+- throws Exception 제거
+- final 추가
+- (Integer) 제거
+- import egovframework.com.dam.map.mat.service.MapMaterial; 제거
+
+기능추가
+- a07knoTypeCdCheck 테스트 메서드 추가
+
+https://github.com/eGovFramework/egovframe-common-components/pull/321/commits/60e67e338ff57c4d2c643a92ffa2ec4a11d341d4
+
+https://youtu.be/eWe22CPL0gI
