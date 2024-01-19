@@ -92,7 +92,7 @@ DAO 단위 테스트 추가를 한다.
 25|BBSSatisfactionDAO|[기능추가][DAO단위테스트] 만족도 BBSSatisfactionDAO 2023-12-12 ~ 2023-12-20|LeeBaekHaeng
 26|TemplateManageDAO|[기능추가][DAO단위테스트] 템플릿 TemplateManageDAO 2023-12-21 ~ 2024-01-01|LeeBaekHaeng
 27|KnoAppraisalDAO|[기능추가][DAO단위테스트] 지식평가관리 KnoAppraisalDAO 2024-01-02 ~ 2024-01-06|LeeBaekHaeng
-28|MapMaterialDAO|[기능추가][DAO단위테스트]지식맵(유형별) MapMaterialDAO 2024-01-08 ~ 2024-01-15|LeeBaekHaeng
+28|MapMaterialDAO|[기능추가][DAO단위테스트]지식맵(유형별) MapMaterialDAO 2024-01-08 ~ 2024-01-17|LeeBaekHaeng
 29|MapTeamDAO||
 30|KnoManagementDAO||
 31|KnoPersonalDAO||
