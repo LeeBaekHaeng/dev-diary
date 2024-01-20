@@ -29,6 +29,24 @@ KnoManagementDAO.deleteKnoManagement 기 등록된 지식정보 정보를 삭제
 - @Repository value를 제거해서 타입 세이프하게
   - @Repository("KnoManagementDAO") 를 @Repository 로 수정
 
+
+```java
+	@Resource(name="KnoManagementDAO")
+	private KnoManagementDAO KnoManagementDAO;
+```
+를
+
+```java
+@Service("KnoManagementService")
+@RequiredArgsConstructor
+public class EgovKnoManagementServiceImpl extends EgovAbstractServiceImpl implements EgovKnoManagementService {
+
+	private final KnoManagementDAO knoManagementDAO;
+```
+로 수정
+
+private final KnoManagementDAO `knoManagementDAO`; 소문자로 수정
+
 ```sql
 SELECT /* KnoManagementDAO.selectList 지식정보 조회(멀티건) */
        A.*

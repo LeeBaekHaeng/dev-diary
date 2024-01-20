@@ -29,6 +29,21 @@ MapTeamDAO.deleteMapTeam 기 등록된 지식맵(조직별) 정보를 삭제한�
 - @Repository value를 제거해서 타입 세이프하게
   - @Repository("MapTeamDAO") 를 @Repository 로 수정
 
+```java
+	@Resource(name="MapTeamDAO")
+	private MapTeamDAO MapTeamDAO;
+```
+를
+
+```java
+@Service("MapTeamService")
+@RequiredArgsConstructor
+public class EgovMapTeamServiceImpl extends EgovAbstractServiceImpl implements EgovMapTeamService {
+
+	private final MapTeamDAO MapTeamDAO;
+```
+로 수정
+
 ---
 
 [기능추가][DAO단위테스트]지식맵(조직별) 정보를 신규로 등록한다.
