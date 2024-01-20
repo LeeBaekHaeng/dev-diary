@@ -1,0 +1,50 @@
+[log4j]2024-01-20 08:56:19,800 DEBUG [egovframework.com.test.EgovTestJavaParser] 
+MapTeamDAO.selectMapTeamList 등록된 지식맵(조직별) 목록을 조회 한다.
+MapTeamDAO.selectMapTeamTotCnt 지식맵(조직별) 목록 총 개수를 조회한다.
+MapTeamDAO.selectMapTeamDetail 지식맵(조직별)상세 정보를 조회 한다.
+MapTeamDAO.insertMapTeam 지식맵(조직별) 정보를 신규로 등록한다.
+MapTeamDAO.updateMapTeam 기 등록 된 지식맵(조직별) 정보를 수정 한다.
+MapTeamDAO.deleteMapTeam 기 등록된 지식맵(조직별) 정보를 삭제한다.
+
+[log4j]2024-01-20 08:56:19,807 DEBUG [egovframework.com.test.EgovTestJavaParser] 
+- a01selectMapTeamList 테스트 메서드 추가
+- a02selectMapTeamTotCnt 테스트 메서드 추가
+- a03selectMapTeamDetail 테스트 메서드 추가
+- a04insertMapTeam 테스트 메서드 추가
+- a05updateMapTeam 테스트 메서드 추가
+- a06deleteMapTeam 테스트 메서드 추가
+
+[기능추가][DAO단위테스트]지식맵(조직별) MapTeamDAO
+- Format source code
+- Exception 제거
+- insert, update, delete 메서드 return int 로 수정
+- 불필요한 형변환 제거
+- 개발표준가이드대로 메서드 순서 수정
+  1. 등록 insert
+  2. 조회(단건) select
+  3. 조회(멀티건) selectList
+  4. 조회(멀티건) 전체건수 selectListTotCnt
+  5. 수정 update
+  6. 삭제 delete
+- @Repository value를 제거해서 타입 세이프하게
+  - @Repository("MapTeamDAO") 를 @Repository 로 수정
+
+---
+
+[기능추가][DAO단위테스트]지식맵(조직별) 정보를 신규로 등록한다.
+
+PMD 버그수정
+```
+Multiple markers at this line
+	- MethodArgumentCouldBeFinal: Parameter 'mapTeam' is not assigned and could be declared final
+	- SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.
+	 Exception
+```
+- final 추가
+- Exception 제거
+
+버그수정
+- insert 메서드 return int 로 수정
+
+기능추가
+- a01insertMapTeam(a04insertMapTeam) 테스트 메서드 추가

@@ -1,0 +1,40 @@
+[log4j]2024-01-20 09:15:39,683 DEBUG [egovframework.com.test.EgovTestJavaParser] 
+KnoManagementDAO.selectKnoManagementList 등록된 지식정보 정보를 조회 한다.
+KnoManagementDAO.selectKnoManagementTotCnt 지식정보 목록 총 개수를 조회한다.
+KnoManagementDAO.selectKnoManagement 지식정보 상세 정보를 조회 한다.
+KnoManagementDAO.insertKnoManagement 지식정보 정보를 신규로 등록한다.
+KnoManagementDAO.updateKnoManagement 기 등록 된 지식정보 정보를 수정 한다.
+KnoManagementDAO.deleteKnoManagement 기 등록된 지식정보 정보를 삭제한다.
+
+[log4j]2024-01-20 09:15:39,690 DEBUG [egovframework.com.test.EgovTestJavaParser] 
+- a01selectKnoManagementList 테스트 메서드 추가
+- a02selectKnoManagementTotCnt 테스트 메서드 추가
+- a03selectKnoManagement 테스트 메서드 추가
+- a04insertKnoManagement 테스트 메서드 추가
+- a05updateKnoManagement 테스트 메서드 추가
+- a06deleteKnoManagement 테스트 메서드 추가
+
+[기능추가][DAO단위테스트]지식정보 KnoManagementDAO
+- Format source code
+- Exception 제거
+- insert, update, delete 메서드 return int 로 수정
+- 불필요한 형변환 제거
+- 개발표준가이드대로 메서드 순서 수정
+  1. 등록 insert
+  2. 조회(단건) select
+  3. 조회(멀티건) selectList
+  4. 조회(멀티건) 전체건수 selectListTotCnt
+  5. 수정 update
+  6. 삭제 delete
+- @Repository value를 제거해서 타입 세이프하게
+  - @Repository("KnoManagementDAO") 를 @Repository 로 수정
+
+```sql
+SELECT /* KnoManagementDAO.selectList 지식정보 조회(멀티건) */
+       A.*
+  FROM COMTNDAMKNOIFM A /* 지식정보 */
+ WHERE 1 = 1
+ ORDER by KNWLDG_ID DESC /* `KNWLDG_ID` char(20) NOT NULL COMMENT '지식ID', */
+;
+
+```
