@@ -26,8 +26,8 @@ MapTeamDAO.deleteMapTeam 기 등록된 지식맵(조직별) 정보를 삭제한�
   4. 조회(멀티건) 전체건수 selectListTotCnt
   5. 수정 update
   6. 삭제 delete
-- @Repository value를 제거해서 타입 세이프하게
-  - @Repository("MapTeamDAO") 를 @Repository 로 수정
+- `@Repository` value를 제거해서 타입 세이프하게
+  - `@Repository("MapTeamDAO")` 를 `@Repository` 로 수정
 
 ```java
 	@Resource(name="MapTeamDAO")
@@ -46,7 +46,69 @@ public class EgovMapTeamServiceImpl extends EgovAbstractServiceImpl implements E
 
 ---
 
-[기능추가][DAO단위테스트]지식맵(조직별) 정보를 신규로 등록한다.
+[기능추가][DAO단위테스트]등록된 지식맵(조직별) 목록을 조회 한다.
+
+PMD 버그수정
+```
+Multiple markers at this line
+	- MethodArgumentCouldBeFinal: Parameter 'searchVO' is not assigned and could be declared final
+	- SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.
+	 Exception
+```
+- final 추가
+- Exception 제거
+
+버그수정
+- searchVO -> mapTeamVO
+- select id="selectMapTeamList" parameterType="egovframework.com.dam.map.tea.service.MapTeamVO" resultType="egovMap"
+  - select id="selectMapTeamList" parameterType="egovframework.com.dam.map.tea.service.MapTeamVO" resultType="egovframework.com.dam.map.tea.service.MapTeamVO"
+
+기능추가
+- a01selectMapTeamList 테스트 메서드 추가
+
+https://github.com/eGovFramework/egovframe-common-components/pull/322/commits/57790736a638f3d029fdb294dff9123b0a75a29f
+
+https://youtu.be/pDZ9tnS0ceA
+
+---
+
+[기능추가][DAO단위테스트]등록된 지식맵(조직별) 목록을 조회 한다. 조직명/조직ID 검색
+
+버그수정
+- sql id="selectMapTeamFromWhere" 추가
+- when test="@egovframework.com.cmm.util.EgovMybatisUtil@isEquals(searchCondition, '1')"
+
+https://youtu.be/dGzrcW7lCKk
+
+https://github.com/eGovFramework/egovframe-common-components/pull/322/commits/180fd77ab4cce99c662c36a1dde94b7053d50cb0
+
+---
+
+[기능추가][DAO단위테스트]지식맵(조직별) 목록 총 개수를 조회한다.
+
+PMD 버그수정
+```
+Multiple markers at this line
+	- SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.
+	 Exception
+	- MethodArgumentCouldBeFinal: Parameter 'searchVO' is not assigned and could be declared final
+```
+- Exception 제거
+- final 추가
+
+버그수정
+- (Integer) 제거
+
+기능추가
+- a02selectMapTeamTotCnt 테스트 메서드 추가
+
+https://github.com/eGovFramework/egovframe-common-components/pull/322/commits/365102d6ecdc0de14e20dce150c4b6e10c450cd0
+
+https://youtu.be/ZBL6ZRc_uW8
+
+---
+
+[기능추가][DAO단위테스트]지식맵(조직별)상세 정보를 조회 한다.
 
 PMD 버그수정
 ```
@@ -59,7 +121,143 @@ Multiple markers at this line
 - Exception 제거
 
 버그수정
-- insert 메서드 return int 로 수정
+- (MapTeam) 제거
+- MapTeam 를 MapTeamVO 로 수정
 
 기능추가
-- a01insertMapTeam(a04insertMapTeam) 테스트 메서드 추가
+- a03selectMapTeamDetail 테스트 메서드 추가
+
+https://github.com/eGovFramework/egovframe-common-components/pull/322/commits/fc60686823ead68e243dc0edfaef3ed96ae6961a
+
+https://youtu.be/g-HiY4usKMU
+
+---
+
+[기능추가][DAO단위테스트]지식맵(조직별) 정보를 신규로 등록한다.
+
+PMD 버그수정
+```
+MethodArgumentCouldBeFinal: Parameter 'mapTeamVO' is not assigned and could be declared final
+```
+- final 추가
+
+버그수정
+- parameterType="egovframework.com.dam.map.tea.service.MapTeamVO" 추가
+- sql Format
+
+기능추가
+- a04insertMapTeam 테스트 메서드 추가
+
+https://github.com/eGovFramework/egovframe-common-components/pull/322/commits/f6f040c4b0906b272aa450a96ff5631240dea7f7
+
+https://youtu.be/iutTwb-ncnY
+
+---
+
+[기능추가][DAO단위테스트]기 등록 된 지식맵(조직별) 정보를 수정 한다.
+
+PMD 버그수정
+```
+Multiple markers at this line
+	- MethodArgumentCouldBeFinal: Parameter 'mapTeam' is not assigned and could be declared final
+	- SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.
+	 Exception
+```
+- final 추가
+- Exception 제거
+
+버그수정
+- return int 로 수정
+- MapTeam 를 MapTeamVO 로 수정
+- parameterType="egovframework.com.dam.map.tea.service.MapTeamVO" 추가
+- sql Format
+- SET ORGNZT_ID       = #{orgnztId} 제거
+
+기능추가
+- a05updateMapTeam 테스트 메서드 추가
+
+https://github.com/eGovFramework/egovframe-common-components/pull/322/commits/7894efdb9626dccac5ba73914c7b0fa0d5c183ed
+
+https://youtu.be/hHHq34O7w1I
+
+
+---
+
+[기능추가][DAO단위테스트]기 등록된 지식맵(조직별) 정보를 삭제한다.
+
+PMD 버그수정
+```
+Multiple markers at this line
+	- MethodArgumentCouldBeFinal: Parameter 'mapTeam' is not assigned and could be declared final
+	- SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.
+	 Exception
+```
+- final 추가
+- Exception 제거
+
+버그수정
+- return int 로 수정
+- MapTeam 를 MapTeamVO 로 수정
+- parameterType="egovframework.com.dam.map.tea.service.MapTeamVO" 추가
+- sql Format
+
+기능추가
+- a06deleteMapTeam 테스트 메서드 추가
+
+https://github.com/eGovFramework/egovframe-common-components/pull/322/commits/a5e3f91d7de95b1092bf7d2ea56b234ab736db47
+
+https://youtu.be/40IEkU_PoDI
+
+---
+
+[기능추가][DAO단위테스트]지식맵(조직별) MapTeamDAO: 개발표준가이드대로 메서드 순서 수정
+
+버그수정
+- 개발표준가이드대로 메서드 순서 수정
+  1. 등록 insert
+  2. 조회(단건) select
+  3. 조회(멀티건) selectList
+  4. 조회(멀티건) 전체건수 selectListTotCnt
+  5. 수정 update
+  6. 삭제 delete
+
+https://github.com/eGovFramework/egovframe-common-components/pull/322/commits/ef301ddf6a09cc40bd9bef1c55b8b8e9e7615cd4
+
+https://youtu.be/PDBN1cJcyM4
+
+---
+
+[기능추가][DAO단위테스트]지식맵(조직별) MapTeamDAO: 타입 세이프
+
+버그수정
+- `@Repository` value를 제거해서 타입 세이프하게
+  - `@Repository("MapTeamDAO")` 를 `@Repository` 로 수정
+
+https://github.com/eGovFramework/egovframe-common-components/pull/322/commits/6372fde7b5a1ea56cd9eb5e11dc4e1a66ddb44ac
+
+https://youtu.be/4kmAhaMV0ak
+
+---
+
+[기능추가][DAO단위테스트]지식맵(조직별) MapTeamDAO: 최초등록자ID/최초등록시점 컬럼 추가
+
+버그수정
+- FRST_REGISTER_ID/FRST_REGIST_PNTTM 컬럼 추가
+
+// TODO DDL COMTNDAMMAPTEAM 지식맵(조직별) 컬럼 추가 필요함
+```
+  `FRST_REGISTER_ID` varchar(20) DEFAULT NULL COMMENT '최초등록자ID',
+  `FRST_REGIST_PNTTM` datetime DEFAULT NULL COMMENT '최초등록시점',
+```
+
+/egovframe-common-components/script/ddl/mysql/com_DDL_mysql.sql
+```
+	FRST_REGISTER_ID      VARCHAR(20) NULL,
+	FRST_REGIST_PNTTM     DATETIME NULL,
+```
+
+/egovframe-common-components/script/comment/mysql/egov_mysql_comment.sql
+```
+ALTER TABLE `COMTNDAMMAPTEAM` CHANGE `FRST_REGIST_PNTTM` `FRST_REGIST_PNTTM` datetime DEFAULT NULL  COMMENT '최초등록시점' ;
+ALTER TABLE `COMTNDAMMAPTEAM` CHANGE `FRST_REGISTER_ID` `FRST_REGISTER_ID` varchar(20) DEFAULT NULL  COMMENT '최초등록자ID' ;
+```
