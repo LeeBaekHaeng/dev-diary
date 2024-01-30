@@ -261,3 +261,19 @@ https://youtu.be/4kmAhaMV0ak
 ALTER TABLE `COMTNDAMMAPTEAM` CHANGE `FRST_REGIST_PNTTM` `FRST_REGIST_PNTTM` datetime DEFAULT NULL  COMMENT '최초등록시점' ;
 ALTER TABLE `COMTNDAMMAPTEAM` CHANGE `FRST_REGISTER_ID` `FRST_REGISTER_ID` varchar(20) DEFAULT NULL  COMMENT '최초등록자ID' ;
 ```
+
+log4jdbc 버전업
+
+```
+org.springframework.dao.InvalidDataAccessApiUsageException: Error attempting to get column 'FRST_REGIST_PNTTM' from result set.  Cause: java.sql.SQLFeatureNotSupportedException: resultSet=net.sf.log4jdbc.ResultSetSpy@359ceb13, columnLabel=FRST_REGIST_PNTTM, type=class java.time.LocalDateTime
+```
+
+https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1
+
+#mysql
+#Globals.mysql.DriverClassName=net.sf.log4jdbc.DriverSpy
+Globals.mysql.DriverClassName=net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+
+https://github.com/eGovFramework/egovframe-common-components/pull/322/commits/73a9a16dacb7812b921e3a1cc43fcac990dde93d
+
+https://youtu.be/NvHXDVT3rpg
