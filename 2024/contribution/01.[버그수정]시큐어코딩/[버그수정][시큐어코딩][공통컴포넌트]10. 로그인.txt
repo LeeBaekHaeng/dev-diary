@@ -1,0 +1,11 @@
+[버그수정][시큐어코딩][공통컴포넌트]10. 로그인
+
+throws Exception 제거
+- /uat/uia/egovLoginUsr.do
+- secure-coding/egovframework.com.uat.uia.web
+- 2024.02.03	이백행		보안약점 조치: 부적절한 예외 처리 (광범위한 예외객체 선언)
+- 2024.02.03   이백행            보안약점 조치: 부적절한 예외 처리 (광범위한 예외객체 선언)
+
+https://github.com/eGovFramework/egovframe-common-components/pull/325
+
+https://youtu.be/8Btn__nb6e0
