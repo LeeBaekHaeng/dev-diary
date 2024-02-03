@@ -19,3 +19,7 @@ Updt	수정	업무컴포넌트명Updt
 
 a01_등록화면_등록버튼
 a02_등록화면_목록버튼
+
+$('#nttCn').val('test 이백행');
+CKEDITOR.instances.nttCn.updateElement();
+CKEDITOR.instances.nttCn.setData();

@@ -1,0 +1,16 @@
+[기능추가][셀레늄단위테스트]개발환경
+
+# Selenium 라이브러리 설치
+- Install a Selenium library
+
+https://www.selenium.dev/documentation/webdriver/getting_started/install_library/
+
+https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/4.17.0
+
+# 셀레늄 사용 > 예
+- Using Selenium > Examples
+
+https://www.selenium.dev/documentation/webdriver/getting_started/using_selenium/#examples
+
+# JUnit 4
+- JRE: org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.2.v20220201-1208
