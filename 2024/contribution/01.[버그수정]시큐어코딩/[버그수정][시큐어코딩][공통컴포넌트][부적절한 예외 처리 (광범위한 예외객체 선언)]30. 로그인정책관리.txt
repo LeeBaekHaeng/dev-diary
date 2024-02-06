@@ -1,0 +1,10 @@
+[버그수정][시큐어코딩][공통컴포넌트][부적절한 예외 처리 (광범위한 예외객체 선언)]30. 로그인정책관리
+
+throws Exception 제거
+- /uat/uap/selectLoginPolicyList.do
+- secure-coding/egovframework.com.uat.uap.web
+- 2024.02.05	이백행	보안약점 조치: 부적절한 예외 처리 (광범위한 예외객체 선언)
+
+https://github.com/eGovFramework/egovframe-common-components/pull/326
+
+https://youtu.be/ffVKEza3Txg

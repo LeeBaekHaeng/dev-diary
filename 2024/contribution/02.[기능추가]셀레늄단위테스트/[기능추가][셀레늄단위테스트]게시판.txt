@@ -23,3 +23,9 @@ a02_등록화면_목록버튼
 $('#nttCn').val('test 이백행');
 CKEDITOR.instances.nttCn.updateElement();
 CKEDITOR.instances.nttCn.setData();
+
+[기능추가][셀레늄단위테스트]게시판 등록화면 등록버튼: CKEDITOR, datepicker, file
+[기능추가][셀레늄단위테스트]게시판 등록화면 등록버튼: 등록화면에서_등록버튼을_클릭한다
+
+[기능추가][셀레늄단위테스트]게시판 등록화면 등록버튼: 확인
+JUnitTestsShouldIncludeAssert
