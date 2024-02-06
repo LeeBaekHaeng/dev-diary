@@ -1,0 +1,28 @@
+﻿2024년 전자정부 표준프레임워크 컨트리뷰션 참여_03.개인 우수 도전
+
+[버그수정][생성자 기반 의존성 주입][공통컴포넌트]1. 포털(예제) 메인화면
+
+`@RequiredArgsConstructor`, `private final`
+
+```java
+@RequiredArgsConstructor
+public class EgovMapTeamServiceImpl extends EgovAbstractServiceImpl implements EgovMapTeamService {
+
+	private final MapTeamDAO MapTeamDAO;
+```
+
+생성자 기반 의존성 주입
+- Constructor-based Dependency Injection
+- 의존성
+  - 1.4. Dependencies
+- 의존성 주입
+  - 1.4.1. Dependency Injection
+
+https://docs.spring.io/spring-framework/docs/5.2.25.RELEASE/spring-framework-reference/core.html#beans-constructor-injection
+
+소스 코드 보관 URL
+- Commit 다운로드
+
+https://github.com/LeeBaekHaeng/egovframe-common-components/archive/7e79ae0c6daa9103a475d8eabd3fd5a7a19e2c48.zip
+
+https://docs.github.com/ko/repositories/working-with-files/using-files/downloading-source-code-archives#source-code-archive-urls
