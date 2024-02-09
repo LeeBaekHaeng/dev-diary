@@ -29,3 +29,7 @@ CKEDITOR.instances.nttCn.setData();
 
 [기능추가][셀레늄단위테스트]게시판 등록화면 등록버튼: 확인
 JUnitTestsShouldIncludeAssert
+
+[기능추가][셀레늄단위테스트]게시판 등록화면 등록버튼: 제목 진하게 등
+
+[기능추가][셀레늄단위테스트]게시판 등록화면 목록버튼

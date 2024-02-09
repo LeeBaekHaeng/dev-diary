@@ -1,0 +1,12 @@
+[버그수정][시큐어코딩][부적절한 예외 처리 (광범위한 예외객체 선언)]90. 롤관리
+
+throws Exception 제거
+- /sec/rmt/EgovRoleList.do
+- secure-coding/egovframework.com.sec.rmt.web
+- 2024.02.09	이백행	보안약점 조치: 부적절한 예외 처리 (광범위한 예외객체 선언)
+
+http://localhost:8080/egovframework-all-in-one/sec/rmt/EgovRoleList.do
+
+https://youtu.be/IsN0pvRuJp8
+
+https://github.com/eGovFramework/egovframe-common-components/pull/330
