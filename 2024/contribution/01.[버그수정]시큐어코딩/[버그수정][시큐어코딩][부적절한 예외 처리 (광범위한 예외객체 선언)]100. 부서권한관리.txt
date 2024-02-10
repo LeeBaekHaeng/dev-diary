@@ -1,0 +1,12 @@
+[버그수정][시큐어코딩][부적절한 예외 처리 (광범위한 예외객체 선언)]100. 부서권한관리
+
+throws Exception 제거
+- /sec/drm/EgovDeptAuthorList.do
+- secure-coding/egovframework.com.sec.drm.web
+- 2024.02.10	이백행	보안약점 조치: 부적절한 예외 처리 (광범위한 예외객체 선언)
+
+http://localhost:8080/egovframework-all-in-one/sec/drm/EgovDeptAuthorList.do
+
+https://youtu.be/JRUdZu84jSA
+
+https://github.com/eGovFramework/egovframe-common-components/pull/331
