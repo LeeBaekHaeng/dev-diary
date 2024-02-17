@@ -1,0 +1,12 @@
+[버그수정][시큐어코딩][부적절한 예외 처리 (광범위한 예외객체 선언)]140. 접속통계
+
+throws Exception 제거
+- /sts/cst/selectConectStats.do
+- secure-coding/egovframework.com.sts.cst.web
+- 2024.02.15	이백행	보안약점 조치: 부적절한 예외 처리 (광범위한 예외객체 선언)
+
+http://localhost:8080/egovframework-all-in-one/sts/cst/selectConectStats.do
+
+https://youtu.be/H97E9l66Wx0
+
+https://github.com/eGovFramework/egovframe-common-components/pull/334
