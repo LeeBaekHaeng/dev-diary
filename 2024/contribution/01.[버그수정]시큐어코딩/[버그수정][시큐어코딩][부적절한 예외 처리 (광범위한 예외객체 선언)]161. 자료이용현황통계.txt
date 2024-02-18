@@ -1,0 +1,12 @@
+[버그수정][시큐어코딩][부적절한 예외 처리 (광범위한 예외객체 선언)]161. 자료이용현황통계
+
+throws Exception 제거
+- /sts/dst/selectDtaUseStatsListView.do
+- secure-coding/egovframework.com.sts.dst.web
+- 2024.02.19	이백행	보안약점 조치: 부적절한 예외 처리 (광범위한 예외객체 선언)
+
+http://localhost:8080/egovframework-all-in-one/sts/dst/selectDtaUseStatsListView.do
+
+https://youtu.be/AnHMvIoZMLk
+
+https://github.com/eGovFramework/egovframe-common-components/pull/337
