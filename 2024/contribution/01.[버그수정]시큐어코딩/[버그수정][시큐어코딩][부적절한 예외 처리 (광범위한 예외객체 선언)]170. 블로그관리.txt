@@ -1,0 +1,12 @@
+[버그수정][시큐어코딩][부적절한 예외 처리 (광범위한 예외객체 선언)]170. 블로그관리
+
+throws Exception 제거
+- /cop/bbs/selectBlogList.do
+- secure-coding/egovframework.com.cop.bbs.web
+- 2024.02.20	이백행	보안약점 조치: 부적절한 예외 처리 (광범위한 예외객체 선언)
+
+http://localhost:8080/egovframework-all-in-one/cop/bbs/selectBlogList.do
+
+https://youtu.be/e3FKp94PWGU
+
+https://github.com/eGovFramework/egovframe-common-components/pull/338
