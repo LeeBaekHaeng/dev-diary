@@ -1,0 +1,12 @@
+[버그수정][시큐어코딩][부적절한 예외 처리 (광범위한 예외객체 선언)]250. 스크랩 목록
+
+throws Exception 제거
+- /cop/scp/selectArticleScrapList.do
+- secure-coding/egovframework.com.cop.scp.web
+- 2024.02.22	이백행	보안약점 조치: 부적절한 예외 처리 (광범위한 예외객체 선언)
+
+http://localhost:8080/egovframework-all-in-one/cop/scp/selectArticleScrapList.do
+
+https://youtu.be/Uy4t3wUQ2zk
+
+https://github.com/eGovFramework/egovframe-common-components/pull/343
