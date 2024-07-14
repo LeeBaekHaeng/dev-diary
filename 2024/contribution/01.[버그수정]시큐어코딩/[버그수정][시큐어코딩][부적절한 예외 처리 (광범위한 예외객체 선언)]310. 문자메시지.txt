@@ -1,0 +1,12 @@
+[버그수정][시큐어코딩][부적절한 예외 처리 (광범위한 예외객체 선언)]310. 문자메시지
+
+throws Exception 제거
+- /cop/sms/selectSmsList.do
+- secure-coding/egovframework.com.cop.sms.web
+- 2024.02.24  이백행          보안약점 조치: 부적절한 예외 처리 (광범위한 예외객체 선언)
+
+http://localhost:8080/egovframework-all-in-one/cop/sms/selectSmsList.do
+
+https://youtu.be/jxA74IYH2KA
+
+https://github.com/eGovFramework/egovframe-common-components/pull/346
