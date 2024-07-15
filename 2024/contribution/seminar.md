@@ -39,6 +39,44 @@ EgovLoginPolicyController
 ```
 
 주석
-```
+```java
  *   2024.07.13  이백행          Exception 제거
+```
+
+PMD
+
+get
+```java
+		if (delYn != null) {
+			return Arrays.stream(delYn).toArray(String[]::new);
+		}
+		return null;
+```
+
+set
+```java
+		if (delYn != null) {
+			this.delYn = Arrays.stream(delYn).toArray(String[]::new);
+		}
+```
+
+```java
+	/**
+	 * @return the delYn
+	 */
+	public String[] getDelYn() {
+		if (delYn != null) {
+			return Arrays.stream(delYn).toArray(String[]::new);
+		}
+		return null;
+	}
+
+	/**
+	 * @param delYn the delYn to set
+	 */
+	public void setDelYn(String[] delYn) {
+		if (delYn != null) {
+			this.delYn = Arrays.stream(delYn).toArray(String[]::new);
+		}
+	}
 ```
