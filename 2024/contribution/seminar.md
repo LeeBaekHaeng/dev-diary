@@ -84,3 +84,18 @@ set
 		}
 	}
 ```
+
+## 기능 추가-DAO단위테스트-LoginPolicyDAO
+
+```
+DeptJobDAOTest
+```
+
+package
+```
+egovframework.com.uat.uap.service.impl
+```
+
+```
+LoginPolicyDAOTest
+```
