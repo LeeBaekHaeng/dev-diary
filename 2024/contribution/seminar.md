@@ -99,3 +99,71 @@ egovframework.com.uat.uap.service.impl
 ```
 LoginPolicyDAOTest
 ```
+
+```java
+package egovframework.com.uat.uap.service.impl;
+
+import static org.junit.Assert.assertEquals;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScan.Filter;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.FilterType;
+import org.springframework.test.context.ContextConfiguration;
+
+import egovframework.com.cmm.LoginVO;
+import egovframework.com.cmm.util.EgovUserDetailsHelper;
+import egovframework.com.test.EgovTestAbstractDAO;
+import egovframework.com.uat.uap.service.LoginPolicyVO;
+import lombok.extern.slf4j.Slf4j;
+
+/**
+ * 로그인정책 DAO 단위 테스트
+ * 
+ * @author 이백행
+ * @since 2024-07-16
+ */
+
+@ContextConfiguration(classes = { LoginPolicyDAOTest.class, EgovTestAbstractDAO.class })
+@Configuration
+@ComponentScan(useDefaultFilters = false, basePackages = {
+		"egovframework.com.uat.uap.service.impl" }, includeFilters = {
+				@Filter(type = FilterType.ASSIGNABLE_TYPE, classes = { LoginPolicyDAO.class }) })
+@Slf4j
+public class LoginPolicyDAOTest extends EgovTestAbstractDAO {
+
+	@Autowired
+	private LoginPolicyDAO loginPolicyDAO;
+
+	@Test
+	public void insertLoginPolicy() {
+		// given
+		LoginPolicyVO loginPolicyVO = new LoginPolicyVO();
+		loginPolicyVO.setEmplyrId("test" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")));
+		loginPolicyVO.setIpInfo("localhost");
+		loginPolicyVO.setDplctPermAt("Y");
+		loginPolicyVO.setLmttAt("N");
+
+		LoginVO loginVO = (LoginVO) EgovUserDetailsHelper.getAuthenticatedUser();
+		if (loginVO != null) {
+			loginPolicyVO.setUserId(loginVO.getId());
+		}
+
+		// when
+		int result = loginPolicyDAO.insertLoginPolicy(loginPolicyVO);
+
+		if (log.isDebugEnabled()) {
+			log.debug("result={}", result);
+		}
+
+		// then
+		assertEquals(egovMessageSource.getMessage("fail.common.insert"), 1, result);
+	}
+
+}
+```
