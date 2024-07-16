@@ -13,22 +13,14 @@
 
 ## 오류(버그) 수정-시큐어코딩-Exception 제거-30. 로그인정책관리
 
-URL
 ```
 http://localhost:8080/egovframework-all-in-one/uat/uap/selectLoginPolicyList.do
 ```
 
-@RequestMapping
 ```
 /uat/uap/selectLoginPolicyList.do
 ```
 
-package
-```
-egovframework.com.uat.uap.web
-```
-
-컨트롤러
 ```
 EgovLoginPolicyController
 ```
@@ -91,7 +83,6 @@ set
 DeptJobDAOTest
 ```
 
-package
 ```
 egovframework.com.uat.uap.service.impl
 ```
