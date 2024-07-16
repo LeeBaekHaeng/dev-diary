@@ -80,6 +80,15 @@ set
 ## 기능 추가-DAO단위테스트-LoginPolicyDAO
 
 ```
+LoginPolicyDAO
+```
+
+브랜치
+```
+2024/test/LoginPolicyDAO
+```
+
+```
 DeptJobDAOTest
 ```
 
