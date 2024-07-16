@@ -167,3 +167,45 @@ public class LoginPolicyDAOTest extends EgovTestAbstractDAO {
 
 }
 ```
+
+## 기능 추가-셀레늄단위테스트-로그인
+
+```
+http://localhost:8080/egovframework-all-in-one/uat/uia/egovLoginUsr.do
+```
+
+```
+/uat/uia/egovLoginUsr.do
+```
+
+```
+egovframework.com.uat.uia.web
+```
+
+```
+EgovLoginController
+```
+
+브랜치
+```
+2024/selenium/EgovLoginController
+```
+
+Selenium 라이브러리 설치
+- Install a Selenium library
+- https://www.selenium.dev/documentation/webdriver/getting_started/install_library/
+- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/4.22.0
+
+```xml
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.22.0</version>
+</dependency>
+```
+
+Selenium 코드 구성 및 실행
+- Organizing and Executing Selenium Code
+- Examples
+- https://www.selenium.dev/documentation/webdriver/getting_started/using_selenium/
