@@ -288,3 +288,14 @@ public class EgovLoginControllerSelenium {
 기능 추가-DAO단위테스트-LoginPolicyDAO
 2024/test/LoginPolicyDAO
 ```
+
+```
+10. 로그인 Exception 제거
+2024/pmd/EgovLoginController
+
+10. 로그인 셀레늄 단위 테스트
+2024/test/EgovLoginControllerSelenium
+
+10. 로그인 DAO 단위 테스트
+2024/test/LoginDAO
+```
