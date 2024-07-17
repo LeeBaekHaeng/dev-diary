@@ -277,3 +277,14 @@ public class EgovLoginControllerSelenium {
 
 }
 ```
+
+```
+오류(버그) 수정-시큐어코딩-30. 로그인정책관리 Exception 제거
+2024/secure-coding/EgovLoginPolicyController
+
+기능 추가-셀레늄단위테스트-로그인
+2024/selenium/EgovLoginController
+
+기능 추가-DAO단위테스트-LoginPolicyDAO
+2024/test/LoginPolicyDAO
+```
