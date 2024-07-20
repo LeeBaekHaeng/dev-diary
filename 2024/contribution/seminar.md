@@ -1,38 +1,48 @@
-# Exception 제거하기
+# 10. 로그인 Exception 제거 및 DAO/셀레늄 단위 테스트
 
-- 오류(버그) 수정
-  - 시큐어코딩
-    - Exception 제거
-    - PMD
-- 기능 추가
-  - DAO단위테스트
-  - 셀레늄단위테스트
+- [10. 로그인 Exception 제거](#10-로그인-exception-제거)
+- 10. 로그인 DAO 단위 테스트
+- 10. 로그인 셀레늄 단위 테스트
 
-## 환경설정
+환경설정
+```
+save
+```
 ![save](save.png)
 
-## 오류(버그) 수정-시큐어코딩-Exception 제거-30. 로그인정책관리
-
+## 10. 로그인 Exception 제거
 ```
-http://localhost:8080/egovframework-all-in-one/uat/uap/selectLoginPolicyList.do
-```
-
-```
-/uat/uap/selectLoginPolicyList.do
+http://localhost:8080/egovframework-all-in-one/uat/uia/egovLoginUsr.do
 ```
 
 ```
-EgovLoginPolicyController
+"/uat/uia/egovLoginUsr.do
 ```
 
-브랜치
+새 브랜치
 ```
-2024/secure-coding/EgovLoginPolicyController
+2024/pmd/EgovLoginController
 ```
 
-주석
+찾기/바꾸기
+- Find/Replace
+- Ctrl+F
+- Find: 입력
 ```java
- *   2024.07.13  이백행          Exception 제거
+throws Exception
+```
+- Replace All 버튼 클릭
+
+```java
+if (log.isErrorEnabled()) {
+	log.error("");
+}
+throw new BaseRuntimeException(e);
+```
+
+개정이력 추가
+```java
+ *   2024.07.20  이백행          Exception 제거
 ```
 
 ## 오류(버그) 수정-시큐어코딩-PMD-30. 로그인정책관리
