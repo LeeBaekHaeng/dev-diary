@@ -1,8 +1,8 @@
 # Exception 제거 함께해요!
 
-- [10. 로그인 시큐어코딩 PMD Exception 제거](#10-로그인-exception-제거)
+- [10. 로그인 시큐어코딩 Exception 제거](#10-로그인-exception-제거)
 - [10. 로그인 셀레늄 단위 테스트](#10-로그인-셀레늄-단위-테스트)
-- [10. 로그인 DAO 단위 테스트](#10-로그인-dao-단위-테스트)
+- ['일반 로그인을 처리한다' DAO 단위 테스트](#일반-로그인을-처리한다-dao-단위-테스트)
 
 환경설정
 ```
@@ -10,7 +10,7 @@ save
 ```
 ![save](save.png)
 
-## 10. 로그인 시큐어코딩 PMD Exception 제거
+## 10. 로그인 시큐어코딩 Exception 제거
 ```
 http://localhost:8080/egovframework-all-in-one/uat/uia/egovLoginUsr.do
 ```
@@ -141,11 +141,11 @@ public class EgovLoginControllerSelenium {
 }
 ```
 
-## 10. 로그인 DAO 단위 테스트
+## '일반 로그인을 처리한다' DAO 단위 테스트
 
 새 브랜치
 ```
-2024/test/LoginDAO
+2024/test/LoginDAO/actionLogin
 ```
 
 참고
