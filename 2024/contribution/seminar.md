@@ -69,7 +69,7 @@ Selenium 코드 구성 및 실행
 - https://www.selenium.dev/documentation/webdriver/getting_started/using_selenium/
 
 ```
-TestEgovLoginControllerSelenium
+TestLoginUsrViewEgovLoginControllerSelenium
 ```
 
 Junit Test 실행 에러
@@ -102,7 +102,7 @@ WebElement id = driver.findElement(By.id("id"));
 id.sendKeys("TEST1");
 ```
 
-비민번호 입력
+비밀번호 입력
 ```java
 WebElement password = driver.findElement(By.id("password"));
 password.sendKeys("rhdxhd12");
@@ -143,6 +143,11 @@ ActionLoginLoginDAOTest
 - https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/LoginDAO/actionLogin/
 
 ## 10. 로그인 시큐어코딩 PMD 진단/조치
+
+새 브랜치
+```
+2024/pmd/EgovLoginController2
+```
 
 [전자정부 표준프레임워크 표준 Inspection 룰셋 적용하기](https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev4.2:imp:inspection#%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80_%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC_%ED%91%9C%EC%A4%80_inspection_%EB%A3%B0%EC%85%8B_%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
 - 표준 Inspection 룰셋 한글/영문판의 압축파일 : 개발환경 4.2 이상 버전 사용
