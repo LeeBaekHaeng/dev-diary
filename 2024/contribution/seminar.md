@@ -73,9 +73,9 @@ TestEgovLoginControllerSelenium
 ```
 
 Junit Test 실행 에러
-```
-java.lang.UnsupportedClassVersionError: org/openqa/selenium/WebDriver has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
-```
+- java.lang.UnsupportedClassVersionError: org/openqa/selenium/WebDriver has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+- java.lang.UnsupportedClassVersionError: org/openqa/selenium/WebDriver는 최신 버전의 Java Runtime(클래스 파일 버전 55.0)으로 컴파일되었습니다. 이 버전의 Java Runtime은 최대 52.0의 클래스 파일 버전만 인식합니다.
+
 ![debug](debug.png)
 
 ## 일반 로그인을 처리한다 DAO 단위 테스트
