@@ -31,6 +31,10 @@ Search
 throws Exception
 ```
 
+```java
+@exception Exception
+```
+
 catch
 ```java
 throw new BaseRuntimeException(e);
@@ -39,6 +43,9 @@ throw new BaseRuntimeException(e);
 [전자정부 표준프레임워크 표준 Inspection 룰셋 적용하기](https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev4.2:imp:inspection#%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80_%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC_%ED%91%9C%EC%A4%80_inspection_%EB%A3%B0%EC%85%8B_%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
 - 표준 Inspection 룰셋 한글/영문판의 압축파일 : 개발환경 4.2 이상 버전 사용
 - egovinspectionrules-4.2.zip
+
+커밋
+- https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovLoginController/
 
 ## 10. 로그인 셀레늄 단위 테스트
 
