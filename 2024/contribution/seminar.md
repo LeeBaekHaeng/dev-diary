@@ -78,6 +78,48 @@ Junit Test 실행 에러
 
 ![debug](debug.png)
 
+로그인 화면 이동
+```java
+driver.get("http://localhost:8080/egovframework-all-in-one/uat/uia/egovLoginUsr.do");
+```
+
+새로고침
+```java
+JavascriptExecutor executor = (JavascriptExecutor) driver;
+
+executor.executeScript("location.reload();");
+```
+
+업무 탭 클릭
+```java
+WebElement typeUsr = driver.findElement(By.id("typeUsr"));
+typeUsr.click();
+```
+
+아이디 입력
+```java
+WebElement id = driver.findElement(By.id("id"));
+id.sendKeys("TEST1");
+```
+
+비민번호 입력
+```java
+WebElement password = driver.findElement(By.id("password"));
+password.sendKeys("rhdxhd12");
+```
+
+로그인 버튼 클릭
+```java
+executor.executeScript("actionLogin();");
+```
+
+확인
+```
+WebElement a = driver.findElement(By.tagName("a"));
+String aString = a.getText();
+assertEquals("", "로그아웃", aString);
+```
+
 ## 일반 로그인을 처리한다 DAO 단위 테스트
 
 새 브랜치
