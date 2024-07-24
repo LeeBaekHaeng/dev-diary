@@ -120,6 +120,9 @@ String aString = a.getText();
 assertEquals("", "로그아웃", aString);
 ```
 
+커밋
+- https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/selenium/EgovLoginController/loginUsrView/
+
 ## 일반 로그인을 처리한다 DAO 단위 테스트
 
 새 브랜치
