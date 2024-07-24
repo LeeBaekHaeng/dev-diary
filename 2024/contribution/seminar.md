@@ -51,15 +51,15 @@ throw new BaseRuntimeException(e);
 Install a Selenium library
 - Selenium 라이브러리 설치
 - https://www.selenium.dev/documentation/webdriver/getting_started/install_library/
-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/4.22.0
+- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/4.23.0
 
 ```xml
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.22.0</version>
-    <scope>test</scope>
+    <version>4.23.0</version>
+	<scope>test</scope>
 </dependency>
 ```
 
@@ -71,6 +71,12 @@ Selenium 코드 구성 및 실행
 ```
 TestEgovLoginControllerSelenium
 ```
+
+Junit Test 실행 에러
+```
+java.lang.UnsupportedClassVersionError: org/openqa/selenium/WebDriver has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+```
+![debug](debug.png)
 
 ## 일반 로그인을 처리한다 DAO 단위 테스트
 
