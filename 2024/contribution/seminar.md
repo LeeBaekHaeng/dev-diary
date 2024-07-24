@@ -41,6 +41,9 @@ catch
 throw new BaseRuntimeException(e);
 ```
 
+커밋
+- https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovLoginController2/
+
 ## 10. 로그인 셀레늄 단위 테스트
 
 새 브랜치
