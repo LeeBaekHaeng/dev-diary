@@ -191,3 +191,30 @@ ActionLoginLoginDAOTest
 [전자정부 표준프레임워크 표준 Inspection 룰셋 적용하기](https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev4.2:imp:inspection#%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80_%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC_%ED%91%9C%EC%A4%80_inspection_%EB%A3%B0%EC%85%8B_%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
 - 표준 Inspection 룰셋 한글/영문판의 압축파일 : 개발환경 4.2 이상 버전 사용
 - egovinspectionrules-4.2.zip
+
+시큐어코딩 PMD 진단/조치
+```
+AtLeastOneConstructor 적어도 하나의 생성자
+AvoidDeeplyNestedIfStmts Stmts인 경우 깊게 중첩되지 않도록 하세요. TODO
+AvoidDuplicateLiterals 중복 리터럴 방지
+CognitiveComplexity 인지 복잡성 TODO
+CommentDefaultAccessModifier 주석 기본 액세스 수정자
+CommentRequired 댓글 필수
+CommentSize 댓글 크기
+ControlStatementBraces 제어문 중괄호
+CyclomaticComplexity 순환적 복잡성 TODO
+GuardLogStatement 가드 로그 설명
+LawOfDemeter 데메테르의 법칙
+LinguisticNaming 언어적 명명
+LiteralsFirstInComparisons 비교에서 리터럴이 먼저임
+LocalVariableCouldBeFinal 지역 변수가 최종일 수 있음
+LocalVariableNamingConventions 지역 변수 명명 규칙
+LongVariable 긴 변수 TODO
+LooseCoupling 느슨한 결합
+MethodArgumentCouldBeFinal 메서드 인수가 최종일 수 있음
+OnlyOneReturn 단 한 번의 반품 TODO
+ShortVariable 짧은 변수
+TooManyMethods 방법이 너무 많음
+UnnecessaryAnnotationValueElement 불필요한 주석 값 요소
+UnnecessaryCast 불필요한 캐스트
+```
