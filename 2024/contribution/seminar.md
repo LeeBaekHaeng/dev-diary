@@ -51,12 +51,12 @@ throw new BaseRuntimeException(e);
 EgovLoginController
 EgovLoginService
 EgovLoginServiceImpl
-EgovClntInfo
+EgovClntInfo 개정이력 <pre> 추가, 위치 이동
 EgovCmmUseService
 EgovCmmUseServiceImpl 개정이력 <pre> 추가
 CmmUseDAO 개정이력 <pre> 추가
 LoginDAO
-EgovFileScrty 개정이력 <pre> 추가
+EgovFileScrty 개정이력 <pre> 추가, 위 주석 제거
 EgovSndngMailRegistService
 EgovSndngMailRegistServiceImpl
 EgovFileMngService 개정이력 <pre> 추가
@@ -66,7 +66,7 @@ SndngMailRegistDAO
 EgovSndngMailService
 EgovSndngMailServiceImpl
 EgovMultiPartEmail
-EgovXMLDoc 개정이력 <pre> 추가
+EgovXMLDoc 개정이력 <pre> 추가, 위치 이동
 egovMailMsgIdGnrService
 EgovFileScrty
 ```
