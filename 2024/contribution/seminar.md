@@ -145,6 +145,7 @@ ActionLoginLoginDAOTest
 
 커밋
 - https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/LoginDAO/actionLogin/
+- https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/LoginDAO/actionLogin2/
 
 ## 10. 로그인 시큐어코딩 PMD 진단/조치
 
