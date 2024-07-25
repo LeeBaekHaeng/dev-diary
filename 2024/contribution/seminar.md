@@ -157,6 +157,7 @@ assertEquals("", "로그아웃", aString);
 커밋
 - https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/selenium/EgovLoginController/loginUsrView/
 - https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/selenium/EgovLoginController/loginUsrView2/
+- https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/selenium/EgovLoginController/loginUsrView3/
 
 ## 일반 로그인을 처리한다 DAO 단위 테스트
 
