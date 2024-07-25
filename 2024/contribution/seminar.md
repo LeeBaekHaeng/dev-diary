@@ -41,8 +41,39 @@ catch
 throw new BaseRuntimeException(e);
 ```
 
+개정이력 추가
+```
+ *   2024.07.25  이백행          시큐어코딩 Exception 제거
+```
+
+수정할 소스
+```
+EgovLoginController
+EgovLoginService
+EgovLoginServiceImpl
+EgovClntInfo
+EgovCmmUseService
+EgovCmmUseServiceImpl 개정이력 <pre> 추가
+CmmUseDAO 개정이력 <pre> 추가
+LoginDAO
+EgovFileScrty 개정이력 <pre> 추가
+EgovSndngMailRegistService
+EgovSndngMailRegistServiceImpl
+EgovFileMngService 개정이력 <pre> 추가
+EgovFileMngServiceImpl 개정이력 <pre> 추가
+FileManageDAO 개정이력 <pre> 추가
+SndngMailRegistDAO
+EgovSndngMailService
+EgovSndngMailServiceImpl
+EgovMultiPartEmail
+EgovXMLDoc 개정이력 <pre> 추가
+egovMailMsgIdGnrService
+EgovFileScrty
+```
+
 커밋
 - https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovLoginController2/
+- https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovLoginController3/
 
 ## 10. 로그인 셀레늄 단위 테스트
 
@@ -151,7 +182,7 @@ ActionLoginLoginDAOTest
 
 새 브랜치
 ```
-2024/pmd/EgovLoginController2
+2024/pmd/EgovLoginController
 ```
 
 [전자정부 표준프레임워크 표준 Inspection 룰셋 적용하기](https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev4.2:imp:inspection#%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80_%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC_%ED%91%9C%EC%A4%80_inspection_%EB%A3%B0%EC%85%8B_%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
