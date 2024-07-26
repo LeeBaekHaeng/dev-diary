@@ -49,8 +49,37 @@ throws Exception
 
 커밋
 
-`Source > Format`
-`30. 로그인정책관리 시큐어코딩 Exception 제거`
+```
+30. 로그인정책관리 시큐어코딩 Exception 제거
+```
+
+```
+EgovLoginPolicyController 시큐어코딩 Exception 제거
+```
+
+```
+EgovLoginPolicyService Source > Format
+```
+
+```
+EgovLoginPolicyService 시큐어코딩 Exception 제거
+```
+
+```
+EgovLoginPolicyServiceImpl Source > Format
+```
+
+```
+EgovLoginPolicyServiceImpl 시큐어코딩 Exception 제거
+```
+
+```
+LoginPolicyDAO Source > Format
+```
+
+```
+LoginPolicyDAO 시큐어코딩 Exception 제거
+```
 
 https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovLoginPolicyController/
 
