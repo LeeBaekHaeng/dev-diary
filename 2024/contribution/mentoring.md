@@ -85,6 +85,93 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/E
 
 2. 시큐어코딩 PMD 진단/조치
 
+EgovLoginPolicyController
+
+AtLeastOneConstructor
+
+```java
+@RequiredArgsConstructor
+```
+
+```
+AtLeastOneConstructor 적어도 하나의 생성자
+```
+
+AvoidDuplicateLiterals
+
+```
+	/**
+	 * 로그인 정책
+	 */
+	private static final String LOGIN_POLICY = "loginPolicy";
+
+	/**
+	 * 로그인 정책 VO
+	 */
+	private static final String LOGIN_POLICY_VO = "loginPolicyVO";
+
+	/**
+	 * 메시지
+	 */
+	private static final String MESSAGE = "message";
+```
+
+```
+AvoidDuplicateLiterals 중복 리터럴 방지
+```
+
+CommentDefaultAccessModifier
+
+```
+CommentDefaultAccessModifier 주석 기본 액세스 수정자
+```
+
+CommentRequired
+
+```
+CommentRequired 댓글 필수
+```
+
+ControlStatementBraces
+
+```
+ControlStatementBraces 제어문 중괄호
+```
+
+LiteralsFirstInComparisons
+
+```
+LiteralsFirstInComparisons 비교에서 리터럴이 먼저임
+```
+
+LocalVariableCouldBeFinal
+
+```
+LocalVariableCouldBeFinal 지역 변수가 최종일 수 있음
+```
+
+LongVariable 긴 변수 TODO
+
+LooseCoupling
+
+```
+LooseCoupling 느슨한 결합
+```
+
+MethodArgumentCouldBeFinal
+
+```
+MethodArgumentCouldBeFinal 메서드 인수가 최종일 수 있음
+```
+
+OnlyOneReturn 단 한 번의 반품 TODO
+
+ShortVariable
+
+```
+ShortVariable 짧은 변수
+```
+
 3. 셀레늄 단위 테스트
 
 4. DAO 단위 테스트
