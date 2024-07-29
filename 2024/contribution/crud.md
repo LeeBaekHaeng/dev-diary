@@ -32,7 +32,7 @@ DataAccess
 
 Resource(Mapper) Folder:
 ```
-/egovframe-common-components-2024/src/main/resources/egovframework/mapper/com/test/comtcadministcode
+src/main/resources/egovframework/mapper/com/test
 ```
 
 DAO Package:
@@ -71,7 +71,7 @@ egovframework.com.test.comtcadministcode.web
 
 JSP Folder:
 ```
-/egovframe-common-components-2024/src/main/webapp/WEB-INF/jsp/egovframework/com/comtcadministcode
+src/main/webapp/WEB-INF/jsp/egovframework/com/test
 ```
 
 템플릿 프로젝트
