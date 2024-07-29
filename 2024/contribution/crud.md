@@ -18,6 +18,28 @@ https://github.com/LeeBaekHaeng/egovframe-development/blob/contribution/egovfram
 https://github.com/LeeBaekHaeng/egovframe-development/blob/contribution/egovframework.dev.imp.codegen.template.templates/eGovFrameTemplates/crud/wizard.xml
 
 
+```
+src/main/resources/egovframework/mapper/com/test
+```
+
+```
+src/main/webapp/WEB-INF/jsp/egovframework/com/test
+```
+
+```
+egovframework.com.test.comtcadministcode.service.impl
+```
+
+```
+egovframework.com.test.comtcadministcode.service
+```
+
+```
+egovframework.com.test.comtcadministcode.web
+```
+
+CRUD Program
+
 Author :
 ```
 이백행
