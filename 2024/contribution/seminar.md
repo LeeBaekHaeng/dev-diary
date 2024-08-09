@@ -49,7 +49,7 @@ throws Exception
 - egovinspectionrules-4.2.zip
 
 PMD > Import rules > Import by Copy
-![save](pmd.png)
+![pmd](pmd.PNG)
 
 LoginPolicyVO
 
