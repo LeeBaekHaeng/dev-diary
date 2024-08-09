@@ -120,3 +120,23 @@ ArrayIsStoredDirectly
 		}
 	}
 ```
+
+List
+
+```java
+	public List<LoginPolicyVO> getLoginPolicyList() {
+		List<LoginPolicyVO> loginPolicyList = null;
+		if (this.loginPolicyList != null) {
+			loginPolicyList = new ArrayList<>(loginPolicyList);
+		}
+		return loginPolicyList;
+	}
+```
+
+```java
+	public void setLoginPolicyList(final List<LoginPolicyVO> loginPolicyList) {
+		if (loginPolicyList != null) {
+			this.loginPolicyList = new ArrayList<>(loginPolicyList);
+		}
+	}
+```
