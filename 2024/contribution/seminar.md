@@ -60,7 +60,7 @@ LoginPolicyVO
 
 MethodReturnsInternalArray
 - 'delYn'을 반환하면 내부 배열이 노출될 수 있음
-```
+```java
 	public String[] getDelYn() {
 		if (delYn != null) {
 			return Arrays.stream(delYn).toArray(String[]::new);
@@ -69,10 +69,30 @@ MethodReturnsInternalArray
 	}
 ```
 
+```java
+	public String[] getDelYn() {
+		String[] delYn;
+		if (this.delYn != null) {
+			delYn = Arrays.stream(this.delYn).toArray(String[]::new);
+		} else {
+			delYn = new String[0];
+		}
+		return delYn;
+	}
+```
+
 ArrayIsStoredDirectly
 - 배열 'delYn' 이 직접 저장되어 있음
 ```java
 	public void setDelYn(String[] delYn) {
+		if (delYn != null) {
+			this.delYn = Arrays.stream(delYn).toArray(String[]::new);
+		}
+	}
+```
+
+```java
+	public void setDelYn(final String... delYn) {
 		if (delYn != null) {
 			this.delYn = Arrays.stream(delYn).toArray(String[]::new);
 		}
