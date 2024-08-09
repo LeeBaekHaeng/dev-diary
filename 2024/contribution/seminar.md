@@ -95,11 +95,9 @@ UseVarargs
 
 ```java
 	public String[] getDelYn() {
-		String[] delYn;
+		String[] delYn = null;
 		if (this.delYn != null) {
 			delYn = Arrays.stream(this.delYn).toArray(String[]::new);
-		} else {
-			delYn = new String[0];
 		}
 		return delYn;
 	}
