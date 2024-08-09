@@ -69,6 +69,30 @@ MethodReturnsInternalArray
 	}
 ```
 
+OnlyOneReturn
+- 단 한 번의 반품
+- A method should have only one exit point, and that should be the last statement in the method
+- 메소드에는 종료 지점이 하나만 있어야 하며, 종료 지점은 메소드의 마지막 명령문이어야 합니다.
+- https://docs.pmd-code.org/pmd-doc-7.0.0-rc3/pmd_rules_java_codestyle.html#onlyonereturn
+
+ReturnEmptyCollectionRatherThanNull
+- Null이 아닌 빈 컬렉션 반환
+- Return an empty collection rather than null.
+- null이 아닌 빈 컬렉션을 반환합니다.
+- https://docs.pmd-code.org/pmd-doc-7.0.0-rc3/pmd_rules_java_errorprone.html#returnemptycollectionratherthannull
+
+MethodArgumentCouldBeFinal
+- 메서드 인수가 최종일 수 있음
+- Parameter 'delYn' is not assigned and could be declared final
+- 매개변수 'delYn'이 할당되지 않았으며 최종으로 선언될 수 있습니다.
+- https://docs.pmd-code.org/pmd-doc-7.0.0-rc3/pmd_rules_java_codestyle.html#methodargumentcouldbefinal
+
+UseVarargs
+- Vararg 사용
+- Consider using varargs for methods or constructors which take an array the last parameter.
+- 배열을 마지막 매개변수로 사용하는 메서드나 생성자에는 가변인수 사용을 고려하세요.
+- https://docs.pmd-code.org/pmd-doc-7.0.0-rc3/pmd_rules_java_bestpractices.html#usevarargs
+
 ```java
 	public String[] getDelYn() {
 		String[] delYn;
