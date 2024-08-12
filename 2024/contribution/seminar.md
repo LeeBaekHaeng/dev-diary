@@ -127,7 +127,7 @@ List
 	public List<LoginPolicyVO> getLoginPolicyList() {
 		List<LoginPolicyVO> loginPolicyList = null;
 		if (this.loginPolicyList != null) {
-			loginPolicyList = new ArrayList<>(loginPolicyList);
+			loginPolicyList = new ArrayList<>(this.loginPolicyList);
 		}
 		return loginPolicyList;
 	}
