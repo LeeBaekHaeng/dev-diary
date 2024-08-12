@@ -95,3 +95,5 @@ public class DemoApplication {
 ```
 http://localhost:8080/helloworld
 
+1.7 Tools > Actions on Save
+![save.PNG](save.PNG)
