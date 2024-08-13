@@ -12,3 +12,5 @@ https://github.com/LeeBaekHaeng/egovframe-common-components
 [CRUD 프로그램 자동 생성 기능](2024/contribution/crud.md)
 
 [2024년 CRUD 프로그램 자동 생성 스터디](2024/study/crud.md)
+
+[공공데이터포털 공유서비스 개발 가이드라인](2024/data.md)

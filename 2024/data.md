@@ -38,8 +38,8 @@
 
 오퍼레이션 유형|영문 오퍼레이션명|국문 오퍼레이션명
 -|-|-
-조회 (목록)|getCmmnDetailCodeList’|공통상세코드목록조회
-조회 (Item)|getCmmnDetailCodeItem’|공통상세코드항목조회
+조회 (목록)|getCmmnDetailCodeList|공통상세코드목록조회
+조회 (Item)|getCmmnDetailCodeItem|공통상세코드항목조회
 등록|addCmmnDetailCode|공통상세코드등록
 변경/수정/제어|setCmmnDetailCode|공통상세코드수정
 삭제|deleteCmmnDetailCode|공통상세코드삭제
