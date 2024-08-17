@@ -53,6 +53,12 @@ public void exceptionTransferService() {
 
 http://localhost:8080/
 
+https://github.com/LeeBaekHaeng/egovframe-boot-sample-java-config/commits/2024/08/17/
+
+https://github.com/eGovFramework/egovframe-boot-sample-java-config/pull/19
+
+https://youtu.be/82S3iDXOsxA
+
 ## 표준프레임워크 부트 기반 심플 게시판 시큐어코딩 PMD 진단/조치 2차
 
 ### EgovBootApplication
