@@ -232,3 +232,16 @@ public class SecurityConfig {
 
 }
 ```
+
+application.properties
+```properties
+spring.application.name=demo
+
+logging.level.com.example.demo=DEBUG
+
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+```
