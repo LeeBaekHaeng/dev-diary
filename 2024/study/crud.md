@@ -10,6 +10,7 @@ CRUD 프로그램 자동 생성 기능
 ## 목차
 
 - [IntelliJ 다운로드](#1-intellij-로-spring-boot-332-시작하기)
+- [Spring Data JPA 3.3.3](#spring-data-jpa-333)
 
 ## 1. IntelliJ 로 Spring Boot 3.3.2 시작하기
 
@@ -97,3 +98,137 @@ http://localhost:8080/helloworld
 
 1.7 Tools > Actions on Save
 ![save.PNG](save.PNG)
+
+## Spring Data JPA 3.3.3
+
+스프링 초기화(Spring Initializr)
+
+https://start.spring.io/
+
+종속성 추가...Ctrl + b(Add dependencies...Ctrl + b)
+
+Web, Security, JPA, Actuator, Devtools...
+```
+web
+```
+
+```
+security
+```
+
+```
+jpa
+```
+
+```
+actuator
+```
+
+```
+devtools
+```
+
+JDBC
+```
+h2
+```
+
+```
+mariadb
+```
+
+```
+postgresql
+```
+
+Developer Tools
+```
+lombok
+```
+
+---
+
+시작하기(Getting Started)
+
+https://spring.io/projects/spring-data-jpa
+
+https://docs.spring.io/spring-data/jpa/reference/jpa/getting-started.html
+
+---
+
+스프링 시큐리티 로그인
+
+http://localhost:8080/login
+
+Username
+```
+user
+```
+
+Password
+```
+ed2ae9e7-58c9-4a5b-9cc7-f408041053c0
+```
+Using generated security password: ed2ae9e7-58c9-4a5b-9cc7-f408041053c0
+
+---
+
+H2 console 로그인
+
+H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ab647d1b-5861-4efd-be17-e3e8b5d497f1'
+
+http://localhost:8080/h2-console
+
+- Driver Class: org.h2.Driver
+- JDBC URL: jdbc:h2:~/test
+```
+jdbc:h2:mem:ab647d1b-5861-4efd-be17-e3e8b5d497f1
+```
+- User Name: sa
+- Password:
+
+spring security h2 console 403
+
+https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/index.html
+
+```java
+.requestMatchers(new AntPathRequestMatcher("/h2-console/**")).permitAll()
+```
+
+```java
+package com.example.demo;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+                .authorizeHttpRequests(
+                        (authorize) -> authorize
+//                                .requestMatchers(new AntPathRequestMatcher("/h2-console/**")).permitAll()
+//                                .anyRequest().permitAll()
+                                .requestMatchers("/").permitAll()
+                                .requestMatchers("/login").permitAll()
+//                                .requestMatchers("/h2-console/**").permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/h2-console/**")).permitAll()
+                                .anyRequest().authenticated()
+                )
+                .httpBasic(Customizer.withDefaults())
+                .formLogin(Customizer.withDefaults());
+
+
+        return http.build();
+    }
+
+}
+```
