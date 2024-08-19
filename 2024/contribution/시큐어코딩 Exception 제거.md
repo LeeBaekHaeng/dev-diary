@@ -71,7 +71,14 @@ http://localhost:8080/egovframework-all-in-one/sts/dst/selectDtaUseStatsListView
 2024/pmd/EgovDtaUseStatsContoller
 ```
 
-161. 자료이용현황통계 Exception 제거
-- `@exception Exception/throws Exception/` 제거
+161. 자료이용현황통계 시큐어코딩 Exception 제거
+- 주석 위치 수정
+- `throws Exception/` 제거
 - ` *   2024.08.19  이백행          시큐어코딩 Exception 제거` 개정이력 수정
 - Source > Format
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovDtaUseStatsContoller/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/391
+
+https://youtu.be/auivh3BSt_g
