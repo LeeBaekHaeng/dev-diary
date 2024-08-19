@@ -4,7 +4,7 @@
 1. DAO 단위 테스트
 2. CRUD 프로그램 자동 생생 기능 템플릿 수정
 3. 셀레늄 단위 테스트
-4. 시큐어코딩 Exception 제거
+4. [시큐어코딩 Exception 제거](2024/contribution/시큐어코딩%20Exception%20제거.md)
 5. 시큐어코딩 PMD 진단/조치
 6. 시큐어코딩 일련번호 PK 파라미터 암복호화
 7. [검색조건 유지](2024/contribution/%EA%B2%80%EC%83%89%EC%A1%B0%EA%B1%B4%20%EC%9C%A0%EC%A7%80.md)
