@@ -7,8 +7,8 @@
 ---
 
 1. 소프트웨어 개발 보안 가이드
-소프트웨어_개발보안_가이드(2021.12.29).pdf
-https://www.kisa.or.kr/2060204/form?postSeq=5&page=1
+- 소프트웨어_개발보안_가이드(2021.12.29).pdf
+- https://www.kisa.or.kr/2060204/form?postSeq=5&page=1
 
 39페이지
 - 4. 구현단계 기준과의 관계
@@ -32,8 +32,8 @@ https://www.kisa.or.kr/2060204/form?postSeq=5&page=1
 ---
 
 2. 소프트웨어 보안약점 진단가이드
-소프트웨어_보안약점_진단가이드(2021).pdf
-https://www.kisa.or.kr/2060204/form?postSeq=9&page=1
+- 소프트웨어_보안약점_진단가이드(2021).pdf
+- https://www.kisa.or.kr/2060204/form?postSeq=9&page=1
 
 429페이지
 - 제4장 구현단계 보안약점 진단
