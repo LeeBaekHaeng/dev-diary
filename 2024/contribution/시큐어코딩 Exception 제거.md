@@ -53,6 +53,7 @@
 
 목차
 - [161. 자료이용현황통계 시큐어코딩 Exception 제거](#161-자료이용현황통계-시큐어코딩-exception-제거)
+- [170. 블로그관리 시큐어코딩 Exception 제거](#170-블로그관리-시큐어코딩-exception-제거)
 
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
 
@@ -82,3 +83,65 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/E
 https://github.com/eGovFramework/egovframe-common-components/pull/391
 
 https://youtu.be/auivh3BSt_g
+
+## 170. 블로그관리 시큐어코딩 Exception 제거
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/cop/bbs/selectBlogList.do
+```
+
+검색(Search)
+```
+/cop/bbs/selectBlogList.do
+```
+
+새 브랜치:
+```
+2024/pmd/EgovBBSMasterController
+```
+
+170. 블로그관리 시큐어코딩 Exception 제거
+- `@throws Exception/throws Exception` 제거
+- ` *   2024.08.20  이백행          시큐어코딩 Exception 제거` 개정이력 수정
+- Source > Format
+- `throw new BaseRuntimeException("FdlException: egovBlogIdGnrService", e);`
+- `throw new BaseRuntimeException("FdlException: egovBBSMstrIdGnrService", e);`
+- `throws FdlException` 제거
+- `throws IllegalAccessException` 추가
+
+`throws Exception`
+`throw processException("info.nodata.msg");`
+Exception Handling
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:rte2:bsl:exception_handling
+EgovBBSMasterServiceImpl
+```java
+	@Override
+	public BoardMasterVO selectBBSMasterInf(BoardMasterVO boardMasterVO) throws Exception {
+		BoardMasterVO resultVO = egovBBSMasterDao.selectBBSMasterDetail(boardMasterVO);
+		if (resultVO == null)
+			throw processException("info.nodata.msg");
+```
+
+`throw processException("fail.common.msg", e);`
+```
+	@Override
+	public void insertBBSMasterInf(BoardMaster boardMaster) throws Exception {
+
+		// 2021 github 반영
+		// String bbsId = idgenService.getNextStringId();
+		// 게시판 ID 채번
+		String bbsId;
+		try {
+			bbsId = idgenService.getNextStringId() + RandomStringUtils.randomAlphabetic(10);
+		} catch (FdlException e) {
+			throw processException("fail.common.msg", e);
+		}
+		boardMaster.setBbsId(bbsId);
+```
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovBBSMasterController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/392
+
+https://youtu.be/YavT8xzJ-pk
