@@ -54,6 +54,7 @@
 목차
 - [161. 자료이용현황통계 시큐어코딩 Exception 제거](#161-자료이용현황통계-시큐어코딩-exception-제거)
 - [170. 블로그관리 시큐어코딩 Exception 제거](#170-블로그관리-시큐어코딩-exception-제거)
+- [게시물 관리 시큐어코딩 Exception 제거](#게시물-관리-시큐어코딩-exception-제거)
 
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
 
@@ -145,3 +146,37 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/E
 https://github.com/eGovFramework/egovframe-common-components/pull/392
 
 https://youtu.be/YavT8xzJ-pk
+
+## 게시물 관리 시큐어코딩 Exception 제거
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/cop/bbs/selectBBSMasterDetail.do?bbsId=BBSMSTR_000000001662AEJYmJtsfq
+```
+
+검색(Search)
+```
+/cop/bbs/selectArticleList.do
+```
+
+새 브랜치:
+```
+2024/pmd/EgovArticleController
+```
+
+게시물 관리 시큐어코딩 Exception 제거
+- `@throws Exception/throws Exception/throws FdlException` 제거
+- ` *   2024.08.21  이백행          시큐어코딩 Exception 제거` 개정이력 수정
+- Source > Format
+- `throw processException("info.nodata.msg");`
+- `throw processException("fail.common.msg", e);`
+- `throw new BaseRuntimeException("FdlException: egovFileIdGnrService", e);`
+
+EgovFileMngUtil
+`throw new FileNotFoundException(downFileName);` 을 `throw new BaseRuntimeException(downFileName + " 파일이 존재하지 않습니다.");/throw new BaseRuntimeException(downFileName + " 파일이 아닙니다.");` 로 수정
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovArticleController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/394
+
+https://youtu.be/OTTLx2vqMWk
