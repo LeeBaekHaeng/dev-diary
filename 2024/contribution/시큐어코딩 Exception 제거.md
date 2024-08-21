@@ -55,6 +55,7 @@
 - [161. 자료이용현황통계 시큐어코딩 Exception 제거](#161-자료이용현황통계-시큐어코딩-exception-제거)
 - [170. 블로그관리 시큐어코딩 Exception 제거](#170-블로그관리-시큐어코딩-exception-제거)
 - [게시물 관리 시큐어코딩 Exception 제거](#게시물-관리-시큐어코딩-exception-제거)
+- [200. 템플릿관리 시큐어코딩 Exception 제거](#200-템플릿관리-시큐어코딩-exception-제거)
 
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
 
@@ -180,3 +181,33 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/E
 https://github.com/eGovFramework/egovframe-common-components/pull/394
 
 https://youtu.be/OTTLx2vqMWk
+
+## 200. 템플릿관리 시큐어코딩 Exception 제거
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/cop/tpl/selectTemplateInfs.do
+```
+
+검색(Search)
+```
+/cop/tpl/selectTemplateInfs.do
+```
+
+새 브랜치:
+```
+2024/pmd/EgovTemplateManageController
+```
+
+200. 템플릿관리 시큐어코딩 Exception 제거
+- `@throws Exception/throws Exception` 제거
+- ` *   2024.08.22  이백행          시큐어코딩 Exception 제거` 개정이력 수정
+- Source > Format
+- EgovCmmUseService
+- `throw processException("fail.common.msg", e);`, `throws Exception`
+
+https://youtu.be/WNNOhcbcVlc
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovTemplateManageController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/396
