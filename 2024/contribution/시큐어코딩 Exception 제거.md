@@ -56,6 +56,7 @@
 - [170. 블로그관리 시큐어코딩 Exception 제거](#170-블로그관리-시큐어코딩-exception-제거)
 - [게시물 관리 시큐어코딩 Exception 제거](#게시물-관리-시큐어코딩-exception-제거)
 - [200. 템플릿관리 시큐어코딩 Exception 제거](#200-템플릿관리-시큐어코딩-exception-제거)
+- [250. 스크랩 목록 시큐어코딩 Exception 제거](#250-스크랩-목록-시큐어코딩-exception-제거)
 
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
 
@@ -211,3 +212,33 @@ https://youtu.be/WNNOhcbcVlc
 https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovTemplateManageController/
 
 https://github.com/eGovFramework/egovframe-common-components/pull/396
+
+## 250. 스크랩 목록 시큐어코딩 Exception 제거
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/cop/scp/selectArticleScrapList.do
+```
+
+검색(Search)
+```
+/cop/scp/selectArticleScrapList.do
+```
+
+새 브랜치:
+```
+2024/pmd/EgovArticleScrapController
+```
+
+250. 스크랩 목록 시큐어코딩 Exception 제거
+- `@throws Exception/throws Exception/throws FdlException` 제거
+- ` *   2024.08.23  이백행          시큐어코딩 Exception 제거` 개정이력 수정
+- Source > Format
+- EgovArticleScrapServiceImpl, `throw processException("fail.common.msg", e);`, `throws Exception`
+- processRuntimeException 추가하면 좋을 것 같음
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovArticleScrapController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/398
+
+https://youtu.be/sUJEw261gkM
