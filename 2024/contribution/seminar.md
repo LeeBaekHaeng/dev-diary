@@ -91,6 +91,17 @@ throws Exception
  *   2024.08.22  이백행          시큐어코딩 Exception 제거
 ```
 
+Exception Handling
+- https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:rte2:bsl:exception_handling
+
+```java
+throw processException("result.nodata.msg"); 
+```
+
+```java
+throw processException("fail.common.msg", e); 
+```
+
 ## 30. 로그인정책관리 시큐어코딩 PMD 진단/조치
 
 [전자정부 표준프레임워크 표준 Inspection 룰셋 적용하기](https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev4.2:imp:inspection#%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80_%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC_%ED%91%9C%EC%A4%80_inspection_%EB%A3%B0%EC%85%8B_%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
