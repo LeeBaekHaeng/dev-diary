@@ -58,6 +58,7 @@
 - [200. 템플릿관리 시큐어코딩 Exception 제거](#200-템플릿관리-시큐어코딩-exception-제거)
 - [250. 스크랩 목록 시큐어코딩 Exception 제거](#250-스크랩-목록-시큐어코딩-exception-제거)
 - [270. 커뮤니티관리 시큐어코딩 Exception 제거](#250-스크랩-목록-시큐어코딩-exception-제거)
+- [커뮤니티 사용자/게시판관리 시큐어코딩 Exception 제거](#커뮤니티-사용자게시판관리-시큐어코딩-exception-제거)
 
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
 
@@ -274,3 +275,31 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/E
 https://github.com/eGovFramework/egovframe-common-components/pull/399
 
 https://youtu.be/PWRXCs_Hpe8
+
+## 커뮤니티 사용자/게시판관리 시큐어코딩 Exception 제거
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/cop/cmy/cmmntyMain.do?cmmntyId=CMMNTY_0000000000301
+```
+
+검색(Search)
+```
+/cop/cmy/cmmntyMain.do
+```
+
+새 브랜치:
+```
+2024/pmd/EgovCommuManageController
+```
+
+커뮤니티 사용자/게시판관리 시큐어코딩 Exception 제거
+- `@throws Exception/throws Exception/throws FdlException/throws DataAccessException` 제거
+- ` *   2024.08.26  이백행          컨트리뷰션 시큐어코딩 Exception 제거` 개정이력 수정
+- Source > Format
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovCommuManageController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/400
+
+https://youtu.be/y1CiUkd1CaE
