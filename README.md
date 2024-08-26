@@ -31,3 +31,57 @@ https://github.com/LeeBaekHaeng/egovframe-boot-sample-java-config
 [2024년 CRUD 프로그램 자동 생성 스터디](2024/study/crud.md)
 
 [공공데이터포털 공유서비스 개발 가이드라인](2024/data.md)
+
+```
+egovframe-common-components 표준프레임워크 공통컴포넌트 4.2.0
+
+egovframe-runtime 표준프레임워크 실행환경 4.2.0
+
+egovframe-development 표준프레임워크 개발환경 4.2.0
+
+egovframe-web-sample 표준프레임워크 심플 게시판
+egovframe-boot-sample-java-config 표준프레임워크 부트 기반 심플 게시판
+
+egovframe-simple-homepage-template 표준프레임워크 템플릿 프로젝트 심플 홈페이지
+egovframe-portal-site-template 표준프레임워크 템플릿 프로젝트 포털 사이트
+egovframe-enterprise-business-template 표준프레임워크 템플릿 프로젝트 내부업무 시스템
+
+egovframe-template-simple-backend 표준프레임워크 심플홈페이지 BackEnd
+egovframe-template-simple-react 표준프레임워크 심플홈페이지 FrontEnd
+
+egovframe-msa-edu MSA 템플릿 (교육용)
+```
+
+```
+egovframe-boot-sample-java-config 표준프레임워크 부트 기반 심플 게시판
+egovframe-common-components 표준프레임워크 공통컴포넌트 4.2.0
+egovframe-development 표준프레임워크 개발환경 4.2.0
+egovframe-enterprise-business-template 표준프레임워크 템플릿 프로젝트 내부업무 시스템
+egovframe-msa-edu MSA 템플릿 (교육용)
+egovframe-portal-site-template 표준프레임워크 템플릿 프로젝트 포털 사이트
+egovframe-runtime 표준프레임워크 실행환경 4.2.0
+egovframe-simple-homepage-template 표준프레임워크 템플릿 프로젝트 심플 홈페이지
+egovframe-template-simple-backend 표준프레임워크 심플홈페이지 BackEnd
+egovframe-template-simple-react 표준프레임워크 심플홈페이지 FrontEnd
+egovframe-web-sample 표준프레임워크 심플 게시판
+```
+
+```
+[2024년 전자정부 표준프레임워크 컨트리뷰션] 공통컴포넌트
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션] 실행환경
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션] 개발환경
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션] 심플 게시판
+[2024년 전자정부 표준프레임워크 컨트리뷰션] 부트 기반 심플 게시판
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션] 템플릿 프로젝트 심플 홈페이지
+[2024년 전자정부 표준프레임워크 컨트리뷰션] 템플릿 프로젝트 포털 사이트
+[2024년 전자정부 표준프레임워크 컨트리뷰션] 템플릿 프로젝트 내부업무 시스템
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션] 심플홈페이지 BackEnd
+[2024년 전자정부 표준프레임워크 컨트리뷰션] 심플홈페이지 FrontEnd
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션] MSA 템플릿 (교육용)
+```
