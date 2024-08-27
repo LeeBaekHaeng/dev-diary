@@ -60,6 +60,7 @@
 - [270. 커뮤니티관리 시큐어코딩 Exception 제거](#250-스크랩-목록-시큐어코딩-exception-제거)
 - [커뮤니티 사용자/게시판관리 시큐어코딩 Exception 제거](#커뮤니티-사용자게시판관리-시큐어코딩-exception-제거)
 - [310. 문자메시지 시큐어코딩 Exception 제거](#310-문자메시지-시큐어코딩-exception-제거)
+- [320. 부서일정관리 시큐어코딩 Exception 제거](#320-부서일정관리-시큐어코딩-exception-제거)
 
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
 
@@ -341,3 +342,45 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/E
 https://github.com/eGovFramework/egovframe-common-components/pull/401
 
 https://youtu.be/ic7FsLG8oTg
+
+## 320. 부서일정관리 시큐어코딩 Exception 제거
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/cop/smt/sdm/EgovDeptSchdulManageList.do
+```
+
+검색(Search)
+```
+/cop/smt/sdm/EgovDeptSchdulManageList.do
+```
+
+새 브랜치:
+```
+2024/pmd/EgovDeptSchdulManageController
+```
+
+320. 부서일정관리 시큐어코딩 Exception 제거
+- `@throws Exception/throws Exception/@exception Exception` 제거
+- ` *   2024.08.28  이백행          컨트리뷰션 시큐어코딩 Exception 제거` 개정이력 수정
+- Source > Format
+
+```java
+throw new BaseRuntimeException("IllegalStateException | IOException: parseFileInf(Map<String, MultipartFile> files, transferTo", e);
+throw new BaseRuntimeException("IllegalStateException | IOException: parseFileInf(List<MultipartFile> files, transferTo", e);
+throw new BaseRuntimeException("IOException: writeUploadedFile", e);
+throw new BaseRuntimeException("FileNotFoundException: downFile " + downFileName);
+throw new BaseRuntimeException("UnsupportedEncodingException: downFile new String", e);
+throw new BaseRuntimeException("IOException: downFile", e);
+throw new BaseRuntimeException("IOException: writeFile", e);
+throw new BaseRuntimeException("FdlException: parseFileInf(Map<String, MultipartFile> files, egovFileIdGnrService", e);
+throw new BaseRuntimeException("FdlException: parseFileInf(List<MultipartFile> files, egovFileIdGnrService", e);
+
+throw processException("fail.common.msg", e);
+```
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovDeptSchdulManageController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/402
+
+https://youtu.be/VYW_HWxCzX8
