@@ -88,7 +88,7 @@ throws Exception
 
 개정이력 추가
 ```
- *   2024.08.22  이백행          시큐어코딩 Exception 제거
+ *   2024.08.29  이백행          컨트리뷰션 시큐어코딩 Exception 제거
 ```
 
 Exception Handling
