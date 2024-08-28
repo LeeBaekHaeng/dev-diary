@@ -287,3 +287,79 @@ https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/0
 https://github.com/eGovFramework/egovframe-template-simple-backend/pull/58
 
 https://youtu.be/cdv-m0bw_cY
+
+## [게시판생성관리] 롬복 생성자 기반 종속성 주입
+
+- [사이트관리 > 게시판사용관리] 롬복 생성자 기반 종속성 주입
+- `@RequiredArgsConstructor` 추가
+- Constructor-based Dependency Injection
+  - 생성자 기반 종속성 주입
+  - https://docs.spring.io/spring-framework/reference/core/beans/dependencies/factory-collaborators.html#beans-constructor-injection
+- Spring Beans and Dependency Injection
+  - 스프링 빈과 종속성 주입
+  - https://docs.spring.io/spring-boot/reference/using/spring-beans-and-dependency-injection.html
+- ` *   2024.08.29  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+사이트관리 > 게시판사용관리
+- http://localhost:3000/admin/usage
+- http://localhost:8080/bbsUseInf?pageIndex=1&searchCnd=0&searchWrd=
+
+```
+/bbsUseInf
+```
+
+1. BBSUseInfoManageDAO
+```java
+//@Repository("BBSUseInfoManageDAO")
+@Repository
+```
+
+2. EgovBBSUseInfoManageServiceImpl
+```java
+//@Service("EgovBBSUseInfoManageService")
+@Service
+@RequiredArgsConstructor
+
+//	@Resource(name = "BBSUseInfoManageDAO")
+//	private BBSUseInfoManageDAO bbsUseDAO;
+	private final BBSUseInfoManageDAO bbsUseDAO;
+```
+
+3. EgovBBSUseInfoManageApiController
+```java
+@RequiredArgsConstructor
+
+	/** EgovBBSUseInfoManageService */
+//	@Resource(name = "EgovBBSUseInfoManageService")
+//	private EgovBBSUseInfoManageService bbsUseService;
+	private final EgovBBSUseInfoManageService bbsUseService;
+
+	/** EgovPropertyService */
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertyService;
+	private final EgovPropertyService propertyService;
+
+	/** EgovBBSAttributeManageService */
+//	@Resource(name = "EgovBBSAttributeManageService")
+//	private EgovBBSAttributeManageService bbsAttrbService;
+	private final EgovBBSAttributeManageService bbsAttrbService;
+
+	/** DefaultBeanValidator */
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+
+	/** EgovMessageSource */
+//	@Resource(name = "egovMessageSource")
+//	EgovMessageSource egovMessageSource;
+	private final EgovMessageSource egovMessageSource;
+//The value of the field EgovBBSUseInfoManageApiController.egovMessageSource is not used
+//EgovBBSUseInfoManageApiController.egovMessageSource 필드의 값이 사용되지 않습니다.
+//사용되지 않아 제거
+```
+
+https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/08/29/
+
+https://github.com/eGovFramework/egovframe-template-simple-backend/pull/59
+
+https://youtu.be/xhivzGdXjD0
