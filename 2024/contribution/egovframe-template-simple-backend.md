@@ -149,3 +149,141 @@ https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/0
 https://github.com/eGovFramework/egovframe-template-simple-backend/pull/57
 
 https://youtu.be/-U9Pn5x8GO4
+
+## [사이트관리 > 게시판생성관리] 롬복 생성자 기반 종속성 주입
+
+- `@RequiredArgsConstructor` 추가
+- Constructor-based Dependency Injection
+  - 생성자 기반 종속성 주입
+  - https://docs.spring.io/spring-framework/reference/core/beans/dependencies/factory-collaborators.html#beans-constructor-injection
+- Spring Beans and Dependency Injection
+  - 스프링 빈과 종속성 주입
+  - https://docs.spring.io/spring-boot/reference/using/spring-beans-and-dependency-injection.html
+- ` *   2024.08.28  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+사이트관리 > 게시판생성관리
+- http://localhost:3000/admin/board
+- http://localhost:8080/bbsMaster?pageIndex=1&searchCnd=0&searchWrd=
+
+1. BBSAttributeManageDAO
+```java
+//@Repository("BBSAttributeManageDAO")
+@Repository
+```
+
+2. EgovBBSAttributeManageServiceImpl
+```java
+//@Service("EgovBBSAttributeManageService")
+@Service
+@RequiredArgsConstructor
+
+//	@Resource(name = "BBSAttributeManageDAO")
+//	private BBSAttributeManageDAO attrbMngDAO;
+	private final BBSAttributeManageDAO bbsAttributeManageDAO;
+
+//	@Resource(name = "BBSUseInfoManageDAO")
+//	private BBSUseInfoManageDAO bbsUseDAO;
+	private final BBSUseInfoManageDAO bbsUseInfoManageDAO;
+
+//	@Resource(name = "EgovUserInfManageService")
+//	private EgovUserInfManageService userService;
+	private final EgovUserInfManageService egovUserInfManageService;
+
+//	@Resource(name = "egovBBSMstrIdGnrService")
+//	private EgovIdGnrService idgenService;
+	private final EgovIdGnrService egovBBSMstrIdGnrService;
+
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertyService;
+	private final EgovPropertyService egovPropertyService;
+
+	// ---------------------------------
+	// 2009.06.26 : 2단계 기능 추가
+	// ---------------------------------
+//	@Resource(name = "BBSAddedOptionsDAO")
+//	private BBSAddedOptionsDAO addedOptionsDAO;
+	private final BBSAddedOptionsDAO addedOptionsDAO;
+	//// -------------------------------
+```
+
+3. EgovBBSAttributeManageApiController
+```java
+@RequiredArgsConstructor
+
+	/** EgovBBSAttributeManageService */
+//	@Resource(name = "EgovBBSAttributeManageService")
+//	private EgovBBSAttributeManageService bbsAttrbService;
+	private final EgovBBSAttributeManageService egovBBSAttributeManageService;
+
+	/** EgovCmmUseService */
+//	@Resource(name = "EgovCmmUseService")
+//	private EgovCmmUseService cmmUseService;
+	private final EgovCmmUseService egovCmmUseService;
+
+	/** EgovPropertyService */
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertyService;
+	private final EgovPropertyService egovPropertyService;
+
+	/** DefaultBeanValidator */
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+
+	/** EgovMessageSource */
+//	@Resource(name = "egovMessageSource")
+//	EgovMessageSource egovMessageSource;
+//	private final EgovMessageSource egovMessageSource;
+// The value of the field EgovBBSAttributeManageApiController.egovMessageSource is not used
+// EgovBBSAttributeManageApiController.egovMessageSource 필드의 값이 사용되지 않습니다.
+// 사용되지 않아 제거
+```
+
+4. CmmUseDAO
+```java
+//@Repository("cmmUseDAO")
+@Repository
+//public class CmmUseDAO extends EgovComAbstractDAO {
+public class CmmUseDAO extends EgovAbstractMapper {
+```
+
+5. EgovCmmUseServiceImpl
+```java
+//@Service("EgovCmmUseService")
+@Service
+@RequiredArgsConstructor
+
+//	@Resource(name = "cmmUseDAO")
+//	private CmmUseDAO cmmUseDAO;
+	private final CmmUseDAO cmmUseDAO;
+```
+
+6. EgovBBSUseInfoManageApiController
+```java
+@RequiredArgsConstructor
+
+	/** EgovBBSAttributeManageService */
+//	@Resource(name = "EgovBBSAttributeManageService")
+//	private EgovBBSAttributeManageService bbsAttrbService;
+	private final EgovBBSAttributeManageService bbsAttrbService;
+```
+
+7. EgovMberManageApiController
+```java
+@RequiredArgsConstructor
+
+	/** cmmUseService */
+//	@Resource(name = "EgovCmmUseService")
+//	private EgovCmmUseService cmmUseService;
+	private final EgovCmmUseService cmmUseService;
+
+		if (log.isDebugEnabled()) {
+			log.debug("commandMap={}", commandMap);
+		}
+```
+
+https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/08/28/
+
+https://github.com/eGovFramework/egovframe-template-simple-backend/pull/58
+
+https://youtu.be/cdv-m0bw_cY
