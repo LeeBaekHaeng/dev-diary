@@ -49,7 +49,7 @@
 - https://github.com/eGovFramework/egovframe-portal-site-template
 - https://github.com/LeeBaekHaeng/egovframe-portal-site-template
 ### [2024년 전자정부 표준프레임워크 컨트리뷰션] 템플릿 프로젝트 내부업무 시스템
-- egovframe-enterprise-business-template 표준프레임워크 템플릿 프로젝트 내부업무 시스템
+- [egovframe-enterprise-business-template 표준프레임워크 템플릿 프로젝트 내부업무 시스템](2024/contribution/egovframe-enterprise-business-template.md)
 - https://github.com/eGovFramework/egovframe-enterprise-business-template
 - https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template
 
