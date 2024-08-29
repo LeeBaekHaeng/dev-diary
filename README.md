@@ -34,7 +34,7 @@
 - https://github.com/eGovFramework/egovframe-web-sample
 - https://github.com/LeeBaekHaeng/egovframe-web-sample
 ### [2024년 전자정부 표준프레임워크 컨트리뷰션] 부트 기반 심플 게시판
-- egovframe-boot-sample-java-config 표준프레임워크 부트 기반 심플 게시판
+- [egovframe-boot-sample-java-config 표준프레임워크 부트 기반 심플 게시판](2024/contribution/egovframe-boot-sample-java-config.md)
 - https://github.com/eGovFramework/egovframe-boot-sample-java-config
 - https://github.com/LeeBaekHaeng/egovframe-boot-sample-java-config
 
