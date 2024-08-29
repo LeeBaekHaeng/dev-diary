@@ -363,3 +363,57 @@ https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/0
 https://github.com/eGovFramework/egovframe-template-simple-backend/pull/59
 
 https://youtu.be/xhivzGdXjD0
+
+## [사이트관리자 암호변경] 롬복 생성자 기반 종속성 주입
+
+- [사이트관리 > 사이트관리자 암호변경] 롬복 생성자 기반 종속성 주입
+- `@RequiredArgsConstructor` 추가
+- Constructor-based Dependency Injection
+  - 생성자 기반 종속성 주입
+  - https://docs.spring.io/spring-framework/reference/core/beans/dependencies/factory-collaborators.html#beans-constructor-injection
+- Spring Beans and Dependency Injection
+  - 스프링 빈과 종속성 주입
+  - https://docs.spring.io/spring-boot/reference/using/spring-beans-and-dependency-injection.html
+- ` *   2024.08.29  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+사이트관리 > 사이트관리자 암호변경
+- http://localhost:3000/admin/manager/
+- http://localhost:8080/admin/password
+
+```
+/admin/password
+```
+
+1. SiteManagerDAO
+```java
+//@Repository("siteManagerDAO")
+@Repository
+```
+
+2. EgovSiteManagerServiceImpl
+```java
+//@Service("siteManagerService")
+@Service
+
+@RequiredArgsConstructor
+
+//	@Resource(name = "siteManagerDAO")
+//	private SiteManagerDAO siteManagerDAO;
+	private final SiteManagerDAO siteManagerDAO;
+```
+
+3. EgovSiteManagerApiController
+```java
+@RequiredArgsConstructor
+
+	/** EgovSiteManagerService */
+//	@Resource(name = "siteManagerService")
+//	private EgovSiteManagerService siteManagerService;
+	private final EgovSiteManagerService siteManagerService;
+```
+
+https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/08/29a/
+
+https://github.com/eGovFramework/egovframe-template-simple-backend/pull/60
+
+https://youtu.be/aRp4n8SNLX4
