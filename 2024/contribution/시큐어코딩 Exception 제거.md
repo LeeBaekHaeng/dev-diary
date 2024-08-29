@@ -62,6 +62,7 @@
 - [310. 문자메시지 시큐어코딩 Exception 제거](#310-문자메시지-시큐어코딩-exception-제거)
 - [320. 부서일정관리 시큐어코딩 Exception 제거](#320-부서일정관리-시큐어코딩-exception-제거)
 - [[협업 > 330. 일정관리] 시큐어코딩 Exception 제거](#320-부서일정관리-시큐어코딩-exception-제거)
+- [[340. 일지관리] 시큐어코딩 Exception 제거](#340-일지관리-시큐어코딩-exception-제거)
 
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
 
@@ -435,3 +436,64 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/E
 https://github.com/eGovFramework/egovframe-common-components/pull/403
 
 https://youtu.be/WExo3nqOq4g
+
+## [340. 일지관리] 시큐어코딩 Exception 제거
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/cop/smt/dsm/EgovDiaryManageList.do
+```
+
+검색(Search)
+```
+/cop/smt/dsm/EgovDiaryManageList.do
+```
+
+새 브랜치:
+```
+2024/pmd/EgovDiaryManageController
+```
+
+[협업 > 340. 일지관리] 시큐어코딩 Exception 제거
+- `@throws Exception/throws Exception` 제거
+- ` *   2024.08.30  이백행          컨트리뷰션 시큐어코딩 Exception 제거` 개정이력 수정
+- Source > Format
+
+```java
+// parseFileInf(Map<String, MultipartFile> files,
+throw new BaseRuntimeException("FdlException: egovFileIdGnrService", e);
+
+} catch (IOException e) {
+throw new BaseRuntimeException("IllegalStateException | IOException: parseFileInf(Map<String, MultipartFile> files, transferTo", e);
+
+// parseFileInf(List<MultipartFile> files,
+throw new BaseRuntimeException("FdlException: egovFileIdGnrService", e);
+throw new BaseRuntimeException("IllegalStateException | IOException: parseFileInf(List<MultipartFile> files, transferTo", e);
+
+// writeUploadedFile
+} catch (IOException e) {
+throw new BaseRuntimeException("IOException: writeUploadedFile", e);
+
+// downFile(HttpServletRequest request,
+throw new BaseRuntimeException("FileNotFoundException: downFile(HttpServletRequest request, " + downFileName);
+throw new BaseRuntimeException("UnsupportedEncodingException: downFile(HttpServletRequest request, new String", e);
+} catch (IOException e) {
+throw new BaseRuntimeException("IOException: downFile(HttpServletRequest request,", e);
+
+// writeFile
+} catch (IOException e) {
+throw new BaseRuntimeException("IOException: writeFile", e);
+
+// downFile(HttpServletResponse response,
+throw new BaseRuntimeException("FileNotFoundException: downFile(HttpServletResponse response, " + downFileName);
+} catch (IOException e) {
+throw new BaseRuntimeException("IOException: downFile(HttpServletResponse response,", e);
+
+throw processException("fail.common.msg", e);
+```
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovDiaryManageController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/404
+
+https://youtu.be/3Zou_M8dn_c
