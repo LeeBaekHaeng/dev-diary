@@ -63,6 +63,7 @@
 - [320. 부서일정관리 시큐어코딩 Exception 제거](#320-부서일정관리-시큐어코딩-exception-제거)
 - [[협업 > 330. 일정관리] 시큐어코딩 Exception 제거](#320-부서일정관리-시큐어코딩-exception-제거)
 - [[340. 일지관리] 시큐어코딩 Exception 제거](#340-일지관리-시큐어코딩-exception-제거)
+- [[350. 전체일정관리] 시큐어코딩 Exception 제거](#350-전체일정관리-시큐어코딩-exception-제거)
 
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
 
@@ -497,3 +498,31 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/E
 https://github.com/eGovFramework/egovframe-common-components/pull/404
 
 https://youtu.be/3Zou_M8dn_c
+
+## [350. 전체일정관리] 시큐어코딩 Exception 제거
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/cop/smt/sam/EgovAllSchdulManageList.do
+```
+
+검색(Search)
+```
+/cop/smt/sam/EgovAllSchdulManageList.do
+```
+
+새 브랜치:
+```
+2024/pmd/EgovAllSchdulManageController
+```
+
+[협업 > 350. 전체일정관리] 시큐어코딩 Exception 제거
+- `@throws Exception/throws Exception` 제거
+- ` *   2024.08.31  이백행          컨트리뷰션 시큐어코딩 Exception 제거` 개정이력 수정
+- Source > Format
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovAllSchdulManageController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/405
+
+https://youtu.be/qh0JTMgCP4s
