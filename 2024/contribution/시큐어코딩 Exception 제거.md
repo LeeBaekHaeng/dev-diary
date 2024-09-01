@@ -64,6 +64,7 @@
 - [[협업 > 330. 일정관리] 시큐어코딩 Exception 제거](#320-부서일정관리-시큐어코딩-exception-제거)
 - [[340. 일지관리] 시큐어코딩 Exception 제거](#340-일지관리-시큐어코딩-exception-제거)
 - [[350. 전체일정관리] 시큐어코딩 Exception 제거](#350-전체일정관리-시큐어코딩-exception-제거)
+- [[360. 메일발송] 시큐어코딩 Exception 제거](#360-메일발송-시큐어코딩-exception-제거)
 
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
 
@@ -526,3 +527,81 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/E
 https://github.com/eGovFramework/egovframe-common-components/pull/405
 
 https://youtu.be/qh0JTMgCP4s
+
+## [360. 메일발송] 시큐어코딩 Exception 제거
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/cop/ems/insertSndngMailView.do
+```
+
+검색(Search)
+```
+/cop/ems/insertSndngMailView.do
+```
+
+새 브랜치:
+```
+2024/pmd/EgovSndngMailRegistController
+```
+
+[협업 > 360. 메일발송] 시큐어코딩 Exception 제거
+- `@exception Exception/throws Exception/@throws Exception/throws EmailException` 제거
+- ` *   2024.09.02  이백행          컨트리뷰션 시큐어코딩 Exception 제거` 개정이력 수정
+- Source > Format
+
+```java
+// parseFileInf(Map<String, MultipartFile> files,
+throw new BaseRuntimeException("FdlException: egovFileIdGnrService", e);
+
+} catch (IOException e) {
+throw new BaseRuntimeException("IllegalStateException | IOException: parseFileInf(Map<String, MultipartFile> files, transferTo", e);
+
+// parseFileInf(List<MultipartFile> files,
+throw new BaseRuntimeException("FdlException: egovFileIdGnrService", e);
+throw new BaseRuntimeException("IllegalStateException | IOException: parseFileInf(List<MultipartFile> files, transferTo", e);
+
+// writeUploadedFile
+} catch (IOException e) {
+throw new BaseRuntimeException("IOException: writeUploadedFile", e);
+
+// downFile(HttpServletRequest request,
+throw new BaseRuntimeException("FileNotFoundException: downFile(HttpServletRequest request, " + downFileName);
+throw new BaseRuntimeException("UnsupportedEncodingException: downFile(HttpServletRequest request, new String", e);
+} catch (IOException e) {
+throw new BaseRuntimeException("IOException: downFile(HttpServletRequest request,", e);
+
+// writeFile
+} catch (IOException e) {
+throw new BaseRuntimeException("IOException: writeFile", e);
+
+// downFile(HttpServletResponse response,
+throw new BaseRuntimeException("FileNotFoundException: downFile(HttpServletResponse response, " + downFileName);
+} catch (IOException e) {
+throw new BaseRuntimeException("IOException: downFile(HttpServletResponse response,", e);
+
+throw processException("fail.common.msg", e);
+```
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovSndngMailRegistController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/410
+
+https://youtu.be/STMewOltSK0
+
+```java
+@Resource(name = "egovMultiPartEmail")
+private EgovMultiPartEmail egovMultiPartEmail;
+```
+
+/egovframe-common-components-2024/src/main/resources/egovframework/spring/com/context-mail.xml
+```xml
+<!-- 메일 연동 인터페이스에서 첨부파일 사용 -->
+<bean id="egovMultiPartEmail" class="egovframework.com.cop.ems.service.EgovMultiPartEmail"
+p:host="이메일SMTP주소"
+p:port="587"
+p:id="아이디"
+p:password="비밀번호"
+p:senderName="System"
+p:emailAddress="이메일주소" />
+```
