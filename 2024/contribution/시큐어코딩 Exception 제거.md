@@ -604,4 +604,3 @@ p:id="아이디"
 p:password="비밀번호"
 p:senderName="System"
 p:emailAddress="이메일주소" />
-```
