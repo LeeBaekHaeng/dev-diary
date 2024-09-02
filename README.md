@@ -36,7 +36,7 @@
 - https://github.com/LeeBaekHaeng/egovframe-development
 
 ### [2024년 전자정부 표준프레임워크 컨트리뷰션] 심플 게시판
-- egovframe-web-sample 표준프레임워크 심플 게시판
+- [egovframe-web-sample 표준프레임워크 심플 게시판](2024/contribution/egovframe-web-sample.md)
 - https://github.com/eGovFramework/egovframe-web-sample
 - https://github.com/LeeBaekHaeng/egovframe-web-sample
 ### [2024년 전자정부 표준프레임워크 컨트리뷰션] 부트 기반 심플 게시판
