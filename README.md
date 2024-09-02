@@ -45,7 +45,7 @@
 - https://github.com/LeeBaekHaeng/egovframe-boot-sample-java-config
 
 ### [2024년 전자정부 표준프레임워크 컨트리뷰션] 템플릿 프로젝트 심플 홈페이지
-- egovframe-simple-homepage-template 표준프레임워크 템플릿 프로젝트 심플 홈페이지
+- [egovframe-simple-homepage-template 표준프레임워크 템플릿 프로젝트 심플 홈페이지](2024/contribution/egovframe-simple-homepage-template.md)
 - https://github.com/eGovFramework/egovframe-simple-homepage-template
 - https://github.com/LeeBaekHaeng/egovframe-simple-homepage-template
 ### [2024년 전자정부 표준프레임워크 컨트리뷰션] 템플릿 프로젝트 포털 사이트
