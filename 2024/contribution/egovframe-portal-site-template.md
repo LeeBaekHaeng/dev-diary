@@ -82,3 +82,11 @@ https://github.com/LeeBaekHaeng/egovframe-portal-site-template/commits/2024/sele
 https://github.com/eGovFramework/egovframe-portal-site-template/pull/11
 
 https://youtu.be/qjkO5yZ2HfY
+
+## [2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 포털 사이트] 관리자 게시판 요청 메서드 정리
+
+https://github.com/LeeBaekHaeng/egovframe-portal-site-template/commits/2024/08/23/
+
+https://github.com/eGovFramework/egovframe-portal-site-template/pull/10
+
+2024 09 02 19 56 03
