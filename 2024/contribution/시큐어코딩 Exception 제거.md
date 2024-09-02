@@ -65,6 +65,7 @@
 - [[340. 일지관리] 시큐어코딩 Exception 제거](#340-일지관리-시큐어코딩-exception-제거)
 - [[350. 전체일정관리] 시큐어코딩 Exception 제거](#350-전체일정관리-시큐어코딩-exception-제거)
 - [[360. 메일발송] 시큐어코딩 Exception 제거](#360-메일발송-시큐어코딩-exception-제거)
+- [[협업 > 361. 발송메일내역] 시큐어코딩 Exception 제거](#협업--361-발송메일내역-시큐어코딩-exception-제거)
 
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
 
@@ -604,3 +605,35 @@ p:id="아이디"
 p:password="비밀번호"
 p:senderName="System"
 p:emailAddress="이메일주소" />
+```
+
+### [협업 > 361. 발송메일내역] 시큐어코딩 Exception 제거
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][협업 > 361. 발송메일내역] 시큐어코딩 Exception 제거
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][협업 > 361. 발송메일내역] 시큐어코딩 Exception 제거
+
+- `@exception Exception/throws Exception/@exception` 제거
+- ` *   2024.09.03  이백행          컨트리뷰션 시큐어코딩 Exception 제거` 개정이력 수정
+- Source > Format
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/cop/ems/selectSndngMailList.do
+```
+
+검색(Search)
+```
+/cop/ems/selectSndngMailList.do
+```
+
+브랜치 생성
+```
+2024/pmd/EgovSndngMailDtlsController
+```
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovSndngMailDtlsController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/412
+
+https://youtu.be/mT5oPsXqMxY
