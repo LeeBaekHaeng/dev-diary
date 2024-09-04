@@ -1,6 +1,12 @@
 # [2024년 전자정부 표준프레임워크 컨트리뷰션] 심플홈페이지 BackEnd
 
-롬복 생성자 기반 종속성 주입
+- 롬복 생성자 기반 종속성 주입
+- 셀레늄 단위 테스트
+
+## 셀레늄 단위 테스트 목차
+- [[로그인] 셀레늄 단위 테스트](#로그인-셀레늄-단위-테스트)
+
+---
 
 메인
 - http://localhost:3000/
@@ -417,3 +423,82 @@ https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/0
 https://github.com/eGovFramework/egovframe-template-simple-backend/pull/60
 
 https://youtu.be/aRp4n8SNLX4
+
+
+### [로그인] 셀레늄 단위 테스트
+
+- Source > Format
+- src/test/java 추가
+- src/test/resources 추가
+- Selenium 라이브러리 설치
+- 셀레늄 단위 테스트 추가
+
+1. 브랜치 생성
+
+http://localhost:3000/login
+
+http://localhost:8080/auth/login-jwt
+
+```
+/auth/login-jwt
+```
+
+```
+2024/selenium/EgovLoginApiController
+```
+
+2. 셀레늄 단위 테스트 추가
+
+```
+egovframework.let.uat.uia.web
+```
+
+```
+TestSelenium
+TestEgovLoginApiControllerSelenium
+```
+
+/egovframe-template-simple-backend/pom.xml
+```xml
+		<selenium.version>4.23.1</selenium.version>
+	</properties>
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+```
+
+3. Selenium 라이브러리 설치
+- Install a Selenium library
+- https://www.selenium.dev/documentation/webdriver/getting_started/install_library/
+
+4. 셀레늄 사용
+- Using Selenium
+- https://www.selenium.dev/documentation/webdriver/getting_started/using_selenium/#examples
+
+```
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/EGOVFRAME/.m2/repository/ch/qos/logback/logback-classic/1.2.12/logback-classic-1.2.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/EGOVFRAME/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.17.2/log4j-slf4j-impl-2.17.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+```
+
+JRE > jre
+```
+Caused by: java.lang.UnsupportedClassVersionError: org/openqa/selenium/WebDriver has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][로그인] 셀레늄 단위 테스트
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][심플홈페이지 BackEnd][로그인] 셀레늄 단위 테스트
+
+https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/selenium/EgovLoginApiController/
+
+https://github.com/eGovFramework/egovframe-template-simple-backend/pull/61
+
+https://youtu.be/43wJRS_w2pw
