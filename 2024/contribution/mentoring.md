@@ -33,6 +33,10 @@ Selenium 라이브러리 설치
 - Using Selenium > Examples
 - https://www.selenium.dev/documentation/webdriver/getting_started/using_selenium/#examples
 
+브랜치 생성
+```
+2024/selenium/
+```
 
 ## 시큐어코딩 Exception 제거
 
@@ -46,10 +50,20 @@ Selenium 라이브러리 설치
 throws Exception
 ```
 
+브랜치 생성
+```
+2024/pmd/
+```
+
 ## 시큐어코딩 일련번호 PK 파라미터 암복호화
 
 ```
  *   2024.09.10  이백행          컨트리뷰션 시큐어코딩 일련번호 PK 파라미터 암복호화
+```
+
+브랜치 생성
+```
+2024/pk/
 ```
 
 ## 시큐어코딩 PMD 진단/조치
@@ -84,6 +98,11 @@ return "redirect:/egovSampleList.do";
  *   2024.09.10  이백행          컨트리뷰션 검색조건 유지
 ```
 
+브랜치 생성
+```
+2024/search/
+```
+
 ## 롬복 생성자 기반 종속성 주입
 
 ```java
@@ -96,4 +115,9 @@ private final BBSManageDAO bbsManageDAO;
 
 ```
  *   2024.09.10  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입
+```
+
+브랜치 생성
+```
+2024/di/
 ```

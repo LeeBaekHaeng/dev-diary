@@ -58,3 +58,47 @@ https://github.com/LeeBaekHaeng/egovframe-msa-edu/commits/2024/09/04/
 https://github.com/eGovFramework/egovframe-msa-edu/pull/19
 
 https://youtu.be/pA1c8Xf1Ldk
+
+### 테스트
+
+1. config
+- http://localhost:8888/
+
+2. discovery
+- http://localhost:8761/
+
+3. apigateway
+- http://localhost:8000/
+- http://10.0.2.15:8000/actuator/info
+
+http://10.0.2.15:8000/actuator/info
+
+http://10.0.2.15:8000/user-service/api/v1/messages/attachment/ko
+
+http://10.0.2.15:8000/user-service/api/v1/messages/banner/ko
+
+http://10.0.2.15:8000/user-service/api/v1/messages/banner/en
+
+4. user-service
+- http://10.0.2.15:62789/actuator/info
+- http://10.0.2.15:62789/api/v1/messages/fail.common.msg/ko
+
+@GetMapping("/api/v1/messages/{code}/{lang}")
+
+messageSource getBasenameSet=file:///C:/Users/god/msa-attach-volume/messages/messages
+
+C:\Users\god\msa-attach-volume\messages\messages
+
+C:/Users/god/msa-attach-volume/messages/messages
+
+/apigateway/src/main/resources/application.yml
+```yml
+messages:
+  directory: ${user.dir}/msa-attach-volume/messages
+```
+
+C:\EGOVFRAME\eGovFrameDev-4.2.0-64bit\workspace3\egovframe-common-components-2024\src\main\resources\egovframework\message\com
+message-common_en.properties
+message-common_ko.properties
+
+http://10.0.2.15:8000/portal-service/api/v1/code-details/00
