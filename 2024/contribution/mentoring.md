@@ -1,4 +1,4 @@
-# 2024년 전자정부 표준프레임워크 컨트리뷰션 멘토링
+# 2024년 전자정부 표준프레임워크 컨트리뷰션 주제 멘토링
 
 [컨트리뷰션 멘토링] ※ 컨트리뷰션 멘토링 신청 방법은 추후 별도 안내 예정
 - DAY1 (09.10.화/19~21시) 장소: 상공회의소
@@ -6,9 +6,7 @@
 
 2024년 전자정부 표준프레임워크 컨트리뷰션(기여/공적기여) 함께 참여해요!
 
-시큐어코딩과 단위 테스트를 멘토링한다.
-
-## 컨트리뷰션 지정 주제
+## 컨트리뷰션 주제
 
 1. 단위 테스트
    - DAO 단위 테스트
@@ -27,6 +25,15 @@
 
 ## 셀레늄 단위 테스트
 
+Selenium 라이브러리 설치
+- Install a Selenium library
+- https://www.selenium.dev/documentation/webdriver/getting_started/install_library/
+
+셀레늄 사용하기
+- Using Selenium > Examples
+- https://www.selenium.dev/documentation/webdriver/getting_started/using_selenium/#examples
+
+
 ## 시큐어코딩 Exception 제거
 
 개정이력 수정
@@ -34,15 +41,59 @@
  *   2024.09.10  이백행          컨트리뷰션 시큐어코딩 Exception 제거
 ```
 
-Find/Replace
+찾기/바꾸기(Find/Replace)
 ```
 throws Exception
 ```
 
 ## 시큐어코딩 일련번호 PK 파라미터 암복호화
 
+```
+ *   2024.09.10  이백행          컨트리뷰션 시큐어코딩 일련번호 PK 파라미터 암복호화
+```
+
 ## 시큐어코딩 PMD 진단/조치
+
+전자정부 표준프레임워크 표준 Inspection 룰셋 적용하기
+
+표준 Inspection 룰셋 한글/영문판의 압축파일 : 개발환경 4.2 이상 버전 사용
+
+https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev4.2:imp:inspection#%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80_%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC_%ED%91%9C%EC%A4%80_inspection_%EB%A3%B0%EC%85%8B_%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0
+
+
+```
+ *   2024.09.10  이백행          컨트리뷰션 시큐어코딩 PMD 진단/조치
+```
 
 ## 검색조건 유지
 
+화면은 `@GetMapping` 으로 처리는 `@PostMapping` 으로 수정한다.
+
+- 화면: @GetMapping 목록화면, 상세화면, 등록화면, 수정화면
+- 처리: @PostMapping 등록처리, 수정처리, 삭제처리
+
+```java
+model.addAttribute("searchCondition", sampleVO.getSearchCondition());
+model.addAttribute("searchKeyword", sampleVO.getSearchKeyword());
+model.addAttribute("pageIndex", sampleVO.getPageIndex());
+
+return "redirect:/egovSampleList.do";
+```
+
+```
+ *   2024.09.10  이백행          컨트리뷰션 검색조건 유지
+```
+
 ## 롬복 생성자 기반 종속성 주입
+
+```java
+@Repository
+
+@RequiredArgsConstructor
+
+private final BBSManageDAO bbsManageDAO;
+```
+
+```
+ *   2024.09.10  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입
+```
