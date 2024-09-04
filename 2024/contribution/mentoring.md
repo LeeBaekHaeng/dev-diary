@@ -66,6 +66,22 @@ throws Exception
 2024/pk/
 ```
 
+/egovframe-simple-homepage-template/src/main/webapp/WEB-INF/jsp/cop/bbs/EgovBoardMstrList.jsp
+```jsp
+<%@ taglib prefix="egovc" uri="/WEB-INF/tlds/egovc.tld" %>
+
+${egovc:encrypt(result.bbsId)}
+
+```
+ *   2024.09.04  이백행          컨트리뷰션 시큐어코딩 일련번호 PK 파라미터 암복호화
+```
+
+```java
+searchVO.setBbsId(EgovFileMngController.decrypt(searchVO.getBbsId()));
+```
+
+Base64Utils
+
 ## 시큐어코딩 PMD 진단/조치
 
 전자정부 표준프레임워크 표준 Inspection 룰셋 적용하기
