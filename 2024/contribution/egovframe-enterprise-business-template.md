@@ -1,7 +1,10 @@
 # 표준프레임워크 템플릿 프로젝트 내부업무 시스템
 
 - 셀레늄 단위 테스트
-- 요청 메서드 정리
+- 요청 메서드 정리/검색 조건 유지
+
+## 검색 조건 유지 목차
+- [[내부서비스관리 > 내부업무게시판관리 > 게시판생성관리] 검색 조건 유지](#내부서비스관리--내부업무게시판관리--게시판생성관리-검색-조건-유지)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -160,3 +163,84 @@ https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/12
 
 https://youtu.be/9-yjjsIPBWY
 
+
+### [내부서비스관리 > 내부업무게시판관리 > 게시판생성관리] 검색 조건 유지
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/cop/bbs/SelectBBSMasterInfs.do?baseMenuNo=5000000
+```
+
+검색(Search)
+```
+/cop/bbs/SelectBBSMasterInfs.do
+```
+
+브랜치 생성
+```
+2024/search/EgovBBSAttributeManageController
+```
+
+- Source > Format
+- searchCnd/searchWrd 추가
+- `@RequestMapping` 을 화면은 `@GetMapping` 으로 처리는 `@PostMapping` 으로 수정
+- `method="post"` 를 `method="get"` 으로 수정
+- `#LINK/javascript:return false;` 제거
+- onclick `event.preventDefault();` 추가
+- ` *   2024.09.05  이백행          컨트리뷰션 검색 조건 유지` 개정이력 수정
+
+```java
+model.addAttribute("searchCnd", boardMasterVO.getSearchCnd());
+model.addAttribute("searchWrd", boardMasterVO.getSearchWrd());
+model.addAttribute("pageIndex", boardMasterVO.getPageIndex());
+
+//forward "redirect:/cop/bbs/SelectBBSMasterInfs.do";
+return "redirect:/cop/bbs/SelectBBSMasterInfs.do";
+```
+
+```jsp
+<input type="hidden" name="searchCnd" value="<c:out value="${searchVO.searchCnd}" />">
+<input type="hidden" name="searchWrd" value="<c:out value="${searchVO.searchWrd}" />">
+
+?searchCnd=<c:out value="${searchVO.searchCnd}" />&searchWrd=<c:out value="${searchVO.searchWrd}" />&pageIndex=<c:out value="${searchVO.pageIndex}" />
+```
+
+내부서비스관리
+- 내부업무게시판관리
+  - 게시판생성관리: 검색 조건 유지 2024-09-05
+  - 게시판사용관리
+  - 공지사항관리: 관리자 게시판 요청 메서드 정리
+  - 업무게시판관리: 관리자 게시판 요청 메서드 정리
+- 사용현황관리
+  - 접속로그관리
+  - 접속통계관리
+  - 로그인정책관리
+
+내부시스템관리
+- 사용자관리
+  - 사용자등록관리
+  - 사용자부재관리
+- 사용자권한관리
+  - 권한관리
+  - 사용자그룹관리
+  - 사용자별권한관리
+  - 롤관리
+- 메뉴관리
+  - 프로그램목록관리
+  - 메뉴생성관리
+  - 메뉴목록관리
+- 코드관리
+  - 분류코드관리
+  - 공통코드관리
+  - 상세코드관리
+  - 우편번호관리
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][내부서비스관리 > 내부업무게시판관리 > 게시판생성관리] 검색 조건 유지
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][게시판생성관리] 검색 조건 유지
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/search/EgovBBSAttributeManageController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/14
+
+https://youtu.be/E88SgzAfygc

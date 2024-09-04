@@ -6,6 +6,9 @@
 ## 셀레늄 단위 테스트 목차
 - [[로그인] 셀레늄 단위 테스트](#로그인-셀레늄-단위-테스트)
 
+## 시큐어코딩 Exception 제거 목차
+- [[알림마당 > 오늘의행사] 시큐어코딩 Exception 제거](#알림마당--오늘의행사-롬복-생성자-기반-종속성-주입)
+
 ---
 
 메인
@@ -502,3 +505,32 @@ https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/s
 https://github.com/eGovFramework/egovframe-template-simple-backend/pull/61
 
 https://youtu.be/43wJRS_w2pw
+
+### [2024년 전자정부 표준프레임워크 컨트리뷰션][알림마당 > 오늘의행사] 시큐어코딩 Exception 제거
+
+- Source > Format
+- `@throws Exception/throws Exception/@exception Exception Exception` 제거
+- ` *   2024.09.05  이백행          컨트리뷰션 시큐어코딩 Exception 제거` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/schedule/daily?schdulSe=&year=2024&month=8&date=5
+```
+
+검색(Search)
+```
+/schedule/daily
+```
+
+브랜치 생성
+```
+2024/pmd/EgovIndvdlSchdulManageApiController
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][심플홈페이지 BackEnd][오늘의행사] 시큐어코딩 Exception 제거
+
+https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/pmd/EgovIndvdlSchdulManageApiController/
+
+https://github.com/eGovFramework/egovframe-template-simple-backend/pull/62
+
+https://youtu.be/OI4QwXrlMy8
