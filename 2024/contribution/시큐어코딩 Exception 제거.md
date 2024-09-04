@@ -67,6 +67,7 @@
 - [[360. 메일발송] 시큐어코딩 Exception 제거](#360-메일발송-시큐어코딩-exception-제거)
 - [[협업 > 361. 발송메일내역] 시큐어코딩 Exception 제거](#협업--361-발송메일내역-시큐어코딩-exception-제거)
 - [[협업 > 370. 명함관리] 시큐어코딩 Exception 제거](#협업--370-명함관리-시큐어코딩-exception-제거)
+- [[협업 > 380. 주소록관리] 시큐어코딩 Exception 제거](#협업--380-주소록관리-시큐어코딩-exception-제거)
 
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
 
@@ -680,3 +681,63 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/E
 https://github.com/eGovFramework/egovframe-common-components/pull/414
 
 https://youtu.be/mFXdAt3zAK0
+
+### [협업 > 380. 주소록관리] 시큐어코딩 Exception 제거
+
+- Source > Format
+- `@throws Exception/throws Exception/@exception Exception` 제거
+- ` *   2024.09.05  이백행          컨트리뷰션 시큐어코딩 Exception 제거` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/cop/adb/selectAdbkList.do
+```
+
+검색(Search)
+```
+/cop/adb/selectAdbkList.do
+```
+
+브랜치 생성
+```
+2024/pmd/EgovAddressBookController
+```
+
+```java
+	@Override
+	public void insertAdressBook(AddressBookVO adbkVO) throws Exception {
+
+		try {
+			adbkVO.setAdbkId(idgenService.getNextStringId());
+		} catch (FdlException e) {
+			throw processException("FdlException: egovAdbkIdGnrService", e);
+		}
+
+		for (int i = 0; i < adbkVO.getAdbkMan().size(); i++) {
+			try {
+				adbkVO.getAdbkMan().get(i).setAdbkUserId(idgenService2.getNextStringId());
+			} catch (FdlException e) {
+				throw processException("FdlException: egovAdbkUserIdGnrService", e);
+			}
+
+	@Override
+	public void updateAdressBook(AddressBookVO adbkVO) throws Exception {
+
+			if (!check) {
+				try {
+					adbkVO.getAdbkMan().get(i).setAdbkUserId(idgenService2.getNextStringId());
+				} catch (FdlException e) {
+					throw processException("FdlException: egovAdbkUserIdGnrService", e);
+				}
+
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][협업 > 380. 주소록관리] 시큐어코딩 Exception 제거
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][380. 주소록관리] 시큐어코딩 Exception 제거
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovAddressBookController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/416
+
+https://youtu.be/eqDgWMMhnNY
