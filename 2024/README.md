@@ -67,7 +67,7 @@
 - https://github.com/LeeBaekHaeng/egovframe-template-simple-react
 
 ### [2024년 전자정부 표준프레임워크 컨트리뷰션] MSA 템플릿 (교육용)
-- egovframe-msa-edu MSA 템플릿 (교육용)
+- [egovframe-msa-edu MSA 템플릿 (교육용)](contribution/egovframe-msa-edu.md)
 - https://github.com/eGovFramework/egovframe-msa-edu
 - https://github.com/LeeBaekHaeng/egovframe-msa-edu
 
