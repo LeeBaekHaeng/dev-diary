@@ -20,7 +20,7 @@
    - 시큐어코딩 Exception 제거
    - 시큐어코딩 일련번호 PK 파라미터 암복호화
    - 시큐어코딩 PMD 진단/조치
-4. 검색조건 유지
+4. 검색 조건 유지
 5. 롬복 생성자 기반 종속성 주입
 
 ## 셀레늄 단위 테스트
@@ -95,7 +95,7 @@ https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev4.2:imp:inspection
  *   2024.09.10  이백행          컨트리뷰션 시큐어코딩 PMD 진단/조치
 ```
 
-## 검색조건 유지
+## 검색 조건 유지
 
 화면은 `@GetMapping` 으로 처리는 `@PostMapping` 으로 수정한다.
 
@@ -111,7 +111,7 @@ return "redirect:/egovSampleList.do";
 ```
 
 ```
- *   2024.09.10  이백행          컨트리뷰션 검색조건 유지
+ *   2024.09.10  이백행          컨트리뷰션 검색 조건 유지
 ```
 
 브랜치 생성
@@ -123,6 +123,8 @@ return "redirect:/egovSampleList.do";
 
 ```java
 @Repository
+
+@Service
 
 @RequiredArgsConstructor
 
