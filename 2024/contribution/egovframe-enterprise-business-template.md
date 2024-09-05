@@ -5,6 +5,7 @@
 
 ## 검색 조건 유지 목차
 - [[내부서비스관리 > 내부업무게시판관리 > 게시판생성관리] 검색 조건 유지](#내부서비스관리--내부업무게시판관리--게시판생성관리-검색-조건-유지)
+- [게시판사용관리 검색 조건 유지](#게시판사용관리-검색-조건-유지)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -244,3 +245,103 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/14
 
 https://youtu.be/E88SgzAfygc
+
+### 게시판사용관리 검색 조건 유지
+
+- Source > Format
+- searchCnd/searchWrd 추가
+- `@RequestMapping` 을 화면은 `@GetMapping` 으로 처리는 `@PostMapping` 으로 수정
+- `method="post"` 를 `method="get"` 으로 수정
+- `return false;/JavaScript:` 제거
+- onclick `event.preventDefault();` 추가
+- ` *   2024.09.06  이백행          컨트리뷰션 검색 조건 유지` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/cop/com/selectBBSUseInfs.do
+```
+
+검색(Search)
+```
+/cop/com/selectBBSUseInfs.do
+```
+
+브랜치 생성
+```
+2024/search/EgovBBSUseInfoManageController
+```
+
+/egovframe-enterprise-business-template/src/main/resources/egovframework/validator/let/cop/com/EgovCopComManage.xml
+`<field property="bbsNm" depends="required">`
+`<field property="trgetNm" depends="required">`
+
+/egovframe-enterprise-business-template/src/main/webapp/WEB-INF/jsp/cop/com/EgovBoardUseInfInqire.jsp
+```jsp
+<input type="hidden" name="bbsNm" value="<c:out value="${bdUseVO.bbsNm}" />">
+<input type="hidden" name="trgetNm" value="<c:out value="${bdUseVO.trgetId}" />">
+
+<!-- <label for="rdo1" class="f_rdo mr30 on"> -->
+<label for="rdo1">
+<label for="rdo1" class="f_rdo mr30 on">
+<!-- <input type="radio" id="rdo1" name="aaa"  value="Y" <c:if test="${bdUseVO.useAt == 'Y'}"> checked="checked"</c:if>> -->
+<input type="radio" id="rdo1" name="useAt"  value="Y" <c:if test="${bdUseVO.useAt == 'Y'}"> checked="checked"</c:if>>
+
+<!-- <label for="rdo2" class="f_rdo"> -->
+<label for="rdo2">
+<!-- <input type="radio" id="rdo2" name="aa" value="N" <c:if test="${bdUseVO.useAt == 'N'}"> checked="checked"</c:if>> -->
+<input type="radio" id="rdo2" name="useAt" value="N" <c:if test="${bdUseVO.useAt == 'N'}"> checked="checked"</c:if>>
+```
+
+```java
+model.addAttribute("searchCnd", bdUseVO.getSearchCnd());
+model.addAttribute("searchWrd", bdUseVO.getSearchWrd());
+model.addAttribute("pageIndex", bdUseVO.getPageIndex());
+
+//return "forward:/cop/com/selectBBSUseInfs.do";
+return "redirect:/cop/com/selectBBSUseInfs.do";
+```
+
+```jsp
+<input type="hidden" name="searchCnd" value="<c:out value="${searchVO.searchCnd}" />">
+<input type="hidden" name="searchWrd" value="<c:out value="${searchVO.searchWrd}" />">
+
+&searchCnd=<c:out value="${searchVO.searchCnd}" />&searchWrd=<c:out value="${searchVO.searchWrd}" />&pageIndex=<c:out value="${searchVO.pageIndex}" />
+```
+
+내부서비스관리
+- 내부업무게시판관리
+  - 게시판생성관리: 검색 조건 유지 2024-09-05
+  - 게시판사용관리: 검색 조건 유지 2024-09-06
+  - 공지사항관리: 관리자 게시판 요청 메서드 정리
+  - 업무게시판관리: 관리자 게시판 요청 메서드 정리
+- 사용현황관리
+  - 접속로그관리
+  - 접속통계관리
+  - 로그인정책관리
+
+내부시스템관리
+- 사용자관리
+  - 사용자등록관리
+  - 사용자부재관리
+- 사용자권한관리
+  - 권한관리
+  - 사용자그룹관리
+  - 사용자별권한관리
+  - 롤관리
+- 메뉴관리
+  - 프로그램목록관리
+  - 메뉴생성관리
+  - 메뉴목록관리
+- 코드관리
+  - 분류코드관리
+  - 공통코드관리
+  - 상세코드관리
+  - 우편번호관리
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템] 게시판사용관리 검색 조건 유지
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/search/EgovBBSUseInfoManageController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/15
+
+https://youtu.be/kjDZfrWPdUI
