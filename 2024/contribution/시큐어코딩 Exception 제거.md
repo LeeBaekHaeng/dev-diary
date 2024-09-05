@@ -51,7 +51,8 @@
 
 ---
 
-목차
+## 시큐어코딩 Exception 제거 목차
+
 - [161. 자료이용현황통계 시큐어코딩 Exception 제거](#161-자료이용현황통계-시큐어코딩-exception-제거)
 - [170. 블로그관리 시큐어코딩 Exception 제거](#170-블로그관리-시큐어코딩-exception-제거)
 - [게시물 관리 시큐어코딩 Exception 제거](#게시물-관리-시큐어코딩-exception-제거)
@@ -68,6 +69,7 @@
 - [[협업 > 361. 발송메일내역] 시큐어코딩 Exception 제거](#협업--361-발송메일내역-시큐어코딩-exception-제거)
 - [[협업 > 370. 명함관리] 시큐어코딩 Exception 제거](#협업--370-명함관리-시큐어코딩-exception-제거)
 - [[협업 > 380. 주소록관리] 시큐어코딩 Exception 제거](#협업--380-주소록관리-시큐어코딩-exception-제거)
+- [390. 간부일정관리 시큐어코딩 Exception 제거](#390-간부일정관리-시큐어코딩-exception-제거)
 
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
 
@@ -741,3 +743,46 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/E
 https://github.com/eGovFramework/egovframe-common-components/pull/416
 
 https://youtu.be/eqDgWMMhnNY
+
+### 390. 간부일정관리 시큐어코딩 Exception 제거
+
+- Source > Format
+- `@throws Exception/throws Exception` 제거
+- ` *   2024.09.06  이백행          컨트리뷰션 시큐어코딩 Exception 제거` 개정이력 수정
+- 전 PR에서 시큐어코딩 Exception 제거해서 `cmmUseService.selectCmmCodeDetail` 만 시큐어코딩 Exception 제거
+- `processException` 사용
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/cop/smt/lsm/usr/selectLeaderSchdulList.do
+```
+
+검색(Search)
+```
+/cop/smt/lsm/usr/selectLeaderSchdulList.do
+```
+
+브랜치 생성
+```
+2024/pmd/EgovLeaderSchdulController
+```
+
+```java
+	 * @throws Exception
+	 */
+	@Override
+	public void insertLeaderSchdul(LeaderSchdul leaderSchdul) throws Exception {
+		String schdulID;
+		try {
+			schdulID = idgenService.getNextStringId();
+		} catch (FdlException e) {
+			throw processException("FdlException: egovLeaderSchdulIdGnrService", e);
+		}
+		leaderSchdul.setSchdulId(schdulID);
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][390. 간부일정관리] 시큐어코딩 Exception 제거
+
+https://github.com/eGovFramework/egovframe-common-components/pull/418
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovLeaderSchdulController/
