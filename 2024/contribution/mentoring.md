@@ -128,6 +128,9 @@ return "redirect:/egovSampleList.do";
 2024/search/
 ```
 
+`[970. 공통상세코드] 검색 조건 유지`
+- https://github.com/eGovFramework/egovframe-common-components/pull/421
+
 ## 롬복 생성자 기반 종속성 주입
 
 ```java
