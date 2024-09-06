@@ -104,6 +104,12 @@ https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev4.2:imp:inspection
  *   2024.09.10  이백행          컨트리뷰션 시큐어코딩 PMD 진단/조치
 ```
 
+`전자정부 표준프레임워크 표준 Inspection 룰셋으로 시큐어코딩 PMD 진단/조치 재요청`
+- https://github.com/eGovFramework/egovframe-boot-sample-java-config/pull/20
+
+`표준프레임워크 부트 기반 심플 게시판 시큐어코딩 PMD 진단/조치`
+https://github.com/eGovFramework/egovframe-boot-sample-java-config/pull/21
+
 ## 검색 조건 유지
 
 화면은 `@GetMapping` 으로 처리는 `@PostMapping` 으로 수정한다.
