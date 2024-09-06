@@ -71,6 +71,10 @@
 - [[협업 > 380. 주소록관리] 시큐어코딩 Exception 제거](#협업--380-주소록관리-시큐어코딩-exception-제거)
 - [390. 간부일정관리 시큐어코딩 Exception 제거](#390-간부일정관리-시큐어코딩-exception-제거)
 
+## 롬복 생성자 기반 종속성 주입 목차
+
+- [1240. 연계기관관리 롬복 생성자 기반 종속성 주입](#1240-연계기관관리-롬복-생성자-기반-종속성-주입)
+
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
 
 링크 주소
@@ -786,3 +790,147 @@ http://localhost:8080/egovframework-all-in-one/cop/smt/lsm/usr/selectLeaderSchdu
 https://github.com/eGovFramework/egovframe-common-components/pull/418
 
 https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovLeaderSchdulController/
+
+## 롬복 생성자 기반 종속성 주입
+
+### 1240. 연계기관관리 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- 필수 Args 생성자 `@RequiredArgsConstructor`, `final` 추가
+- ` *   2024.09.07  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+- 생성자 기반 종속성 주입
+  - Constructor-based Dependency Injection
+  - https://docs.spring.io/spring-framework/reference/core/beans/dependencies/factory-collaborators.html#beans-constructor-injection
+- 스프링 빈과 종속성 주입
+  - Spring Beans and Dependency Injection
+  - https://docs.spring.io/spring-boot/reference/using/spring-beans-and-dependency-injection.html
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/ssi/syi/iis/getCntcInsttList.do
+```
+
+검색
+```
+/ssi/syi/iis/getCntcInsttList.do
+```
+
+브랜치 생성
+```
+2024/di/EgovCntcInsttController
+```
+
+```java
+//@Repository("CntcInsttDAO")
+@Repository
+
+//@Service("CntcInsttService")
+@Service
+@RequiredArgsConstructor
+//	@Resource(name = "CntcInsttDAO")
+//	private CntcInsttDAO cntcInsttDAO;
+	private final CntcInsttDAO cntcInsttDAO;
+
+@Controller
+@RequiredArgsConstructor
+//	@Resource(name = "CntcInsttService")
+//	private EgovCntcInsttService cntcInsttService;
+	private final EgovCntcInsttService cntcInsttService;
+
+//	@Resource(name = "CntcMessageService")
+//	private EgovCntcMessageService cntcMessageService;
+	private final EgovCntcMessageService cntcMessageService;
+
+	/** EgovIdGnrService */
+//	@Resource(name = "egovCntcInsttIdGnrService")
+//	private EgovIdGnrService idgenService;
+	private final EgovIdGnrService egovCntcInsttIdGnrService;
+
+	/** EgovIdGnrService */
+//	@Resource(name = "egovCntcSystemIdGnrService")
+//	private EgovIdGnrService idgenServiceSys;
+	private final EgovIdGnrService egovCntcSystemIdGnrService;
+
+	/** EgovIdGnrService */
+//	@Resource(name = "egovCntcServiceIdGnrService")
+//	private EgovIdGnrService idgenServiceSvc;
+	private final EgovIdGnrService egovCntcServiceIdGnrService;
+
+	/** EgovPropertyService */
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertiesService;
+//	protected final EgovPropertyService propertiesService;
+	private final EgovPropertyService propertiesService;
+
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+```
+
+오류
+```
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'CntcInsttService' available
+```
+
+"CntcInsttService" 검색
+
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovSystemCntcController {
+
+//	@Resource(name = "CntcInsttService")
+//	private EgovCntcInsttService cntcInsttService;
+	private final EgovCntcInsttService cntcInsttService;
+```
+
+빈 최종 필드 cntcInsttService가 초기화되지 않았을 수 있습니다.
+```
+[log4j]2024-09-07 06:53:24,339 ERROR [org.springframework.web.servlet.DispatcherServlet] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'egovSystemCntcController' defined in file [C:\EGOVFRAME\eGovFrameDev-4.2.0-64bit\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp2\wtpwebapps\egovframe-common-components-2024\WEB-INF\classes\egovframework\com\ssi\syi\sim\web\EgovSystemCntcController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [egovframework.com.ssi.syi.sim.web.EgovSystemCntcController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The blank final field cntcInsttService may not have been initialized
+```
+
+기관명
+```
+test 이백행 2024-09-07 기관명
+```
+
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovSystemCntcController {
+
+//	@Resource(name = "SystemCntcService")
+//	private EgovSystemCntcService systemCntcService;
+	private final EgovSystemCntcService systemCntcService;
+
+	private final EgovCntcInsttService egovCntcInsttService;
+
+	/** EgovIdGnrService */
+//	@Resource(name = "egovSystemCntcIdGnrService")
+//	private EgovIdGnrService idgenService;
+	private final EgovIdGnrService egovSystemCntcIdGnrService;
+
+	/** EgovMessageSource */
+//	@Resource(name = "egovMessageSource")
+//	EgovMessageSource egovMessageSource;
+	private final EgovMessageSource egovMessageSource;
+
+	/** EgovPropertyService */
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertiesService;
+	private final EgovPropertyService propertiesService;
+
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][1240. 연계기관관리] 롬복 생성자 기반 종속성 주입
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/di/EgovCntcInsttController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/420
+
+https://youtu.be/A1gXWGnd9eY
