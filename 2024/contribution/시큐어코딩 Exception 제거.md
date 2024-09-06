@@ -75,6 +75,12 @@
 
 - [1240. 연계기관관리 롬복 생성자 기반 종속성 주입](#1240-연계기관관리-롬복-생성자-기반-종속성-주입)
 
+## 검색 조건 유지 목록
+
+- [[970. 공통상세코드] 검색 조건 유지](#970-공통상세코드-검색-조건-유지)
+
+---
+
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
 
 링크 주소
@@ -934,3 +940,74 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/di/Eg
 https://github.com/eGovFramework/egovframe-common-components/pull/420
 
 https://youtu.be/A1gXWGnd9eY
+
+## 검색 조건 유지
+
+### [970. 공통상세코드] 검색 조건 유지
+
+- Source > Format
+- `@RequestMapping` 을 화면은 `@GetMapping` 으로 처리는 `@PostMapping` 으로 수정
+- `forward` 를 `redirect` 로 수정
+- ` *   2024.09.07  이백행          컨트리뷰션 검색 조건 유지` 개정이력 수정
+- `method="post"` 를 method="get" 으로 수정
+- onclick `event.preventDefault();` 추가
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/sym/ccm/cde/SelectCcmCmmnDetailCodeList.do
+```
+
+검색(Search)
+```
+/sym/ccm/cde/SelectCcmCmmnDetailCodeList.do
+```
+
+브랜치 생성
+```
+2024/search/EgovCcmCmmnDetailCodeManageController
+```
+
+컨트롤러
+```java
+		model.addAttribute("searchCondition", cmmnDetailCodeVO.getSearchCondition());
+		model.addAttribute("searchKeyword", cmmnDetailCodeVO.getSearchKeyword());
+		model.addAttribute("pageIndex", cmmnDetailCodeVO.getPageIndex());
+
+//		return "forward:/sym/ccm/cde/SelectCcmCmmnDetailCodeList.do";
+		return "redirect:/sym/ccm/cde/SelectCcmCmmnDetailCodeList.do";
+```
+
+목록 화면
+```jsp
+?searchCondition=<c:out value="${searchVO.searchCondition}" />&searchKeyword=<c:out value="${searchVO.searchKeyword}" />&pageIndex=<c:out value="${searchVO.pageIndex}" />
+```
+
+등록 화면
+```jsp
+?searchCondition=<c:out value="${cmmnDetailCodeVO.searchCondition}" />&searchKeyword=<c:out value="${cmmnDetailCodeVO.searchKeyword}" />&pageIndex=<c:out value="${cmmnDetailCodeVO.pageIndex}" />
+
+	<input name="searchCondition" type="hidden" value="<c:out value="${cmmnDetailCodeVO.searchCondition}" />">
+	<input name="searchKeyword" type="hidden" value="<c:out value="${cmmnDetailCodeVO.searchKeyword}" />">
+	<input name="pageIndex" type="hidden" value="<c:out value="${cmmnDetailCodeVO.pageIndex}" />">
+</form:form>
+```
+
+```
+test 이백행 2024-09-07
+```
+
+수정 화면
+```
+	<input name="searchCondition" type="hidden" value="<c:out value="${param.searchCondition}" />">
+	<input name="searchKeyword" type="hidden" value="<c:out value="${param.searchKeyword}" />">
+	<input name="pageIndex" type="hidden" value="<c:out value="${param.pageIndex}" />">
+</form:form>
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][970. 공통상세코드] 검색 조건 유지
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/search/EgovCcmCmmnDetailCodeManageController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/421
+
+https://youtu.be/SVrCj80VX5w
