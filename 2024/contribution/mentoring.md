@@ -89,7 +89,7 @@ searchVO.setBbsId(EgovFileMngController.decrypt(searchVO.getBbsId()));
 Base64Utils
 
 `30. 로그인정책관리 시큐어코딩 일련번호 PK 파라미터 암복호화`
-https://github.com/eGovFramework/egovframe-common-components/pull/386
+- https://github.com/eGovFramework/egovframe-common-components/pull/386
 
 ## 시큐어코딩 PMD 진단/조치
 
