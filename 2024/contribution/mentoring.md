@@ -38,6 +38,9 @@ Selenium 라이브러리 설치
 2024/selenium/
 ```
 
+`10. 로그인 셀레늄 단위 테스트`
+- https://github.com/eGovFramework/egovframe-common-components/pull/354
+
 ## 시큐어코딩 Exception 제거
 
 개정이력 수정
@@ -54,6 +57,9 @@ throws Exception
 ```
 2024/pmd/
 ```
+
+`390. 간부일정관리 시큐어코딩 Exception 제거`
+- https://github.com/eGovFramework/egovframe-common-components/pull/418
 
 ## 시큐어코딩 일련번호 PK 파라미터 암복호화
 
@@ -81,6 +87,9 @@ searchVO.setBbsId(EgovFileMngController.decrypt(searchVO.getBbsId()));
 ```
 
 Base64Utils
+
+`30. 로그인정책관리 시큐어코딩 일련번호 PK 파라미터 암복호화`
+https://github.com/eGovFramework/egovframe-common-components/pull/386
 
 ## 시큐어코딩 PMD 진단/조치
 
@@ -139,6 +148,9 @@ private final BBSManageDAO bbsManageDAO;
 ```
 2024/di/
 ```
+
+`1240. 연계기관관리 롬복 생성자 기반 종속성 주입`
+- https://github.com/eGovFramework/egovframe-common-components/pull/420
 
 ## 공통컴포넌트 > 시스템관리 메뉴
 
