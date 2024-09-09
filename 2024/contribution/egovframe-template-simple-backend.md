@@ -5,6 +5,7 @@
 
 ## 셀레늄 단위 테스트 목차
 - [[로그인] 셀레늄 단위 테스트](#로그인-셀레늄-단위-테스트)
+- [[로그인] 셀레늄 단위 테스트: v4.13.0 로 버전 수정 했습니다.](#로그인-셀레늄-단위-테스트-v4130-로-버전-수정-했습니다)
 
 ## 시큐어코딩 Exception 제거 목차
 - [[알림마당 > 오늘의행사] 시큐어코딩 Exception 제거](#알림마당--오늘의행사-롬복-생성자-기반-종속성-주입)
@@ -505,6 +506,26 @@ https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/s
 https://github.com/eGovFramework/egovframe-template-simple-backend/pull/61
 
 https://youtu.be/43wJRS_w2pw
+
+### [로그인] 셀레늄 단위 테스트: v4.13.0 로 버전 수정 했습니다.
+
+v4.13.0 로 버전 수정 했습니다.
+
+selenium jdk 8
+
+Java 8 support in Selenium
+
+https://www.selenium.dev/blog/2023/java-8-support/
+
+https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/4.13.0
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][심플홈페이지 BackEnd][로그인] 셀레늄 단위 테스트
+
+https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/selenium/EgovLoginApiController/
+
+https://github.com/eGovFramework/egovframe-template-simple-backend/pull/64
+
+https://youtu.be/TpewXpFhMjA
 
 ### [2024년 전자정부 표준프레임워크 컨트리뷰션][알림마당 > 오늘의행사] 시큐어코딩 Exception 제거
 
