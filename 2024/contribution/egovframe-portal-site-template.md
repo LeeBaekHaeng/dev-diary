@@ -90,3 +90,23 @@ https://github.com/LeeBaekHaeng/egovframe-portal-site-template/commits/2024/08/2
 https://github.com/eGovFramework/egovframe-portal-site-template/pull/10
 
 2024 09 02 19 56 03
+
+### [로그인] 셀레늄 단위 테스트: v4.13.0 로 버전 수정 했습니다.
+
+v4.13.0 로 버전 수정 했습니다.
+
+selenium jdk 8
+
+Java 8 support in Selenium
+
+https://www.selenium.dev/blog/2023/java-8-support/
+
+https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/4.13.0
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 포털 사이트][로그인] 셀레늄 단위 테스트: v4.13.0 로 버전 수정 했습니다.
+
+https://github.com/LeeBaekHaeng/egovframe-portal-site-template/commits/2024/selenium/EgovLoginController/
+
+https://github.com/eGovFramework/egovframe-portal-site-template/pull/13
+
+https://youtu.be/CNoQNaBgxRY
