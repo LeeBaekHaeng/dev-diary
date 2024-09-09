@@ -71,6 +71,7 @@
 - [[협업 > 380. 주소록관리] 시큐어코딩 Exception 제거](#협업--380-주소록관리-시큐어코딩-exception-제거)
 - [390. 간부일정관리 시큐어코딩 Exception 제거](#390-간부일정관리-시큐어코딩-exception-제거)
 - [[400. 부서업무함관리] 시큐어코딩 Exception 제거](#400-부서업무함관리-시큐어코딩-exception-제거)
+- [[410. 주간/월간보고관리] 시큐어코딩 Exception 제거](#410-주간월간보고관리-시큐어코딩-exception-제거)
 
 ## 롬복 생성자 기반 종속성 주입 목차
 
@@ -1066,3 +1067,47 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/E
 https://github.com/eGovFramework/egovframe-common-components/pull/423
 
 https://youtu.be/j-3HPaTxzxA
+
+### [410. 주간/월간보고관리] 시큐어코딩 Exception 제거
+
+- Source > Format
+- `@throws Exception/throws Exception` 제거
+- ` *   2024.09.10  이백행          컨트리뷰션 시큐어코딩 Exception 제거` 개정이력 수정
+- `processException` 사용
+  - EgovBizException 으로 리턴하면 좋겠음
+  - processRuntimeException(BaseRuntimeException) 추가되면 좋겠음
+- `작성자명은(는) 필수 입력값입니다.` 오류
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/cop/smt/wmr/selectWikMnthngReprtList.do
+```
+
+검색(Search)
+```
+/cop/smt/wmr/selectWikMnthngReprtList.do
+```
+
+브랜치 생성
+```
+2024/pmd/EgovWikMnthngReprtController
+```
+
+```java
+	 * @throws Exception
+	 */
+	@Override
+	public void insertWikMnthngReprt(WikMnthngReprt wikMnthngReprt) throws Exception {
+		try {
+			wikMnthngReprt.setReprtId(idgenServiceWikMnthngReprt.getNextStringId());
+		} catch (FdlException e) {
+			throw processException("FdlException: egovWikMnthngReprtIdGnrService", e);
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][410. 주간/월간보고관리] 시큐어코딩 Exception 제거
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovWikMnthngReprtController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/426
+
+https://youtu.be/bx8NjyoPD_8
