@@ -73,6 +73,7 @@
 - [[400. 부서업무함관리] 시큐어코딩 Exception 제거](#400-부서업무함관리-시큐어코딩-exception-제거)
 - [[410. 주간/월간보고관리] 시큐어코딩 Exception 제거](#410-주간월간보고관리-시큐어코딩-exception-제거)
 - [[420. 메모할일관리] 시큐어코딩 Exception 제거](#420-메모할일관리-시큐어코딩-exception-제거)
+- [[430. 메모보고] 시큐어코딩 Exception 제거](#430-메모보고-시큐어코딩-exception-제거)
 
 ## 롬복 생성자 기반 종속성 주입 목차
 
@@ -1156,3 +1157,47 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/E
 https://github.com/eGovFramework/egovframe-common-components/pull/428
 
 https://youtu.be/j9oax62prPw
+
+### [430. 메모보고] 시큐어코딩 Exception 제거
+
+- Source > Format
+- `@throws Exception/throws Exception` 제거
+- ` *   2024.09.12  이백행          컨트리뷰션 시큐어코딩 Exception 제거` 개정이력 수정
+- `processException` 사용
+  - EgovBizException 으로 리턴하면 좋겠음
+  - processRuntimeException(BaseRuntimeException) 추가되면 좋겠음
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/egovframework-all-in-one/cop/smt/mrm/selectMemoReprtList.do
+```
+
+검색(Search)
+```
+/cop/smt/mrm/selectMemoReprtList.do
+```
+
+브랜치 생성
+```
+2024/pmd/EgovMemoReprtController
+```
+
+```java
+	 * @throws Exception
+	 */
+	@Override
+	public void insertMemoReprt(MemoReprt memoReprt) throws Exception {
+		try {
+			memoReprt.setReprtId(idgenServiceMemoReprt.getNextStringId());
+		} catch (FdlException e) {
+			throw processException("FdlException: egovMemoReprtIdGnrService", e);
+		}
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][430. 메모보고] 시큐어코딩 Exception 제거
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/EgovMemoReprtController/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/431
+
+https://youtu.be/C51rGCfunNQ
