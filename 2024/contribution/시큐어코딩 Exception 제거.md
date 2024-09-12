@@ -83,6 +83,10 @@
 
 - [[970. 공통상세코드] 검색 조건 유지](#970-공통상세코드-검색-조건-유지)
 
+## DAO 단위 테스트
+
+- [[10. 로그인][LoginDAO.actionLoginByEsntlId] DAO 단위 테스트](#10-로그인logindaoactionloginbyesntlid-dao-단위-테스트)
+
 ---
 
 ## 161. 자료이용현황통계 시큐어코딩 Exception 제거
@@ -1201,3 +1205,28 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/pmd/E
 https://github.com/eGovFramework/egovframe-common-components/pull/431
 
 https://youtu.be/C51rGCfunNQ
+
+### [10. 로그인][LoginDAO.actionLoginByEsntlId] DAO 단위 테스트
+
+브랜치 생성
+```
+2024/test/LoginDAO/actionLoginByEsntlId
+```
+
+테스트 패키지 생성
+```
+egovframework.com.uat.uia.service.impl
+```
+
+테스트 파일 생성
+```
+LoginDAOTestActionLoginByEsntlIdTest
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][10. 로그인][LoginDAO.actionLoginByEsntlId] DAO 단위 테스트
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/LoginDAO/actionLoginByEsntlId/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/434
+
+https://youtu.be/k73Fqn3Fjp4
