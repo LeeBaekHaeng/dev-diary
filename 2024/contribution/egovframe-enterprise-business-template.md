@@ -9,6 +9,7 @@
 - [접속로그관리 검색 조건 유지](#접속로그관리-검색-조건-유지)
 - [[접속통계관리] 검색 조건 유지](#접속통계관리-검색-조건-유지)
 - [[로그인정책관리] 검색 조건 유지](#로그인정책관리-검색-조건-유지)
+- [[사용자등록관리] 검색 조건 유지](#사용자등록관리-검색-조건-유지)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -563,3 +564,80 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/20
 
 https://youtu.be/GHdvIVf3rhM
+
+### [사용자등록관리] 검색 조건 유지
+
+- Source > Format
+- `@RequestMapping` 을 화면은 `@GetMapping` 으로 처리는 `@PostMapping` 으로 수정
+- onclick `event.preventDefault();` 추가
+- 저장 버튼 클릭시 `사용자아이디 중복체크를 실행하십시오` 추가
+- ModelMap 을 Model 로 통일
+- resultMsg 정리가 필요함
+- ` *   2024.09.12  이백행          컨트리뷰션 검색 조건 유지` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/uss/umt/user/EgovUserManage.do
+```
+
+검색
+```
+/uss/umt/user/EgovUserManage.do
+```
+
+브랜치 생성
+```
+2024/search/EgovUserManageController
+```
+
+```java
+
+		addAttributeSearch(userManageVO, model);
+
+//		return "forward:/uss/umt/user/EgovUserManage.do";
+		return "redirect:/uss/umt/user/EgovUserManage.do";
+
+	private void addAttributeSearch(UserManageVO userManageVO, Model model) {
+		model.addAttribute("searchCondition", userManageVO.getSearchCondition());
+		model.addAttribute("searchKeyword", userManageVO.getSearchKeyword());
+		model.addAttribute("pageIndex", userManageVO.getPageIndex());
+	}
+```
+
+내부서비스관리
+- 내부업무게시판관리
+  - 게시판생성관리: 검색 조건 유지 2024-09-05
+  - 게시판사용관리: 검색 조건 유지 2024-09-06
+  - 공지사항관리: 관리자 게시판 요청 메서드 정리
+  - 업무게시판관리: 관리자 게시판 요청 메서드 정리
+- 사용현황관리
+  - 접속로그관리: 검색 조건 유지 2024-09-06
+  - 접속통계관리: 검색 조건 유지 2024-09-10
+  - 로그인정책관리: 검색 조건 유지 2024-09-11
+
+내부시스템관리
+- 사용자관리
+  - 사용자등록관리: 검색 조건 유지 2024-09-12
+  - 사용자부재관리
+- 사용자권한관리
+  - 권한관리
+  - 사용자그룹관리
+  - 사용자별권한관리
+  - 롤관리
+- 메뉴관리
+  - 프로그램목록관리
+  - 메뉴생성관리
+  - 메뉴목록관리
+- 코드관리
+  - 분류코드관리
+  - 공통코드관리
+  - 상세코드관리
+  - 우편번호관리
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][사용자등록관리] 검색 조건 유지
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/search/EgovUserManageController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/21
+
+https://youtu.be/hpp66IRalDE
