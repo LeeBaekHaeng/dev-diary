@@ -86,6 +86,7 @@
 ## DAO 단위 테스트
 
 - [[10. 로그인][LoginDAO.actionLoginByEsntlId] DAO 단위 테스트](#10-로그인logindaoactionloginbyesntlid-dao-단위-테스트)
+- [[10. 로그인][LoginDAO.actionCrtfctLogin] DAO 단위 테스트](#10-로그인logindaoactioncrtfctlogin-dao-단위-테스트)
 
 ---
 
@@ -1230,3 +1231,30 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/
 https://github.com/eGovFramework/egovframe-common-components/pull/434
 
 https://youtu.be/k73Fqn3Fjp4
+
+### [10. 로그인][LoginDAO.actionCrtfctLogin] DAO 단위 테스트
+
+- `인증서 로그인을 처리한다` DAO 단위 테스트
+
+브랜치 생성
+```
+2024/test/LoginDAO/actionCrtfctLogin
+```
+
+테스트 패키지 생성
+```
+egovframework.com.uat.uia.service.impl
+```
+
+테스트 파일 생성
+```
+LoginDAOTestActionCrtfctLoginTest
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][10. 로그인][LoginDAO.actionCrtfctLogin] DAO 단위 테스트
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/LoginDAO/actionCrtfctLogin/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/436
+
+https://youtu.be/t8oWCP6Km00
