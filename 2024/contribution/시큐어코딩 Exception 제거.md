@@ -88,6 +88,7 @@
 - [[10. 로그인][LoginDAO.actionLoginByEsntlId] DAO 단위 테스트](#10-로그인logindaoactionloginbyesntlid-dao-단위-테스트)
 - [[10. 로그인][LoginDAO.actionCrtfctLogin] DAO 단위 테스트](#10-로그인logindaoactioncrtfctlogin-dao-단위-테스트)
 - [[10. 로그인][LoginDAO.searchId] DAO 단위 테스트](#10-로그인logindaosearchid-dao-단위-테스트)
+- [[10. 로그인][LoginDAO.searchPassword] DAO 단위 테스트](#10-로그인logindaosearchpassword-dao-단위-테스트)
 
 ---
 
@@ -1297,3 +1298,41 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/
 https://github.com/eGovFramework/egovframe-common-components/pull/447
 
 https://youtu.be/vq4cyWakUCM
+
+### [10. 로그인][LoginDAO.searchPassword] DAO 단위 테스트
+
+- `아이디를 찾는다.` DAO 단위 테스트
+
+브랜치 생성
+```
+2024/test/LoginDAO/searchPassword
+```
+
+테스트 패키지 생성
+```
+egovframework.com.uat.uia.service.impl
+```
+
+테스트 파일 생성
+```
+LoginDAOTestSearchPasswordTest
+```
+
+```sql
+SELECT A.MBER_NM, A.MBER_EMAIL_ADRES, A.MBER_STTUS, A.MBER_ID FROM COMTNGNRLMBER A
+;
+
+SELECT A.CMPNY_NM, A.APPLCNT_EMAIL_ADRES, A.ENTRPRS_MBER_STTUS, A.ENTRPRS_MBER_ID FROM COMTNENTRPRSMBER A
+;
+
+SELECT A.USER_NM, A.EMAIL_ADRES, A.EMPLYR_STTUS_CODE, A.EMPLYR_ID FROM COMTNEMPLYRINFO A
+;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][10. 로그인][LoginDAO.searchId] DAO 단위 테스트
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/LoginDAO/searchPassword/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/455
+
+https://youtu.be/oR3y4r4lhjs
