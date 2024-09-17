@@ -13,6 +13,7 @@
 - [[사용자부재관리] 검색 조건 유지](#사용자부재관리-검색-조건-유지)
 - [[권한관리] 검색 조건 유지](#권한관리-검색-조건-유지)
 - [[사용자그룹관리] 검색 조건 유지](#사용자그룹관리-검색-조건-유지)
+- [[사용자별권한관리] 검색 조건 유지](#사용자별권한관리-검색-조건-유지)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -891,3 +892,79 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/24
 
 https://youtu.be/AXNT97tHOnI
+
+### [사용자별권한관리] 검색 조건 유지
+
+- Source > Format
+- `@RequestMapping` 을 화면은 `@GetMapping` 으로 처리는 `@PostMapping` 으로 수정
+- ModelMap 을 Model 로 통일
+- addAttributeSearch 메서드 추가
+- onclick `event.preventDefault();` 추가
+- ` *   2024.09.17  이백행          컨트리뷰션 검색 조건 유지` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/sec/rgm/EgovAuthorGroupListView.do
+```
+
+검색
+```
+/sec/rgm/EgovAuthorGroupListView.do
+```
+
+브랜치 생성
+```
+2024/search/EgovAuthorGroupController
+```
+
+```java
+	private void addAttributeSearch(final AuthorGroupVO authorGroupVO, final Model model) {
+		model.addAttribute("searchCondition", authorGroupVO.getSearchCondition());
+		model.addAttribute("searchKeyword", authorGroupVO.getSearchKeyword());
+		model.addAttribute("pageIndex", authorGroupVO.getPageIndex());
+	}
+```
+
+```java
+		addAttributeSearch(authorGroupVO, model);
+//		return "forward:/sec/rgm/EgovAuthorGroupList.do";
+		return "redirect:/sec/rgm/EgovAuthorGroupList.do";
+```
+
+내부서비스관리
+- 내부업무게시판관리
+  - 게시판생성관리: 검색 조건 유지 2024-09-05
+  - 게시판사용관리: 검색 조건 유지 2024-09-06
+  - 공지사항관리: 관리자 게시판 요청 메서드 정리
+  - 업무게시판관리: 관리자 게시판 요청 메서드 정리
+- 사용현황관리
+  - 접속로그관리: 검색 조건 유지 2024-09-06
+  - 접속통계관리: 검색 조건 유지 2024-09-10
+  - 로그인정책관리: 검색 조건 유지 2024-09-11
+
+내부시스템관리
+- 사용자관리
+  - 사용자등록관리: 검색 조건 유지 2024-09-12
+  - 사용자부재관리: 검색 조건 유지 2024-09-13
+- 사용자권한관리
+  - 권한관리: 검색 조건 유지 2024-09-14
+  - 사용자그룹관리: 검색 조건 유지 2024-09-16
+  - 사용자별권한관리: 검색 조건 유지 2024-09-17
+  - 롤관리
+- 메뉴관리
+  - 프로그램목록관리
+  - 메뉴생성관리
+  - 메뉴목록관리
+- 코드관리
+  - 분류코드관리
+  - 공통코드관리
+  - 상세코드관리
+  - 우편번호관리
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][사용자별권한관리] 검색 조건 유지
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/search/EgovAuthorGroupController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/25
+
+https://youtu.be/Nm8yTsPAwrw
