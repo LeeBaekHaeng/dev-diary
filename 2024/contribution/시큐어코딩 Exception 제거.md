@@ -89,6 +89,7 @@
 - [[10. 로그인][LoginDAO.actionCrtfctLogin] DAO 단위 테스트](#10-로그인logindaoactioncrtfctlogin-dao-단위-테스트)
 - [[10. 로그인][LoginDAO.searchId] DAO 단위 테스트](#10-로그인logindaosearchid-dao-단위-테스트)
 - [[10. 로그인][LoginDAO.searchPassword] DAO 단위 테스트](#10-로그인logindaosearchpassword-dao-단위-테스트)
+- [[10. 로그인][LoginDAO.updatePassword] DAO 단위 테스트](#10-로그인logindaoupdatepassword-dao-단위-테스트)
 
 ---
 
@@ -1336,3 +1337,43 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/
 https://github.com/eGovFramework/egovframe-common-components/pull/455
 
 https://youtu.be/oR3y4r4lhjs
+
+### [10. 로그인][LoginDAO.updatePassword] DAO 단위 테스트
+
+- 변경된 비밀번호를 저장한다.
+- Source > Format
+- ` *   2024.09.18  이백행          컨트리뷰션 updatePassword return 을 void 에서 int 로 수정` 개정이력 수정
+
+브랜치 생성
+```
+2024/test/LoginDAO/updatePassword
+```
+
+테스트 패키지 생성
+```
+egovframework.com.uat.uia.service.impl
+```
+
+테스트 파일 생성
+```
+LoginDAOTestUpdatePasswordTest
+```
+
+```sql
+SELECT A.MBER_ID, A.PASSWORD FROM COMTNGNRLMBER A
+;
+
+SELECT A.ENTRPRS_MBER_ID, A.ENTRPRS_MBER_PASSWORD FROM COMTNENTRPRSMBER A
+;
+
+SELECT A.EMPLYR_ID, A.PASSWORD FROM COMTNEMPLYRINFO A
+;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][10. 로그인][LoginDAO.updatePassword] DAO 단위 테스트
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/LoginDAO/updatePassword/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/457
+
+https://youtu.be/oG4iyawnUPg
