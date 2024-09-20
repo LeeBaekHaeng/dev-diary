@@ -10,6 +10,9 @@
 ## 시큐어코딩 Exception 제거 목차
 - [[알림마당 > 오늘의행사] 시큐어코딩 Exception 제거](#알림마당--오늘의행사-롬복-생성자-기반-종속성-주입)
 
+## 롬복 생성자 기반 종속성 주입 목차
+- [[게시판사용관리] 롬복 생성자 기반 종속성 주입](#게시판사용관리-롬복-생성자-기반-종속성-주입)
+
 ---
 
 메인
@@ -555,3 +558,272 @@ https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/p
 https://github.com/eGovFramework/egovframe-template-simple-backend/pull/62
 
 https://youtu.be/OI4QwXrlMy8
+
+### [게시판사용관리] 롬복 생성자 기반 종속성 주입
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][심플홈페이지 BackEnd][게시판사용관리] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- SnsLoginApiController.loginService 필드의 값이 사용되지 않아 제거
+- EgovLoginApiController.propertiesService 필드의 값이 사용되지 않아 제거
+- EgovLoginApiController.leaveaTrace 필드의 값은 사용되지 않아 제거
+- ` *   2024.09.20  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/bbsUseInf?pageIndex=1&searchCnd=0&searchWrd=
+```
+
+검색
+```
+/bbsUseInf
+```
+
+브랜치 생성
+```
+2024/di/EgovUserInfManageDAO
+```
+
+`@Repository` DAO
+```java
+//@Repository("EgovUserInfManageDAO")
+@Repository
+public class EgovUserInfManageDAO extends EgovAbstractMapper {
+```
+
+`@Service` ServiceImpl
+```java
+//@Service("EgovUserInfManageService")
+@Service
+@RequiredArgsConstructor
+public class EgovUserInfManageServiceImpl extends EgovAbstractServiceImpl implements EgovUserInfManageService {
+
+//	@Resource(name = "EgovUserInfManageDAO")
+//	private EgovUserInfManageDAO userInfDAO;
+	private final EgovUserInfManageDAO userInfDAO;
+```
+
+게시판 마스터 등록
+- `@PostMapping(value = "/bbsMaster")`
+- `egovBBSAttributeManageService.insertBBSMastetInf(boardMasterVO);`
+```java
+			if ("REGC05".equals(boardMaster.getRegistSeCode())) {
+				tmpList = egovUserInfManageService.selectAllClubUser(userVO);
+
+			} else if ("REGC06".equals(boardMaster.getRegistSeCode())) {
+				tmpList = egovUserInfManageService.selectAllCmmntyUser(userVO);
+```
+
+FileManageDAO, LoginDAO, EgovComponentChecker
+```java
+@Repository("FileManageDAO")
+@Service("EgovFileMngService")
+EgovFileDownloadController
+EgovFileMngApiController
+EgovImageProcessController
+
+@Repository("loginDAO")
+@Service("loginService")
+SnsLoginApiController
+EgovLoginApiController
+
+@Service("egovUtil")
+```
+
+FileManageDAO
+```java
+//@Repository("FileManageDAO")
+@Repository
+public class FileManageDAO extends EgovAbstractMapper {
+
+//@Service("EgovFileMngService")
+@Service
+@RequiredArgsConstructor
+public class EgovFileMngServiceImpl extends EgovAbstractServiceImpl implements EgovFileMngService {
+
+//	@Resource(name = "FileManageDAO")
+//	private FileManageDAO fileMngDAO;
+	private final FileManageDAO fileMngDAO;
+
+@Slf4j
+@Controller
+@Tag(name = "EgovFileDownloadController", description = "파일 다운로드")
+@RequiredArgsConstructor
+public class EgovFileDownloadController {
+
+//	@Resource(name = "EgovFileMngService")
+//	private EgovFileMngService fileService;
+	private final EgovFileMngService fileService;
+
+	/** 암호화서비스 */
+//	@Resource(name = "egovARIACryptoService")
+//	EgovCryptoService cryptoService;
+	private final EgovCryptoService cryptoService;
+
+@RestController
+@Tag(name = "EgovFileMngApiController", description = "파일 관리")
+@RequiredArgsConstructor
+public class EgovFileMngApiController {
+
+//	@Resource(name = "EgovFileMngService")
+//	private EgovFileMngService fileService;
+	private final EgovFileMngService fileService;
+
+	/** 암호화서비스 */
+//	@Resource(name = "egovARIACryptoService")
+//	EgovCryptoService cryptoService;
+	private final EgovCryptoService cryptoService;
+
+@Slf4j
+@Controller
+@Tag(name = "EgovImageProcessController", description = "이미지 처리")
+@RequiredArgsConstructor
+public class EgovImageProcessController extends HttpServlet {
+
+	/**
+	 * serialVersion UID
+	 */
+	private static final long serialVersionUID = -6339945210971171173L;
+
+//	@Resource(name = "EgovFileMngService")
+//	private EgovFileMngService fileService;
+	private final EgovFileMngService fileService;
+
+	/** 암호화서비스 */
+//	@Resource(name = "egovARIACryptoService")
+//	EgovCryptoService cryptoService;
+	private final EgovCryptoService cryptoService;
+```
+
+LoginDAO
+```java
+@Slf4j
+@RestController
+@Tag(name = "SnsLoginApiController", description = "Sns 로그인 관련")
+@RequiredArgsConstructor
+public class SnsLoginApiController {
+
+	/** EgovLoginService */
+//	@Resource(name = "loginService")
+//	private EgovLoginService loginService;
+//	private final EgovLoginService loginService;
+// The value of the field SnsLoginApiController.loginService is not used
+// SnsLoginApiController.loginService 필드의 값이 사용되지 않습니다.
+
+	/** EgovMessageSource */
+//	@Resource(name = "egovMessageSource")
+//	EgovMessageSource egovMessageSource;
+	private final EgovMessageSource egovMessageSource;
+
+	/** JWT */
+//	@Autowired
+//	private EgovJwtTokenUtil jwtTokenUtil;
+	private final EgovJwtTokenUtil jwtTokenUtil;
+
+@Slf4j
+@RestController
+@Tag(name = "EgovLoginApiController", description = "로그인 관련")
+@RequiredArgsConstructor
+public class EgovLoginApiController {
+
+	/** EgovLoginService */
+//	@Resource(name = "loginService")
+//	private EgovLoginService loginService;
+	private final EgovLoginService loginService;
+
+	/** EgovMessageSource */
+//	@Resource(name = "egovMessageSource")
+//	EgovMessageSource egovMessageSource;
+	private final EgovMessageSource egovMessageSource;
+
+	/** EgovPropertyService */
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertiesService;
+	private final EgovPropertyService propertiesService;
+// The value of the field EgovLoginApiController.propertiesService is not used
+// EgovLoginApiController.propertiesService 필드의 값이 사용되지 않습니다.
+
+	/** TRACE */
+//	@Resource(name = "leaveaTrace")
+//	LeaveaTrace leaveaTrace;
+//	private final LeaveaTrace leaveaTrace;
+// The value of the field EgovLoginApiController.leaveaTrace is not used
+// EgovLoginApiController.leaveaTrace 필드의 값은 사용되지 않습니다.
+
+	/** JWT */
+//	@Autowired
+//	private EgovJwtTokenUtil jwtTokenUtil;
+	private final EgovJwtTokenUtil jwtTokenUtil;
+```
+
+EgovComponentChecker
+```java
+//@Service("egovUtil")
+@Service
+public class EgovComponentChecker extends EgovAbstractServiceImpl implements ApplicationContextAware {
+```
+
+검색
+```
+@Repository("
+```
+- `@Repository("FileManageDAO")`
+- `@Repository("BBSAddedOptionsDAO")`
+- `@Repository("BBSLoneMasterDAO")`
+- `@Repository("EgovUserInfManageDAO")`
+- `@Repository("loginDAO")`
+- `@Repository("mberManageDAO")`
+
+검색
+```
+@Service("
+```
+- `@Service("EgovFileMngService")`
+- `@Service("egovUtil")`
+- `@Service("EgovBBSLoneMasterService")`
+- `@Service("EgovUserInfManageService")`
+- `@Service("loginService")`
+- `@Service("mberManageService")`
+
+사이트관리
+- 일정관리
+  - http://localhost:8080/schedule/month?schdulSe=&year=2024&month=8&date=15
+  - /schedule/month
+  - 이백행 2024-08-27 
+- 게시판생성관리
+  - http://localhost:8080/bbsMaster?pageIndex=1&searchCnd=0&searchWrd=
+  - /bbsMaster
+  - 이백행 2024-08-28
+- 게시판사용관리
+  - http://localhost:8080/bbsUseInf?pageIndex=1&searchCnd=0&searchWrd=
+  - /bbsUseInf
+  - 이백행 2024-08-29
+  - TODO 할 일: `@Repository("EgovUserInfManageDAO")` EgovUserInfManageDAO, `@Service("EgovUserInfManageService")` EgovUserInfManageServiceImpl
+  - 이백행 2024-09-20
+- 공지사항관리
+  - http://localhost:8080/board?bbsId=BBSMSTR_AAAAAAAAAAAA&pageIndex=1&searchCnd=0&searchWrd=
+  - /board
+  - 이백행 2024-08-26
+  - TODO 할 일: `@Repository("BBSAddedOptionsDAO")` BBSAddedOptionsDAO, `@Repository("BBSLoneMasterDAO")` BBSLoneMasterDAO, `@Service("EgovBBSLoneMasterService")` EgovBBSLoneMasterServiceImpl
+  - 안단희  2024-09-20
+- 사이트갤러리관리
+  - http://localhost:8080/board?bbsId=BBSMSTR_BBBBBBBBBBBB&pageIndex=1&searchCnd=0&searchWrd=
+- 사이트관리자 암호변경
+  - http://localhost:8080/admin/password
+  - /admin/password
+  - 이백행 2024-08-29
+- 회원관리
+  - http://localhost:8080/members?pageIndex=1&searchCnd=0&searchWrd=
+  - /members
+  - 이백행 2024-08-28
+  - TODO 할 일: `@Repository("mberManageDAO")` MberManageDAO, `@Service("mberManageService")` EgovMberManageServiceImpl, EgovMberManageApiController
+  - 강동휘 2024-09-20
+
+https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/di/EgovUserInfManageDAO/
+
+https://github.com/eGovFramework/egovframe-template-simple-backend/pull/66
+
+https://youtu.be/bGozw9g6T10
