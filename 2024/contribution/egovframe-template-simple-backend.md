@@ -13,6 +13,9 @@
 ## 롬복 생성자 기반 종속성 주입 목차
 - [[게시판사용관리] 롬복 생성자 기반 종속성 주입](#게시판사용관리-롬복-생성자-기반-종속성-주입)
 
+## DAO 단위 테스트 목차
+- [[게시판생성관리][BBSAttributeManageDAO.insertBBSMasterInf] DAO 단위 테스트](#게시판생성관리bbsattributemanagedaoinsertbbsmasterinf-dao-단위-테스트)
+
 ---
 
 메인
@@ -827,3 +830,52 @@ https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/d
 https://github.com/eGovFramework/egovframe-template-simple-backend/pull/66
 
 https://youtu.be/bGozw9g6T10
+
+### [게시판생성관리][BBSAttributeManageDAO.insertBBSMasterInf] DAO 단위 테스트
+
+- 신규 게시판 속성정보를 등록한다.
+- [게시판생성관리][BBSAttributeManageDAO.insertBBSMasterInf] DAO 단위 테스트
+- [게시판생성관리][EgovBBSUseInfoManageServiceImpl.insertBBSMastetInf] ServiceImpl 단위 테스트
+- [게시판생성관리][EgovBBSAttributeManageApiController.insertBBSMasterInf] Controller 단위 테스트
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/bbsMaster
+```
+
+검색
+```
+/bbsMaster
+```
+
+브랜치 생성
+```
+2024/test/EgovBBSAttributeManageApiController
+```
+
+테스트 패키지 생성
+```
+egovframework.let.cop.bbs.service.impl
+```
+테스트 파일 생성
+```
+BBSAttributeManageDAOTestInsertBBSMasterInfTest
+```
+```
+EgovBBSUseInfoManageServiceImplTestInsertBBSMastetInfTest
+```
+
+테스트 패키지 생성
+```
+egovframework.let.cop.bbs.web
+```
+테스트 파일 생성
+```
+EgovBBSAttributeManageApiControllerTestInsertBBSMasterInfTest
+```
+
+https://github.com/LeeBaekHaeng/egovframe-template-simple-backend/commits/2024/test/EgovBBSAttributeManageApiController/
+
+https://github.com/eGovFramework/egovframe-template-simple-backend/pull/68
+
+https://youtu.be/3udJ0yFW9yI
