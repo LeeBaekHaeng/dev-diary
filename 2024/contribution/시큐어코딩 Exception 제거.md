@@ -91,6 +91,7 @@
 - [[10. 로그인][LoginDAO.searchPassword] DAO 단위 테스트](#10-로그인logindaosearchpassword-dao-단위-테스트)
 - [[10. 로그인][LoginDAO.updatePassword] DAO 단위 테스트](#10-로그인logindaoupdatepassword-dao-단위-테스트)
 - [[10. 로그인][LoginDAO.selectLoginIncorrect] DAO 단위 테스트](#10-로그인logindaoselectloginincorrect-dao-단위-테스트)
+- [[10. 로그인][LoginDAO.updateLoginIncorrect] DAO 단위 테스트](#10-로그인logindaoupdateloginincorrect-dao-단위-테스트)
 
 ---
 
@@ -1405,3 +1406,30 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/
 https://github.com/eGovFramework/egovframe-common-components/pull/460
 
 https://youtu.be/okWaMVwWpGA
+
+### [10. 로그인][LoginDAO.updateLoginIncorrect] DAO 단위 테스트
+
+- 로그인인증제한 내역을 업데이트 한다.
+
+브랜치 생성
+```
+2024/test/LoginDAO/updateLoginIncorrect
+```
+
+테스트 패키지 생성
+```
+egovframework.com.uat.uia.service.impl
+```
+
+테스트 파일 생성
+```
+LoginDAOTestUpdateLoginIncorrectTest
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][10. 로그인][LoginDAO.updateLoginIncorrect] DAO 단위 테스트
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/LoginDAO/updateLoginIncorrect/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/474
+
+https://youtu.be/KO-lQTaZ6X8
