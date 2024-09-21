@@ -15,6 +15,7 @@
 - [[사용자그룹관리] 검색 조건 유지](#사용자그룹관리-검색-조건-유지)
 - [[사용자별권한관리] 검색 조건 유지](#사용자별권한관리-검색-조건-유지)
 - [[롤관리] 검색 조건 유지](#롤관리-검색-조건-유지)
+- [[프로그램목록관리] 검색 조건 유지](#프로그램목록관리-검색-조건-유지)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -1050,3 +1051,92 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/27
 
 https://youtu.be/LAyecbrKj64
+
+### [프로그램목록관리] 검색 조건 유지
+
+- Source > Format
+- `@RequestMapping` 을 화면은 `@GetMapping` 으로 처리는 `@PostMapping` 으로 수정
+- ModelMap 을 Model 로 통일
+- addAttributeSearch 메서드 추가
+- onclick `event.preventDefault();` 추가
+- ` *   2024.09.21  이백행          컨트리뷰션 검색 조건 유지` 개정이력 수정
+- 할 일(TODO): 등록화면과 수정화면을 분리해야 함
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/sym/prm/EgovProgramListManageSelect.do
+```
+
+검색
+```
+/sym/prm/EgovProgramListManageSelect.do
+```
+
+브랜치 생성
+```
+2024/search/EgovProgrmManageController
+```
+
+```java
+	private void addAttributeSearch(final ComDefaultVO searchVO, final Model model) {
+		model.addAttribute("searchCondition", searchVO.getSearchCondition());
+		model.addAttribute("searchKeyword", searchVO.getSearchKeyword());
+		model.addAttribute("pageIndex", searchVO.getPageIndex());
+	}
+```
+
+```java
+		addAttributeSearch(searchVO, model);
+//		return "forward:/sym/prm/EgovProgramListManageSelect.do";
+		return "redirect:/sym/prm/EgovProgramListManageSelect.do";
+```
+
+```jsp
+//     document.progrmManageForm.action = "<c:url value='/sym/prm/EgovProgramListDetailSelectUpdt.do'/>";
+    document.progrmManageForm.action = "<c:url value='/sym/prm/EgovProgramListDetailSelect.do'/>";
+
+?searchCondition=<c:out value="${searchVO.searchCondition}" />&searchKeyword=<c:out value="${searchVO.searchKeyword}" />&pageIndex=<c:out value="${searchVO.pageIndex}" />
+?searchCondition=<c:out value="${searchVO.searchCondition}" />&searchKeyword=<c:out value="${param.searchKeyword}" />&pageIndex=<c:out value="${searchVO.pageIndex}" />
+
+                                <input name="searchCondition" type="hidden" value="<c:out value="${param.searchCondition}" />">
+                                <input name="searchKeyword" type="hidden" value="<c:out value="${param.searchKeyword}" />">
+                                <input name="pageIndex" type="hidden" value="<c:out value="${param.pageIndex}" />">
+```
+
+내부서비스관리
+- 내부업무게시판관리
+  - 게시판생성관리: 검색 조건 유지 2024-09-05
+  - 게시판사용관리: 검색 조건 유지 2024-09-06
+  - 공지사항관리: 관리자 게시판 요청 메서드 정리
+  - 업무게시판관리: 관리자 게시판 요청 메서드 정리
+- 사용현황관리
+  - 접속로그관리: 검색 조건 유지 2024-09-06
+  - 접속통계관리: 검색 조건 유지 2024-09-10
+  - 로그인정책관리: 검색 조건 유지 2024-09-11
+
+내부시스템관리
+- 사용자관리
+  - 사용자등록관리: 검색 조건 유지 2024-09-12
+  - 사용자부재관리: 검색 조건 유지 2024-09-13
+- 사용자권한관리
+  - 권한관리: 검색 조건 유지 2024-09-14
+  - 사용자그룹관리: 검색 조건 유지 2024-09-16
+  - 사용자별권한관리: 검색 조건 유지 2024-09-17
+  - 롤관리: 검색 조건 유지 2024-09-18
+- 메뉴관리
+  - 프로그램목록관리: 검색 조건 유지 2024-09-21
+  - 메뉴생성관리
+  - 메뉴목록관리
+- 코드관리
+  - 분류코드관리
+  - 공통코드관리
+  - 상세코드관리
+  - 우편번호관리
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][프로그램목록관리] 검색 조건 유지
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/search/EgovProgrmManageController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/28
+
+https://youtu.be/cuA0Gaj4OlY
