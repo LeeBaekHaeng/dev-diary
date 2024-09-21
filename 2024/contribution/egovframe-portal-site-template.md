@@ -110,3 +110,98 @@ https://github.com/LeeBaekHaeng/egovframe-portal-site-template/commits/2024/sele
 https://github.com/eGovFramework/egovframe-portal-site-template/pull/13
 
 https://youtu.be/CNoQNaBgxRY
+
+### [게시판생성관리][BBSAttributeManageDAO.insertBBSMasterInf] DAO 단위 테스트
+
+- Source > Format
+- 신규 게시판 속성정보를 등록한다.
+- [게시판생성관리][BBSAttributeManageDAO.insertBBSMasterInf] DAO 단위 테스트
+- [게시판생성관리][EgovBBSAttributeManageServiceImpl.insertBBSMastetInf] ServiceImpl 단위 테스트
+- [게시판생성관리][EgovBBSAttributeManageController.insertBBSMasterInf] Controller 단위 테스트
+- junit-jupiter-api/lombok/spring-test jar 추가
+- EgovTestAbstractSpring, EgovTestAbstractSpringMvc 추가
+- /egovframe-web-sample/src/test/resources/egovframework/spring/test-context-common.xml 추가
+- EgovUserDetailsHelper 추가
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/pst_webapp/cop/bbs/insertBBSMasterInf.do
+```
+
+검색
+```
+/cop/bbs/insertBBSMasterInf.do
+```
+
+브랜치 생성
+```
+2024/test/EgovBBSAttributeManageController
+```
+
+---
+
+테스트 패키지 생성
+```
+egovframework.let.cop.bbs.service.impl
+```
+테스트 파일 생성
+```
+BBSAttributeManageDAOTestInsertBBSMasterInfTest
+```
+```
+EgovBBSAttributeManageServiceImplTestInsertBBSMastetInfTest
+```
+
+---
+
+테스트 패키지 생성
+```
+egovframework.let.cop.bbs.web
+```
+테스트 파일 생성
+```
+EgovBBSAttributeManageControllerTestInsertBBSMasterInfTest
+```
+
+---
+
+테스트 패키지 생성
+```
+egovframework.test
+```
+
+---
+
+```xml
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.11.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.28</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.maven.artifact.version}</version>
+			<scope>test</scope>
+		</dependency>
+```
+
+---
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 포털 사이트][게시판생성관리] DAO 단위 테스트
+
+https://github.com/LeeBaekHaeng/egovframe-portal-site-template/commits/2024/test/EgovBBSAttributeManageController/
+
+https://github.com/eGovFramework/egovframe-portal-site-template/pull/14
+
+https://youtu.be/bb4yY-LX5vc
