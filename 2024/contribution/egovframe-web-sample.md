@@ -92,3 +92,62 @@ https://github.com/LeeBaekHaeng/egovframe-web-sample/commits/2024/09/03/
 https://github.com/eGovFramework/egovframe-web-sample/pull/8
 
 https://youtu.be/xR0JC2fdGP4
+
+### [게시판][SampleMapper.insertSample] DAO 단위 테스트
+
+- 글을 등록한다.
+- [게시판][SampleMapper.insertSample] DAO 단위 테스트
+- [게시판][EgovSampleServiceImpl.insertSample] ServiceImpl 단위 테스트
+- [게시판][EgovSampleController.addSample] Controller 단위 테스트
+- spring-test-5.3.27.jar 추가
+- EgovTestAbstractSpring, EgovTestAbstractSpringMvc 추가
+- /egovframe-web-sample/src/test/resources/egovframework/spring/test-context-common.xml 추가
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/web-example/addSample.do
+```
+
+검색
+```
+/addSample.do
+```
+
+브랜치 생성
+```
+2024/test/EgovSampleController
+```
+
+테스트 패키지 생성
+```
+egovframework.example.sample.service.impl
+```
+테스트 파일 생성
+```
+SampleMapperTestInsertSampleTest
+```
+```
+EgovSampleServiceImplTestInsertSampleTest
+```
+
+테스트 패키지 생성
+```
+egovframework.example.sample.web
+```
+테스트 파일 생성
+```
+EgovSampleControllerTestAddSampleTest
+```
+
+테스트 패키지 생성
+```
+egovframework.test
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][심플 게시판] DAO 단위 테스트
+
+https://github.com/LeeBaekHaeng/egovframe-web-sample/commits/2024/test/EgovSampleController/
+
+https://github.com/eGovFramework/egovframe-web-sample/pull/15
+
+https://youtu.be/vJvDcMFCyoM
