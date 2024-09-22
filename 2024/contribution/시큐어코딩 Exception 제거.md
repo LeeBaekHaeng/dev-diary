@@ -93,6 +93,7 @@
 - [[10. 로그인][LoginDAO.selectLoginIncorrect] DAO 단위 테스트](#10-로그인logindaoselectloginincorrect-dao-단위-테스트)
 - [[10. 로그인][LoginDAO.updateLoginIncorrect] DAO 단위 테스트](#10-로그인logindaoupdateloginincorrect-dao-단위-테스트)
 - [[10. 로그인][LoginDAO.selectPassedDayChangePWD] DAO 단위 테스트](#10-로그인logindaoselectpasseddaychangepwd-dao-단위-테스트)
+- [[10. 로그인][LoginDAO.onepassLogin] DAO 단위 테스트](#10-로그인logindaoonepasslogin-dao-단위-테스트)
 
 ---
 
@@ -1461,3 +1462,30 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/
 https://github.com/eGovFramework/egovframe-common-components/pull/480
 
 https://youtu.be/CZv8-fl28BQ
+
+### [10. 로그인][LoginDAO.onepassLogin] DAO 단위 테스트
+
+- 디지털원패스 인증 회원 조회한다.
+
+브랜치 생성
+```
+2024/test/LoginDAO/onepassLogin
+```
+
+테스트 패키지 생성
+```
+egovframework.com.uat.uia.service.impl
+```
+
+테스트 파일 생성
+```
+LoginDAOTestOnepassLoginTest
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][10. 로그인][LoginDAO.onepassLogin] DAO 단위 테스트
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/LoginDAO/onepassLogin/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/497
+
+https://youtu.be/9YbQcUyoCV4
