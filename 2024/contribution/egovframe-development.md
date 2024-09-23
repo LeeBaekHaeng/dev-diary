@@ -17,6 +17,13 @@
 ```
 
 The import org.eclipse.jdt.launching.JavaRuntime is never used	BatchWebProjectCreationOperation.java	/egovframework.bdev.imp.ide/src/egovframework/bdev/imp/ide/job/wizards/operation	line 41	Java Problem
+```java
+//import org.eclipse.jdt.launching.JavaRuntime;
+```
+
+https://github.com/LeeBaekHaeng/egovframe-development/commits/2024/probems/BatchWebProjectCreationOperation/
+
+https://github.com/eGovFramework/egovframe-development/pull/117
 
 ### egovframework.bdev.imp.ide 이클립스 문제(Probems)
 
