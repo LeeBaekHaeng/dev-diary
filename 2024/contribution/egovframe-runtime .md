@@ -9,6 +9,12 @@
 - Class is a raw type. References to generic type Class<T> should be parameterized
 - 클래스는 원시 유형입니다. 일반 유형 Class<T>에 대한 참조는 매개변수화되어야 합니다.
 - `Class` 를 `Class<?>` 로 수정
+- `.gitignore` 에 `*.factorypath` 를 추가
+
+브랜치 생성
+```
+2024/probems/ObjectOptimisticLockingFailureException
+```
 
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectOptimisticLockingFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 52	Java Problem
 ```java
@@ -56,6 +62,8 @@ Class is a raw type. References to generic type Class<T> should be parameterized
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectOptimisticLockingFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 133	Java Problem
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectOptimisticLockingFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 134	Java Problem
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectOptimisticLockingFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 143	Java Problem
+이백행 2024-09-23
+
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectRetrievalFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 52	Java Problem
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectRetrievalFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 67	Java Problem
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectRetrievalFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 107	Java Problem
