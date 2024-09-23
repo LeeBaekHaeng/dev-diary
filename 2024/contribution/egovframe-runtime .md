@@ -1,26 +1,49 @@
 # 표준프레임워크 실행환경 4.2.0
 
-[2024년 전자정부 표준프레임워크 컨트리뷰션][실행환경][ObjectOptimisticLockingFailureException] 이클립스 문제(Probems)
+[2024년 전자정부 표준프레임워크 컨트리뷰션][실행환경] 이클립스 문제(Probems) 해결
 
 ## 이클립스 문제(Probems) 해결 목차
 - [[ObjectOptimisticLockingFailureException] 이클립스 문제(Probems) 해결](#objectoptimisticlockingfailureexception이클립스-문제probems-해결)
 
-### [ObjectOptimisticLockingFailureException]이클립스 문제(Probems) 해결
+### [ObjectOptimisticLockingFailureException] 이클립스 문제(Probems) 해결
 - Class is a raw type. References to generic type Class<T> should be parameterized
 - 클래스는 원시 유형입니다. 일반 유형 Class<T>에 대한 참조는 매개변수화되어야 합니다.
+- `Class` 를 `Class<?>` 로 수정
 
-테스트
-```
-EgovDeleteStepTest
-```
-
-```
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectOptimisticLockingFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 52	Java Problem
+```java
+//	public ObjectOptimisticLockingFailureException(Class persistentClass, Object identifier) {
+	public ObjectOptimisticLockingFailureException(Class<?> persistentClass, Object identifier) {
+```
+
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectOptimisticLockingFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 64	Java Problem
+```java
+//			Class persistentClass, Object identifier, Throwable cause) {
+			Class<?> persistentClass, Object identifier, Throwable cause) {
+```
+
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectOptimisticLockingFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 80	Java Problem
+```java
+//			Class persistentClass, Object identifier, String msg, Throwable cause) {
+			Class<?> persistentClass, Object identifier, String msg, Throwable cause) {
+```
+
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectOptimisticLockingFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 133	Java Problem
+```java
+//	public Class getPersistentClass() {
+	public Class<?> getPersistentClass() {
+```
+
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectOptimisticLockingFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 134	Java Problem
+```java
+//		return (this.persistentClass instanceof Class ? (Class) this.persistentClass : null);
+		return (this.persistentClass instanceof Class ? (Class<?>) this.persistentClass : null);
+```
+
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectOptimisticLockingFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 143	Java Problem
+```java
+//			return ((Class) this.persistentClass).getName();
+			return ((Class<?>) this.persistentClass).getName();
 ```
 
 ### 이클립스 문제(Probems)
