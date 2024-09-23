@@ -83,7 +83,7 @@
 
 - [[970. 공통상세코드] 검색 조건 유지](#970-공통상세코드-검색-조건-유지)
 
-## DAO 단위 테스트
+## DAO, ServiceImpl 단위 테스트
 
 - [[10. 로그인][LoginDAO.actionLoginByEsntlId] DAO 단위 테스트](#10-로그인logindaoactionloginbyesntlid-dao-단위-테스트)
 - [[10. 로그인][LoginDAO.actionCrtfctLogin] DAO 단위 테스트](#10-로그인logindaoactioncrtfctlogin-dao-단위-테스트)
@@ -94,6 +94,7 @@
 - [[10. 로그인][LoginDAO.updateLoginIncorrect] DAO 단위 테스트](#10-로그인logindaoupdateloginincorrect-dao-단위-테스트)
 - [[10. 로그인][LoginDAO.selectPassedDayChangePWD] DAO 단위 테스트](#10-로그인logindaoselectpasseddaychangepwd-dao-단위-테스트)
 - [[10. 로그인][LoginDAO.onepassLogin] DAO 단위 테스트](#10-로그인logindaoonepasslogin-dao-단위-테스트)
+- [[10. 로그인][EgovLoginServiceImpl.actionLoginByEsntlId] ServiceImpl 단위 테스트](#10-로그인egovloginserviceimplactionloginbyesntlid-serviceimpl-단위-테스트)
 
 ---
 
@@ -1489,3 +1490,30 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/
 https://github.com/eGovFramework/egovframe-common-components/pull/497
 
 https://youtu.be/9YbQcUyoCV4
+
+### [10. 로그인][EgovLoginServiceImpl.actionLoginByEsntlId] ServiceImpl 단위 테스트
+
+- EsntlId를 이용한 로그인을 처리한다
+
+브랜치 생성
+```
+2024/test/EgovLoginServiceImpl/actionLoginByEsntlId
+```
+
+테스트 패키지 생성
+```
+egovframework.com.uat.uia.service.impl
+```
+
+테스트 파일 생성
+```
+EgovLoginServiceImplTestActionLoginByEsntlIdTest
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][10. 로그인][EgovLoginServiceImpl.actionLoginByEsntlId] ServiceImpl 단위 테스트
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/EgovLoginServiceImpl/actionLoginByEsntlId/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/503
+
+https://youtu.be/syTg2VpdH5U
