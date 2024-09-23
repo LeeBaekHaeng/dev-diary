@@ -1,7 +1,8 @@
 # MSA 템플릿 (교육용)
 
-목차
+## 이클립스 문제(Problems) 해결 목차
 - [module-common 이클립스 문제(Problems)](#module-common-orgwebjars-가져오기를-확인할-수-없습니다)
+- [[SecurityConfig] 이클립스 문제(Problems) 해결](#securityconfig-이클립스-문제problems-해결)
 
 ### module-common org.webjars 가져오기를 확인할 수 없습니다.
 
@@ -102,3 +103,41 @@ message-common_en.properties
 message-common_ko.properties
 
 http://10.0.2.15:8000/portal-service/api/v1/code-details/00
+
+
+### [SecurityConfig] 이클립스 문제(Problems) 해결
+
+- The type WebSecurityConfigurerAdapter is deprecated
+- WebSecurityConfigurerAdapter 유형은 더 이상 사용되지 않습니다.
+
+브랜치 생성
+```
+2024/problems/SecurityConfig
+```
+
+```java
+//import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+
+        return http.build();
+```
+
+```
+Description	Resource	Path	Location	Type
+Newer patch version of Spring Boot available: 2.7.18	build.gradle	/discovery	line 1	Language Servers
+Project 'discovery' has no explicit encoding set	discovery		/discovery	No explicit project encoding
+The type WebSecurityConfigurerAdapter is deprecated	SecurityConfig.java	/discovery/src/main/java/org/egovframe/cloud/discovery	line 5	Java Problem
+The type WebSecurityConfigurerAdapter is deprecated	SecurityConfig.java	/discovery/src/main/java/org/egovframe/cloud/discovery	line 26	Java Problem
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][MSA 템플릿 (교육용)][SecurityConfig] 이클립스 문제(Problems) 해결
+
+https://github.com/LeeBaekHaeng/egovframe-msa-edu/commits/2024/problems/SecurityConfig/
+
+https://github.com/eGovFramework/egovframe-msa-edu/pull/22
+
+https://youtu.be/cVyexV3WRK8
