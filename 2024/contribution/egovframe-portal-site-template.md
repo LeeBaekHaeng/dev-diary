@@ -205,3 +205,116 @@ https://github.com/LeeBaekHaeng/egovframe-portal-site-template/commits/2024/test
 https://github.com/eGovFramework/egovframe-portal-site-template/pull/14
 
 https://youtu.be/bb4yY-LX5vc
+
+### [포털 사이트][설문지] 롬복 생성자 기반 종속성 주입
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][포털 사이트][설문지] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.23  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/pst_webapp/uss/olp/qmc/EgovQustnrManageList.do
+```
+
+검색
+```
+/uss/olp/qmc/EgovQustnrManageList.do
+```
+
+브랜치 생성
+```
+2024/di/EgovQustnrManageController
+```
+
+`@Repository` DAO
+```java
+//@Repository("qustnrManageDao")
+@Repository
+public class QustnrManageDao extends EgovAbstractMapper {
+```
+
+`@Service` ServiceImpl
+```java
+//@Repository("qustnrManageDao")
+@Repository
+public class QustnrManageDao extends EgovAbstractMapper {
+```
+
+`@Controller` Controller
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovQustnrManageController {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(EgovQustnrManageController.class);
+
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+
+	/** EgovMessageSource */
+//	@Resource(name = "egovMessageSource")
+//	EgovMessageSource egovMessageSource;
+	private final EgovMessageSource egovMessageSource;
+
+//	@Resource(name = "egovQustnrManageService")
+//	private EgovQustnrManageService egovQustnrManageService;
+	private final EgovQustnrManageService egovQustnrManageService;
+
+	/** EgovPropertyService */
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertiesService;
+	private final EgovPropertyService propertiesService;
+
+//	@Resource(name = "EgovCmmUseService")
+//	private EgovCmmUseService cmmUseService;
+	private final EgovCmmUseService cmmUseService;
+```
+
+```xml
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.28</version>
+			<scope>provided</scope>
+		</dependency>
+```
+
+https://github.com/LeeBaekHaeng/egovframe-portal-site-template/commits/2024/di/EgovQustnrManageController/
+
+https://github.com/eGovFramework/egovframe-portal-site-template/pull/15
+
+https://youtu.be/YoARWAjXzsk
+
+포털서비스관리
+- 설문관리
+  - 설문지: 이백행 2024-09-23 원
+  - 설문템플릿: 이백행 2024-09-24 화
+  - 설문문항: 이백행 2024-09-25 수
+  - 설문항목: 이백행 2024-09-26 목
+  - 설문응답결과: 이백행 2024-09-27 금
+- 서비스관리
+  - FAQ관리: 안단희 2024-09-23 원
+  - QnA관리: 안단희 2024-09-24 화
+  - QnA답변관리: 안단희 2024-09-25 수
+  - 게시판생성관리: 안단희 2024-09-26 목
+  - 게시판사용관리: 안단희 2024-09-27 금
+  - 공지사항관리: 안단희 2024-09-28 토
+  - 자유게시판관리: 안단희 2024-09-30 월
+  - 배너관리: 안단희 2024-09-30 월
+포털시스템관리
+- 사용자관리
+  - 회원관리: 강동휘 2024-09-23 원
+  - 이용약관관리: 강동휘 2024-09-24 화
+  - 개인정보보호관리: 강동휘 2024-09-25 수
+- 사용자권한관리
+  - 권한관리: 강동휘 2024-09-26 목
+  - 사용자그룹관리: 강동휘 2024-09-27 금
+  - 사용자별권한관리: 강동휘 2024-09-28 토
+  - 롤관리: 강동휘 2024-09-30 월
