@@ -9,6 +9,11 @@
 - Class is a raw type. References to generic type Class<T> should be parameterized
 - 클래스는 원시 유형입니다. 일반 유형 Class<T>에 대한 참조는 매개변수화되어야 합니다.
 
+테스트
+```
+EgovDeleteStepTest
+```
+
 ```
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectOptimisticLockingFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 52	Java Problem
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectOptimisticLockingFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 64	Java Problem
