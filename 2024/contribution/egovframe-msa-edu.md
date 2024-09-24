@@ -172,7 +172,7 @@ The import org.springframework.context.annotation.Configuration is never used	Re
 The import org.springframework.context.i18n.LocaleContextHolder is never used	MessageSourceApiController.java	/apigateway/src/main/java/org/egovframe/cloud/apigateway/api	line 6	Java Problem
 ```
 
-[2024년 전자정부 표준프레임워크 컨트리뷰션][MSA 템플릿 (교육용)][SecurityConfig] 이클립스 문제(Problems) 해결
+[2024년 전자정부 표준프레임워크 컨트리뷰션][MSA 템플릿 (교육용)][apigateway] 이클립스 문제(Problems) 해결
 
 https://github.com/LeeBaekHaeng/egovframe-msa-edu/commits/2024/problems/apigateway/
 
