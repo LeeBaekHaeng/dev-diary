@@ -4,6 +4,7 @@
 
 ## 이클립스 문제(Probems) 해결 목차
 - [[ObjectOptimisticLockingFailureException] 이클립스 문제(Probems) 해결](#objectoptimisticlockingfailureexception이클립스-문제probems-해결)
+- [[ObjectRetrievalFailureException] 이클립스 문제(Probems) 해결](#objectretrievalfailureexception-이클립스-문제probems-해결)
 
 ### [ObjectOptimisticLockingFailureException] 이클립스 문제(Probems) 해결
 - Class is a raw type. References to generic type Class<T> should be parameterized
@@ -52,7 +53,49 @@ Class is a raw type. References to generic type Class<T> should be parameterized
 			return ((Class<?>) this.persistentClass).getName();
 ```
 
-### 이클립스 문제(Probems)
+### [ObjectRetrievalFailureException] 이클립스 문제(Probems) 해결
+- Class is a raw type. References to generic type Class<T> should be parameterized
+- 클래스는 원시 유형입니다. 제네릭 유형 Class<T>에 대한 참조는 매개변수화되어야 합니다.
+- `Class` 를 `Class<?>` 로 수정
+
+브랜치 생성
+```
+2024/probems/ObjectRetrievalFailureException
+```
+
+Class is a raw type. References to generic type Class<T> should be parameterized	ObjectRetrievalFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 52	Java Problem
+```java
+//	public ObjectRetrievalFailureException(Class persistentClass, Object identifier) {
+	public ObjectRetrievalFailureException(Class<?> persistentClass, Object identifier) {
+```
+
+Class is a raw type. References to generic type Class<T> should be parameterized	ObjectRetrievalFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 67	Java Problem
+```java
+//			Class persistentClass, Object identifier, String msg, Throwable cause) {
+			Class<?> persistentClass, Object identifier, String msg, Throwable cause) {
+```
+
+Class is a raw type. References to generic type Class<T> should be parameterized	ObjectRetrievalFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 107	Java Problem
+```java
+//	public Class getPersistentClass() {
+	public Class<?> getPersistentClass() {
+```
+
+Class is a raw type. References to generic type Class<T> should be parameterized	ObjectRetrievalFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 108	Java Problem
+```java
+//		return (this.persistentClass instanceof Class ? (Class) this.persistentClass : null);
+		return (this.persistentClass instanceof Class ? (Class<?>) this.persistentClass : null);
+```
+
+Class is a raw type. References to generic type Class<T> should be parameterized	ObjectRetrievalFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 117	Java Problem
+```java
+//			return ((Class) this.persistentClass).getName();
+			return ((Class<?>) this.persistentClass).getName();
+```
+
+https://github.com/eGovFramework/egovframe-runtime/pull/163
+
+## 이클립스 문제(Probems)
 
 ```
 Description	Resource	Path	Location	Type
@@ -69,6 +112,8 @@ Class is a raw type. References to generic type Class<T> should be parameterized
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectRetrievalFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 107	Java Problem
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectRetrievalFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 108	Java Problem
 Class is a raw type. References to generic type Class<T> should be parameterized	ObjectRetrievalFailureException.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm	line 117	Java Problem
+이백행 2024-09-24
+
 Class is a raw type. References to generic type Class<T> should be parameterized	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 22	Java Problem
 Class is a raw type. References to generic type Class<T> should be parameterized	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 38	Java Problem
 Class is a raw type. References to generic type Class<T> should be parameterized	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 49	Java Problem
