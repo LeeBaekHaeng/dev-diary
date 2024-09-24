@@ -3,6 +3,7 @@
 ## 이클립스 문제(Problems) 해결 목차
 - [module-common 이클립스 문제(Problems)](#module-common-orgwebjars-가져오기를-확인할-수-없습니다)
 - [[SecurityConfig] 이클립스 문제(Problems) 해결](#securityconfig-이클립스-문제problems-해결)
+- [[apigateway] 이클립스 문제(Problems) 해결](#apigateway-이클립스-문제problems-해결)
 
 ### module-common org.webjars 가져오기를 확인할 수 없습니다.
 
@@ -104,7 +105,6 @@ message-common_ko.properties
 
 http://10.0.2.15:8000/portal-service/api/v1/code-details/00
 
-
 ### [SecurityConfig] 이클립스 문제(Problems) 해결
 
 - The type WebSecurityConfigurerAdapter is deprecated
@@ -141,3 +141,41 @@ https://github.com/LeeBaekHaeng/egovframe-msa-edu/commits/2024/problems/Security
 https://github.com/eGovFramework/egovframe-msa-edu/pull/22
 
 https://youtu.be/cVyexV3WRK8
+
+### [apigateway] 이클립스 문제(Problems) 해결
+
+- The import org.springframework.context.annotation.Bean is never used
+  - import org.springframework.context.annotation.Bean은 절대 사용되지 않습니다.
+- The import org.springframework.context.annotation.Configuration is never used
+  - import org.springframework.context.annotation.Configuration은 절대 사용되지 않습니다.
+- The import org.springframework.context.i18n.LocaleContextHolder is never used
+  - 가져오기 org.springframework.context.i18n.LocaleContextHolder는 사용되지 않습니다.
+
+브랜치 생성
+```
+2024/problems/apigateway
+```
+
+```java
+//import org.springframework.context.annotation.Bean;
+//import org.springframework.context.annotation.Configuration;
+
+//import org.springframework.context.i18n.LocaleContextHolder;
+```
+
+```
+Description	Resource	Path	Location	Type
+Newer patch version of Spring Boot available: 2.7.18	build.gradle	/apigateway	line 1	Language Servers
+Project 'apigateway' has no explicit encoding set	apigateway		/apigateway	No explicit project encoding
+The import org.springframework.context.annotation.Bean is never used	ReactiveExceptionHandlerConfig.java	/apigateway/src/main/java/org/egovframe/cloud/apigateway/exception	line 9	Java Problem
+The import org.springframework.context.annotation.Configuration is never used	ReactiveExceptionHandlerConfig.java	/apigateway/src/main/java/org/egovframe/cloud/apigateway/exception	line 10	Java Problem
+The import org.springframework.context.i18n.LocaleContextHolder is never used	MessageSourceApiController.java	/apigateway/src/main/java/org/egovframe/cloud/apigateway/api	line 6	Java Problem
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][MSA 템플릿 (교육용)][SecurityConfig] 이클립스 문제(Problems) 해결
+
+https://github.com/LeeBaekHaeng/egovframe-msa-edu/commits/2024/problems/apigateway/
+
+https://github.com/eGovFramework/egovframe-msa-edu/pull/23
+
+https://youtu.be/OeEGB94kvug
