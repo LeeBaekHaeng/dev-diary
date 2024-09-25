@@ -5,6 +5,7 @@
 ## 이클립스 문제(Probems) 해결 목차
 - [[ObjectOptimisticLockingFailureException] 이클립스 문제(Probems) 해결](#objectoptimisticlockingfailureexception이클립스-문제probems-해결)
 - [[ObjectRetrievalFailureException] 이클립스 문제(Probems) 해결](#objectretrievalfailureexception-이클립스-문제probems-해결)
+- [[SampleAspect] 이클립스 문제(Probems) 해결](#sampleaspect-이클립스-문제probems-해결)
 
 ### [ObjectOptimisticLockingFailureException] 이클립스 문제(Probems) 해결
 - Class is a raw type. References to generic type Class<T> should be parameterized
@@ -95,6 +96,46 @@ Class is a raw type. References to generic type Class<T> should be parameterized
 
 https://github.com/eGovFramework/egovframe-runtime/pull/163
 
+### [SampleAspect] 이클립스 문제(Probems) 해결
+- The value of the local variable clazz is not used
+- `지역 변수 clazz의 값은 사용되지 않습니다.` 주석함
+- Class is a raw type. References to generic type Class<T> should be parameterized
+- 클래스는 원시 유형입니다. 제네릭 유형 Class<T>에 대한 참조는 매개변수화되어야 합니다.
+- `Class` 를 `Class<?>` 로 수정
+
+브랜치 생성
+```
+2024/probems/SampleAspect
+```
+
+Class is a raw type. References to generic type Class<T> should be parameterized	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 22	Java Problem
+- Class is a raw type. References to generic type Class<T> should be parameterized	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 38	Java Problem
+- Class is a raw type. References to generic type Class<T> should be parameterized	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 49	Java Problem
+The value of the local variable clazz is not used	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 22	Java Problem
+- The value of the local variable clazz is not used	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 38	Java Problem
+- The value of the local variable clazz is not used	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 49	Java Problem
+```java
+    public void beforeTargetMethod(JoinPoint thisJoinPoint) {
+    	
+//  	  Class clazz = thisJoinPoint.getTarget().getClass();
+
+    public void Pointcut(JoinPoint thisJoinPoint) {
+    	
+//    	  Class clazz = thisJoinPoint.getTarget().getClass();
+
+    public Object aroundTargetMethod(ProceedingJoinPoint thisJoinPoint) throws Throwable {
+    	
+//    	  Class clazz = thisJoinPoint.getTarget().getClass();
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][실행환경] 이클립스 문제(Probems) 해결
+
+https://github.com/LeeBaekHaeng/egovframe-runtime/commits/2024/probems/SampleAspect/
+
+https://github.com/eGovFramework/egovframe-runtime/pull/164
+
+https://youtu.be/-5PuuGPgJNY
+
 ## 이클립스 문제(Probems)
 
 ```
@@ -117,6 +158,8 @@ Class is a raw type. References to generic type Class<T> should be parameterized
 Class is a raw type. References to generic type Class<T> should be parameterized	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 22	Java Problem
 Class is a raw type. References to generic type Class<T> should be parameterized	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 38	Java Problem
 Class is a raw type. References to generic type Class<T> should be parameterized	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 49	Java Problem
+이백행 2024-09-25
+
 Class is a raw type. References to generic type Class<T> should be parameterized	SqlMapClientFactoryBean.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm/ibatis	line 102	Java Problem
 Class is a raw type. References to generic type Class<T> should be parameterized	SqlMapClientFactoryBean.java	/org.egovframe.rte.psl.dataaccess/src/main/java/org/egovframe/rte/psl/orm/ibatis	line 246	Java Problem
 Collection is a raw type. References to generic type Collection<E> should be parameterized	EgovObjectUtil.java	/org.egovframe.rte.fdl.string/src/main/java/org/egovframe/rte/fdl/string	line 163	Java Problem
