@@ -330,9 +330,12 @@ The value of the field TaskletStep.vJobVariable is not used	TaskletStep.java	/or
 The value of the field TaskletStep.vResourceVariable is not used	TaskletStep.java	/org.egovframe.rte.bat.core/src/test/java/org/egovframe/rte/bat/support/tasklet	line 26	Java Problem
 The value of the field User.serialVersionUID is not used	User.java	/org.egovframe.rte.psl.data.jpa/src/test/java/org/egovframe/rte/psl/data/jpa/domain	line 10	Java Problem
 The value of the local variable arrCryptoString is not used	EgovARIATest.java	/org.egovframe.rte.fdl.crypto/src/test/java/org/egovframe/rte/fdl/cryptography	line 48	Java Problem
+
 The value of the local variable clazz is not used	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 22	Java Problem
 The value of the local variable clazz is not used	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 38	Java Problem
 The value of the local variable clazz is not used	SampleAspect.java	/org.egovframe.rte.fdl.cmmn/src/test/java/org/egovframe/rte/fdl/cmmn/aspectj	line 49	Java Problem
+이백행 2024-09-25
+
 The value of the local variable decryptedURLDecoder is not used	EgovARIACryptoServiceTest.java	/org.egovframe.rte.fdl.crypto/src/test/java/org/egovframe/rte/fdl/cryptography	line 201	Java Problem
 The value of the local variable dir1 is not used	FilehandlingServiceTest.java	/org.egovframe.rte.fdl.filehandling/src/test/java/org/egovframe/rte/fdl/filehandling	line 490	Java Problem
 The value of the local variable egovDelimitedLineTokenizer is not used	EgovDelimitedLineTokenizerTest.java	/org.egovframe.rte.bat.core/src/test/java/org/egovframe/rte/bat/core/item/file/transform	line 28	Java Problem
