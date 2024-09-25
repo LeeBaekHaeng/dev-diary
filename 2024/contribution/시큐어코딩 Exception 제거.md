@@ -95,6 +95,7 @@
 - [[10. 로그인][LoginDAO.selectPassedDayChangePWD] DAO 단위 테스트](#10-로그인logindaoselectpasseddaychangepwd-dao-단위-테스트)
 - [[10. 로그인][LoginDAO.onepassLogin] DAO 단위 테스트](#10-로그인logindaoonepasslogin-dao-단위-테스트)
 - [[10. 로그인][EgovLoginServiceImpl.actionLoginByEsntlId] ServiceImpl 단위 테스트](#10-로그인egovloginserviceimplactionloginbyesntlid-serviceimpl-단위-테스트)
+- [[10. 로그인][EgovLoginServiceImpl.actionLogin] ServiceImpl 단위 테스트](#10-로그인egovloginserviceimplactionlogin-serviceimpl-단위-테스트)
 
 ---
 
@@ -1517,3 +1518,40 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/
 https://github.com/eGovFramework/egovframe-common-components/pull/503
 
 https://youtu.be/syTg2VpdH5U
+
+### [10. 로그인][EgovLoginServiceImpl.actionLogin] ServiceImpl 단위 테스트
+
+- 일반 로그인을 처리한다
+
+브랜치 생성
+```
+2024/test/EgovLoginServiceImpl/actionLogin
+```
+
+테스트 패키지 생성
+```
+egovframework.com.uat.uia.service.impl
+```
+
+테스트 파일 생성
+```
+EgovLoginServiceImplTestActionLoginTest
+```
+
+```java
+@ImportResource({ "egovframework/spring/com/idgn/context-idgn-MailMsg.xml", })
+@ComponentScan(useDefaultFilters = false, basePackages = { "egovframework.com.uat.uia.service.impl",
+		"egovframework.com.cop.ems.service", "egovframework.com.cmm.config",
+		"egovframework.com.cmm.service", }, includeFilters = {
+				@Filter(type = FilterType.ANNOTATION, classes = { Repository.class, Service.class }),
+				@Filter(type = FilterType.ASSIGNABLE_TYPE, classes = { EgovLoginService.class, EgovLoginConfig.class,
+						EgovMultiPartEmail.class, }) })
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][10. 로그인][EgovLoginServiceImpl.actionLogin] ServiceImpl 단위 테스트
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/EgovLoginServiceImpl/actionLogin/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/505
+
+https://youtu.be/iYOlnvM2hT4
