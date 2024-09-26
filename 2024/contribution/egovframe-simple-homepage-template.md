@@ -1,10 +1,31 @@
 # 표준프레임워크 템플릿 프로젝트 심플 홈페이지
 
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 심플 홈페이지]
+
 - 셀레늄 단위 테스트
+- 롬복 생성자 기반 종속성 주입
 
-## [로그인] 셀레늄 단위 테스트
+## 셀레늄 단위 테스트 목차
+- [[로그인] 셀레늄 단위 테스트](#로그인-셀레늄-단위-테스트)
 
-[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 심플 홈페이지][로그인] 셀레늄 단위 테스트
+## 롬복 생성자 기반 종속성 주입 목차
+
+## 메뉴 구성
+
+알림마당
+- 오늘의 행사
+- 금주의 행사
+- 공지사항
+- 사이트갤러리
+사이트관리(관리자)
+- 일정관리
+- 게시판템플릿관리
+- 게시판생성관리
+- 게시판사용관리
+- 공지사항관리
+- 사이트갤러리관리
+
+### [로그인] 셀레늄 단위 테스트
 
 - Source > Format
 - src/test/java 추가
@@ -78,9 +99,10 @@ cssSelector
 #header_loginname > a
 ```
 
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 심플 홈페이지][로그인] 셀레늄 단위 테스트
+
 https://github.com/LeeBaekHaeng/egovframe-simple-homepage-template/commits/2024/selenium/EgovLoginController/
 
 https://github.com/eGovFramework/egovframe-simple-homepage-template/pull/20
 
 https://youtu.be/5YYCD96TWl4
-
