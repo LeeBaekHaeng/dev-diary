@@ -9,6 +9,7 @@
 - [[로그인] 셀레늄 단위 테스트](#로그인-셀레늄-단위-테스트)
 
 ## 롬복 생성자 기반 종속성 주입 목차
+- [[오늘의 행사] 롬복 생성자 기반 종속성 주입](#오늘의-행사-롬복-생성자-기반-종속성-주입)
 
 ## 메뉴 구성
 
@@ -107,3 +108,94 @@ https://github.com/LeeBaekHaeng/egovframe-simple-homepage-template/commits/2024/
 https://github.com/eGovFramework/egovframe-simple-homepage-template/pull/20
 
 https://youtu.be/5YYCD96TWl4
+
+### [오늘의 행사] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.26  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/sht_webapp/cop/smt/sim/EgovIndvdlSchdulManageDailyList.do
+```
+
+검색
+```
+/cop/smt/sim/EgovIndvdlSchdulManageDailyList.do
+```
+
+브랜치 생성
+```
+2024/di/EgovIndvdlSchdulManageController
+```
+
+`@Repository` DAO
+```java
+//@Repository("indvdlSchdulManageDao")
+@Repository
+```
+
+`@Service` ServiceImpl
+```java
+//@Service("egovIndvdlSchdulManageService")
+@Service
+@RequiredArgsConstructor
+public class EgovIndvdlSchdulManageServiceImpl extends EgovAbstractServiceImpl
+		implements EgovIndvdlSchdulManageService {
+
+//	@Resource(name = "indvdlSchdulManageDao")
+//	private IndvdlSchdulManageDao dao;
+	private final IndvdlSchdulManageDao dao;
+
+//	@Resource(name = "deptSchdulManageIdGnrService")
+//	private EgovIdGnrService idgenService;
+	private final EgovIdGnrService deptSchdulManageIdGnrService;
+
+```
+
+`@Controller` Controller
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovIndvdlSchdulManageController {
+
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+
+	/** EgovMessageSource */
+//	@Resource(name = "egovMessageSource")
+//	EgovMessageSource egovMessageSource;
+	private final EgovMessageSource egovMessageSource;
+
+//	@Resource(name = "egovIndvdlSchdulManageService")
+//	private EgovIndvdlSchdulManageService egovIndvdlSchdulManageService;
+	private final EgovIndvdlSchdulManageService egovIndvdlSchdulManageService;
+
+//	@Resource(name = "EgovCmmUseService")
+//	private EgovCmmUseService cmmUseService;
+	private final EgovCmmUseService cmmUseService;
+
+	/** EgovPropertyService */
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertiesService;
+//	private final EgovPropertyService propertiesService;
+
+	// 첨부파일 관련
+//	@Resource(name = "EgovFileMngService")
+//	private EgovFileMngService fileMngService;
+	private final EgovFileMngService fileMngService;
+
+//	@Resource(name = "EgovFileMngUtil")
+//	private EgovFileMngUtil fileUtil;
+	private final EgovFileMngUtil fileUtil;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 심플 홈페이지][오늘의 행사] 롬복 생성자 기반 종속성 주입
+
+https://github.com/LeeBaekHaeng/egovframe-simple-homepage-template/commits/2024/di/EgovIndvdlSchdulManageController/
+
+https://github.com/eGovFramework/egovframe-simple-homepage-template/pull/22
