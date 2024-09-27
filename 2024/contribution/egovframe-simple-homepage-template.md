@@ -12,6 +12,7 @@
 - [[오늘의 행사] 롬복 생성자 기반 종속성 주입](#오늘의-행사-롬복-생성자-기반-종속성-주입)
 - [[공지사항] 롬복 생성자 기반 종속성 주입](#공지사항-롬복-생성자-기반-종속성-주입)
 - [[게시판템플릿관리] 롬복 생성자 기반 종속성 주입](#게시판템플릿관리-롬복-생성자-기반-종속성-주입)
+- [[게시판생성관리] 롬복 생성자 기반 종속성 주입](#게시판생성관리-롬복-생성자-기반-종속성-주입)
 
 ## 메뉴 구성
 
@@ -401,3 +402,62 @@ https://github.com/LeeBaekHaeng/egovframe-simple-homepage-template/commits/2024/
 https://github.com/eGovFramework/egovframe-simple-homepage-template/pull/24
 
 https://youtu.be/q69C8k9yqpg
+
+### [게시판생성관리] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.27  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/sht_webapp/cop/bbs/SelectBBSMasterInfs.do?menuNo=53
+```
+
+검색
+```
+/cop/bbs/SelectBBSMasterInfs.do
+```
+
+브랜치 생성
+```
+2024/di/EgovBBSAttributeManageController
+```
+
+`@Repository` DAO
+```java
+
+```
+
+`@Service` ServiceImpl
+```java
+
+```
+
+`@Controller` Controller
+```java
+
+```
+
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovBBSManageController {
+
+	@Resource(name = "EgovBBSManageService")
+	private EgovBBSManageService bbsMngService;
+
+//	@Resource(name = "EgovBBSAttributeManageService")
+//	private EgovBBSAttributeManageService bbsAttrbService;
+	private final EgovBBSAttributeManageService bbsAttrbService;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 심플 홈페이지][게시판생성관리] 롬복 생성자 기반 종속성 주입
+
+https://github.com/LeeBaekHaeng/egovframe-simple-homepage-template/commits/2024/di/EgovBBSAttributeManageController/
+
+https://github.com/eGovFramework/egovframe-simple-homepage-template/pull/25
+
+https://youtu.be/j-EQxJqmesA
