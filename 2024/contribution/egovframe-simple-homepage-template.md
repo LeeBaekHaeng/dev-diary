@@ -14,6 +14,7 @@
 - [[게시판템플릿관리] 롬복 생성자 기반 종속성 주입](#게시판템플릿관리-롬복-생성자-기반-종속성-주입)
 - [[게시판생성관리] 롬복 생성자 기반 종속성 주입](#게시판생성관리-롬복-생성자-기반-종속성-주입)
 - [[게시판사용관리] 롬복 생성자 기반 종속성 주입](#게시판사용관리-롬복-생성자-기반-종속성-주입)
+- [[게시판속성관리?] 롬복 생성자 기반 종속성 주입](#게시판속성관리-롬복-생성자-기반-종속성-주입)
 
 ## 메뉴 구성
 
@@ -553,3 +554,93 @@ https://github.com/LeeBaekHaeng/egovframe-simple-homepage-template/commits/2024/
 https://github.com/eGovFramework/egovframe-simple-homepage-template/pull/26
 
 https://youtu.be/aZqJXibUF-Q
+
+### [게시판속성관리?] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.27  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+- 할 일(TODO) 게시판 속성관리 못 찾겠음
+
+크롬 링크 주소 복사
+```
+게시판 속성관리 못 찾겠음
+```
+
+검색
+```
+/cop/bbs/selectBoardMasterList.do
+```
+
+브랜치 생성
+```
+2024/di/EgovBBSLoneMasterController
+```
+
+`@Repository` DAO
+```java
+//@Repository("BBSLoneMasterDAO")
+@Repository
+```
+
+`@Service` ServiceImpl
+```java
+//@Service("EgovBBSLoneMasterService")
+@Service
+@RequiredArgsConstructor
+public class EgovBBSLoneMasterServiceImpl extends EgovAbstractServiceImpl implements EgovBBSLoneMasterService {
+
+//	@Resource(name = "BBSLoneMasterDAO")
+//	private BBSLoneMasterDAO masterDAO;
+	private final BBSLoneMasterDAO masterDAO;
+
+//	@Resource(name = "BBSUseInfoManageDAO")
+//	private BBSUseInfoManageDAO bbsUseDAO;
+	private final BBSUseInfoManageDAO bbsUseDAO;
+
+//	@Resource(name = "egovBBSMstrIdGnrService")
+//	private EgovIdGnrService idgenService;
+	private final EgovIdGnrService egovBBSMstrIdGnrService;
+```
+
+`@Controller` Controller
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovBBSLoneMasterController {
+
+	/** EgovBBSLoneMasterService */
+//	@Resource(name = "EgovBBSLoneMasterService")
+//	private EgovBBSLoneMasterService bbsLoneService;
+	private final EgovBBSLoneMasterService bbsLoneService;
+
+	/** EgovCmmUseService */
+//	@Resource(name = "EgovCmmUseService")
+//	private EgovCmmUseService cmmUseService;
+	private final EgovCmmUseService cmmUseService;
+
+	/** EgovPropertyService */
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertyService;
+	private final EgovPropertyService propertyService;
+
+	/** DefaultBeanValidator */
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+
+	/** EgovMessageSource */
+//	@Resource(name = "egovMessageSource")
+//	EgovMessageSource egovMessageSource;
+	private final EgovMessageSource egovMessageSource;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 심플 홈페이지][게시판속성관리?] 롬복 생성자 기반 종속성 주입
+
+https://github.com/LeeBaekHaeng/egovframe-simple-homepage-template/commits/2024/di/EgovBBSLoneMasterController/
+
+https://github.com/eGovFramework/egovframe-simple-homepage-template/pull/27
+
+https://youtu.be/_QjcqfxEkbY
