@@ -25,6 +25,7 @@
 - [[공지사항관리] 롬복 생성자 기반 종속성 주입](#공지사항관리-롬복-생성자-기반-종속성-주입)
 - [[접속로그관리] 롬복 생성자 기반 종속성 주입](#접속로그관리-롬복-생성자-기반-종속성-주입)
 - [[접속통계관리] 롬복 생성자 기반 종속성 주입](#접속통계관리-롬복-생성자-기반-종속성-주입)
+- [[로그인정책관리] 롬복 생성자 기반 종속성 주입](#로그인정책관리-롬복-생성자-기반-종속성-주입)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -1691,3 +1692,92 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/34
 
 https://youtu.be/CTSIk7YpKfY
+
+### [로그인정책관리] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.28  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/uat/uap/selectLoginPolicyList.do
+```
+
+검색
+```
+/uat/uap/selectLoginPolicyList.do
+```
+
+브랜치 생성
+```
+2024/di/EgovLoginPolicyController
+```
+
+`@Repository` DAO
+```java
+//@Repository("loginPolicyDAO")
+@Repository
+public class LoginPolicyDAO extends EgovAbstractMapper {
+```
+
+`@Service` ServiceImpl
+```java
+//@Service("egovLoginPolicyService")
+@Service
+@RequiredArgsConstructor
+public class EgovLoginPolicyServiceImpl extends EgovAbstractServiceImpl implements EgovLoginPolicyService {
+
+//	@Resource(name = "loginPolicyDAO")
+//	LoginPolicyDAO loginPolicyDAO;
+	private final LoginPolicyDAO loginPolicyDAO;
+```
+
+`@Controller` Controller
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovLoginPolicyController {
+
+//	@Resource(name = "egovMessageSource")
+//	EgovMessageSource egovMessageSource;
+	private final EgovMessageSource egovMessageSource;
+
+//	@Resource(name = "egovLoginPolicyService")
+//	EgovLoginPolicyService egovLoginPolicyService;
+	private final EgovLoginPolicyService egovLoginPolicyService;
+
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+```
+
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovLoginController {
+
+	/** EgovLoginService */
+	@Resource(name = "loginService")
+	private EgovLoginService loginService;
+
+	/** EgovMessageSource */
+	@Resource(name = "egovMessageSource")
+	EgovMessageSource egovMessageSource;
+
+	/** EgovLoginPolicyService */
+//	@Resource(name = "egovLoginPolicyService")
+//	EgovLoginPolicyService egovLoginPolicyService;
+	private final EgovLoginPolicyService egovLoginPolicyService;
+
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][로그인정책관리] 롬복 생성자 기반 종속성 주입
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/di/EgovLoginPolicyController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/35
+
+https://youtu.be/4EXSzLxqdU0
