@@ -24,6 +24,7 @@
 - [[게시판사용관리] 롬복 생성자 기반 종속성 주입](#게시판사용관리-롬복-생성자-기반-종속성-주입)
 - [[공지사항관리] 롬복 생성자 기반 종속성 주입](#공지사항관리-롬복-생성자-기반-종속성-주입)
 - [[접속로그관리] 롬복 생성자 기반 종속성 주입](#접속로그관리-롬복-생성자-기반-종속성-주입)
+- [[접속통계관리] 롬복 생성자 기반 종속성 주입](#접속통계관리-롬복-생성자-기반-종속성-주입)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -1628,3 +1629,65 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/33
 
 https://youtu.be/F33U297VlUM
+
+### [접속통계관리] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.28  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/sts/cst/selectConectStats.do
+```
+
+검색
+```
+/sts/cst/selectConectStats.do
+```
+
+브랜치 생성
+```
+2024/di/EgovConectStatsController
+```
+
+`@Repository` DAO
+```java
+//@Repository("conectStatsDAO")
+@Repository
+public class ConectStatsDAO extends EgovAbstractMapper {
+```
+
+`@Service` ServiceImpl
+```java
+//@Service("conectStatsService")
+@Service
+@RequiredArgsConstructor
+public class EgovConectStatsServiceImpl extends EgovAbstractServiceImpl implements EgovConectStatsService {
+
+//	@Resource(name = "conectStatsDAO")
+//	private ConectStatsDAO conectStatsDAO;
+	private final ConectStatsDAO conectStatsDAO;
+```
+
+`@Controller` Controller
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovConectStatsController {
+
+	/** EgovConectStatsService */
+//	@Resource(name = "conectStatsService")
+//	private EgovConectStatsService conectStatsService;
+	private final EgovConectStatsService conectStatsService;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][접속통계관리] 롬복 생성자 기반 종속성 주입
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/di/EgovConectStatsController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/34
+
+https://youtu.be/CTSIk7YpKfY
