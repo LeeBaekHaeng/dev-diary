@@ -2,6 +2,7 @@
 
 - 셀레늄 단위 테스트
 - 요청 메서드 정리/검색 조건 유지
+- 롬복 생성자 기반 종속성 주입
 
 ## 검색 조건 유지 목차
 - [[내부서비스관리 > 내부업무게시판관리 > 게시판생성관리] 검색 조건 유지](#내부서비스관리--내부업무게시판관리--게시판생성관리-검색-조건-유지)
@@ -17,6 +18,9 @@
 - [[롤관리] 검색 조건 유지](#롤관리-검색-조건-유지)
 - [[프로그램목록관리] 검색 조건 유지](#프로그램목록관리-검색-조건-유지)
 - [[메뉴생성관리] 검색 조건 유지](#메뉴생성관리-검색-조건-유지)
+
+## 롬복 생성자 기반 종속성 주입 목차
+- [[게시판생성관리] 롬복 생성자 기반 종속성 주입](#게시판생성관리-롬복-생성자-기반-종속성-주입)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -1218,3 +1222,129 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/29
 
 https://youtu.be/B9u18Utw1wY
+
+### [게시판생성관리] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.28  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/cop/bbs/SelectBBSMasterInfs.do
+```
+
+검색
+```
+/cop/bbs/SelectBBSMasterInfs.do
+```
+
+브랜치 생성
+```
+2024/di/EgovBBSAttributeManageController
+```
+
+`@Repository` DAO
+```java
+//@Repository("BBSAttributeManageDAO")
+@Repository
+public class BBSAttributeManageDAO extends EgovAbstractMapper {
+```
+
+`@Service` ServiceImpl
+```java
+//@Service("EgovBBSAttributeManageService")
+@Service
+@RequiredArgsConstructor
+public class EgovBBSAttributeManageServiceImpl extends EgovAbstractServiceImpl
+		implements EgovBBSAttributeManageService {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(EgovBBSAttributeManageServiceImpl.class);
+
+//	@Resource(name = "BBSAttributeManageDAO")
+//	private BBSAttributeManageDAO attrbMngDAO;
+	private final BBSAttributeManageDAO attrbMngDAO;
+
+//	@Resource(name = "BBSUseInfoManageDAO")
+//	private BBSUseInfoManageDAO bbsUseDAO;
+	private final BBSUseInfoManageDAO bbsUseDAO;
+
+//	@Resource(name = "EgovUserInfManageService")
+//	private EgovUserInfManageService userService;
+	private final EgovUserInfManageService userService;
+
+//	@Resource(name = "egovBBSMstrIdGnrService")
+//	private EgovIdGnrService idgenService;
+	private final EgovIdGnrService idgenService;
+
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertyService;
+	private final EgovPropertyService propertyService;
+
+	// ---------------------------------
+	// 2009.06.26 : 2단계 기능 추가
+	// ---------------------------------
+//	@Resource(name = "BBSAddedOptionsDAO")
+//	private BBSAddedOptionsDAO addedOptionsDAO;
+	private final BBSAddedOptionsDAO addedOptionsDAO;
+	//// -------------------------------
+```
+
+`@Controller` Controller
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovBBSAttributeManageController {
+
+//	@Resource(name = "EgovBBSAttributeManageService")
+//	private EgovBBSAttributeManageService bbsAttrbService;
+	private final EgovBBSAttributeManageService bbsAttrbService;
+
+//	@Resource(name = "EgovCmmUseService")
+//	private EgovCmmUseService cmmUseService;
+	private final EgovCmmUseService cmmUseService;
+
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertyService;
+	private final EgovPropertyService propertyService;
+
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+```
+
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovBBSManageController {
+
+	@Resource(name = "EgovBBSManageService")
+	private EgovBBSManageService bbsMngService;
+
+//	@Resource(name = "EgovBBSAttributeManageService")
+//	private EgovBBSAttributeManageService bbsAttrbService;
+	private final EgovBBSAttributeManageService bbsAttrbService;
+```
+
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovBBSAdminManageController {
+
+	@Resource(name = "EgovBBSManageService")
+	private EgovBBSManageService bbsMngService;
+
+//	@Resource(name = "EgovBBSAttributeManageService")
+//	private EgovBBSAttributeManageService bbsAttrbService;
+	private final EgovBBSAttributeManageService bbsAttrbService;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][게시판생성관리] 롬복 생성자 기반 종속성 주입
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/di/EgovBBSAttributeManageController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/30
+
+https://youtu.be/1Nmklfse_JQ
