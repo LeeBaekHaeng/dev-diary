@@ -30,6 +30,7 @@
 - [[사용자부재관리] 롬복 생성자 기반 종속성 주입](#사용자부재관리-롬복-생성자-기반-종속성-주입)
 - [[권한관리] 롬복 생성자 기반 종속성 주입](#권한관리-롬복-생성자-기반-종속성-주입)
 - [[사용자그룹관리] 롬복 생성자 기반 종속성 주입](#사용자그룹관리-롬복-생성자-기반-종속성-주입)
+- [[사용자별권한관리] 롬복 생성자 기반 종속성 주입](#사용자별권한관리-롬복-생성자-기반-종속성-주입)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -2138,3 +2139,77 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/39
 
 https://youtu.be/o4Pj0hF1id4
+
+### [사용자별권한관리] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.28  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/sec/rgm/EgovAuthorGroupListView.do
+```
+
+검색
+```
+/sec/rgm/EgovAuthorGroupListView.do
+```
+
+브랜치 생성
+```
+2024/di/EgovAuthorGroupController
+```
+
+`@Repository` DAO
+```java
+//@Repository("authorGroupDAO")
+@Repository
+public class AuthorGroupDAO extends EgovAbstractMapper {
+```
+
+`@Service` ServiceImpl
+```java
+//@Service("egovAuthorGroupService")
+@Service
+@RequiredArgsConstructor
+public class EgovAuthorGroupServiceImpl extends EgovAbstractServiceImpl implements EgovAuthorGroupService {
+
+//	@Resource(name = "authorGroupDAO")
+//	private AuthorGroupDAO authorGroupDAO;
+	private final AuthorGroupDAO authorGroupDAO;
+```
+
+`@Controller` Controller
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovAuthorGroupController {
+
+//	@Resource(name = "egovMessageSource")
+//	EgovMessageSource egovMessageSource;
+	private final EgovMessageSource egovMessageSource;
+
+//	@Resource(name = "egovAuthorGroupService")
+//	private EgovAuthorGroupService egovAuthorGroupService;
+	private final EgovAuthorGroupService egovAuthorGroupService;
+
+//	@Resource(name = "egovAuthorManageService")
+//	private EgovAuthorManageService egovAuthorManageService;
+	private final EgovAuthorManageService egovAuthorManageService;
+
+	/** EgovPropertyService */
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertiesService;
+//	private final EgovPropertyService propertiesService;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][사용자별권한관리] 롬복 생성자 기반 종속성 주입
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/di/EgovAuthorGroupController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/40
+
+https://youtu.be/a3Ou-3D_CQQ
