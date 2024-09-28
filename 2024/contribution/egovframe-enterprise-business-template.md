@@ -23,6 +23,7 @@
 - [[게시판생성관리] 롬복 생성자 기반 종속성 주입](#게시판생성관리-롬복-생성자-기반-종속성-주입)
 - [[게시판사용관리] 롬복 생성자 기반 종속성 주입](#게시판사용관리-롬복-생성자-기반-종속성-주입)
 - [[공지사항관리] 롬복 생성자 기반 종속성 주입](#공지사항관리-롬복-생성자-기반-종속성-주입)
+- [[접속로그관리] 롬복 생성자 기반 종속성 주입](#접속로그관리-롬복-생성자-기반-종속성-주입)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -1548,3 +1549,82 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/32
 
 https://youtu.be/ctboEni2Wq8
+
+### [접속로그관리] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.28  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/sym/log/clg/SelectLoginLogList.do
+```
+
+검색
+```
+/sym/log/clg/SelectLoginLogList.do
+```
+
+브랜치 생성
+```
+2024/di/EgovLoginLogController
+```
+
+`@Repository` DAO
+```java
+//@Repository("loginLogDAO")
+@Repository
+public class LoginLogDAO extends EgovAbstractMapper {
+```
+
+`@Service` ServiceImpl
+```java
+//@Service("EgovLoginLogService")
+@Service
+@RequiredArgsConstructor
+public class EgovLoginLogServiceImpl extends EgovAbstractServiceImpl implements EgovLoginLogService {
+
+//	@Resource(name = "loginLogDAO")
+//	private LoginLogDAO loginLogDAO;
+	private final LoginLogDAO loginLogDAO;
+
+	/** ID Generation */
+//	@Resource(name = "egovLoginLogIdGnrService")
+//	private EgovIdGnrService egovLoginLogIdGnrService;
+	private final EgovIdGnrService egovLoginLogIdGnrService;
+```
+
+`@Controller` Controller
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovLoginLogController {
+
+//	@Resource(name = "EgovLoginLogService")
+//	private EgovLoginLogService loginLogService;
+	private final EgovLoginLogService loginLogService;
+
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertyService;
+	private final EgovPropertyService propertyService;
+```
+
+```java
+@RequiredArgsConstructor
+public class EgovLoginLogAspect {
+
+//	@Resource(name = "EgovLoginLogService")
+//	private EgovLoginLogService loginLogService;
+	private final EgovLoginLogService loginLogService;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][접속로그관리] 롬복 생성자 기반 종속성 주입
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/di/EgovLoginLogController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/33
+
+https://youtu.be/F33U297VlUM
