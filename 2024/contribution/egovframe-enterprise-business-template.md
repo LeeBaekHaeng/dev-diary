@@ -29,6 +29,7 @@
 - [[사용자등록관리] 롬복 생성자 기반 종속성 주입](#사용자등록관리-롬복-생성자-기반-종속성-주입)
 - [[사용자부재관리] 롬복 생성자 기반 종속성 주입](#사용자부재관리-롬복-생성자-기반-종속성-주입)
 - [[권한관리] 롬복 생성자 기반 종속성 주입](#권한관리-롬복-생성자-기반-종속성-주입)
+- [[사용자그룹관리] 롬복 생성자 기반 종속성 주입](#사용자그룹관리-롬복-생성자-기반-종속성-주입)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -2058,3 +2059,82 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/38
 
 https://youtu.be/X9VfFWzj4qo
+
+### [사용자그룹관리] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.28  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/sec/gmt/EgovGroupList.do
+```
+
+검색
+```
+/sec/gmt/EgovGroupList.do
+```
+
+브랜치 생성
+```
+2024/di/EgovGroupManageController
+```
+
+`@Repository` DAO
+```java
+//@Repository("groupManageDAO")
+@Repository
+public class GroupManageDAO extends EgovAbstractMapper {
+```
+
+`@Service` ServiceImpl
+```java
+//@Service("egovGroupManageService")
+@Service
+@RequiredArgsConstructor
+public class EgovGroupManageServiceImpl extends EgovAbstractServiceImpl implements EgovGroupManageService {
+
+//	@Resource(name = "groupManageDAO")
+//	private GroupManageDAO groupManageDAO;
+	private final GroupManageDAO groupManageDAO;
+```
+
+`@Controller` Controller
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovGroupManageController {
+
+//	@Resource(name = "egovMessageSource")
+//	EgovMessageSource egovMessageSource;
+	private final EgovMessageSource egovMessageSource;
+
+//	@Resource(name = "egovGroupManageService")
+//	private EgovGroupManageService egovGroupManageService;
+	private final EgovGroupManageService egovGroupManageService;
+
+	/** EgovPropertyService */
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertiesService;
+//	private final EgovPropertyService propertiesService;
+
+	/** Message ID Generation */
+//	@Resource(name = "egovGroupIdGnrService")
+//	private EgovIdGnrService egovGroupIdGnrService;
+	private final EgovIdGnrService egovGroupIdGnrService;
+
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][사용자그룹관리] 롬복 생성자 기반 종속성 주입
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/di/EgovGroupManageController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/39
+
+https://youtu.be/o4Pj0hF1id4
