@@ -32,6 +32,7 @@
 - [[사용자그룹관리] 롬복 생성자 기반 종속성 주입](#사용자그룹관리-롬복-생성자-기반-종속성-주입)
 - [[사용자별권한관리] 롬복 생성자 기반 종속성 주입](#사용자별권한관리-롬복-생성자-기반-종속성-주입)
 - [[롤관리] 롬복 생성자 기반 종속성 주입](#롤관리-롬복-생성자-기반-종속성-주입)
+- [[프로그램목록관리] 롬복 생성자 기반 종속성 주입](#프로그램목록관리-롬복-생성자-기반-종속성-주입)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -2302,3 +2303,85 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/41
 
 https://youtu.be/YBJQstqTS60
+
+### [프로그램목록관리] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.28  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/sym/prm/EgovProgramListManageSelect.do
+```
+
+검색
+```
+/sym/prm/EgovProgramListManageSelect.do
+```
+
+브랜치 생성
+```
+2024/di/EgovProgrmManageController
+```
+
+`@Repository` DAO
+```java
+//@Repository("progrmManageDAO")
+@Repository
+public class ProgrmManageDAO extends EgovAbstractMapper {
+```
+
+`@Service` ServiceImpl
+```java
+//@Service("progrmManageService")
+@Service
+@RequiredArgsConstructor
+public class EgovProgrmManageServiceImpl extends EgovAbstractServiceImpl implements EgovProgrmManageService {
+
+//	@Resource(name = "progrmManageDAO")
+//	private ProgrmManageDAO progrmManageDAO;
+	private final ProgrmManageDAO progrmManageDAO;
+
+```
+
+`@Controller` Controller
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovProgrmManageController {
+
+	/** Validator */
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+
+	/** EgovPropertyService */
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertiesService;
+	private final EgovPropertyService propertiesService;
+
+	/** EgovProgrmManageService */
+//	@Resource(name = "progrmManageService")
+//	private EgovProgrmManageService progrmManageService;
+	private final EgovProgrmManageService progrmManageService;
+
+	/** EgovMessageSource */
+//	@Resource(name = "egovMessageSource")
+//	EgovMessageSource egovMessageSource;
+	private final EgovMessageSource egovMessageSource;
+
+	/** EgovSndngMailRegistService */
+	// @Resource(name = "sndngMailRegistService")
+	// private EgovSndngMailRegistService sndngMailRegistService;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][프로그램목록관리] 롬복 생성자 기반 종속성 주입
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/di/EgovProgrmManageController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/42
+
+https://youtu.be/WADcACKOcUI
