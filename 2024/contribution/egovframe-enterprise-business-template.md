@@ -21,6 +21,7 @@
 
 ## 롬복 생성자 기반 종속성 주입 목차
 - [[게시판생성관리] 롬복 생성자 기반 종속성 주입](#게시판생성관리-롬복-생성자-기반-종속성-주입)
+- [[게시판사용관리] 롬복 생성자 기반 종속성 주입](#게시판사용관리-롬복-생성자-기반-종속성-주입)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -1348,3 +1349,80 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/30
 
 https://youtu.be/1Nmklfse_JQ
+
+### [게시판사용관리] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.28  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/cop/com/selectBBSUseInfs.do
+```
+
+검색
+```
+/cop/com/selectBBSUseInfs.do
+```
+
+브랜치 생성
+```
+2024/di/EgovBBSUseInfoManageController
+```
+
+`@Repository` DAO
+```java
+//@Repository("BBSUseInfoManageDAO")
+@Repository
+public class BBSUseInfoManageDAO extends EgovAbstractMapper {
+```
+
+`@Service` ServiceImpl
+```java
+//@Service("EgovBBSUseInfoManageService")
+@Service
+@RequiredArgsConstructor
+public class EgovBBSUseInfoManageServiceImpl extends EgovAbstractServiceImpl implements EgovBBSUseInfoManageService {
+
+//	@Resource(name = "BBSUseInfoManageDAO")
+//	private BBSUseInfoManageDAO bbsUseDAO;
+	private final BBSUseInfoManageDAO bbsUseDAO;
+```
+
+`@Controller` Controller
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovBBSUseInfoManageController {
+
+//	@Resource(name = "EgovBBSUseInfoManageService")
+//	private EgovBBSUseInfoManageService bbsUseService;
+	private final EgovBBSUseInfoManageService bbsUseService;
+
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertyService;
+	private final EgovPropertyService propertyService;
+
+	// SHT-CUSTOMIZING//@Resource(name = "EgovCommunityManageService")
+	// SHT-CUSTOMIZING//private EgovCommunityManageService cmmntyService; // 커뮤니티
+	// 관리자 권한 확인
+
+	// SHT-CUSTOMIZING//@Resource(name = "EgovClubManageService")
+	// SHT-CUSTOMIZING//private EgovClubManageService clubService; // 동호회 운영자 권한 확인
+
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+```
+
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][게시판사용관리] 롬복 생성자 기반 종속성 주입
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/di/EgovBBSUseInfoManageController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/31
+
+https://youtu.be/mnipL2A7NYs
