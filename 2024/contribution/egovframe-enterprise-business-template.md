@@ -27,6 +27,7 @@
 - [[접속통계관리] 롬복 생성자 기반 종속성 주입](#접속통계관리-롬복-생성자-기반-종속성-주입)
 - [[로그인정책관리] 롬복 생성자 기반 종속성 주입](#로그인정책관리-롬복-생성자-기반-종속성-주입)
 - [[사용자등록관리] 롬복 생성자 기반 종속성 주입](#사용자등록관리-롬복-생성자-기반-종속성-주입)
+- [[사용자부재관리] 롬복 생성자 기반 종속성 주입](#사용자부재관리-롬복-생성자-기반-종속성-주입)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -1878,3 +1879,72 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/36
 
 https://youtu.be/JFaQrJ-zZzM
+
+### [사용자부재관리] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.28  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/uss/ion/uas/selectUserAbsnceListView.do
+```
+
+검색
+```
+/uss/ion/uas/selectUserAbsnceListView.do
+```
+
+브랜치 생성
+```
+2024/di/EgovUserAbsnceController
+```
+
+`@Repository` DAO
+```java
+//@Repository("userAbsnceDAO")
+@Repository
+public class UserAbsnceDAO extends EgovAbstractMapper {
+```
+
+`@Service` ServiceImpl
+```java
+//@Service("egovUserAbsnceService")
+@Service
+@RequiredArgsConstructor
+public class EgovUserAbsnceServiceImpl extends EgovAbstractServiceImpl implements EgovUserAbsnceService {
+
+//	@Resource(name = "userAbsnceDAO")
+//	private UserAbsnceDAO userAbsnceDAO;
+	private final UserAbsnceDAO userAbsnceDAO;
+```
+
+`@Controller` Controller
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovUserAbsnceController {
+
+//	@Resource(name = "egovMessageSource")
+//	EgovMessageSource egovMessageSource;
+	private final EgovMessageSource egovMessageSource;
+
+//	@Resource(name = "egovUserAbsnceService")
+//	private EgovUserAbsnceService egovUserAbsnceService;
+	private final EgovUserAbsnceService egovUserAbsnceService;
+
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][사용자부재관리] 롬복 생성자 기반 종속성 주입
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/di/EgovUserAbsnceController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/37
+
+https://youtu.be/Tb3aGXbGcAM
