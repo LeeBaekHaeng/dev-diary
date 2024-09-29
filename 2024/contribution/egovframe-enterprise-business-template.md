@@ -35,6 +35,7 @@
 - [[프로그램목록관리] 롬복 생성자 기반 종속성 주입](#프로그램목록관리-롬복-생성자-기반-종속성-주입)
 - [[메뉴생성관리] 롬복 생성자 기반 종속성 주입](#메뉴생성관리-롬복-생성자-기반-종속성-주입)
 - [[메뉴목록관리] 롬복 생성자 기반 종속성 주입](#메뉴목록관리-롬복-생성자-기반-종속성-주입)
+- [[분류코드관리] 롬복 생성자 기반 종속성 주입](#분류코드관리-롬복-생성자-기반-종속성-주입)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -2575,3 +2576,99 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/44
 
 https://youtu.be/fNU0Hz9Bl98
+
+### [분류코드관리] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.29  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/sym/ccm/ccc/EgovCcmCmmnClCodeList.do
+```
+
+검색
+```
+/sym/ccm/ccc/EgovCcmCmmnClCodeList.do
+```
+
+브랜치 생성
+```
+2024/di/EgovCcmCmmnClCodeManageController
+```
+
+`@Repository` DAO
+```java
+//@Repository("CmmnClCodeManageDAO")
+@Repository
+public class CmmnClCodeManageDAO extends EgovAbstractMapper {
+```
+
+`@Service` ServiceImpl
+```java
+//@Service("CmmnClCodeManageService")
+@Service
+@RequiredArgsConstructor
+public class EgovCcmCmmnClCodeManageServiceImpl extends EgovAbstractServiceImpl
+		implements EgovCcmCmmnClCodeManageService {
+
+//	@Resource(name = "CmmnClCodeManageDAO")
+//	private CmmnClCodeManageDAO cmmnClCodeManageDAO;
+	private final CmmnClCodeManageDAO cmmnClCodeManageDAO;
+```
+
+`@Controller` Controller
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovCcmCmmnClCodeManageController {
+//	@Resource(name = "CmmnClCodeManageService")
+//	private EgovCcmCmmnClCodeManageService cmmnClCodeManageService;
+	private final EgovCcmCmmnClCodeManageService cmmnClCodeManageService;
+
+	/** EgovPropertyService */
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertiesService;
+	private final EgovPropertyService propertiesService;
+
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+```
+
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovCcmCmmnCodeManageController {
+
+	@Resource(name = "CmmnCodeManageService")
+	private EgovCcmCmmnCodeManageService cmmnCodeManageService;
+
+//	@Resource(name = "CmmnClCodeManageService")
+//	private EgovCcmCmmnClCodeManageService cmmnClCodeManageService;
+	private final EgovCcmCmmnClCodeManageService cmmnClCodeManageService;
+```
+
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovCcmCmmnDetailCodeManageController {
+
+	@Resource(name = "CmmnDetailCodeManageService")
+	private EgovCcmCmmnDetailCodeManageService cmmnDetailCodeManageService;
+
+//	@Resource(name = "CmmnClCodeManageService")
+//	private EgovCcmCmmnClCodeManageService cmmnClCodeManageService;
+	private final EgovCcmCmmnClCodeManageService cmmnClCodeManageService;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][분류코드관리] 롬복 생성자 기반 종속성 주입
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/di/EgovCcmCmmnClCodeManageController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/45
+
+https://youtu.be/YnTOa8fll0A
