@@ -39,6 +39,7 @@
 - [[공통코드관리] 롬복 생성자 기반 종속성 주입](#공통코드관리-롬복-생성자-기반-종속성-주입)
 - [[상세코드관리] 롬복 생성자 기반 종속성 주입](#상세코드관리-롬복-생성자-기반-종속성-주입)
 - [[우편번호관리] 롬복 생성자 기반 종속성 주입](#우편번호관리-롬복-생성자-기반-종속성-주입)
+- [[공지사항] 롬복 생성자 기반 종속성 주입](#공지사항-롬복-생성자-기반-종속성-주입)
 
 ## [로그인] 셀레늄 단위 테스트
 
@@ -2919,3 +2920,124 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/48
 
 https://youtu.be/SKmzaV3cZ1E
+
+### [공지사항] 롬복 생성자 기반 종속성 주입
+
+- Source > Format
+- `@Repository("DAO")` 를 `@Repository` 로 수정
+- `@Service("Service")` 를 `@Service` 로 수정
+- `@RequiredArgsConstructor` 추가
+- ` *   2024.09.29  이백행          컨트리뷰션 롬복 생성자 기반 종속성 주입` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/cop/bbs/selectBoardList.do?bbsId=BBSMSTR_AAAAAAAAAAAA
+```
+
+검색
+```
+/cop/bbs/selectBoardList.do
+```
+
+브랜치 생성
+```
+2024/di/EgovBBSManageController
+```
+
+`@Repository` DAO
+```java
+//@Repository("BBSManageDAO")
+@Repository
+public class BBSManageDAO extends EgovAbstractMapper {
+```
+
+`@Service` ServiceImpl
+```java
+//@Service("EgovBBSManageService")
+@Service
+@RequiredArgsConstructor
+public class EgovBBSManageServiceImpl extends EgovAbstractServiceImpl implements EgovBBSManageService {
+
+//	@Resource(name = "BBSManageDAO")
+//	private BBSManageDAO bbsMngDAO;
+	private final BBSManageDAO bbsMngDAO;
+
+//	@Resource(name = "EgovFileMngService")
+//	private EgovFileMngService fileService;
+	private final EgovFileMngService fileService;
+
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertyService;
+//	private final EgovPropertyService propertyService;
+
+//	@Resource(name = "leaveaTrace")
+//	LeaveaTrace leaveaTrace;
+//	private final LeaveaTrace leaveaTrace;
+```
+
+`@Controller` Controller
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovBBSManageController {
+
+//	@Resource(name = "EgovBBSManageService")
+//	private EgovBBSManageService bbsMngService;
+	private final EgovBBSManageService bbsMngService;
+
+//	@Resource(name = "EgovBBSAttributeManageService")
+//	private EgovBBSAttributeManageService bbsAttrbService;
+	private final EgovBBSAttributeManageService bbsAttrbService;
+
+//	@Resource(name = "EgovFileMngService")
+//	private EgovFileMngService fileMngService;
+	private final EgovFileMngService fileMngService;
+
+//	@Resource(name = "EgovFileMngUtil")
+//	private EgovFileMngUtil fileUtil;
+	private final EgovFileMngUtil fileUtil;
+
+//	@Resource(name = "propertiesService")
+//	protected EgovPropertyService propertyService;
+	private final EgovPropertyService propertyService;
+
+//	@Resource(name = "egovMessageSource")
+//	EgovMessageSource egovMessageSource;
+	private final EgovMessageSource egovMessageSource;
+
+//	@Autowired
+//	private DefaultBeanValidator beanValidator;
+	private final DefaultBeanValidator beanValidator;
+```
+
+```java
+@Controller
+@RequiredArgsConstructor
+public class EgovBBSAdminManageController {
+
+//	@Resource(name = "EgovBBSManageService")
+//	private EgovBBSManageService bbsMngService;
+	private final EgovBBSManageService bbsMngService;
+```
+
+```java
+@Controller
+@SessionAttributes(types = ComDefaultVO.class)
+@RequiredArgsConstructor
+public class EgovMainController {
+
+	/**
+	 * EgovBBSManageService
+	 */
+//	@Resource(name = "EgovBBSManageService")
+//	private EgovBBSManageService bbsMngService;
+	private final EgovBBSManageService bbsMngService;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][공지사항] 롬복 생성자 기반 종속성 주입
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/di/EgovBBSManageController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/49
+
+https://youtu.be/Y-YKPkrUf9k
