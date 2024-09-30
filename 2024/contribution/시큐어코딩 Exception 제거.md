@@ -99,6 +99,7 @@
 - [[10. 로그인][EgovLoginServiceImpl.actionCrtfctLogin] ServiceImpl 단위 테스트](#10-로그인egovloginserviceimplactioncrtfctlogin-serviceimpl-단위-테스트)
 - [[10. 로그인][EgovLoginServiceImpl.searchId] ServiceImpl 단위 테스트](#10-로그인egovloginserviceimplsearchid-serviceimpl-단위-테스트)
 - [[10. 로그인][EgovLoginServiceImpl.searchPassword] ServiceImpl 단위 테스트](#10-로그인egovloginserviceimplsearchpassword-serviceimpl-단위-테스트)
+- [[10. 로그인][EgovLoginServiceImpl.selectLoginIncorrect] ServiceImpl 단위 테스트](#10-로그인egovloginserviceimplselectloginincorrect-serviceimpl-단위-테스트)
 
 ---
 
@@ -1697,3 +1698,40 @@ https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/
 https://github.com/eGovFramework/egovframe-common-components/pull/513
 
 https://youtu.be/q405I5zIB3c
+
+### [10. 로그인][EgovLoginServiceImpl.selectLoginIncorrect] ServiceImpl 단위 테스트
+
+- 로그인인증제한을 조회한다.
+
+브랜치 생성
+```
+2024/test/EgovLoginServiceImpl/selectLoginIncorrect
+```
+
+테스트 패키지 생성
+```
+egovframework.com.uat.uia.service.impl
+```
+
+테스트 파일 생성
+```
+EgovLoginServiceImplTestSelectLoginIncorrectTest
+```
+
+```java
+@ImportResource({ "classpath*:egovframework/spring/com/idgn/context-idgn-MailMsg.xml", })
+@ComponentScan(useDefaultFilters = false, basePackages = { "egovframework.com.uat.uia.service.impl",
+		"egovframework.com.cop.ems.service", "egovframework.com.cmm.config",
+		"egovframework.com.cmm.service", }, includeFilters = {
+				@Filter(type = FilterType.ANNOTATION, classes = { Repository.class, Service.class, }),
+				@Filter(type = FilterType.ASSIGNABLE_TYPE, classes = { EgovLoginService.class, EgovLoginConfig.class,
+						EgovMultiPartEmail.class, }) })
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][공통컴포넌트][10. 로그인][EgovLoginServiceImpl.selectLoginIncorrect] ServiceImpl 단위 테스트
+
+https://github.com/GSITM2023/egovframe-common-components-2024/commits/2024/test/EgovLoginServiceImpl/selectLoginIncorrect/
+
+https://github.com/eGovFramework/egovframe-common-components/pull/519
+
+https://youtu.be/asi4Fa5PLgY
