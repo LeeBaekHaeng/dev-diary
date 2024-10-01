@@ -44,6 +44,9 @@
 ## 이클립스 문제(Problems) 제거 목차
 - [[메인] 이클립스 문제(Problems) 제거](#메인-이클립스-문제problems-제거)
 
+## 미인증 사용자에 대한 보안처리 제거 목차
+- [[context-security.xml] 로그인 페이지 URL 수정](#context-securityxml-로그인-페이지-url-수정)
+
 ## [로그인] 셀레늄 단위 테스트
 
 1. Selenium 라이브러리 설치
@@ -3083,3 +3086,58 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/50
 
 https://youtu.be/IlByPAVxS40
+
+### [context-security.xml] 로그인 페이지 URL 수정
+
+- `loginUrl="/uat/uia/actionSecurityLogin.do"` 을 `loginUrl="/uat/uia/egovLoginUsr.do"` 로 수정
+- ` *   2024.10.01  이백행          컨트리뷰션 미인증 사용자에 대한 보안처리 제거` 개정이력 수정
+- 할 일(TODO)
+  - 스프링 시큐리티 사용하므로 미인증 사용자에 대한 보안처리 모두 제거해야 함
+
+브랜치 생성
+```
+2024/10/01
+```
+
+/egovframe-enterprise-business-template/DATABASE/mysql/all_ebt_data_mysql.sql
+- `/uss/umt/cmm/.*.do.*`
+```sql
+# 롤정보
+INSERT INTO LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) VALUES ('uss-umt-cmm','uss-umt-cmm','/uss/umt/cmm/.*.do.*','아이디중복확인','url','20','2011-08-24 0:00');
+
+# 권한별 롤
+INSERT INTO LETTNAUTHORROLERELATE(AUTHOR_CODE,ROLE_CODE,CREAT_DT) VALUES ('ROLE_ADMIN','uss-umt-cmm','2009-08-25 00:00:00');
+```
+
+/egovframe-enterprise-business-template/src/main/java/egovframework/let/uss/umt/web/EgovUserManageController.java
+```java
+	/**
+	 * 사용자목록을 조회한다. (pageing)
+	 * 
+	 * @param userSearchVO 검색조건정보
+	 * @param model        화면모델
+	 * @return cmm/uss/umt/EgovUserManage
+	 * @throws Exception
+	 */
+	@GetMapping(value = "/uss/umt/user/EgovUserManage.do")
+	public String selectUserList(@ModelAttribute("userSearchVO") UserDefaultVO userSearchVO, Model model,
+			HttpServletRequest request) throws Exception {
+
+		// 메인화면에서 넘어온 경우 메뉴 갱신을 위해 추가
+		request.getSession().setAttribute("baseMenuNo", "6000000");
+
+//		// 미인증 사용자에 대한 보안처리
+//		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
+//		if (!isAuthenticated) {
+//			model.addAttribute("message", egovMessageSource.getMessage("fail.common.login"));
+//			return "uat/uia/EgovLoginUsr";
+//		}
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][context-security.xml] 로그인 페이지 URL 수정
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/10/01/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/51
+
+https://youtu.be/mcGcARuYZ4E
