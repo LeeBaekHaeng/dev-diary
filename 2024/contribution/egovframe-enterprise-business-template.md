@@ -41,6 +41,9 @@
 - [[우편번호관리] 롬복 생성자 기반 종속성 주입](#우편번호관리-롬복-생성자-기반-종속성-주입)
 - [[공지사항] 롬복 생성자 기반 종속성 주입](#공지사항-롬복-생성자-기반-종속성-주입)
 
+## 이클립스 문제(Problems) 제거 목차
+- [[메인] 이클립스 문제(Problems) 제거](#메인-이클립스-문제problems-제거)
+
 ## [로그인] 셀레늄 단위 테스트
 
 1. Selenium 라이브러리 설치
@@ -3041,3 +3044,42 @@ https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2
 https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/49
 
 https://youtu.be/Y-YKPkrUf9k
+
+### [메인] 이클립스 문제(Problems) 제거
+
+- The import javax.annotation.Resource is never used
+- 가져오기 javax.annotation.Resource는 사용되지 않습니다.
+- `import javax.annotation.Resource;` 제거
+- ` *   2024.10.01  이백행          컨트리뷰션 이클립스 문제(Problems) 제거` 개정이력 수정
+
+크롬 링크 주소 복사
+```
+http://localhost:8080/ebt_webapp/cmm/main/mainPage.do
+```
+
+검색
+```
+/cmm/main/mainPage.do
+```
+
+브랜치 생성
+```
+2024/problems/EgovMainController
+```
+
+```
+Description	Resource	Path	Location	Type
+The import javax.annotation.Resource is never used	EgovMainController.java	/egovframe-enterprise-business-template/src/main/java/egovframework/let/main/web	line 5	Java Problem
+```
+
+```java
+//import javax.annotation.Resource;
+```
+
+[2024년 전자정부 표준프레임워크 컨트리뷰션][템플릿 프로젝트 내부업무 시스템][메인] 이클립스 문제(Problems) 제거
+
+https://github.com/LeeBaekHaeng/egovframe-enterprise-business-template/commits/2024/problems/EgovMainController/
+
+https://github.com/eGovFramework/egovframe-enterprise-business-template/pull/50
+
+https://youtu.be/IlByPAVxS40
