@@ -151,6 +151,80 @@ sudo systemctl enable --now docker
 sudo docker run hello-world
 ```
 
+사용자 추가
+```
+adduser god
+```
+
+god 사용자의 비밀 번호 변경
+```
+passwd god
+```
+
+god 사용자로 로그인
+```
+su - god
+```
+
+```
+sudo docker run hello-world
+```
+
+```
+[god@localhost ~]$ sudo docker run hello-world
+
+로컬 시스템 관리자에게 일반적인 지침을 받았으리라 믿습니다.
+보통 세가지로 요약합니다:
+
+    #1) 타인의 사생활을 존중하십시오.
+    #2) 입력하기 전에 한 번 더 생각하십시오.
+    #3) 막강한 힘에는 상당한 책임이 뒤따릅니다.
+
+[sudo] god의 암호:
+god은(는) sudoers 설정 파일에 없습니다.  이 시도를 보고합니다.
+[god@localhost ~]$
+
+```
+
+wheel 그룹에 god 사용자 추가
+```
+su - root
+sudo usermod -aG wheel god
+```
+
+```
+[root@localhost ~]# id god
+uid=1000(god) gid=1000(god) groups=1000(god)
+[root@localhost ~]# sudo usermod -aG wheel god
+[root@localhost ~]# id god
+uid=1000(god) gid=1000(god) groups=1000(god),10(wheel)
+[root@localhost ~]#
+
+```
+
+```
+docker run hello-world
+```
+
+```
+[god@localhost ~]$ docker run hello-world
+docker: permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Head "http://%2Fvar%2Frun%2Fdocker.sock/_ping": dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+[god@localhost ~]$
+
+```
+
+docker 그룹에 god 사용자 추가
+- su - god
+```
+sudo usermod -aG docker $USER
+```
+
+su - root
+```
+sudo usermod -aG docker god
+```
+
 Docker Engine을 위한 Linux 설치 후 단계(Linux post-installation steps for Docker Engine)
 - https://docs.docker.com/engine/install/linux-postinstall/
 
