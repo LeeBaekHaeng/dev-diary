@@ -118,7 +118,7 @@ sudo netplan apply
 CentOS에 Docker 엔진 설치(Install Docker Engine on CentOS)
 - https://docs.docker.com/engine/install/centos/
 
-Uninstall old versions
+이전 버전 제거(Uninstall old versions)
 ```
 sudo dnf remove docker \
                   docker-client \
@@ -130,41 +130,41 @@ sudo dnf remove docker \
                   docker-engine
 ```
 
-Set up the repository
+저장소 설정(Set up the repository)
 ```
 sudo dnf -y install dnf-plugins-core
 sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 ```
 
-Install the Docker packages.
+Docker 패키지를 설치합니다.(Install the Docker packages.)
 ```
 sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-Start Docker Engine.
+Docker Engine을 시작합니다.(Start Docker Engine.)
 ```
 sudo systemctl enable --now docker
 ```
 
-Verify that the installation is successful by running the hello-world image:
+이미지를 실행하여 설치가 성공적으로 완료되었는지 확인하세요 hello-world.(Verify that the installation is successful by running the hello-world image:)
 ```
 sudo docker run hello-world
 ```
 
-Linux post-installation steps for Docker Engine
+Docker Engine을 위한 Linux 설치 후 단계(Linux post-installation steps for Docker Engine)
 - https://docs.docker.com/engine/install/linux-postinstall/
 
-Add your user to the docker group.
+사용자를 docker그룹에 추가합니다.(Add your user to the docker group.)
 ```
 sudo usermod -aG docker $USER
 ```
 
-Log out and log back in so that your group membership is re-evaluated.
+로그아웃했다가 다시 로그인하여 그룹 멤버십을 다시 평가하세요.(Log out and log back in so that your group membership is re-evaluated.)
 ```
 newgrp docker
 ```
 
-Verify that you can run docker commands without sudo.
+docker. 없이 명령을 실행할 수 있는지 확인하세요 sudo.(Verify that you can run docker commands without sudo.)
 ```
 docker run hello-world
 ```
