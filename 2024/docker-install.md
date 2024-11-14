@@ -242,3 +242,65 @@ docker. 없이 명령을 실행할 수 있는지 확인하세요 sudo.(Verify th
 ```
 docker run hello-world
 ```
+
+## 인터넷에 접속할 수 없는 에어갭 시스템에 Docker를 설치
+
+RPM 패키지를 다운로드하고, 수동으로 설치하고 , 업그레이드를 완전히 수동으로 관리할 수 있습니다. 이는 인터넷에 접속할 수 없는 에어갭 시스템에 Docker를 설치하는 것과 같은 상황에서 유용합니다.
+
+온라인
+
+su - root
+```
+dnf download --resolve --downloaddir=docker-ce-rpm docker-ce
+tar cvfz docker-ce-rpm.tar.gz docker-ce-rpm/
+
+```
+
+```
+[root@localhost docker-ce-rpm]# ll
+합계 105328
+-rw-r--r--. 1 root root    71199 11월 13 23:35 container-selinux-2.229.0-2.module+el8.10.0+1880+8e896d1b.noarch.rpm
+-rw-r--r--. 1 root root 37048204 11월 13 23:35 containerd.io-1.6.32-3.1.el8.x86_64.rpm
+-rw-r--r--. 1 root root 14279736 11월 13 23:35 docker-buildx-plugin-0.14.0-1.el8.x86_64.rpm
+-rw-r--r--. 1 root root 28542392 11월 13 23:35 docker-ce-26.1.3-1.el8.x86_64.rpm
+-rw-r--r--. 1 root root  8181560 11월 13 23:35 docker-ce-cli-26.1.3-1.el8.x86_64.rpm
+-rw-r--r--. 1 root root  5210852 11월 13 23:35 docker-ce-rootless-extras-26.1.3-1.el8.x86_64.rpm
+-rw-r--r--. 1 root root 14046812 11월 13 23:35 docker-compose-plugin-2.27.0-1.el8.x86_64.rpm
+-rw-r--r--. 1 root root    21888 11월 13 23:35 fuse-common-3.3.0-19.el8.x86_64.rpm
+-rw-r--r--. 1 root root    70503 11월 13 23:35 fuse-overlayfs-1.13-1.module+el8.10.0+1880+8e896d1b.x86_64.rpm
+-rw-r--r--. 1 root root    54936 11월 13 23:35 fuse3-3.3.0-19.el8.x86_64.rpm
+-rw-r--r--. 1 root root    96948 11월 13 23:35 fuse3-libs-3.3.0-19.el8.x86_64.rpm
+-rw-r--r--. 1 root root    70188 11월 13 23:35 libcgroup-0.41-19.el8.x86_64.rpm
+-rw-r--r--. 1 root root    71071 11월 13 23:35 libslirp-4.4.0-2.module+el8.10.0+1880+8e896d1b.x86_64.rpm
+-rw-r--r--. 1 root root    56359 11월 13 23:35 slirp4netns-1.2.3-1.module+el8.10.0+1880+8e896d1b.x86_64.rpm
+[root@localhost docker-ce-rpm]#
+
+```
+
+도커 이미지 저장
+- docker image save
+- https://docs.docker.com/reference/cli/docker/image/save/
+
+오프라인
+
+su - root
+```
+tar xvf docker-ce-rpm.tar.gz
+rpm -Uvh docker-ce-rpm/*
+
+```
+
+```
+sudo systemctl enable --now docker
+```
+
+도커 이미지 로드
+- docker image load
+- https://docs.docker.com/reference/cli/docker/image/load/
+```
+docker load -i hello-world-latest.tar
+```
+
+```
+sudo docker run hello-world
+```
