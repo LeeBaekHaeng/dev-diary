@@ -138,7 +138,7 @@ sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/dock
 
 Docker 패키지를 설치합니다.(Install the Docker packages.)
 ```
-sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo dnf -y install docker-ce
 ```
 
 Docker Engine을 시작합니다.(Start Docker Engine.)
