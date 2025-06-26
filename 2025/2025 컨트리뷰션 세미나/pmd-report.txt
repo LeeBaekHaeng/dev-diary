@@ -1,0 +1,266 @@
+src/test/java/egovframework/code/security/copyobj/TestCopyCollections.java:50:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/code/security/copyobj/TestCopyDate.java:20:	UselessParentheses:	UselessParentheses: 괄호가 없어도 되는 상황에서 불필요한 괄호를 사용할 경우 마치 메소드 호출처럼 보여서 소스 코드의 가독성을 떨어뜨릴 수 있음
+src/test/java/egovframework/code/security/file/TestFileName.java:44:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/auth/pattern/TestSessionURLPattern.java:39:	ImmutableField:	ImmutableField: 생성자에서 Assign된 변수 'testAntPatternURL' 를 Final로 선언하지 않았음
+src/test/java/egovframework/com/auth/pattern/TestSessionURLPattern.java:42:	ImmutableField:	ImmutableField: 생성자에서 Assign된 변수 'antPatternRule' 를 Final로 선언하지 않았음
+src/test/java/egovframework/com/auth/pattern/TestSessionURLPattern.java:46:	ImmutableField:	ImmutableField: 생성자에서 Assign된 변수 'testRegexPatternURL' 를 Final로 선언하지 않았음
+src/test/java/egovframework/com/auth/pattern/TestSessionURLPattern.java:51:	ImmutableField:	ImmutableField: 생성자에서 Assign된 변수 'regexPatternRule' 를 Final로 선언하지 않았음
+src/test/java/egovframework/com/auth/session/EgovAccessConfigTest.java:96:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/bean/TestBean.java:33:	CloseResource:	CloseResource: 리소스 'ClassPathXmlApplicationContext' 가 사용 후에 닫혔는지 확인필요
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTag.java:27:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTag.java:29:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTag.java:40:	SimplifyBooleanExpressions:	SimplifyBooleanExpressions: boolean 사용 시 불필요한 비교 연산을 피하도록 함
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTag.java:44:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTag.java:47:	SimplifyBooleanExpressions:	SimplifyBooleanExpressions: boolean 사용 시 불필요한 비교 연산을 피하도록 함
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTag.java:51:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTag.java:68:	AvoidReassigningParameters:	AvoidReassigningParameters: 'value' 처럼 파라미터 값을 직접 변경하지 말 것
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTag.java:73:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTag.java:78:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTag.java:84:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTag.java:92:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTag.java:97:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTag.java:100:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTag.java:105:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:31:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:33:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:44:	SimplifyBooleanExpressions:	SimplifyBooleanExpressions: boolean 사용 시 불필요한 비교 연산을 피하도록 함
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:48:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:51:	SimplifyBooleanExpressions:	SimplifyBooleanExpressions: boolean 사용 시 불필요한 비교 연산을 피하도록 함
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:55:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:72:	AvoidReassigningParameters:	AvoidReassigningParameters: 'value' 처럼 파라미터 값을 직접 변경하지 말 것
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:77:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:79:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:84:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:86:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:88:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:97:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:99:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:104:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:106:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:109:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:120:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:122:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:131:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/filter/TestWhiteListTagV2.java:133:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/service/EgovWhiteList.java:44:	EmptyControlStatement:	EmptyControlStatement: Empty if statement
+src/test/java/egovframework/com/cmm/service/EgovWhiteList.java:76:	EmptyControlStatement:	EmptyControlStatement: Empty if statement
+src/test/java/egovframework/com/cmm/service/EgovWhiteList.java:92:	AvoidReassigningParameters:	AvoidReassigningParameters: 'filePath' 처럼 파라미터 값을 직접 변경하지 말 것
+src/test/java/egovframework/com/cmm/service/EgovWhiteList.java:121:	AssignmentInOperand:	AssignmentInOperand: 피연산자내에 할당문이 사용됨. Code 를 복잡하고 가독성이 떨어지게 만듬
+src/test/java/egovframework/com/cmm/service/TestClassPath.java:23:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/service/TestClassPath.java:25:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/service/TestClassPath.java:32:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/service/TestClassPath.java:34:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/service/TestClassPath.java:35:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/service/TestClassPath.java:37:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cmm/service/TestClassPath.java:40:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/BlogTest_JavaParser.java:40:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleDAOTest_JavaParser.java:27:	SimplifyBooleanExpressions:	SimplifyBooleanExpressions: boolean 사용 시 불필요한 비교 연산을 피하도록 함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleDAOTest_selectArticleCnOne.java:22:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleDAOTest_AaaTestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleDAOTest_selectArticleDetailCn.java:24:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleDAOTest_AaaTestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleDAOTest_selectArticleDetailDefault.java:23:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleDAOTest_AaaTestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleDAOTest_selectArticleDetailDefaultCnt.java:33:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleDAOTest_AaaTestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleDAOTest_selectBlogListManager.java:24:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleDAOTest_AaaTestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleDAOTest_selectBlogListManagerCnt.java:21:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleDAOTest_AaaTestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleDAOTest_selectBlogNmList.java:23:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleDAOTest_AaaTestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleDAOTest_selectLoginUser.java:40:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleDAOTest_AaaTestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_deleteArticle.java:19:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleServiceImplTest_AAC_TestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_insertArticle.java:28:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleServiceImplTest_AAC_TestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleCnOne.java:20:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleServiceImplTest_AAC_TestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetail.java:20:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleServiceImplTest_AAC_TestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn.java:22:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleServiceImplTest_AAC_TestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:19:	CloseResource:	CloseResource: 리소스 'InputStream' 가 사용 후에 닫혔는지 확인필요
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:28:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:29:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:31:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:32:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:34:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:35:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:37:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:38:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:40:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:41:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:43:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:44:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:46:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:61:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailCn_getResultMap.java:63:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault.java:22:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleServiceImplTest_AAC_TestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefaultCnt.java:20:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleServiceImplTest_AAC_TestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:19:	CloseResource:	CloseResource: 리소스 'InputStream' 가 사용 후에 닫혔는지 확인필요
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:26:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:27:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:29:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:30:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:32:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:33:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:35:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:36:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:38:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:39:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:41:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:42:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:44:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleDetailDefault_getResultMap.java:46:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectArticleList.java:23:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleServiceImplTest_AAC_TestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectBlogListManager.java:23:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleDAOTest_AaaTestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectBlogNmList.java:22:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleDAOTest_AaaTestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectGuestArticleList.java:22:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleServiceImplTest_AAC_TestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectLoginUser.java:22:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleDAOTest_AaaTestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectNoticeArticleList.java:21:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleServiceImplTest_AAC_TestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectNoticeArticleList_MyBatis.java:22:	CloseResource:	CloseResource: 리소스 'InputStream' 가 사용 후에 닫혔는지 확인필요
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectNoticeArticleList_MyBatis.java:59:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_selectNoticeArticleList_MyBatis.java:60:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_updateArticle.java:22:	FieldNamingConventions:	FieldNamingConventions: 'field' 의 변수 'egovArticleServiceImplTest_AAC_TestData' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_updateArticle_MyBatis.java:76:	CloseResource:	CloseResource: 리소스 'InputStream' 가 사용 후에 닫혔는지 확인필요
+src/test/java/egovframework/com/cop/bbs/service/impl/EgovArticleServiceImplTest_updateArticle_MyBatis.java:131:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/cop/ems/service/impl/SndngMailDetailDAOTest.java:167:	LocalVariableNamingConventions:	LocalVariableNamingConventions: 'local variable' 의 변수 '_result' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/ems/service/impl/SndngMailDetailDAOTest.java:168:	LocalVariableNamingConventions:	LocalVariableNamingConventions: 'local variable' 의 변수 '_atchFileId' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/ems/service/impl/SndngMailDtlsDAOTest.java:168:	LocalVariableNamingConventions:	LocalVariableNamingConventions: 'local variable' 의 변수 '_result' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/ems/service/impl/SndngMailDtlsDAOTest.java:169:	LocalVariableNamingConventions:	LocalVariableNamingConventions: 'local variable' 의 변수 '_atchFileId' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/ems/service/impl/SndngMailRegistDAOTest.java:171:	LocalVariableNamingConventions:	LocalVariableNamingConventions: 'local variable' 의 변수 '_result' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/cop/ems/service/impl/SndngMailRegistDAOTest.java:172:	LocalVariableNamingConventions:	LocalVariableNamingConventions: 'local variable' 의 변수 '_atchFileId' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/crypto/data/EgovDataCryptoTest.java:58:	ImmutableField:	ImmutableField: 생성자에서 Assign된 변수 'password' 를 Final로 선언하지 않았음
+src/test/java/egovframework/com/crypto/data/EgovDataCryptoTest.java:77:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/crypto/data/EgovDataCryptoTest.java:82:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/crypto/data/EgovDataCryptoTest.java:110:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/crypto/data/EgovDataCryptoTest.java:138:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/crypto/data/EgovDataCryptoTest.java:165:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/crypto/data/EgovDataCryptoTest.java:192:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/crypto/data/EgovDataCryptoTest.java:225:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/crypto/data/EgovDataCryptoTest.java:291:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/crypto/data/EgovDataCryptoTest.java:297:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/crypto/err/TestEncrypt.java:38:	CloseResource:	CloseResource: 리소스 'ClassPathXmlApplicationContext' 가 사용 후에 닫혔는지 확인필요
+src/test/java/egovframework/com/crypto/err/TestEncrypt.java:67:	SwitchStmtsShouldHaveDefault:	SwitchStmtsShouldHaveDefault: Switch구문에는 반드시 default label이 있어야 함
+src/test/java/egovframework/com/crypto/err/TestEncrypt.java:70:	UselessParentheses:	UselessParentheses: 괄호가 없어도 되는 상황에서 불필요한 괄호를 사용할 경우 마치 메소드 호출처럼 보여서 소스 코드의 가독성을 떨어뜨릴 수 있음
+src/test/java/egovframework/com/crypto/err/TestEncrypt.java:74:	UselessParentheses:	UselessParentheses: 괄호가 없어도 되는 상황에서 불필요한 괄호를 사용할 경우 마치 메소드 호출처럼 보여서 소스 코드의 가독성을 떨어뜨릴 수 있음
+src/test/java/egovframework/com/crypto/err/TestEncrypt.java:78:	UselessParentheses:	UselessParentheses: 괄호가 없어도 되는 상황에서 불필요한 괄호를 사용할 경우 마치 메소드 호출처럼 보여서 소스 코드의 가독성을 떨어뜨릴 수 있음
+src/test/java/egovframework/com/crypto/err/TestEncryptV37.java:41:	CloseResource:	CloseResource: 리소스 'ClassPathXmlApplicationContext' 가 사용 후에 닫혔는지 확인필요
+src/test/java/egovframework/com/crypto/err/TestEncryptV37.java:74:	SwitchStmtsShouldHaveDefault:	SwitchStmtsShouldHaveDefault: Switch구문에는 반드시 default label이 있어야 함
+src/test/java/egovframework/com/crypto/err/TestEncryptV37.java:77:	UselessParentheses:	UselessParentheses: 괄호가 없어도 되는 상황에서 불필요한 괄호를 사용할 경우 마치 메소드 호출처럼 보여서 소스 코드의 가독성을 떨어뜨릴 수 있음
+src/test/java/egovframework/com/crypto/err/TestEncryptV37.java:81:	UselessParentheses:	UselessParentheses: 괄호가 없어도 되는 상황에서 불필요한 괄호를 사용할 경우 마치 메소드 호출처럼 보여서 소스 코드의 가독성을 떨어뜨릴 수 있음
+src/test/java/egovframework/com/crypto/err/TestEncryptV37.java:85:	UselessParentheses:	UselessParentheses: 괄호가 없어도 되는 상황에서 불필요한 괄호를 사용할 경우 마치 메소드 호출처럼 보여서 소스 코드의 가독성을 떨어뜨릴 수 있음
+src/test/java/egovframework/com/crypto/xmlconfig/EgovEnvCryptoUserTest.java:26:	CloseResource:	CloseResource: 리소스 'ClassPathXmlApplicationContext' 가 사용 후에 닫혔는지 확인필요
+src/test/java/egovframework/com/db/TestService.java:55:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/db/TestService.java:58:	LocalVariableNamingConventions:	LocalVariableNamingConventions: 'local variable' 의 변수 'HpcmList' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/db/TestService.java:59:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/file/TestDecompress.java:19:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/file/TestDecompress.java:28:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/file/TestDecompress.java:29:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/file/TestDecompress.java:35:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/file/TestDecompress.java:38:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/file/TestDecompress.java:47:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/file/TestFile.java:13:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/file/TestFile.java:18:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/file/TestFile.java:21:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/file/TestFile.java:24:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/file/TestFile.java:26:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/file/TestFile.java:32:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/http/TestHttpTimeoutStatus1.java:24:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/http/TestHttpTimeoutStatus1.java:29:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/http/TestHttpTimeoutStatus1.java:30:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/http/TestHttpTimeoutStatus1.java:45:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/http/TestHttpTimeoutStatus1.java:48:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/http/TestHttpTimeoutStatus1.java:49:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/http/TestHttpTimeoutStatus2.java:25:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/http/TestHttpTimeoutStatus2.java:41:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/http/TestHttpTimeoutStatus2.java:44:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/http/TestHttpTimeoutStatus2.java:45:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/idgen/TestIDGen.java:34:	CloseResource:	CloseResource: 리소스 'ClassPathXmlApplicationContext' 가 사용 후에 닫혔는지 확인필요
+src/test/java/egovframework/com/idgen/TestIDGen.java:40:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/idgen/TestIDGen.java:41:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/idgen/TestIDGen.java:42:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/idgen/TestIDGen.java:48:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/idgen/TestIDGenDev.java:34:	CloseResource:	CloseResource: 리소스 'ClassPathXmlApplicationContext' 가 사용 후에 닫혔는지 확인필요
+src/test/java/egovframework/com/idgen/TestIDGenDev.java:39:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/idgen/TestIDGenDev.java:40:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/idgen/TestIDGenDev.java:41:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/idgen/TestIDGenDev.java:43:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/idgen/TestIDGenDev.java:48:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/idgen/TestIDGenDev.java:50:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/idgen/TestIDGenDev.java:55:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/idgen/TestIDGenDev.java:57:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/json/TestJson2ListMap.java:29:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/json/TestJson2ListMap.java:34:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/json/TestJson2ListMap.java:37:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/json/TestJson2ListMap.java:40:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/json/TestJson2ListVO.java:62:	AssignmentInOperand:	AssignmentInOperand: 피연산자내에 할당문이 사용됨. Code 를 복잡하고 가독성이 떨어지게 만듬
+src/test/java/egovframework/com/json/TestJson2ListVO.java:63:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/json/TestJson2ListVO.java:68:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/json/TestJson2ListVO.java:74:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/json/TestJson2ListVO.java:86:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/json/TestJson2ListVO.java:87:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/json/TestJson2ListVO.java:88:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/json/TestJson2ListVO.java:89:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/json/TestJson2ListVO.java:93:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/json/TestJson2ListVO.java:96:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/json/TestJson2ListVO.java:99:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/secure/coding/MyUserVO.java:6:	MethodReturnsInternalArray:	MethodReturnsInternalArray: 'myColor'을 반환하면 내부 배열이 노출될 수 있음
+src/test/java/egovframework/com/secure/coding/MyUserVO.java:10:	ArrayIsStoredDirectly:	ArrayIsStoredDirectly: 배열 'myColor' 이 직접 저장되어 있음
+src/test/java/egovframework/com/secure/coding/PrivateTest.java:28:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/secure/coding/PrivateTest.java:29:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/secure/coding/PrivateTest.java:32:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/secure/coding/PrivateTest.java:40:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/secure/coding/PrivateTest.java:41:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/secure/coding/PrivateTest.java:44:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/secure/path/FileDownloadController.java:4:	UnnecessaryImport:	UnnecessaryImport: Unused import 'org.springframework.beans.factory.annotation.Autowired'
+src/test/java/egovframework/com/secure/path/FileDownloadController.java:21:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/secure/path/FileDownloadController.java:26:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/secure/path/FileDownloadControllerTest.java:5:	UnnecessaryImport:	UnnecessaryImport: Unused import 'java.io.FileNotFoundException'
+src/test/java/egovframework/com/secure/path/FileDownloadControllerTest.java:64:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/secure/path/SecurePathTest.java:4:	UnnecessaryImport:	UnnecessaryImport: Unused static import 'org.junit.Assert.assertThrows'
+src/test/java/egovframework/com/secure/path/SecurePathTest.java:5:	UnnecessaryImport:	UnnecessaryImport: Unused static import 'org.junit.Assert.assertTrue'
+src/test/java/egovframework/com/secure/path/SecurePathTest.java:38:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/secure/path/SecurePathTest.java:50:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/secure/path/SecurePathTest.java:61:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/secure/path/SecurePathTest.java:72:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/stream/filter/TestStreamFilter1.java:30:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/stream/filter/TestStreamFilter2.java:50:	UnnecessarySemicolon:	UnnecessarySemicolon: 필요없는 문장 (;)이 있음
+src/test/java/egovframework/com/stream/filter/TestStreamFilter2.java:51:	UnnecessarySemicolon:	UnnecessarySemicolon: 필요없는 문장 (;)이 있음
+src/test/java/egovframework/com/stream/filter/TestStreamFilter2.java:53:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/stream/filter/TestStreamFilter2.java:54:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/stream/filter/TestStreamFilter3.java:61:	UnnecessarySemicolon:	UnnecessarySemicolon: 필요없는 문장 (;)이 있음
+src/test/java/egovframework/com/stream/filter/TestStreamFilter3.java:63:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/stream/filter/TestStreamFilter3.java:65:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/stream/filter/TestStreamFilter3.java:66:	UnnecessarySemicolon:	UnnecessarySemicolon: 필요없는 문장 (;)이 있음
+src/test/java/egovframework/com/stream/filter/TestStreamFilter3.java:67:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/stream/filter/TestStreamFilter3.java:68:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/stream/filter/TestStreamFilter3.java:70:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/stream/filter/TestStreamFilter3.java:71:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/stream/filter/TestStreamFilter3.java:73:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/stream/filter/TestStreamFilter3.java:76:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/stream/filter/TestStreamFilter3.java:78:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/stream/filter/TestStreamFilter3.java:81:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/test/EgovAbstractControllerV1Test.java:50:	AbstractClassWithoutAbstractMethod:	AbstractClassWithoutAbstractMethod: Abstract Class내에  Abstract Method가 존재하지 않음
+src/test/java/egovframework/com/test/EgovAbstractControllerV1Test.java:52:	FieldNamingConventions:	FieldNamingConventions: 'static field' 의 변수 'EGOV_LOGGER' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/uss/ion/tir/TestTwitter.java:58:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/uss/ion/tir/TestTwitter.java:60:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/uss/ion/tir/TestTwitter.java:61:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/uss/ion/tir/TestTwitter.java:65:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/uss/ion/tir/TestTwitter.java:76:	LocalVariableNamingConventions:	LocalVariableNamingConventions: 'local variable' 의 변수 'oauth_verifier' 이  '[a-z][a-zA-Z0-9]*'  로 시작함
+src/test/java/egovframework/com/uss/ion/tir/TestTwitter.java:86:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/uss/ion/tir/TestTwitter.java:91:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/uss/ion/tir/TestTwitter.java:92:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/uss/umt/TestMakePwd.java:42:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/uss/umt/TestMakePwd.java:43:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/uss/umt/TestMakePwd.java:49:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/uss/umt/TestMakePwd.java:55:	StringInstantiation:	StringInstantiation: 필요없는 Instance가 생성되어 있음
+src/test/java/egovframework/com/uss/umt/TestMakePwd.java:56:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/uss/umt/TestMakePwd.java:69:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/uss/umt/TestMakePwd.java:73:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/utl/message/TestMessage.java:35:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/utl/message/TestMessage.java:39:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/utl/message/TestMessage.java:54:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/utl/message/TestMessage.java:58:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/utl/message/TestMessage.java:73:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/utl/message/TestMessage.java:77:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/utl/message/TestMessage.java:92:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/utl/message/TestMessage.java:96:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/utl/sim/TestPdfConverter.java:58:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/com/validation/ipaddress/IpAddressTest.java:26:	AvoidUsingHardCodedIP:	AvoidUsingHardCodedIP: 하드코딩된 IP 주소 addr 사용
+src/test/java/egovframework/com/validation/ipaddress/IpAddressTest.java:26:	AvoidUsingHardCodedIP:	AvoidUsingHardCodedIP: 하드코딩된 IP 주소 addr 사용
+src/test/java/egovframework/com/validation/ipaddress/IpAddressTest.java:29:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/validation/nullcheck/NullCheckTest.java:35:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/com/web/TestController.java:68:	SystemPrintln:	SystemPrintln: System.out.print 가 사용됨
+src/test/java/egovframework/dev/com/utl/sim/service/TestFileToolBasePath.java:67:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/dev/com/utl/sim/service/TestFileToolBasePathAOP.java:66:	AvoidPrintStackTrace:	AvoidPrintStackTrace: printStackTrace()를 사용하는 대신 로거 호출을 사용해야함
+src/test/java/egovframework/dev/scheduling/TestSchedulingDev.java:29:	CloseResource:	CloseResource: 리소스 'ClassPathXmlApplicationContext' 가 사용 후에 닫혔는지 확인필요
